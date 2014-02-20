@@ -1,5 +1,7 @@
 /* This is for your Custom Content. */
 
 .page-header {
-
+    @include background-size(cover);
+    background: url(../images/bgs/header-bg.jpg) center center;
+    min-height: 300px;
 }
