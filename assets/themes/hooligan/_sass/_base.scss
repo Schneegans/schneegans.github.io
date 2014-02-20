@@ -7,22 +7,22 @@ $link-color: #4cb4e8;
 /* Compass Vars */
 $default-box-shadow-color: #000;
 $default-box-shadow-v-offset: 1px;
-$default-box-shadow-blur: 1px; 
+$default-box-shadow-blur: 1px;
 
-/* Override some defaults */ 
+/* Override some defaults */
 html, body {
   background-color: #2a2a2a;
   background: url(../images/bgs/body.png) repeat ;
 }
- 
+
 body {
   color:#bbb;
   text-shadow:1px 1px 1px #000;
-  height:100%; 
-  font-family: 'Oxygen', sans-serif; 
+  height:100%;
+  font-family: 'Oxygen', sans-serif;
   font-size: 14px;
 }
-   
+
 h1,h2,h3,h4,h5,h6 {
 	margin:0;
 	font-weight:normal;
@@ -30,7 +30,7 @@ h1,h2,h3,h4,h5,h6 {
 	text-rendering:optimizelegibility;
 	font-family: 'Advent Pro', sans-serif;
 	/*font-family: 'Pontano Sans', sans-serif;*/
-} 
+}
 
 a {
 	color:$link-color;
@@ -69,7 +69,7 @@ pre > code {
 	-moz-box-shadow: none;
   	-webkit-box-shadow: none;
   	-o-box-shadow: none;
-} 
+}
 
 hr {
 	border:none;
@@ -122,14 +122,14 @@ hr {
 			> img {
 				display:block;
 				margin: 10px auto;
-			}	
+			}
 		}
 		div.span4 {
 			h4 {
 				margin-top:10px;
 				&:first {margin-top: 0}
 			}
-		}	
+		}
 	}
 	p {
 		padding-bottom:15px;
@@ -141,7 +141,7 @@ hr {
 /* Page header tweaks */
 .page-header {
 	@include box-shadow(
-		 rgba(255, 255, 255, 0.1) 0 1px 0, 
+		 rgba(255, 255, 255, 0.1) 0 1px 0,
 		 rgba(0, 0, 0, 0.8) 0 1px 7px 0px inset
 	);
 	background: #202020;
@@ -165,7 +165,7 @@ hr {
 /* Pagination */
 div.pagination {
 	li {
-		a { 
+		a {
 			@include box-shadow;
 			// background: rgba(0, 0, 0, 0.8);
 		}
@@ -179,8 +179,8 @@ a.btn, a.btn.disabled {
 	background:rgba(0,0,0, 0.2);
 	border:none;
   	-moz-box-shadow: rgba(255, 255, 255, 0.1) 0 1px 0, rgba(0, 0, 0, 0.8) 0 1px 7px 0px inset;
-  	-webkit-box-shadow: 
-  		rgba(0, 0, 0, 0.8) 0 1px 0, 
+  	-webkit-box-shadow:
+  		rgba(0, 0, 0, 0.8) 0 1px 0,
   		rgba(255, 255, 255, 0.5) 0 1px 1px 0px inset;
 	-o-box-shadow: rgba(255, 255, 255, 0.1) 0 1px 0, rgba(0, 0, 0, 0.8) 0 1px 7px 0px inset;
 
@@ -211,7 +211,7 @@ a.btn, a.btn.disabled {
 			background:#57A957;
 			border:1px solid #4C964D;
 			color:#FFF;
-		}		
+		}
 		span{
 			vertical-align:super;
 			font-size:0.8em;
@@ -228,15 +228,15 @@ a.btn, a.btn.disabled {
 	border-radius: 3px;
 	text-decoration:none;
   	-moz-box-shadow: rgba(255, 255, 255, 0.1) 0 1px 0, rgba(0, 0, 0, 0.8) 0 1px 7px 0px inset;
-  	-webkit-box-shadow: 
-  		rgba(0, 0, 0, 0.8) 0 1px 0, 
+  	-webkit-box-shadow:
+  		rgba(0, 0, 0, 0.8) 0 1px 0,
   		rgba(255, 255, 255, 0.5) 0 1px 1px 0px inset;
 	-o-box-shadow: rgba(255, 255, 255, 0.1) 0 1px 0, rgba(0, 0, 0, 0.8) 0 1px 7px 0px inset;
 	&:hover {
-		background: rgba(255, 255, 255, 0.30);		
+		background: rgba(255, 255, 255, 0.30);
 	}
 }
-	
+
 /* Page-specific */
 div.content {
 	div#page-index {
@@ -268,4 +268,4 @@ div.content {
 .zocial.rss:focus,
 .zocial.rss:hover {
 	color:#fb9d3a !important;
-}  
+}
