@@ -28,7 +28,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* line 32, ../_sass/_base.scss */
 a {
-  color: #4cb4e8;
+  color: #a9c161;
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   -o-transition: all 0.3s;
@@ -36,7 +36,7 @@ a {
 }
 /* line 34, ../_sass/_base.scss */
 a:hover {
-  color: #d4edf9;
+  color: #e5eccf;
   text-decoration: none;
 }
 
@@ -352,13 +352,49 @@ div.posts article div.date time {
   padding: 5px 10px;
 }
 
-/* This is for your Custom Content. */
-/* line 3, ../_sass/_custom.scss */
+/* line 2, ../_sass/_custom.scss */
 .page-header {
+  background: url(../images/bgs/header-bg.jpg) center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  background: url(../images/bgs/header-bg.jpg) center center;
-  min-height: 300px;
+  min-height: 200px;
+  position: relative;
+}
+/* line 8, ../_sass/_custom.scss */
+.page-header h1 {
+  position: absolute;
+  font-size: 7em;
+  bottom: 0;
+  font-weight: lighter;
+  text-shadow: 1px 1px 15px #000;
+}
+@media (max-width: 767px) {
+  /* line 17, ../_sass/_custom.scss */
+  .page-header h1 {
+    font-size: 4em;
+    bottom: 50px;
+  }
+}
+/* line 23, ../_sass/_custom.scss */
+.page-header small {
+  color: #fff;
+}
+
+/* line 28, ../_sass/_custom.scss */
+.container {
+  position: relative;
+}
+
+/* line 32, ../_sass/_custom.scss */
+.page-footer {
+  -webkit-box-shadow: rgba(255, 255, 255, 0.1) 0 1px 0, rgba(0, 0, 0, 0.8) 0 1px 7px 0px inset;
+  -moz-box-shadow: rgba(255, 255, 255, 0.1) 0 1px 0, rgba(0, 0, 0, 0.8) 0 1px 7px 0px inset;
+  box-shadow: rgba(255, 255, 255, 0.1) 0 1px 0, rgba(0, 0, 0, 0.8) 0 1px 7px 0px inset;
+  background: #202020;
+  background-color: rgba(0, 0, 0, 0.3);
+  margin-top: 20px;
+  padding-bottom: 20px;
+  padding-top: 50px;
 }
