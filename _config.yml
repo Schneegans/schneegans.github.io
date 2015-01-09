@@ -8,12 +8,12 @@ pygments: true
 # Themes are encouraged to use these universal variables
 # so be sure to set them if your theme uses them.
 #
-title : guacamole
-tagline: delicious VR
+title : Simon Schneegans
+tagline: Projects & Blog
 author :
-  name : VR-Systems-Group
-  email : blah@email.test
-  github : vrsys
+  name : Simon Schneegans
+  email : mail@simonschneegans.de
+  github : simmesimme
   #twitter : username
   #feedburner : feedname
 
@@ -80,7 +80,7 @@ JB :
   # Set 'provider' to false to turn commenting off globally.
   #
   comments :
-    provider : false
+    provider : disqus
     disqus :
       short_name : jekyllbootstrap
     livefyre :

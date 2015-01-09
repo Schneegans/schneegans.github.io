@@ -1,3 +1,3 @@
-# Homepage of guacamole
+# Homepage of Simon Schneegans
 
-Feel free to visit it at http://guacamole.github.io
+Feel free to visit it at http://simmesimme.github.io

@@ -28,10 +28,10 @@ h1, h2, h3, h4, h5, h6 {
 
 /* line 32, ../_sass/_base.scss */
 a {
-  color: #a9c161;
-  -webkit-transition: all 0.3s;
+  color: #A9C161;
   -moz-transition: all 0.3s;
   -o-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 /* line 34, ../_sass/_base.scss */
@@ -90,10 +90,8 @@ hr {
 }
 /* line 80, ../_sass/_base.scss */
 .navbar div.navbar-inner {
-  -webkit-border-radius: 0;
   -moz-border-radius: 0;
-  -ms-border-radius: 0;
-  -o-border-radius: 0;
+  -webkit-border-radius: 0;
   border-radius: 0;
 }
 /* line 82, ../_sass/_base.scss */
@@ -154,8 +152,8 @@ hr {
 /* Page header tweaks */
 /* line 139, ../_sass/_base.scss */
 .page-header {
-  -webkit-box-shadow: rgba(255, 255, 255, 0.1) 0 1px 0, rgba(0, 0, 0, 0.8) 0 1px 7px 0px inset;
   -moz-box-shadow: rgba(255, 255, 255, 0.1) 0 1px 0, rgba(0, 0, 0, 0.8) 0 1px 7px 0px inset;
+  -webkit-box-shadow: rgba(255, 255, 255, 0.1) 0 1px 0, rgba(0, 0, 0, 0.8) 0 1px 7px 0px inset;
   box-shadow: rgba(255, 255, 255, 0.1) 0 1px 0, rgba(0, 0, 0, 0.8) 0 1px 7px 0px inset;
   background: #202020;
   background-color: rgba(0, 0, 0, 0.3);
@@ -184,9 +182,9 @@ hr {
 /* Pagination */
 /* line 165, ../_sass/_base.scss */
 div.pagination li a {
-  -webkit-box-shadow: 0px 1px 1px black;
-  -moz-box-shadow: 0px 1px 1px black;
-  box-shadow: 0px 1px 1px black;
+  -moz-box-shadow: 0px 1px 1px #000;
+  -webkit-box-shadow: 0px 1px 1px #000;
+  box-shadow: 0px 1px 1px #000;
 }
 
 /* Buttons */
@@ -237,7 +235,7 @@ a.btn.disabled, a.btn.disabled.disabled {
   font-size: 0.8em;
 }
 
-/* line 220, ../_sass/_base.scss */
+/* line 219, ../_sass/_base.scss */
 .tag_box.inline a,
 .tag_box a {
   padding: 3px 6px;
@@ -269,25 +267,25 @@ div.content div#page-index {
   padding-right: 0 !important;
 }
 
-/* line 251, ../_sass/_base.scss */
+/* line 250, ../_sass/_base.scss */
 .zocial.googleplus:focus,
 .zocial.googleplus:hover {
   color: #e01d30 !important;
 }
 
-/* line 256, ../_sass/_base.scss */
+/* line 255, ../_sass/_base.scss */
 .zocial.twitter:focus,
 .zocial.twitter:hover {
   color: #46c0fb !important;
 }
 
-/* line 261, ../_sass/_base.scss */
+/* line 260, ../_sass/_base.scss */
 .zocial.linkedin:focus,
 .zocial.linkedin:hover {
   color: #50a1cb !important;
 }
 
-/* line 266, ../_sass/_base.scss */
+/* line 265, ../_sass/_base.scss */
 .zocial.rss:focus,
 .zocial.rss:hover {
   color: #fb9d3a !important;
@@ -307,10 +305,8 @@ div.content div#page-index {
   }
   /* line 10, ../_sass/_responsive.scss */
   div.container div.page-header {
-    -webkit-border-radius: 0;
     -moz-border-radius: 0;
-    -ms-border-radius: 0;
-    -o-border-radius: 0;
+    -webkit-border-radius: 0;
     border-radius: 0;
   }
 }
@@ -339,15 +335,13 @@ div.posts article div.date {
 }
 /* line 28, ../_sass/_post.scss */
 div.posts article div.date time {
-  -webkit-box-shadow: rgba(255, 255, 255, 0.1) 0 1px 0, rgba(0, 0, 0, 0.8) 0 1px 7px 0px inset;
   -moz-box-shadow: rgba(255, 255, 255, 0.1) 0 1px 0, rgba(0, 0, 0, 0.8) 0 1px 7px 0px inset;
+  -webkit-box-shadow: rgba(255, 255, 255, 0.1) 0 1px 0, rgba(0, 0, 0, 0.8) 0 1px 7px 0px inset;
   box-shadow: rgba(255, 255, 255, 0.1) 0 1px 0, rgba(0, 0, 0, 0.8) 0 1px 7px 0px inset;
   background: #202020;
   background-color: rgba(0, 0, 0, 0.3);
-  -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
+  -webkit-border-radius: 5px;
   border-radius: 5px;
   padding: 5px 10px;
 }
@@ -355,9 +349,9 @@ div.posts article div.date time {
 /* line 2, ../_sass/_custom.scss */
 .page-header {
   background: url(../images/bgs/header-bg.jpg) center center;
-  -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
+  -webkit-background-size: cover;
   background-size: cover;
   min-height: 200px;
   position: relative;
@@ -389,8 +383,8 @@ div.posts article div.date time {
 
 /* line 32, ../_sass/_custom.scss */
 .page-footer {
-  -webkit-box-shadow: rgba(255, 255, 255, 0.1) 0 1px 0, rgba(0, 0, 0, 0.8) 0 1px 7px 0px inset;
   -moz-box-shadow: rgba(255, 255, 255, 0.1) 0 1px 0, rgba(0, 0, 0, 0.8) 0 1px 7px 0px inset;
+  -webkit-box-shadow: rgba(255, 255, 255, 0.1) 0 1px 0, rgba(0, 0, 0, 0.8) 0 1px 7px 0px inset;
   box-shadow: rgba(255, 255, 255, 0.1) 0 1px 0, rgba(0, 0, 0, 0.8) 0 1px 7px 0px inset;
   background: #202020;
   background-color: rgba(0, 0, 0, 0.3);
