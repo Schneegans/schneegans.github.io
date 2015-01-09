@@ -1,15 +1,16 @@
 /* Partials */
+@import url(http://fonts.googleapis.com/css?family=Advent+Pro);
 @import url(http://fonts.googleapis.com/css?family=Oxygen);
 /* Theme Vars */
 /* Compass Vars */
 /* Override some defaults */
-/* line 12, ../_sass/_base.scss */
+/* line 13, ../_sass/_base.scss */
 html, body {
   background-color: #2a2a2a;
   background: url(../images/bgs/body.png) repeat;
 }
 
-/* line 17, ../_sass/_base.scss */
+/* line 18, ../_sass/_base.scss */
 body {
   color: #bbb;
   text-shadow: 1px 1px 1px #000;
@@ -18,55 +19,57 @@ body {
   font-size: 14px;
 }
 
-/* line 25, ../_sass/_base.scss */
+/* line 26, ../_sass/_base.scss */
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
   font-weight: normal;
   color: #999;
   text-rendering: optimizelegibility;
+  font-family: 'Advent Pro', sans-serif;
+  /*font-family: 'Pontano Sans', sans-serif;*/
 }
 
-/* line 32, ../_sass/_base.scss */
+/* line 35, ../_sass/_base.scss */
 a {
-  color: #A9C161;
+  color: #7dc900;
   -moz-transition: all 0.3s;
   -o-transition: all 0.3s;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
-/* line 34, ../_sass/_base.scss */
+/* line 37, ../_sass/_base.scss */
 a:hover {
-  color: #e5eccf;
+  color: #c4ff63;
   text-decoration: none;
 }
 
-/* line 41, ../_sass/_base.scss */
+/* line 44, ../_sass/_base.scss */
 h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
   font-weight: normal;
   color: #999999;
 }
 
-/* line 46, ../_sass/_base.scss */
+/* line 49, ../_sass/_base.scss */
 h1, h2 {
   margin: 0 0 15px;
 }
 
-/* line 50, ../_sass/_base.scss */
+/* line 53, ../_sass/_base.scss */
 h1 {
   font-size: 40px;
 }
 
-/* line 54, ../_sass/_base.scss */
+/* line 57, ../_sass/_base.scss */
 h2 {
   font-size: 30px;
 }
 
-/* line 58, ../_sass/_base.scss */
+/* line 61, ../_sass/_base.scss */
 pre, code {
   color: #ccc;
 }
 
-/* line 62, ../_sass/_base.scss */
+/* line 65, ../_sass/_base.scss */
 pre > code {
   /* Reset box-shadow for pygments */
   background: none;
@@ -76,7 +79,7 @@ pre > code {
   -o-box-shadow: none;
 }
 
-/* line 71, ../_sass/_base.scss */
+/* line 74, ../_sass/_base.scss */
 hr {
   border: none;
   background: rgba(0, 0, 0, 0.7);
@@ -84,65 +87,65 @@ hr {
 }
 
 /* Layout */
-/* line 78, ../_sass/_base.scss */
+/* line 81, ../_sass/_base.scss */
 .navbar {
   margin-bottom: 0;
 }
-/* line 80, ../_sass/_base.scss */
+/* line 83, ../_sass/_base.scss */
 .navbar div.navbar-inner {
   -moz-border-radius: 0;
   -webkit-border-radius: 0;
   border-radius: 0;
 }
-/* line 82, ../_sass/_base.scss */
+/* line 85, ../_sass/_base.scss */
 .navbar div.navbar-inner a.brand {
   padding: 10px 20px;
 }
-/* line 87, ../_sass/_base.scss */
+/* line 90, ../_sass/_base.scss */
 .navbar div.navbar-inner ul.nav:first-child li a {
   padding: 12px 10px 8px;
 }
 
-/* line 96, ../_sass/_base.scss */
+/* line 99, ../_sass/_base.scss */
 .container > footer {
   margin-top: 20px;
   clear: both;
 }
 
-/* line 100, ../_sass/_base.scss */
+/* line 103, ../_sass/_base.scss */
 .container > footer p {
   text-align: center;
   /* center align it with the container */
 }
 
 /* Content */
-/* line 107, ../_sass/_base.scss */
+/* line 110, ../_sass/_base.scss */
 .content {
   /* when there's no page-header */
   /* Wide column content */
 }
-/* line 108, ../_sass/_base.scss */
+/* line 111, ../_sass/_base.scss */
 .content img {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
 }
-/* line 112, ../_sass/_base.scss */
+/* line 115, ../_sass/_base.scss */
 .content.no-header {
   padding-top: 40px;
 }
-/* line 119, ../_sass/_base.scss */
+/* line 122, ../_sass/_base.scss */
 .content div.row div.span8 > img {
   display: block;
   margin: 10px auto;
 }
-/* line 125, ../_sass/_base.scss */
+/* line 128, ../_sass/_base.scss */
 .content div.row div.span4 h4 {
   margin-top: 10px;
 }
-/* line 127, ../_sass/_base.scss */
+/* line 130, ../_sass/_base.scss */
 .content div.row div.span4 h4:first {
   margin-top: 0;
 }
-/* line 131, ../_sass/_base.scss */
+/* line 134, ../_sass/_base.scss */
 .content p {
   padding-bottom: 15px;
   line-height: 25px;
@@ -150,7 +153,7 @@ hr {
 }
 
 /* Page header tweaks */
-/* line 139, ../_sass/_base.scss */
+/* line 142, ../_sass/_base.scss */
 .page-header {
   -moz-box-shadow: rgba(255, 255, 255, 0.1) 0 1px 0, rgba(0, 0, 0, 0.8) 0 1px 7px 0px inset;
   -webkit-box-shadow: rgba(255, 255, 255, 0.1) 0 1px 0, rgba(0, 0, 0, 0.8) 0 1px 7px 0px inset;
@@ -168,19 +171,19 @@ hr {
   -webkit-border-bottom-right-radius: 5px;
   border-bottom-right-radius: 5px;
 }
-/* line 152, ../_sass/_base.scss */
+/* line 155, ../_sass/_base.scss */
 .page-header h1 {
   color: #eee;
   margin-bottom: 0;
 }
 
-/* line 158, ../_sass/_base.scss */
+/* line 161, ../_sass/_base.scss */
 .topbar .btn {
   border: 0;
 }
 
 /* Pagination */
-/* line 165, ../_sass/_base.scss */
+/* line 168, ../_sass/_base.scss */
 div.pagination li a {
   -moz-box-shadow: 0px 1px 1px #000;
   -webkit-box-shadow: 0px 1px 1px #000;
@@ -188,7 +191,7 @@ div.pagination li a {
 }
 
 /* Buttons */
-/* line 173, ../_sass/_base.scss */
+/* line 176, ../_sass/_base.scss */
 a.btn, a.btn.disabled {
   color: rgba(255, 255, 255, 0.7);
   text-shadow: 1px 1px 2px #000;
@@ -198,44 +201,44 @@ a.btn, a.btn.disabled {
   -webkit-box-shadow: rgba(0, 0, 0, 0.8) 0 1px 0, rgba(255, 255, 255, 0.5) 0 1px 1px 0px inset;
   -o-box-shadow: rgba(255, 255, 255, 0.1) 0 1px 0, rgba(0, 0, 0, 0.8) 0 1px 7px 0px inset;
 }
-/* line 184, ../_sass/_base.scss */
+/* line 187, ../_sass/_base.scss */
 a.btn:hover, a.btn.disabled:hover {
   background: rgba(255, 255, 255, 0.05);
 }
-/* line 187, ../_sass/_base.scss */
+/* line 190, ../_sass/_base.scss */
 a.btn.disabled, a.btn.disabled.disabled {
   color: rgba(255, 255, 255, 0.3);
 }
 
 /* Tags */
-/* line 193, ../_sass/_base.scss */
+/* line 196, ../_sass/_base.scss */
 .tag_box {
   list-style: none;
   margin: 0;
   padding: 5px 0;
   overflow: hidden;
 }
-/* line 199, ../_sass/_base.scss */
+/* line 202, ../_sass/_base.scss */
 .tag_box.inline li {
   float: left;
 }
-/* line 203, ../_sass/_base.scss */
+/* line 206, ../_sass/_base.scss */
 .tag_box li {
   line-height: 28px;
 }
-/* line 207, ../_sass/_base.scss */
+/* line 210, ../_sass/_base.scss */
 .tag_box a.active {
   background: #57A957;
   border: 1px solid #4C964D;
   color: #FFF;
 }
-/* line 212, ../_sass/_base.scss */
+/* line 215, ../_sass/_base.scss */
 .tag_box a span {
   vertical-align: super;
   font-size: 0.8em;
 }
 
-/* line 219, ../_sass/_base.scss */
+/* line 222, ../_sass/_base.scss */
 .tag_box.inline a,
 .tag_box a {
   padding: 3px 6px;
@@ -248,47 +251,72 @@ a.btn.disabled, a.btn.disabled.disabled {
   -webkit-box-shadow: rgba(0, 0, 0, 0.8) 0 1px 0, rgba(255, 255, 255, 0.5) 0 1px 1px 0px inset;
   -o-box-shadow: rgba(255, 255, 255, 0.1) 0 1px 0, rgba(0, 0, 0, 0.8) 0 1px 7px 0px inset;
 }
-/* line 232, ../_sass/_base.scss */
+/* line 235, ../_sass/_base.scss */
 .tag_box.inline a:hover,
 .tag_box a:hover {
   background: rgba(255, 255, 255, 0.3);
 }
 
 /* Page-specific */
-/* line 239, ../_sass/_base.scss */
+/* line 242, ../_sass/_base.scss */
 div.content div#page-index {
   padding-top: 30px !important;
 }
 
 /* Zocial Overrides */
-/* line 245, ../_sass/_base.scss */
+/* line 248, ../_sass/_base.scss */
 .navbar a.zocial {
   padding-left: 0 !important;
   padding-right: 0 !important;
 }
 
-/* line 250, ../_sass/_base.scss */
+/* line 253, ../_sass/_base.scss */
 .zocial.googleplus:focus,
 .zocial.googleplus:hover {
   color: #e01d30 !important;
 }
 
-/* line 255, ../_sass/_base.scss */
+/* line 258, ../_sass/_base.scss */
 .zocial.twitter:focus,
 .zocial.twitter:hover {
   color: #46c0fb !important;
 }
 
-/* line 260, ../_sass/_base.scss */
+/* line 263, ../_sass/_base.scss */
 .zocial.linkedin:focus,
 .zocial.linkedin:hover {
   color: #50a1cb !important;
 }
 
-/* line 265, ../_sass/_base.scss */
+/* line 268, ../_sass/_base.scss */
 .zocial.rss:focus,
 .zocial.rss:hover {
   color: #fb9d3a !important;
+}
+
+/* Sticky footer */
+/* line 277, ../_sass/_base.scss */
+html, body {
+  height: 100%;
+}
+
+/* line 281, ../_sass/_base.scss */
+#page-wrap {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin-bottom: -75px;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+}
+
+/* line 293, ../_sass/_base.scss */
+.footer-push,
+footer {
+  height: 75px;
+  max-height: 75px;
+  overflow: hidden;
 }
 
 /* Responsive Overrides */
@@ -346,49 +374,4 @@ div.posts article div.date time {
   padding: 5px 10px;
 }
 
-/* line 2, ../_sass/_custom.scss */
-.page-header {
-  background: url(../images/bgs/header-bg.jpg) center center;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  -webkit-background-size: cover;
-  background-size: cover;
-  min-height: 200px;
-  position: relative;
-}
-/* line 8, ../_sass/_custom.scss */
-.page-header h1 {
-  position: absolute;
-  font-size: 7em;
-  bottom: 0;
-  font-weight: lighter;
-  text-shadow: 1px 1px 15px #000;
-}
-@media (max-width: 767px) {
-  /* line 17, ../_sass/_custom.scss */
-  .page-header h1 {
-    font-size: 4em;
-    bottom: 50px;
-  }
-}
-/* line 23, ../_sass/_custom.scss */
-.page-header small {
-  color: #fff;
-}
-
-/* line 28, ../_sass/_custom.scss */
-.container {
-  position: relative;
-}
-
-/* line 32, ../_sass/_custom.scss */
-.page-footer {
-  -moz-box-shadow: rgba(255, 255, 255, 0.1) 0 1px 0, rgba(0, 0, 0, 0.8) 0 1px 7px 0px inset;
-  -webkit-box-shadow: rgba(255, 255, 255, 0.1) 0 1px 0, rgba(0, 0, 0, 0.8) 0 1px 7px 0px inset;
-  box-shadow: rgba(255, 255, 255, 0.1) 0 1px 0, rgba(0, 0, 0, 0.8) 0 1px 7px 0px inset;
-  background: #202020;
-  background-color: rgba(0, 0, 0, 0.3);
-  margin-top: 20px;
-  padding-bottom: 20px;
-  padding-top: 50px;
-}
+/* This is for your Custom Content. */

@@ -3,19 +3,19 @@
 permalink: /:categories/:year/:month/:day/:title
 
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
-pygments: true
+highlighter: pygments
 
 # Themes are encouraged to use these universal variables
 # so be sure to set them if your theme uses them.
 #
 title : Simon Schneegans
-tagline: Projects & Blog
+tagline: Site Tagline
 author :
   name : Simon Schneegans
-  email : mail@simonschneegans.de
+  email : code@simonschneegans.de
   github : simmesimme
-  #twitter : username
-  #feedburner : feedname
+  # twitter : username
+  # feedburner : feedname
 
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt

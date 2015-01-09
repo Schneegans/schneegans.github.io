@@ -11,10 +11,6 @@ tags: [test]
 
 ## Test
 
-{{ page.excerpt | textilize }}
-
-{{ site.time | date_to_string }}
-
 I really like working on Gnome-Pie --- and you can help improving it! There are many people sending mails to me, praising the possibilities Gnome-Pie offers to them. But I think it can be even better! Let's try to improve this piece of software together! There are multiple things you can do in order to become a part of Gnome-Pie's history:
 
 ## The code of Gnome-Pie
@@ -33,6 +29,7 @@ If you want to write code for Gnome-Pie, please have a look at the existing file
 An example of well-formatted code:
 
 {% highlight c++ %}
+
 ///////////////////////////////////////////////////////////////
 /// Some cool method.
 ///////////////////////////////////////////////////////////////
