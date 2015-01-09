@@ -302,21 +302,33 @@ html, body {
 
 /* line 281, ../_sass/_base.scss */
 #page-wrap {
+  background-color: #2a2a2a;
+  background: url(../images/bgs/body.png) repeat;
   min-height: 100%;
   height: auto !important;
   height: 100%;
-  margin-bottom: -75px;
+  margin-bottom: 125px;
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
 }
 
-/* line 293, ../_sass/_base.scss */
-.footer-push,
+/* line 295, ../_sass/_base.scss */
 footer {
-  height: 75px;
-  max-height: 75px;
+  position: fixed;
+  bottom: 0;
+  z-index: -1;
+  height: 125px;
+  width: 100%;
+  padding-top: 20px;
+  max-height: 105px;
   overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+/* line 297, ../_sass/_base.scss */
+footer .container {
+  text-align: center;
 }
 
 /* Responsive Overrides */
@@ -375,3 +387,16 @@ div.posts article div.date time {
 }
 
 /* This is for your Custom Content. */
+/* line 3, ../_sass/_custom.scss */
+ul.sub-nav {
+  list-style: none;
+  margin: 0 0 50px 0;
+}
+/* line 7, ../_sass/_custom.scss */
+ul.sub-nav li {
+  margin: 0;
+  border-bottom: #4A4A4A 1px dotted;
+  line-height: 36px;
+  list-style: none;
+  margin: 0;
+}

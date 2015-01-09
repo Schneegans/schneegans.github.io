@@ -1,9 +1,9 @@
 ---
 layout: page
-title : Gnome-Pie
-header : Gnome-Pie
+title : M.A.R.S
+header : M.A.R.S
 group: projects
 ---
 {% include JB/setup %}
 
-# Gnome-Pie
+## M.A.R.S.

@@ -1,1 +1,14 @@
 /* This is for your Custom Content. */
+
+ul.sub-nav {
+  list-style: none;
+  margin: 0 0 50px 0;
+
+  li {
+    margin: 0;
+    border-bottom: #4A4A4A 1px dotted;
+    line-height: 36px;
+    list-style: none;
+    margin:0;
+  }
+}

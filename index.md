@@ -13,9 +13,9 @@ tagline: Supporting tagline
 <div class="row">
   <div class="span6">
 
-    <h2>lastest projects</h2>
+    <h2>latest projects</h2>
 
-    <ul class="posts">
+    <ul class="sub-nav">
       {% assign pages_list = site.pages %}
       {% assign group = 'projects' %}
       {% include JB/pages_list %}
@@ -23,9 +23,9 @@ tagline: Supporting tagline
 
   </div>
   <div class="span6">
-    <h2>lastest posts</h2>
+    <h2>latest posts</h2>
 
-    <ul class="posts">
+    <ul class="sub-nav">
       {% for post in site.posts %}
         <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
       {% endfor %}

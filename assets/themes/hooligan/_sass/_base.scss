@@ -271,7 +271,7 @@ div.content {
 }
 
 /* Sticky footer */
-$footerHeight: 75px;
+$footerHeight: 125px;
 
 //Page full height
 html, body {
@@ -279,21 +279,33 @@ html, body {
 }
 
 #page-wrap {
+	background-color: #2a2a2a;
+	background: url(../images/bgs/body.png) repeat ;
 	min-height: 100%;
 	height: auto !important;
 	height: 100%;
-	// Negative indent footer by it's height
-	margin-bottom: -($footerHeight);
+	margin-bottom: $footerHeight;
 	margin-left: 0;
 	margin-right: 0;
 	margin-top: 0;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
 }
 
 //footer fixed height
-.footer-push,
 footer {
+
+	.container {
+		text-align:center;
+	}
+
+	position:fixed;
+	bottom:0;
+	z-index:-1;
 	height: $footerHeight;
-	max-height: $footerHeight;
+	width: 100%;
+	padding-top:20px;
+	max-height: ($footerHeight - 20);
 	overflow: hidden;
+	background-color: rgba(0, 0, 0, 0.3);
 }
 
