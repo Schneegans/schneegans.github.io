@@ -2,7 +2,7 @@
 layout: page
 title : Gnome-Pie
 header : Gnome-Pie
-group: projects
+group: featured-project
 ---
 {% include JB/setup %}
 

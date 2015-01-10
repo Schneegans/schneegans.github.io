@@ -1,0 +1,50 @@
+---
+layout: page
+title : blog
+header : blog
+group: blog
+---
+{% include JB/setup %}
+
+{% for post in paginator.posts %}
+
+
+
+<div class="row post-preview">
+  <div class="span6 visible-phone">
+    <div class="teaser" style="background-image:url({{ site.url }}/assets/pictures/{{post.teaser}})"> <div class="banner">{{post.date | date_to_string}}</div> </div>
+    <br />
+    <br />
+  </div>
+  <div class="span6">
+    <h1>
+      <a href="{{post.url}}">{{post.title}}</a>
+    </h1>
+    {{post.excerpt}}
+    <a href="{{post.url}}">Read on &raquo;</a>
+  </div>
+  <div class="span6 hidden-phone">
+    <div class="teaser" style="background-image:url({{ site.url }}/assets/pictures/{{post.teaser}})"> <div class="banner">{{post.date | date_to_string}}</div> </div>
+  </div>
+
+</div>
+
+{% if forloop.last %}{% else %}<hr />{% endif %}
+
+{% endfor %}
+
+
+<div class="well">
+
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path }}" class="">&laquo; Older posts</a>
+  {% else %}
+    <!-- <span class="btn disabled">Older posts</span> -->
+  {% endif %}
+
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path }}" class="pull-right">Newer posts &raquo;</a>
+  {% else %}
+    <!-- <span class="btn disabled">Newer posts</span> -->
+  {% endif %}
+</div>

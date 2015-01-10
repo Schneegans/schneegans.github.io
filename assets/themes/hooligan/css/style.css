@@ -302,13 +302,14 @@ html, body {
 #page-background {
   margin-bottom: 125px;
   padding-top: 30px;
+  padding-bottom: 30px;
   background-color: #2a2a2a;
   background: url(../images/bgs/body.png) repeat;
   box-shadow: 0 0px 10px rgba(0, 0, 0, 0.8);
   border-top: 1px solid #373737;
 }
 
-/* line 293, ../_sass/_base.scss */
+/* line 294, ../_sass/_base.scss */
 footer {
   position: fixed;
   bottom: 0;
@@ -320,7 +321,7 @@ footer {
   overflow: hidden;
   background: #1b1b1b;
 }
-/* line 295, ../_sass/_base.scss */
+/* line 296, ../_sass/_base.scss */
 footer .container {
   text-align: center;
 }
@@ -380,17 +381,19 @@ div.posts article div.date time {
   padding: 5px 10px;
 }
 
-/* This is for your Custom Content. */
-/* line 3, ../_sass/_custom.scss */
+/* line 1, ../_sass/_custom.scss */
+hr {
+  margin: 12px 0;
+}
+
+/* line 5, ../_sass/_custom.scss */
 ul.sub-nav {
   list-style: none;
   margin: 0 0 50px 0;
 }
-/* line 7, ../_sass/_custom.scss */
+/* line 9, ../_sass/_custom.scss */
 ul.sub-nav li {
   margin: 0;
-  border-bottom: #4A4A4A 1px dotted;
-  line-height: 36px;
   list-style: none;
   margin: 0;
 }
@@ -480,4 +483,73 @@ ul.sub-nav li {
 .kwicks > li .bg {
   height: 100%;
   width: 100%;
+}
+
+/* line 104, ../_sass/_custom.scss */
+div.teaser {
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  background-position: 50% 50%;
+  border-top: 1px solid #373737;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+/* line 115, ../_sass/_custom.scss */
+.post-preview {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+/* line 121, ../_sass/_custom.scss */
+.banner {
+  margin: 20px -10px 0 0;
+  padding: 5px 12px;
+  -moz-border-radius: 2px 0 0 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px 0 0 2px;
+  position: absolute;
+  right: 0;
+  border-top: 1px solid #373737;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzJmMmYyZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzFmMWYxZiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #2f2f2f), color-stop(100%, #1f1f1f));
+  background-image: -moz-linear-gradient(top, #2f2f2f, #1f1f1f);
+  background-image: -webkit-linear-gradient(top, #2f2f2f, #1f1f1f);
+  background-image: linear-gradient(to bottom, #2f2f2f, #1f1f1f);
+}
+/* line 122, ../_sass/_custom.scss */
+.banner::before {
+  content: "";
+  position: absolute;
+  top: -11px;
+  right: 0;
+  border-color: transparent transparent #111 #111;
+  border-style: solid;
+  border-width: 5px;
+  width: 0;
+  height: 0;
+}
+
+/* line 145, ../_sass/_custom.scss */
+.responsive-video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 153, ../_sass/_custom.scss */
+.responsive-video {
+  border-top: 1px solid #373737;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+  position: relative;
+  padding-bottom: 56.25%;
+  /* Default for 1600x900 videos 16:9 ratio*/
+  padding-top: 0px;
+  height: 0;
+  overflow: hidden;
 }

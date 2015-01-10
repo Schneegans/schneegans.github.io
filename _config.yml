@@ -29,6 +29,11 @@ author :
 #
 production_url : http://simmesimme.github.io
 
+# you can specify your own separator, of course.
+excerpt_separator: <!--more-->
+paginate: 3
+paginate_path: "blog/page:num/"
+
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #
 JB :

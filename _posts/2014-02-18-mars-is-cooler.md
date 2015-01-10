@@ -1,17 +1,19 @@
 ---
 layout: post
-title: "Hello World2"
+title: "M.A.R.S on github!"
 description: "huhu"
 published: true
-category: lesson
+category: news
 comments: true
 tags: [test]
+teaser: "mars.jpg"
 ---
 {% include JB/setup %}
 
-# huhu
-
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias ipsam, omnis perspiciatis voluptatem nobis quis iste ut saepe aliquid doloremque placeat dicta porro, rem aspernatur temporibus eveniet quia nulla natus.
+
+<!--more-->
+
 
 ## huhu 2
 

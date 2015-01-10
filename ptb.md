@@ -2,7 +2,7 @@
 layout: page
 title : PTB Animation
 header : PTB Animation
-group: projects
+group: featured-project
 ---
 {% include JB/setup %}
 

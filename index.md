@@ -40,9 +40,13 @@ tagline: Supporting tagline
     <h2>latest projects</h2>
 
     <ul class="sub-nav">
-      {% assign pages_list = site.pages %}
-      {% assign group = 'projects' %}
-      {% include JB/pages_list %}
+        <hr/>
+      {% for page in site.pages %}
+      {% if page.group == "featured-project" %}
+        <li><a href="{{ BASE_PATH }}{{ page.url }}">{{ page.title }}</a></li>
+        <hr/>
+      {% endif %}
+      {% endfor %}
     </ul>
 
   </div>
@@ -50,8 +54,16 @@ tagline: Supporting tagline
     <h2>latest posts</h2>
 
     <ul class="sub-nav">
+        <hr/>
+      {% assign post_count = 0 %}
+
       {% for post in site.posts %}
         <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
+        <hr/>
+        {% assign post_count=post_count | plus:1 %}
+        {% if post_count == 3 %}
+          {% break %}
+        {% endif %}
       {% endfor %}
     </ul>
 

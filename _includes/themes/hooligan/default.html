@@ -40,9 +40,18 @@
     <div class="page-header">
       <div class="container">
         <ul class="main-nav">
-          {% assign pages_list = site.pages %}
-          {% assign group = 'navigation' %}
-          {% include JB/pages_list %}
+          {% if page.group == "blog" %}
+          <li class="active">
+          {% else %}
+          <li>
+          {% endif %}
+          <a href="/blog">blog</a></li>
+          {% if page.group == "projects" %}
+          <li class="active">
+          {% else %}
+          <li>
+          {% endif %}
+            <a href="/projects.html">projects</a></li>
         </ul>
         <ul class="main-nav brand">
           {% if page.url == "/index.html" %}
@@ -87,15 +96,13 @@
           {% if site.author.linkedin %}
             <a href="http://www.linkedin.com/in/{{ site.author.linkedin }}" class="zocial linkedin icon" target="_blank"></a>
           {% endif %}
-            <a href="rss.xml" class="zocial rss icon" target="_blank"></a>
+            <a href="{{site.url}}/rss.xml" class="zocial rss icon" target="_blank"></a>
 
         </p>
-        <p>&copy; {{ site.time | date: '%Y' }} {{ site.author.name }}
-          with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
-          and <a href="http://github.com/dhulihan/hooligan" target="_blank">The Hooligan Theme</a>
+        <p>&copy; {{ site.time | date: '%Y' }} <a href="{{site.url}}">{{ site.author.name }}</a> - made with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>, <a href="http://github.com/dhulihan/hooligan" target="_blank">The Hooligan Theme</a> and <a href="https://pages.github.com/">github pages</a>.
         </p>
         <p>
-          Impressum
+          <a href="{{ site.url }}/about.html">Impressum</a>
         </p>
       </div> <!-- /container -->
     </footer>

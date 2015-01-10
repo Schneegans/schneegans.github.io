@@ -1,8 +1,8 @@
 ---
 layout: page
-title : Projects
-header : Projects
-group: navigation
+title : projects
+header : projects
+group: projects
 ---
 {% include JB/setup %}
 
