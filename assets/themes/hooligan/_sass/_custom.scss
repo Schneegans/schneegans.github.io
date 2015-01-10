@@ -12,3 +12,90 @@ ul.sub-nav {
     margin:0;
   }
 }
+
+.page-header {
+  font-family: 'Advent Pro', sans-serif;
+  font-size: 30px;
+}
+
+@media only screen and (max-width:600px) {
+  .page-header {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width:400px) {
+  .page-header {
+    font-size: 15px;
+  }
+}
+
+.page-header {
+
+  >.container {
+    position:relative;
+  }
+
+
+  ul.main-nav {
+    list-style: none;
+    margin: 0 -10px;
+    display: inline-block;
+
+    &.brand {
+      position:absolute;
+      right:0;
+    }
+
+    @media only screen and (max-width:768px) {
+      &.brand {
+        margin: 0 10px;
+      }
+    }
+
+    li {
+      margin: 0;
+      display:inline;
+      padding: 9px 9px 12px 9px;
+    }
+  }
+
+  li.active {
+    background-color: #2a2a2a;
+    background: url(../images/bgs/body.png) repeat ;
+    border-top: 1px solid #373737;
+    @include border-radius(3px);
+  }
+}
+
+
+
+.kwicks {
+  height: 500px;
+  margin-bottom:30px;
+}
+.kwicks > li {
+  height: 500px;
+  border-top: 1px solid #373737;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 1);
+  overflow: hidden;
+
+  .description {
+    display: none;
+    color:#D7D7D7;
+
+    h2 {
+      color:#D7D7D7;
+    }
+
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 15px;
+    bottom: 0;
+    position: absolute;
+  }
+
+  .bg {
+    height:100%;
+    width:100%;
+  }
+}

@@ -2,18 +2,12 @@
 @import url(http://fonts.googleapis.com/css?family=Oxygen);
 
 /* Theme Vars */
-$link-color: #7dc900;
+$link-color: #F5994D;
 
 /* Compass Vars */
 $default-box-shadow-color: #000;
 $default-box-shadow-v-offset: 1px;
 $default-box-shadow-blur: 1px;
-
-/* Override some defaults */
-html, body {
-	background-color: #2a2a2a;
-	background: url(../images/bgs/body.png) repeat ;
-}
 
 body {
 	color:#bbb;
@@ -109,6 +103,7 @@ hr {
 /* Content */
 .content {
 	img {
+		border-top: 1px solid #373737;
 		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
 	}
 	/* when there's no page-header */
@@ -140,22 +135,21 @@ hr {
 
 /* Page header tweaks */
 .page-header {
-	@include box-shadow(
-		 rgba(255, 255, 255, 0.1) 0 1px 0,
-		 rgba(0, 0, 0, 0.8) 0 1px 7px 0px inset
-	);
-	background: #202020;
-	background-color: rgba(0, 0, 0, 0.3);
+	width:100%;
+	padding-top:30px;
 	border:none;
-	padding: 20px 20px 10px;
-	margin: 0px -20px 20px;
-	z-index: 0;
-	@include border-bottom-left-radius;
-	@include border-bottom-right-radius;
+	margin: 0px;
 	h1 {
 		color:#eee;
 		margin-bottom:0;
 	}
+}
+
+@media only screen and (max-width:600px) {
+  .page-header {
+    padding-top:20px;
+    padding-bottom:10px;
+  }
 }
 
 .topbar .btn {
@@ -278,18 +272,22 @@ html, body {
 	height: 100%;
 }
 
-#page-wrap {
-	background-color: #2a2a2a;
-	background: url(../images/bgs/body.png) repeat ;
+#page-content {
 	min-height: 100%;
 	height: auto !important;
 	height: 100%;
-	margin-bottom: $footerHeight;
-	margin-left: 0;
-	margin-right: 0;
-	margin-top: 0;
-	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+	margin: 0;
 }
+
+#page-background {
+	margin-bottom: $footerHeight;
+	padding-top:30px;
+	background-color: #2a2a2a;
+	background: url(../images/bgs/body.png) repeat ;
+	box-shadow: 0 0px 10px rgba(0, 0, 0, 0.8);
+	border-top: 1px solid #373737;
+}
+
 
 //footer fixed height
 footer {
@@ -306,6 +304,6 @@ footer {
 	padding-top:20px;
 	max-height: ($footerHeight - 20);
 	overflow: hidden;
-	background-color: rgba(0, 0, 0, 0.3);
+	background: #1b1b1b;
 }
 
