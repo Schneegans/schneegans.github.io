@@ -32,6 +32,9 @@ ul.sub-nav {
 
 .page-header {
 
+  border-bottom: none;
+  box-shadow: none;
+
   >.container {
     position:relative;
   }
@@ -137,7 +140,7 @@ div.teaser {
   position: absolute;
   right:0;
   border-top: 1px solid #373737;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+  @include box-shadow(0 2px 5px rgba(0, 0, 0, 0.8));
   @include background-image(linear-gradient(to bottom, #2f2f2f, #1f1f1f));
 }
 
@@ -158,4 +161,8 @@ div.teaser {
   padding-top: 0px;
   height: 0;
   overflow: hidden;
+}
+
+.post-meta {
+  margin-top: -10px;
 }

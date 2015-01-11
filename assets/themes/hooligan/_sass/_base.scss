@@ -217,17 +217,13 @@ a.btn, a.btn.disabled {
 .tag_box a {
 	padding: 3px 6px;
 	margin: 2px;
-	background: rgba(255, 255, 255, 0.20);
+	@include background-image(linear-gradient(to bottom, #2f2f2f, #1f1f1f));
+	@include border-radius(2px);
+  border-top: 1px solid #373737;
+  @include box-shadow(0 2px 5px rgba(0, 0, 0, 0.8));
 	color:white;
-	border-radius: 3px;
-	text-decoration:none;
-		-moz-box-shadow: rgba(255, 255, 255, 0.1) 0 1px 0, rgba(0, 0, 0, 0.8) 0 1px 7px 0px inset;
-		-webkit-box-shadow:
-			rgba(0, 0, 0, 0.8) 0 1px 0,
-			rgba(255, 255, 255, 0.5) 0 1px 1px 0px inset;
-	-o-box-shadow: rgba(255, 255, 255, 0.1) 0 1px 0, rgba(0, 0, 0, 0.8) 0 1px 7px 0px inset;
 	&:hover {
-		background: rgba(255, 255, 255, 0.30);
+		@include background-image(linear-gradient(to bottom, #3f3f3f, #2f2f2f));
 	}
 }
 
@@ -265,7 +261,7 @@ div.content {
 }
 
 /* Sticky footer */
-$footerHeight: 125px;
+$footerHeight: 155px;
 
 //Page full height
 html, body {
@@ -303,6 +299,7 @@ footer {
 	height: $footerHeight;
 	width: 100%;
 	padding-top:20px;
+	padding-bottom:0px;
 	max-height: ($footerHeight - 20);
 	overflow: hidden;
 	background: #1b1b1b;
