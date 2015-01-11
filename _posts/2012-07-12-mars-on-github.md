@@ -1,13 +1,11 @@
 ---
 layout: post
 title: "M.A.R.S on github!"
-description: "huhu"
-published: true
+tagline: "yay, finally!"
 category: news
-comments: true
-tags: [test]
 teaser: "mars.jpg"
 ---
+
 {% include JB/setup %}
 
 Just in case you are a fan of the game <a href="http://mars-game.sourceforge.net/">M.A.R.S.</a> and do not check its homepage regularly --- Felix and I managed to port it to the current snapshot of SFML2 and <a href="https://github.com/thelaui/M.A.R.S.">uploaded it to github</a>!

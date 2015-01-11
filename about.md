@@ -11,7 +11,7 @@ This is the personal blog of Simon Schneegans, a student of computer media scien
 
 ## Contact
 
-<address>
+<address class="well">
   <strong>Simon Schneegans</strong><br>
   Trierer Strasse 60<br>
   99423 Weimar, Germany<br>

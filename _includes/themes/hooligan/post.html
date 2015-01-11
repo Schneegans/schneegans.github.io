@@ -19,10 +19,10 @@
 
     <div class="well">
       {% if page.previous %}
-        <a href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&laquo; Previous post</a>
+        <a href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&laquo; {{page.previous.title}}</a>
       {% endif %}
       {% if page.next %}
-        <a class="pull-right" href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">Next post&raquo;</a>
+        <a class="pull-right" href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">{{page.next.title}} &raquo;</a>
       {% endif %}
     </div>
     <br />

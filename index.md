@@ -35,7 +35,7 @@ tagline: Supporting tagline
 
 
 <div class="row">
-  <div class="span6">
+  <div class="span4">
 
     <h2>latest projects</h2>
 
@@ -50,7 +50,27 @@ tagline: Supporting tagline
     </ul>
 
   </div>
-  <div class="span6">
+  <div class="span4">
+    <h2>featured posts</h2>
+
+    <ul class="sub-nav">
+        <hr/>
+      {% assign post_count = 0 %}
+
+      {% for post in site.posts %}
+        {% if post.tags contains "featured" %}
+          <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
+          <hr/>
+          {% assign post_count=post_count | plus:1 %}
+          {% if post_count == 3 %}
+            {% break %}
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+    </ul>
+
+  </div>
+  <div class="span4">
     <h2>latest posts</h2>
 
     <ul class="sub-nav">

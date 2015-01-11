@@ -1,0 +1,13 @@
+Source: greet-the-world
+Section: devel
+Priority: optional
+Maintainer: Your Name <your.email@some.where>
+Build-Depends: cmake, build-essential
+Homepage: http://www.yourhomepage.org
+
+Package: greet-the-world
+Architecture: any
+Depends: 
+Description: First test-package
+ Long description of greet-the-world.
+ It can span multiple lines!

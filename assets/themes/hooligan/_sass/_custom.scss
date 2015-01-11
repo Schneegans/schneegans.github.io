@@ -89,10 +89,11 @@ ul.sub-nav {
 
     h2 {
       color:#D7D7D7;
+      margin-top:10px;
     }
 
     background-color: rgba(0, 0, 0, 0.6);
-    padding: 15px;
+    padding: 0 15px 15px 15px;
     bottom: 0;
     position: absolute;
   }
@@ -145,7 +146,9 @@ div.teaser {
 }
 
 
-.responsive-video iframe {
+.responsive-video-169 iframe,
+.responsive-video-32 iframe,
+.responsive-video-43 iframe {
   position: absolute;
   top: 0;
   left: 0;
@@ -153,16 +156,34 @@ div.teaser {
   height: 100%;
 }
 
-.responsive-video {
+.responsive-video-169,
+.responsive-video-32,
+.responsive-video-43 {
   border-top: 1px solid #373737;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
   position: relative;
-  padding-bottom: 56.25%; /* Default for 1600x900 videos 16:9 ratio*/
   padding-top: 0px;
   height: 0;
   overflow: hidden;
 }
 
+.responsive-video-169 {
+  padding-bottom: 56.25%;
+}
+
+.responsive-video-43 {
+  padding-bottom: 75%;
+}
+
+.responsive-video-32 {
+  padding-bottom: 66.66%;
+}
+
 .post-meta {
   margin-top: -10px;
+}
+
+.alert {
+  background-color: rgba(250, 167, 50, 0.29);
+  border-color: rgba(255, 157, 18, 0.1);
 }
