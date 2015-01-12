@@ -109,6 +109,8 @@
     <script>window.jQuery || document.write('<script src="{{ ASSET_PATH }}/js/jquery.min.js"><\/script>')</script>
     <script src="{{ ASSET_PATH }}/bootstrap/js/bootstrap.min.js"></script>
     <script src="{{ site.url }}/assets/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="{{ site.url }}/assets/jquery.toc.min.js"></script>
+    <script src="{{ site.url }}/assets/jquery.sticky-kit.min.js"></script>
 
     {% if page.url == "/index.html" %}
       <script src="{{ site.url }}/assets/jquery.kwicks.min.js"></script>
@@ -153,6 +155,14 @@
               return openerElement.find('div');
             }
           }
+        });
+
+        $('#toc').toc({
+          selectors: 'h1,h2',
+          highlightOffset: 200
+        });
+        $('#toc').parent().stick_in_parent({
+          offset_top:30
         });
 
         $('.magnific-gallery').magnificPopup({

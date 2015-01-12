@@ -234,3 +234,38 @@ div.teaser {
 .mfp-with-zoom.mfp-removing.mfp-bg {
   opacity: 0;
 }
+
+// toc -------------------------------------------------------------------------
+#toc {
+  ul {
+    margin-top: -15px;
+    list-style: none;
+
+    a {
+      color:#bbb;
+      &:hover {
+        color:$link-color;
+      }
+      @include transition(all 0.1s);
+    }
+
+    li {
+
+      &.toc-active a {
+          color:$link-color;
+      }
+
+      list-style: none;
+
+      &.toc-h1 {
+        margin:15px 0 0 0;
+      }
+      &.toc-h2 {
+        margin:5px 0 0 0;
+      }
+      &.toc-h3 {
+        margin:0 0 0 0;
+      }
+    }
+  }
+}

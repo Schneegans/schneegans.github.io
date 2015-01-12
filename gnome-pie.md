@@ -1,12 +1,10 @@
 ---
-layout: page
+layout: nav-page
 title : Gnome-Pie
 header : Gnome-Pie
 group: featured-project
 ---
 {% include JB/setup %}
-
-# Gnome-Pie
 
 Gnome-Pie is a circular application launcher for Linux. It is made of several pies, each consisting of multiple slices. The user presses a key stroke which opens the desired pie. By activating one of its slices, applications may be launched, key presses may be simulated or files can be opened.
 

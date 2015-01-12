@@ -1,0 +1,18 @@
+<div class="page-header">
+  <h1>
+    {{ page.title }}
+    {% if page.tagline %}
+      <small>{{ page.tagline }}</small>
+    {% endif %}
+  </h1>
+  <hr />
+</div>
+
+<div class="row">
+  <div class="span8">
+    {{ content }}
+  </div>
+  <div class="span4 hidden-phone">
+    <div id="toc"></div>
+  </div>
+</div>

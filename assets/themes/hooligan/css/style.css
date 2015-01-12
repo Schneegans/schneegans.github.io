@@ -673,3 +673,41 @@ div.teaser {
 .mfp-with-zoom.mfp-removing.mfp-bg {
   opacity: 0;
 }
+
+/* line 240, ../_sass/_custom.scss */
+#toc ul {
+  margin-top: -15px;
+  list-style: none;
+}
+/* line 244, ../_sass/_custom.scss */
+#toc ul a {
+  color: #bbb;
+  -moz-transition: all 0.1s;
+  -o-transition: all 0.1s;
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
+}
+/* line 246, ../_sass/_custom.scss */
+#toc ul a:hover {
+  color: #F06F20;
+}
+/* line 252, ../_sass/_custom.scss */
+#toc ul li {
+  list-style: none;
+}
+/* line 254, ../_sass/_custom.scss */
+#toc ul li.toc-active a {
+  color: #F06F20;
+}
+/* line 260, ../_sass/_custom.scss */
+#toc ul li.toc-h1 {
+  margin: 15px 0 0 0;
+}
+/* line 263, ../_sass/_custom.scss */
+#toc ul li.toc-h2 {
+  margin: 5px 0 0 0;
+}
+/* line 266, ../_sass/_custom.scss */
+#toc ul li.toc-h3 {
+  margin: 0 0 0 0;
+}
