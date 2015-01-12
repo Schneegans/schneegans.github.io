@@ -16,6 +16,7 @@
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
+    <link rel="stylesheet" href="{{ site.url }}/assets/magnific-popup/magnific-popup.css">
 
     <link href="{{ site.url }}/assets/jquery.kwicks.min.css" rel="stylesheet" type="text/css" media="all">
     <link href="{{ ASSET_PATH }}/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -110,11 +111,12 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="{{ ASSET_PATH }}/js/jquery.min.js"><\/script>')</script>
     <script src="{{ ASSET_PATH }}/bootstrap/js/bootstrap.min.js"></script>
+    <script src="{{ site.url }}/assets/magnific-popup/jquery.magnific-popup.min.js"></script>
 
     {% if page.url == "/index.html" %}
       <script src="{{ site.url }}/assets/jquery.kwicks.min.js"></script>
       <script>
-      $(window).ready(function() {
+      $(document).ready(function() {
         $(".kwicks").kwicks({
           maxSize : "75%",
           behavior: 'menu',
@@ -133,6 +135,42 @@
       })
       </script>
     {% endif %}
+
+     <script>
+      $(document).ready(function() {
+        $('.magnific-image').magnificPopup({
+          type:'image',
+          mainClass: 'mfp-with-zoom',
+          zoom: {
+            enabled: true,
+            opener: function(openerElement) {
+              if (openerElement.is('img')) {
+                return openerElement;
+              }
+
+              var imgs = openerElement.find('img');
+              if (imgs.length > 0) {
+                return imgs;
+              }
+
+              return openerElement.find('div');
+            }
+          }
+        });
+
+        $('.magnific-gallery').magnificPopup({
+          type:'image',
+          delegate:'a',
+          mainClass: 'mfp-with-zoom',
+          zoom: {
+            enabled: true
+          },
+          gallery: {
+            enabled: true
+          }
+        });
+      })
+     </script>
 
     {% include JB/analytics %}
   </body>

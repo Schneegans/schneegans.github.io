@@ -12,7 +12,7 @@ group: blog
 
 <div class="row post-preview">
   <div class="span6 visible-phone">
-    <div class="teaser" style="background-image:url({{ site.url }}/assets/pictures/{{post.teaser}})"> <div class="banner">{{post.date | date_to_string}}</div> </div>
+   <a href="{{post.url}}"><div class="teaser" style="background-image:url({{ site.url }}/assets/pictures/{{post.teaser}})"> <div class="banner">{{post.date | date_to_string}}</div> </div></a>
     <br />
     <br />
   </div>
@@ -24,7 +24,7 @@ group: blog
     <a href="{{post.url}}">read on &raquo;</a>
   </div>
   <div class="span6 hidden-phone">
-    <div class="teaser" style="background-image:url({{ site.url }}/assets/pictures/{{post.teaser}})"> <div class="banner">{{post.date | date_to_long_string}}</div> </div>
+    <a href="{{post.url}}"><div class="teaser" style="background-image:url({{ site.url }}/assets/pictures/{{post.teaser}})"> <div class="banner">{{post.date | date_to_long_string}}</div> </div></a>
   </div>
 
 </div>

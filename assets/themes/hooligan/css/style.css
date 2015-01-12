@@ -612,3 +612,31 @@ div.teaser {
   background-color: rgba(250, 167, 50, 0.29);
   border-color: rgba(255, 157, 18, 0.1);
 }
+
+/* line 192, ../_sass/_custom.scss */
+.mfp-with-zoom .mfp-container,
+.mfp-with-zoom.mfp-bg {
+  opacity: 0;
+  -webkit-backface-visibility: hidden;
+  /* ideally, transition speed should match zoom duration */
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+/* line 203, ../_sass/_custom.scss */
+.mfp-with-zoom.mfp-ready .mfp-container {
+  opacity: 1;
+}
+
+/* line 206, ../_sass/_custom.scss */
+.mfp-with-zoom.mfp-ready.mfp-bg {
+  opacity: 0.8;
+}
+
+/* line 210, ../_sass/_custom.scss */
+.mfp-with-zoom.mfp-removing .mfp-container,
+.mfp-with-zoom.mfp-removing.mfp-bg {
+  opacity: 0;
+}
