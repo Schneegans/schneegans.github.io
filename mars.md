@@ -8,7 +8,7 @@ group: featured-project
 
 
 <div class="responsive-video-169">
-<iframe src="http://player.vimeo.com/video/19975252?title=0&amp;byline=0&amp;portrait=0&amp;color=F5994D" width="1600" height="900" frameborder="0" webkitAllowFullScreen allowFullScreen></iframe>
+<iframe src="http://player.vimeo.com/video/19975252?title=0&amp;byline=0&amp;portrait=0&amp;color=F06F20" width="1600" height="900" frameborder="0" webkitAllowFullScreen allowFullScreen></iframe>
 </div>
 
 <br>

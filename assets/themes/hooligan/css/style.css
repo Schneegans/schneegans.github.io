@@ -24,7 +24,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* line 29, ../_sass/_base.scss */
 a {
-  color: #F5994D;
+  color: #F06F20;
   -moz-transition: all 0.3s;
   -o-transition: all 0.3s;
   -webkit-transition: all 0.3s;
@@ -32,7 +32,7 @@ a {
 }
 /* line 31, ../_sass/_base.scss */
 a:hover {
-  color: #fdecde;
+  color: #faccaf;
   text-decoration: none;
 }
 
@@ -532,7 +532,7 @@ div.teaser {
 }
 
 /* line 125, ../_sass/_custom.scss */
-.banner {
+.banner-right {
   margin: 20px -10px 0 0;
   padding: 5px 12px;
   -moz-border-radius: 2px 0 0 2px;
@@ -552,7 +552,7 @@ div.teaser {
   background-image: linear-gradient(to bottom, #2f2f2f, #1f1f1f);
 }
 /* line 126, ../_sass/_custom.scss */
-.banner::before {
+.banner-right::before {
   content: "";
   position: absolute;
   top: -11px;
@@ -564,7 +564,40 @@ div.teaser {
   height: 0;
 }
 
+/* line 148, ../_sass/_custom.scss */
+.banner-left {
+  margin: 20px 0 0 -10px;
+  padding: 5px 12px;
+  -moz-border-radius: 2px 0 0 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px 0 0 2px;
+  position: absolute;
+  left: 0;
+  border-top: 1px solid #373737;
+  -moz-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzJmMmYyZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzFmMWYxZiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #2f2f2f), color-stop(100%, #1f1f1f));
+  background-image: -moz-linear-gradient(top, #2f2f2f, #1f1f1f);
+  background-image: -webkit-linear-gradient(top, #2f2f2f, #1f1f1f);
+  background-image: linear-gradient(to bottom, #2f2f2f, #1f1f1f);
+}
 /* line 149, ../_sass/_custom.scss */
+.banner-left::before {
+  content: "";
+  position: absolute;
+  top: -11px;
+  left: 0;
+  border-color: transparent #111 #111 transparent;
+  border-style: solid;
+  border-width: 5px;
+  width: 0;
+  height: 0;
+}
+
+/* line 172, ../_sass/_custom.scss */
 .responsive-video-169 iframe,
 .responsive-video-32 iframe,
 .responsive-video-43 iframe {
@@ -575,7 +608,7 @@ div.teaser {
   height: 100%;
 }
 
-/* line 159, ../_sass/_custom.scss */
+/* line 182, ../_sass/_custom.scss */
 .responsive-video-169,
 .responsive-video-32,
 .responsive-video-43 {
@@ -587,33 +620,33 @@ div.teaser {
   overflow: hidden;
 }
 
-/* line 170, ../_sass/_custom.scss */
+/* line 193, ../_sass/_custom.scss */
 .responsive-video-169 {
   padding-bottom: 56.25%;
 }
 
-/* line 174, ../_sass/_custom.scss */
+/* line 197, ../_sass/_custom.scss */
 .responsive-video-43 {
   padding-bottom: 75%;
 }
 
-/* line 178, ../_sass/_custom.scss */
+/* line 201, ../_sass/_custom.scss */
 .responsive-video-32 {
   padding-bottom: 66.66%;
 }
 
-/* line 182, ../_sass/_custom.scss */
+/* line 205, ../_sass/_custom.scss */
 .post-meta {
   margin-top: -10px;
 }
 
-/* line 186, ../_sass/_custom.scss */
+/* line 209, ../_sass/_custom.scss */
 .alert {
   background-color: rgba(250, 167, 50, 0.29);
   border-color: rgba(255, 157, 18, 0.1);
 }
 
-/* line 192, ../_sass/_custom.scss */
+/* line 215, ../_sass/_custom.scss */
 .mfp-with-zoom .mfp-container,
 .mfp-with-zoom.mfp-bg {
   opacity: 0;
@@ -625,17 +658,17 @@ div.teaser {
   transition: all 0.3s ease-out;
 }
 
-/* line 203, ../_sass/_custom.scss */
+/* line 226, ../_sass/_custom.scss */
 .mfp-with-zoom.mfp-ready .mfp-container {
   opacity: 1;
 }
 
-/* line 206, ../_sass/_custom.scss */
+/* line 229, ../_sass/_custom.scss */
 .mfp-with-zoom.mfp-ready.mfp-bg {
   opacity: 0.8;
 }
 
-/* line 210, ../_sass/_custom.scss */
+/* line 233, ../_sass/_custom.scss */
 .mfp-with-zoom.mfp-removing .mfp-container,
 .mfp-with-zoom.mfp-removing.mfp-bg {
   opacity: 0;

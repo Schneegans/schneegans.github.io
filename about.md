@@ -5,22 +5,32 @@ header : about
 ---
 {% include JB/setup %}
 
-# About
+<h1>About</h1>
+<hr />
+<div class="row">
+  <div class="span9">
+  <p>This is the personal blog of Simon Schneegans, a student of computer media science at the <a href="http://www.uni-weimar.de/cms/">Bauhaus University</a> in Weimar.</p>
 
-This is the personal blog of Simon Schneegans, a student of computer media science at the [Bauhaus University](http://www.uni-weimar.de/cms/) in Weimar.
+  <address>
+    <strong>Simon Schneegans</strong><br>
+    Trierer Strasse 60<br>
+    99423 Weimar, Germany<br>
+    admin (at) simonschneegans.de
+  </address>
 
-## Contact
 
-<address class="well">
-  <strong>Simon Schneegans</strong><br>
-  Trierer Strasse 60<br>
-  99423 Weimar, Germany<br>
-  admin (at) simonschneegans.de
-</address>
+  </div>
+  <div class="span3">
+    {% assign link = "/assets/pictures/simon.jpg" %}
+    {% assign text = "That's me!" %}
+    {% include Magnific/image %}
+  </div>
+</div>
 
 
 ## License Information
 
+<div class="well">
 <table>
 <tbody>
 <tr>
@@ -33,3 +43,15 @@ This is the personal blog of Simon Schneegans, a student of computer media scien
 </tr>
 </tbody>
 </table>
+</div>
+
+### German disclaimer (Rechtliche Hinweise)
+
+
+
+<small>Alle Inhalte meines Internetauftritts wurden mit Sorgfalt und nach bestem Gewissen erstellt. Eine Gewähr für die Aktualität, Vollständigkeit und Richtigkeit sämtlicher Seiten kann jedoch nicht übernommen werden. Gemäß § 7 Abs. 1 TMG bin ich als Dienstanbieter für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich, nach den §§ 8 bis 10 TMG jedoch nicht verpflichtet, die übermittelten oder gespeicherten fremden Informationen zu überwachen. Eine umgehende Entfernung dieser Inhalte erfolgt ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung und wir haften nicht vor dem Zeitpunkt der Kenntniserlangung.</small>
+
+<small>Die Webseite enthält sog. „externe Links“ (Verknüpfungen zu Webseiten Dritter), auf deren Inhalt ich keinen Einfluss habe und für den ich aus diesem Grund keine Gewähr übernehme. Für die Inhalte und Richtigkeit der Informationen ist der jeweilige Informationsanbieter der verlinkten Webseite verantwortlich. Als die Verlinkung vorgenommen wurde, waren für mich keine Rechtsverstöße erkennbar. Sollte mir eine Rechtsverletzung bekannt werden, wird der jeweilige Link umgehend entfernt.</small>
+
+<small>Durch den Besuch meines Internetauftritts können Informationen über den Zugriff (Datum, Uhrzeit, aufgerufene Seite) auf dem Server gespeichert werden. Dies stellt keine Auswertung personenbezogener Daten (z.B. Name, Anschrift oder E-Mail Adresse) dar. Sofern personenbezogene Daten erhoben werden, erfolgt dies – sofern möglich – nur mit dem vorherigen Einverständnis des Nutzers der Webseite. Eine Weiterleitung der Daten an Dritte findet ohne ausdrückliche Zustimmung des Nutzers nicht statt. Ich weise ausdrücklich darauf hin, dass die Übertragung von Daten im Internet (z.B. per E-Mail) Sicherheitslücken aufweisen kann. Ein lückenloser Schutz der Daten vor dem Zugriff Dritter kann nicht gewährleistet werden. Ich kann keine Haftung für die durch solche Sicherheitslücken entstehenden Schäden übernehmen. Der Verwendung veröffentlichter Kontaktdaten durch Dritte zum Zwecke von Werbung wird ausdrücklich widersprochen. Ich behalte mir rechtliche Schritte für den Fall der unverlangten Zusendung von Werbeinformationen, z.B. durch Spam-Mails, vor.</small>
+

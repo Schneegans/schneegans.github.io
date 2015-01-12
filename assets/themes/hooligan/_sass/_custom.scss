@@ -122,7 +122,7 @@ div.teaser {
   position:relative;
 }
 
-.banner {
+.banner-right {
   &::before {
     content: "";
     position: absolute;
@@ -140,6 +140,29 @@ div.teaser {
   @include border-radius(2px 0 0 2px);
   position: absolute;
   right:0;
+  border-top: 1px solid #373737;
+  @include box-shadow(0 2px 5px rgba(0, 0, 0, 0.8));
+  @include background-image(linear-gradient(to bottom, #2f2f2f, #1f1f1f));
+}
+
+.banner-left {
+  &::before {
+    content: "";
+    position: absolute;
+    top: -11px;
+    left: 0;
+    border-color: transparent #111 #111 transparent;
+    border-style: solid;
+    border-width: 5px;
+    width: 0;
+    height: 0;
+  }
+
+  margin: 20px 0 0 -10px;
+  padding: 5px 12px;
+  @include border-radius(2px 0 0 2px);
+  position: absolute;
+  left:0;
   border-top: 1px solid #373737;
   @include box-shadow(0 2px 5px rgba(0, 0, 0, 0.8));
   @include background-image(linear-gradient(to bottom, #2f2f2f, #1f1f1f));

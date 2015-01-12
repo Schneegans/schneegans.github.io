@@ -77,7 +77,7 @@ Both prototypes were coded with Vala on Ubuntu Linux. The source code can be <a 
 The first prototype is targeted at users who often search for items due to their manifold menu usage. It displays hierarchies with ease. Even very deep hierarchies are easy to explore. Many items are displayed by increasing the pie's radius and stacking the labels which are displayed next to their sector on top of each other. The following clip demonstrates the behavior. As you can see, the items of sub-menus are indicated by little dark blobs at their parents. This menu is quite fast to use because of the mouse making a smooth movement.
 
 <div class="responsive-video-43">
-<iframe src="http://player.vimeo.com/video/51072812?title=0&amp;byline=0&amp;portrait=0&amp;color=F5994D" width="1200" height="900" frameborder="0" webkitAllowFullScreen allowFullScreen></iframe>
+<iframe src="http://player.vimeo.com/video/51072812?title=0&amp;byline=0&amp;portrait=0&amp;color=F06F20" width="1200" height="900" frameborder="0" webkitAllowFullScreen allowFullScreen></iframe>
 </div>
 
 ### 2.2. The Trace-Menu
@@ -85,7 +85,7 @@ The first prototype is targeted at users who often search for items due to their
 The second prototype addresses itself to users who often make use of the same menus. Thus they know where to find an entry and want to select it blazingly fast. In contrast to the Coral-Menu each sub-menu is a complete 360-degree-Pie-Menu with one entry being the parent menu. The hierarchy is visualized by a path between the visited menus. This menu features a so-called "Marking-Mode": The user may _draw_ the path (the "trace") to the desired entry with one continuous gesture. Watch the following clip and you will understand this behavior - the Marking-Mode is used for the very last selection.
 
 <div class="responsive-video-43">
-<iframe src="http://player.vimeo.com/video/51073078?title=0&amp;byline=0&amp;portrait=0&amp;color=F5994D" width="1200" height="900" frameborder="0" webkitAllowFullScreen allowFullScreen></iframe>
+<iframe src="http://player.vimeo.com/video/51073078?title=0&amp;byline=0&amp;portrait=0&amp;color=F06F20" width="1200" height="900" frameborder="0" webkitAllowFullScreen allowFullScreen></iframe>
 </div>
 
 The visualization of wide menus is not shown in this clip. For this purpose the Trace-Menu generates artificial sub-menus when there are more than eight entries at one level. These sub-menus are labeled with all contained items. In order to select an item, the user first selects the generated sub-menu which contains the desired item and secondly selects the item itself.
