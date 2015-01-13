@@ -8,9 +8,9 @@ tagline: Supporting tagline
 <ul class='kwicks kwicks-horizontal'>
     <li id="panel-1">
       <div class="description">
-      <h2>Test Heading</h2>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis rem maxime consequatur necessitatibus dolorem, nesciunt dolores. Culpa rem temporibus nihil voluptatibus, doloremque totam, eligendi dicta, veniam optio distinctio, debitis enim. </div>
-      <div class="bg" style="background-image:url('{{ site.url }}/assets/pictures/header01.jpg')"></div>
+      <h2>GNOME-PIE</h2>
+      Gnome-Pie a slick application launcher for Linux. It’s eye candy and pretty fun to work with. It offers multiple ways to improve your desktop experience.</div>
+      <div class="bg" style="background-image:url('{{ site.url }}/assets/pictures/teaser-gnomepie.jpg')"></div>
     </li>
     <li id="panel-2">
       <div class="description">
@@ -20,9 +20,9 @@ tagline: Supporting tagline
     </li>
     <li id="panel-3">
       <div class="description">
-      <h2>Test Heading</h2>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad alias molestias velit facilis quam provident veniam quo quis dolores, possimus necessitatibus delectus esse, quidem fuga cumque itaque, harum sint earum! </div>
-      <div class="bg" style="background-image:url('{{ site.url }}/assets/pictures/header03.jpg')"></div>
+      <h2>Les Formes et les Couleurs</h2>
+      It is short &amp; funny old-school stop motion video created together with a friend of mine. It feauters 927 frames shot with a Canon EOS 450d.</div>
+      <div class="bg" style="background-image:url('{{ site.url }}/assets/pictures/teaser-formes-et-couleurs.jpg')"></div>
     </li>
     <li id="panel-4">
       <div class="description">

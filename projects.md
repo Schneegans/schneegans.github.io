@@ -65,6 +65,6 @@ group: projects
             <div class="banner-right">Stop motion clip</div>
             <img src="{{ site.url }}/assets/pictures/project-formes-et-couleurs.jpg" alt="">
         </div><br/>
-         It is a game for two players, flying with ships in a two-dimensional space setting, governed by the laws of gravity.<br/><br/>
+         It is short &amp; funny old-school stop motion video created together with a friend of mine.<br/><br/>
     </div>
 </div>

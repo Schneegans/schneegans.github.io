@@ -1,6 +1,6 @@
 /* Partials */
-@import url(http://fonts.googleapis.com/css?family=Advent+Pro);
-@import url(http://fonts.googleapis.com/css?family=Oxygen);
+@import url(https://fonts.googleapis.com/css?family=Advent+Pro);
+@import url(https://fonts.googleapis.com/css?family=Oxygen);
 /* Theme Vars */
 /* Compass Vars */
 /* line 12, ../_sass/_base.scss */
@@ -512,9 +512,10 @@ ul.sub-nav li {
 .kwicks > li .bg {
   height: 100%;
   width: 100%;
+  background-size: cover;
 }
 
-/* line 108, ../_sass/_custom.scss */
+/* line 109, ../_sass/_custom.scss */
 div.teaser {
   width: 100%;
   height: 300px;
@@ -524,14 +525,14 @@ div.teaser {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
 }
 
-/* line 119, ../_sass/_custom.scss */
+/* line 120, ../_sass/_custom.scss */
 .post-preview {
   margin-top: 30px;
   margin-bottom: 30px;
   position: relative;
 }
 
-/* line 125, ../_sass/_custom.scss */
+/* line 128, ../_sass/_custom.scss */
 .banner-right {
   margin: 20px -10px 0 0;
   padding: 5px 12px;
@@ -551,7 +552,7 @@ div.teaser {
   background-image: -webkit-linear-gradient(top, #2f2f2f, #1f1f1f);
   background-image: linear-gradient(to bottom, #2f2f2f, #1f1f1f);
 }
-/* line 126, ../_sass/_custom.scss */
+/* line 129, ../_sass/_custom.scss */
 .banner-right::before {
   content: "";
   position: absolute;
@@ -564,7 +565,7 @@ div.teaser {
   height: 0;
 }
 
-/* line 148, ../_sass/_custom.scss */
+/* line 151, ../_sass/_custom.scss */
 .banner-left {
   margin: 20px 0 0 -10px;
   padding: 5px 12px;
@@ -584,7 +585,7 @@ div.teaser {
   background-image: -webkit-linear-gradient(top, #2f2f2f, #1f1f1f);
   background-image: linear-gradient(to bottom, #2f2f2f, #1f1f1f);
 }
-/* line 149, ../_sass/_custom.scss */
+/* line 152, ../_sass/_custom.scss */
 .banner-left::before {
   content: "";
   position: absolute;
@@ -597,7 +598,7 @@ div.teaser {
   height: 0;
 }
 
-/* line 172, ../_sass/_custom.scss */
+/* line 176, ../_sass/_custom.scss */
 .responsive-video-169 iframe,
 .responsive-video-32 iframe,
 .responsive-video-43 iframe {
@@ -608,7 +609,7 @@ div.teaser {
   height: 100%;
 }
 
-/* line 182, ../_sass/_custom.scss */
+/* line 186, ../_sass/_custom.scss */
 .responsive-video-169,
 .responsive-video-32,
 .responsive-video-43 {
@@ -620,33 +621,33 @@ div.teaser {
   overflow: hidden;
 }
 
-/* line 193, ../_sass/_custom.scss */
+/* line 197, ../_sass/_custom.scss */
 .responsive-video-169 {
   padding-bottom: 56.25%;
 }
 
-/* line 197, ../_sass/_custom.scss */
+/* line 201, ../_sass/_custom.scss */
 .responsive-video-43 {
   padding-bottom: 75%;
 }
 
-/* line 201, ../_sass/_custom.scss */
+/* line 205, ../_sass/_custom.scss */
 .responsive-video-32 {
   padding-bottom: 66.66%;
 }
 
-/* line 205, ../_sass/_custom.scss */
+/* line 209, ../_sass/_custom.scss */
 .post-meta {
   margin-top: -10px;
 }
 
-/* line 209, ../_sass/_custom.scss */
+/* line 215, ../_sass/_custom.scss */
 .alert {
   background-color: rgba(250, 167, 50, 0.29);
   border-color: rgba(255, 157, 18, 0.1);
 }
 
-/* line 215, ../_sass/_custom.scss */
+/* line 221, ../_sass/_custom.scss */
 .mfp-with-zoom .mfp-container,
 .mfp-with-zoom.mfp-bg {
   opacity: 0;
@@ -658,28 +659,28 @@ div.teaser {
   transition: all 0.3s ease-out;
 }
 
-/* line 226, ../_sass/_custom.scss */
+/* line 232, ../_sass/_custom.scss */
 .mfp-with-zoom.mfp-ready .mfp-container {
   opacity: 1;
 }
 
-/* line 229, ../_sass/_custom.scss */
+/* line 235, ../_sass/_custom.scss */
 .mfp-with-zoom.mfp-ready.mfp-bg {
   opacity: 0.8;
 }
 
-/* line 233, ../_sass/_custom.scss */
+/* line 239, ../_sass/_custom.scss */
 .mfp-with-zoom.mfp-removing .mfp-container,
 .mfp-with-zoom.mfp-removing.mfp-bg {
   opacity: 0;
 }
 
-/* line 240, ../_sass/_custom.scss */
+/* line 246, ../_sass/_custom.scss */
 #toc ul {
   margin-top: -15px;
   list-style: none;
 }
-/* line 244, ../_sass/_custom.scss */
+/* line 250, ../_sass/_custom.scss */
 #toc ul a {
   color: #bbb;
   -moz-transition: all 0.1s;
@@ -687,27 +688,27 @@ div.teaser {
   -webkit-transition: all 0.1s;
   transition: all 0.1s;
 }
-/* line 246, ../_sass/_custom.scss */
+/* line 252, ../_sass/_custom.scss */
 #toc ul a:hover {
   color: #F06F20;
 }
-/* line 252, ../_sass/_custom.scss */
+/* line 258, ../_sass/_custom.scss */
 #toc ul li {
   list-style: none;
 }
-/* line 254, ../_sass/_custom.scss */
+/* line 260, ../_sass/_custom.scss */
 #toc ul li.toc-active a {
   color: #F06F20;
 }
-/* line 260, ../_sass/_custom.scss */
+/* line 266, ../_sass/_custom.scss */
 #toc ul li.toc-h1 {
   margin: 15px 0 0 0;
 }
-/* line 263, ../_sass/_custom.scss */
+/* line 269, ../_sass/_custom.scss */
 #toc ul li.toc-h2 {
   margin: 5px 0 0 0;
 }
-/* line 266, ../_sass/_custom.scss */
+/* line 272, ../_sass/_custom.scss */
 #toc ul li.toc-h3 {
   margin: 0 0 0 0;
 }

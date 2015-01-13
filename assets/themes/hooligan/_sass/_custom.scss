@@ -101,6 +101,7 @@ ul.sub-nav {
   .bg {
     height:100%;
     width:100%;
+    background-size:cover;
   }
 }
 
@@ -121,6 +122,8 @@ div.teaser {
   margin-bottom: 30px;
   position:relative;
 }
+
+// banners ---------------------------------------------------------------------
 
 .banner-right {
   &::before {
@@ -168,6 +171,7 @@ div.teaser {
   @include background-image(linear-gradient(to bottom, #2f2f2f, #1f1f1f));
 }
 
+// responsive video ------------------------------------------------------------
 
 .responsive-video-169 iframe,
 .responsive-video-32 iframe,
@@ -205,6 +209,8 @@ div.teaser {
 .post-meta {
   margin-top: -10px;
 }
+
+// alerts ----------------------------------------------------------------------
 
 .alert {
   background-color: rgba(250, 167, 50, 0.29);
