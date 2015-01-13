@@ -96,7 +96,7 @@ mkdir debian && cd debian
 Now we will go through each individual file and check what it is for. You can download the file of each section with the given command. Just execute it inside the "debian"-directory and open the downloaded file in an editor of your choice.
 
 {% highlight bash %}
-wget http://www.simonschneegans.de/files/ppa-howto/control
+wget http://www.simonschneegans.de/assets/files/ppa-howto/control
 {% endhighlight %}
 
 This first file is "control". It specifies which packages are needed for building your package, what it is called and some information on you. The first section of the file describes the source package. The second part is the configuration for the resulting binary package.
@@ -109,7 +109,7 @@ You'll have to write your name and e-mail address to the appropriate fields.
 The second file, "rules", is very important, too. It tells launchpad how to exactly compile your application. It is basically a normal makefile with some special targets, which are invoked by launchpad.
 
 {% highlight bash %}
-wget http://www.simonschneegans.de/files/ppa-howto/rules
+wget http://www.simonschneegans.de/assets/files/ppa-howto/rules
 {% endhighlight %}
 
 The target "clean" is called firstly. Then launchpad will execute "build", which does the same thing as we tested above. It will create a build directory, change to it, execute CMake (with the install prefix set to a directory inside the debian directory) and compile the application.
@@ -122,7 +122,7 @@ You don't need to alter the content of this file.
 The third file is "changelog". It contains some information on what you have done since the last release.
 
 {% highlight bash %}
-wget http://www.simonschneegans.de/files/ppa-howto/changelog
+wget http://www.simonschneegans.de/assets/files/ppa-howto/changelog
 {% endhighlight %}
 
 The first line specifies for what distribution your package is made and its version. Then there can be multiple lines containing the change log information. The last line has to be _exactly_ like it is shown there. Mind the **two spaces** after your e-mail address! Without them, your package will be rejected!
@@ -132,7 +132,7 @@ Please change the date and the e-mail address accordingly. The date string can b
 ### 3.4 The copyright file
 
 {% highlight bash %}
-wget http://www.simonschneegans.de/files/ppa-howto/copyright
+wget http://www.simonschneegans.de/assets/files/ppa-howto/copyright
 {% endhighlight %}
 
 The last file contains your copyright information. It does not follow any structure and can contain everything you want. Here is a GPL-3 example. Just insert your name.
