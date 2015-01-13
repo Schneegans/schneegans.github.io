@@ -36,7 +36,7 @@ Here's another showcase of Gnome-Pie. It features the new settings menu of Gnome
 <br/>
 
 # Installation of Gnome-Pie
-<hr/>
+<hr>
 
 {% assign link = "/assets/pictures/install.jpg" %}
 {% assign text = "How to install Gnome-Pie!" %}
@@ -84,7 +84,7 @@ Then you can launch the application via your main menu. It will start silently, 
 <br/>
 
 # Using Gnome-Pie
-<hr/>
+<hr>
 
 {% assign link = "/assets/pictures/use.jpg" %}
 {% assign text = "How to use Gnome-Pie!" %}
@@ -140,7 +140,7 @@ When you now move your mouse towards the selected edge, the pie with the specifi
 <br/>
 
 # Getting involved
-<hr/>
+<hr>
 
 {% assign link = "/assets/pictures/contribute.jpg" %}
 {% assign text = "Contribute to Gnome-Pie!" %}
