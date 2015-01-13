@@ -7,8 +7,6 @@ teaser: "translate.jpg"
 tags: ["featured"]
 ---
 
-{% include JB/setup %}
-
 It would be really cool if you could create a translation of Gnome-Pie into your language! It is quite easy and involves the following steps.
 
 <!--more-->

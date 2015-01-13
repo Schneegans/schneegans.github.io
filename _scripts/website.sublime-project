@@ -4,10 +4,10 @@
 		{
 			"cmd":
 			[
-				"./scripts/make.sh"
+				"./_scripts/make.sh"
 			],
 			"file_regex": "^(..[^:]*):(.*)$",
-			"name": "guacamole-website",
+			"name": "website",
 			"working_dir": "${project_path}/.."
 		}
 	],

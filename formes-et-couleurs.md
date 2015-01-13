@@ -4,8 +4,6 @@ title : Les Formes et les Couleurs
 header : Les Formes et les Couleurs
 group: featured-project
 ---
-{% include JB/setup %}
-
 
 <div class="responsive-video-32">
 <iframe src="http://player.vimeo.com/video/69958297?title=0&amp;byline=0&amp;portrait=0&amp;color={% include link_color %}" width="1600" height="900" frameborder="0" webkitAllowFullScreen allowFullScreen></iframe>

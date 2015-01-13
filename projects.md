@@ -4,7 +4,6 @@ title : projects
 header : projects
 group: projects
 ---
-{% include JB/setup %}
 
 <div class="row">
     <div class="span6">

@@ -3,7 +3,6 @@ layout: page
 title : about
 header : about
 ---
-{% include JB/setup %}
 
 <h1>About</h1>
 <hr>
@@ -23,7 +22,7 @@ header : about
   <div class="span3">
     {% assign link = "/assets/pictures/simon.jpg" %}
     {% assign text = "That's me!" %}
-    {% include Magnific/image %}
+    {% include magnific/image %}
   </div>
 </div>
 

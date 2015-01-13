@@ -4,7 +4,7 @@ Feel free to visit it at <http://simmesimme.github.io>
 
 ## Used Software
 
-The homepage uses the awesome [Jekyll-Bootstrap](http://jekyllbootstrap.com) and a theme based on [The Hooligan Theme](http://github.com/dhulihan/hooligan).
+The homepage uses a theme based on [The Hooligan Theme](http://github.com/dhulihan/hooligan).
 
 ## License
 

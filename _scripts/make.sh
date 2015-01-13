@@ -1,4 +1,4 @@
 #!/bin/bash
 
-cd assets/themes/hooligan/
+cd _sass
 compass compile

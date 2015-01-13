@@ -322,7 +322,7 @@ html, body {
   padding-top: 30px;
   padding-bottom: 30px;
   background-color: #2a2a2a;
-  background: url(../images/bgs/body.png) repeat;
+  background: url(../third_party/images/bgs/body.png) repeat;
   box-shadow: 0 0px 10px rgba(0, 0, 0, 0.8);
   border-top: 1px solid #373737;
 }
@@ -470,7 +470,7 @@ ul.sub-nav li {
 /* line 66, ../_sass/_custom.scss */
 .page-header li.active {
   background-color: #2a2a2a;
-  background: url(../images/bgs/body.png) repeat;
+  background: url(../third_party/images/bgs/body.png) repeat;
   border-top: 1px solid #373737;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;

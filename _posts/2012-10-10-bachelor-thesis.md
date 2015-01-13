@@ -7,8 +7,6 @@ teaser: "bachelor/bachelor01.jpg"
 tags: ["featured"]
 ---
 
-{% include JB/setup %}
-
 And finally it's done. After some months of hard work I'm now a Bachelor of Science! I passed with distinction and since many of you helped me by sending in your usage statistics of Gnome-Pie, I owe you many THANKS and a summary of what I achieved. You may just read the abstract and look at the pictures, graphs and videos to get a glimpse of the results or (if you're brave and greedy for knowledge) you may read the entire summary.
 
 <!--more-->
@@ -32,13 +30,13 @@ Gnome-Pie was created in order to bring Pie-Menus to the Linux desktop. It is no
 
 {% assign link = "/assets/pictures/bachelor/bachelor10.jpg" %}
 {% assign text = "Correlation between item count and selection time in Gnome-Pie" %}
-{% include Magnific/image %}
+{% include magnific/image %}
 
 Selection performance in Gnome-Pie is generally high. The mode of selection is 1.4 seconds which is quite fast, particularly considering the real-world circumstances of this study: the users were not told to operate the menu as fast as possible. I was surprised by the humble amount of quick-actions used - only a few users employed them at all. And those who did, were only slightly faster. They achieved a mode of 1.2 seconds. This is interesting, as the pointer does not have to be moved at all in order to select a quick action!
 
 {% assign link = "/assets/pictures/bachelor/bachelor09.jpg" %}
 {% assign text = "Density functions of selection time done with Gnome-Pie by 150 users" %}
-{% include Magnific/image %}
+{% include magnific/image %}
 
 Additionally to Gnome-Pie I evaluated many other Pie-Menu concepts and structured their benefits and drawbacks. None of them was able to display both, wide _and_ deep menus. This is necessary to compete with conventional linear menus, which are slow to operate but are able to do both.
 
@@ -108,19 +106,19 @@ When unknown entries had been searched, the linear menu remained the fastest. As
 
 {% assign link = "/assets/pictures/bachelor/bachelor06.jpg" %}
 {% assign text = "Prototype search performance for different menu configurations compared to the linear menu" %}
-{% include Magnific/image %}
+{% include magnific/image %}
 
 When the same entry is selected multiple times, the situation is flipped. After eight or nine selections (graph below) the Trace-Menu performs twice as good as the linear menu. The Coral-Menu is roughly 25 % faster than the linear menu when selecting well-known items. Due to the unnatural circumstances these numbers are suitable as a upper limit which may be reached by real experts only.
 
 {% assign link = "/assets/pictures/bachelor/bachelor07.jpg" %}
 {% assign text = "Menu performance for consecutive selections of the same item" %}
-{% include Magnific/image %}
+{% include magnific/image %}
 
 Very interesting is a comparison of these figures to the control group which selected the same entries in multiple training sessions. The trend of the curves is similar. But the differences between the menu types are much lower and the achieved performance level is only half. At the end of the sixth training, members of this group had selected each entry 30 times.
 
 {% assign link = "/assets/pictures/bachelor/bachelor08.jpg" %}
 {% assign text = "Menu performance for multiple selections of the same item distributed over six training sessions" %}
-{% include Magnific/image %}
+{% include magnific/image %}
 
 ## 4. Summary
 
@@ -132,11 +130,11 @@ Both prototypes were mostly used as intended. During the test I recorded the mou
 
 {% assign link = "/assets/pictures/bachelor/coral_paths.jpg" %}
 {% assign text = "Cursor movement of users of the Coral-Menu. Green dots visualize mouse clicks" %}
-{% include Magnific/image %}
+{% include magnific/image %}
 
 {% assign link = "/assets/pictures/bachelor/trace_paths.jpg" %}
 {% assign text = "Cursor movement of users of the Trace-Menu. Green dots visualize mouse clicks" %}
-{% include Magnific/image %}
+{% include magnific/image %}
 
 But there are some design issues which need to be fixed. The biggest problems of the Coral-Menu are:
 

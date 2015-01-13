@@ -16,15 +16,15 @@
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    <link rel="stylesheet" href="{{ site.url }}/assets/magnific-popup/magnific-popup.css">
+    <link rel="stylesheet" href="/third_party/magnific-popup.css">
 
-    <link href="{{ site.url }}/assets/jquery.kwicks.min.css" rel="stylesheet" type="text/css" media="all">
-    <link href="{{ ASSET_PATH }}/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="{{ ASSET_PATH }}/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="{{ ASSET_PATH }}/css-social-buttons/css/zocial.stripped.css">
-    <link href="{{ ASSET_PATH }}/css/pygments.css" rel="stylesheet" type="text/css" media="all">
-    <link href="{{ ASSET_PATH }}/css/darkstrap.css" rel="stylesheet" type="text/css" media="all">
-    <link href="{{ ASSET_PATH }}/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+    <link href="/third_party/jquery.kwicks.min.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/third_party/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/third_party/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/third_party/css-social-buttons/css/zocial.stripped.css">
+    <link href="/third_party/css/pygments.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/third_party/css/darkstrap.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/main.css?body=1" rel="stylesheet" type="text/css" media="all">
 
 
     <!-- fav and touch icons -->
@@ -60,7 +60,7 @@
           {% else %}
           <li>
           {% endif %}
-            <a href="{{ HOME_PATH }}">by {{ site.title }}</a>
+            <a href="/">by {{ site.title }}</a>
           </li>
         </ul>
       </div>
@@ -97,23 +97,23 @@
           {% if site.author.linkedin %}
             <a href="http://www.linkedin.com/in/{{ site.author.linkedin }}" class="zocial linkedin icon" target="_blank"></a>
           {% endif %}
-            <a href="{{site.url}}/rss.xml" class="zocial rss icon" target="_blank"></a>
+            <a href="{{site.url}}/feed.xml" class="zocial rss icon" target="_blank"></a>
 
         </p>
-        <p>&copy; {{ site.time | date: '%Y' }} Desgin &amp; Content by <a href="{{ site.path }}/about.html">{{ site.author.name }} (Impressum)</a> with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a> and the <a href="http://github.com/dhulihan/hooligan" target="_blank">Hooligan Theme</a>. Proudly hosted on <a href="https://pages.github.com/">github pages</a>. (<a href="https://github.com/Simmesimme/Simmesimme.github.io">repository</a>)
+        <p>&copy; {{ site.time | date: '%Y' }} Desgin &amp; Content by <a href="{{ site.path }}/about.html">{{ site.author.name }} (Impressum)</a> with help from <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> and the <a href="http://github.com/dhulihan/hooligan" target="_blank">Hooligan Theme</a>. Proudly hosted on <a href="https://pages.github.com/">github pages</a>. (<a href="https://github.com/Simmesimme/Simmesimme.github.io">repository</a>)
         </p>
       </div> <!-- /container -->
     </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="{{ ASSET_PATH }}/js/jquery.min.js"><\/script>')</script>
-    <script src="{{ ASSET_PATH }}/bootstrap/js/bootstrap.min.js"></script>
-    <script src="{{ site.url }}/assets/magnific-popup/jquery.magnific-popup.min.js"></script>
-    <script src="{{ site.url }}/assets/jquery.toc.min.js"></script>
-    <script src="{{ site.url }}/assets/jquery.sticky-kit.min.js"></script>
+    <script>window.jQuery || document.write('<script src="/third_party/js/jquery.min.js"><\/script>')</script>
+    <script src="/third_party/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/third_party/jquery.magnific-popup.min.js"></script>
+    <script src="/third_party/jquery.toc.min.js"></script>
+    <script src="/third_party/jquery.sticky-kit.min.js"></script>
 
     {% if page.url == "/index.html" %}
-      <script src="{{ site.url }}/assets/jquery.kwicks.min.js"></script>
+      <script src="/third_party/jquery.kwicks.min.js"></script>
       <script>
       $(document).ready(function() {
         $(".kwicks").kwicks({
@@ -178,7 +178,5 @@
         });
       })
      </script>
-
-    {% include JB/analytics %}
   </body>
 </html>

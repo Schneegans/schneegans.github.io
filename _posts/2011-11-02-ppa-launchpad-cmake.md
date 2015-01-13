@@ -7,8 +7,6 @@ teaser: "launchpad.jpg"
 tags: ["featured"]
 ---
 
-{% include JB/setup %}
-
 When I first wanted to create a PPA for Ubuntu, it was a pain. It was barely documented, unnecessarily complex and --- the worst thing of all --- when there was a tutorial, it employs retarded stuff like auto-tools (sorry for those who happen to like these tools - I don't).
 
 <!--more-->

@@ -4,7 +4,6 @@ title : Gnome-Pie
 header : Gnome-Pie
 group: featured-project
 ---
-{% include JB/setup %}
 
 Gnome-Pie is a circular application launcher for Linux. It is made of several pies, each consisting of multiple slices. The user presses a key stroke which opens the desired pie. By activating one of its slices, applications may be launched, key presses may be simulated or files can be opened.
 
@@ -40,7 +39,7 @@ Here's another showcase of Gnome-Pie. It features the new settings menu of Gnome
 
 {% assign link = "/assets/pictures/install.jpg" %}
 {% assign text = "How to install Gnome-Pie!" %}
-{% include Magnific/image %}
+{% include magnific/image %}
 
 Besides from installing from source there are other ways to install Gnome-Pie. I maintain a PPA for easy installation on ubuntu-ish distributions and there are several repositories for other distributions, like <a href="https://aur.archlinux.org/packages.php?ID=52732&detail=0">Arch Linux</a>.
 
@@ -88,13 +87,13 @@ Then you can launch the application via your main menu. It will start silently, 
 
 {% assign link = "/assets/pictures/use.jpg" %}
 {% assign text = "How to use Gnome-Pie!" %}
-{% include Magnific/image %}
+{% include magnific/image %}
 
 ## Tweaking the behavior of Gnome-Pie
 
 {% assign link = "/assets/pictures/gnome-pie_06.jpg" %}
 {% assign text = "The settings menu of Gnome-Pie" %}
-{% include Magnific/image_right %}
+{% include magnific/image_right %}
 By clicking on the panel-indicator of Gnome-Pie or by launching the application a second time, you can open its settings menu.
 
 Here you can set up your Pies. All your Pies are listed on the left --- you can add new or delete existing pies with the little plus and minus sign in the lower left-hand corner. On the right is a preview of each Pie. Simply drag and drop the Slice to reorder them. You can drag stuff from your computer to this preview in order to add it to the Pie.
@@ -115,7 +114,7 @@ Where _123_ is the ID of the desired pie. The ID of each pie is displayed in the
 
 {% assign link = "/assets/pictures/gnome-pie_04.jpg" %}
 {% assign text = "Assigning gestures with easystroke" %}
-{% include Magnific/image_right %}
+{% include magnific/image_right %}
 With the open source application _Easystroke_ you can easily execute any command when performing a user defined action. You can install this tool and bind each pie you want to a gesture. For example you may draw a big B on your screen to open the bookmarks-pie. It's easy to set up and really cool!
 
 Easystroke has an interface which is quite to understand. If you want some additional information you can have a look at the <a href="http://sourceforge.net/apps/trac/easystroke/wiki/Documentation">official documentation</a>.
@@ -124,7 +123,7 @@ Easystroke has an interface which is quite to understand. If you want some addit
 
 {% assign link = "/assets/pictures/gnome-pie_03.jpg" %}
 {% assign text = "Creating a launcher for opening pies" %}
-{% include Magnific/image_right %}
+{% include magnific/image_right %}
 You can also create a launcher on your desktop which opens pies. Simply drag'n'drop a pie from the configuration menu to your desktop. Where you dropped the pie, a launcher will appear. Clicking on this launcher will then open your pie. Maybe you can drag'n'drop this launcher to your panel/dock/whats-o-ever to suit your needs!
 
 <div class="clearfix"></div>
@@ -133,7 +132,7 @@ You can also create a launcher on your desktop which opens pies. Simply drag'n'd
 
 {% assign link = "/assets/pictures/gnome-pie_07.jpg" %}
 {% assign text = "Using the Advanced Compiz-Config-Settings-Manager to open pies" %}
-{% include Magnific/image_right %}
+{% include magnific/image_right %}
 If you're using Compiz as your composition manager you can assign commands to the edges and corners of your screen. Consequently you can open pies simply by touching the edge of your screen with your pointer.
 
 All you need is the _compizconfig-settings-manager_. You may install it from your package manager.
@@ -142,7 +141,7 @@ All you need is the _compizconfig-settings-manager_. You may install it from you
 
 {% assign link = "/assets/pictures/gnome-pie_08.jpg" %}
 {% assign text = "Selecting an edge to open a pie" %}
-{% include Magnific/image_right %}
+{% include magnific/image_right %}
 Open the compizconfig-settings-manager: In the configuration of the plugin <em>Commands</em> enter <code>gnome-pie -o 123</code> (with 123 being the ID of your desired pie). Then select an edge in the <em>Edge Bindings</em> tab.
 
 When you now move your mouse towards the selected edge, the pie with the specified ID will pop up.
@@ -158,7 +157,7 @@ When you now move your mouse towards the selected edge, the pie with the specifi
 
 {% assign link = "/assets/pictures/contribute.jpg" %}
 {% assign text = "Contribute to Gnome-Pie!" %}
-{% include Magnific/image %}
+{% include magnific/image %}
 
 
 ## I need your help!
