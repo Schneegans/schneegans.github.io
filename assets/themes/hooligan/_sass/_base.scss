@@ -2,7 +2,7 @@
 @import url(https://fonts.googleapis.com/css?family=Oxygen);
 
 /* Theme Vars */
-$link-color: #F06F20;
+$link-color: #FF9758;
 
 /* Compass Vars */
 $default-box-shadow-color: #000;
@@ -280,11 +280,10 @@ html, body {
 	min-height: 100%;
 	height: auto !important;
 	height: 100%;
-	margin: 0;
+	margin-bottom: $footerHeight;
 }
 
 #page-background {
-	margin-bottom: $footerHeight;
 	padding-top:30px;
 	padding-bottom:30px;
 	background-color: #2a2a2a;
