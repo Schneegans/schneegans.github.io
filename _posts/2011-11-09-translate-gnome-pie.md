@@ -4,7 +4,6 @@ title: "Translate Gnome-Pie!"
 tagline: "a step-by-step guide"
 category: lessons
 teaser: "translate.jpg"
-tags: ["featured"]
 ---
 
 It would be really cool if you could create a translation of Gnome-Pie into your language! It is quite easy and involves the following steps.
