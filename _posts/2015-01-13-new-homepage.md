@@ -1,32 +1,18 @@
 ---
 layout: post
-title: "I updated my homepage!"
-tagline: "cool"
+title: "Updated homepage!"
+tagline: "because there will be news to be told "
 category: news
-teaser: "gnome-pie055.jpg"
+teaser: "sunset.jpg"
+description: "A new start"
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+It's been a while since my last post. But since I'm planning to release new updates for Gnome-Pie, I decided to create a new homepage! It is now hosted on github pages and built with jekyll. I ported some of the old wordpress posts and managed to import all your comments to disqus.
 
 <!--more-->
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+If you have any remarks regarding the new layout and design of this new website feel free to leave a comment below!
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+A lot has happened in the meantime --- I've attended the IEEE VR 2014 conference in Minneapolis, nearly finished my master's degree, co-founded a little start-up, created together with some friends of mine the VR-engine [_guacamole_](https://github.com/vrsys) and worked a lot on **M.A.R.S.2** together with Felix.
 
-asduisbfhisdb
+Stay tuned for more updates!
