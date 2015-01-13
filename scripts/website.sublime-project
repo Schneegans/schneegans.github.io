@@ -19,15 +19,8 @@
 				"*.nfs*"
 			],
 			"follow_symlinks": true,
-			"path": ".."
-		},
-		{
-			"follow_symlinks": true,
-			"path": "../_includes/themes/hooligan"
-		},
-		{
-			"follow_symlinks": true,
-			"path": "../assets/themes/hooligan/_sass"
+			"path": "..",
+			"folder_exclude_patterns": ["_site"]
 		}
 	]
 }

@@ -6,7 +6,7 @@ header : PTB Animation
 {% include JB/setup %}
 
 <div class="responsive-video-43">
-<iframe src="http://player.vimeo.com/video/6830808?title=0&amp;byline=0&amp;portrait=0&amp;color=F06F20" width="1200" height="900" frameborder="0" webkitAllowFullScreen allowFullScreen></iframe>
+<iframe src="http://player.vimeo.com/video/6830808?title=0&amp;byline=0&amp;portrait=0&amp;color={% include link_color %}" width="1200" height="900" frameborder="0" webkitAllowFullScreen allowFullScreen></iframe>
 </div>
 
 <br>

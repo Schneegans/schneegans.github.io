@@ -24,7 +24,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* line 29, ../_sass/_base.scss */
 a {
-  color: #F06F20;
+  color: #FF9758;
   -moz-transition: all 0.3s;
   -o-transition: all 0.3s;
   -webkit-transition: all 0.3s;
@@ -32,7 +32,7 @@ a {
 }
 /* line 31, ../_sass/_base.scss */
 a:hover {
-  color: #faccaf;
+  color: #fff6f1;
   text-decoration: none;
 }
 
@@ -314,15 +314,11 @@ html, body {
 
 /* line 279, ../_sass/_base.scss */
 #page-content {
-  min-height: 100%;
-  height: auto !important;
-  height: 100%;
-  margin: 0;
+  margin-bottom: 155px;
 }
 
-/* line 286, ../_sass/_base.scss */
+/* line 283, ../_sass/_base.scss */
 #page-background {
-  margin-bottom: 155px;
   padding-top: 30px;
   padding-bottom: 30px;
   background-color: #2a2a2a;
@@ -331,7 +327,7 @@ html, body {
   border-top: 1px solid #373737;
 }
 
-/* line 298, ../_sass/_base.scss */
+/* line 294, ../_sass/_base.scss */
 footer {
   position: fixed;
   bottom: 0;
@@ -344,7 +340,7 @@ footer {
   overflow: hidden;
   background: #1b1b1b;
 }
-/* line 300, ../_sass/_base.scss */
+/* line 296, ../_sass/_base.scss */
 footer .container {
   text-align: center;
 }
@@ -675,12 +671,20 @@ div.teaser {
   opacity: 0;
 }
 
-/* line 246, ../_sass/_custom.scss */
+/* line 244, ../_sass/_custom.scss */
+.image-right {
+  float: right;
+  margin: 5px 0 10px 15px;
+  width: 42%;
+  height: auto;
+}
+
+/* line 253, ../_sass/_custom.scss */
 #toc ul {
   margin-top: -15px;
   list-style: none;
 }
-/* line 250, ../_sass/_custom.scss */
+/* line 257, ../_sass/_custom.scss */
 #toc ul a {
   color: #bbb;
   -moz-transition: all 0.1s;
@@ -688,27 +692,27 @@ div.teaser {
   -webkit-transition: all 0.1s;
   transition: all 0.1s;
 }
-/* line 252, ../_sass/_custom.scss */
+/* line 259, ../_sass/_custom.scss */
 #toc ul a:hover {
-  color: #F06F20;
+  color: #FF9758;
 }
-/* line 258, ../_sass/_custom.scss */
+/* line 265, ../_sass/_custom.scss */
 #toc ul li {
   list-style: none;
 }
-/* line 260, ../_sass/_custom.scss */
+/* line 267, ../_sass/_custom.scss */
 #toc ul li.toc-active a {
-  color: #F06F20;
+  color: #FF9758;
 }
-/* line 266, ../_sass/_custom.scss */
+/* line 273, ../_sass/_custom.scss */
 #toc ul li.toc-h1 {
   margin: 15px 0 0 0;
 }
-/* line 269, ../_sass/_custom.scss */
+/* line 276, ../_sass/_custom.scss */
 #toc ul li.toc-h2 {
   margin: 5px 0 0 0;
 }
-/* line 272, ../_sass/_custom.scss */
+/* line 279, ../_sass/_custom.scss */
 #toc ul li.toc-h3 {
   margin: 0 0 0 0;
 }

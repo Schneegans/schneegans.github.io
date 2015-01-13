@@ -6,7 +6,7 @@ header : about
 {% include JB/setup %}
 
 <h1>About</h1>
-<hr />
+<hr>
 <div class="row">
   <div class="span9">
   <p>This is the personal blog of Simon Schneegans, a student of computer media science at the <a href="http://www.uni-weimar.de/cms/">Bauhaus University</a> in Weimar.</p>
