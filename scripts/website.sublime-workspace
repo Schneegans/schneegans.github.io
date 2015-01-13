@@ -520,42 +520,82 @@
 	"buffers":
 	[
 		{
-			"file": "/home/simon/Projekte/Homepage/_includes/themes/hooligan/nav-page.html",
+			"file": "/home/rufu1194/Desktop/simmesimme.github.io/gnome-pie.md",
 			"settings":
 			{
-				"buffer_size": 304,
+				"buffer_size": 11866,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/home/simon/Projekte/Homepage/assets/themes/hooligan/_sass/_base.scss",
+			"file": "/home/rufu1194/Desktop/simmesimme.github.io/hzb.md",
 			"settings":
 			{
-				"buffer_size": 4854,
+				"buffer_size": 491,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/home/simon/Projekte/Homepage/blog/index.html",
+			"file": "/home/rufu1194/Desktop/simmesimme.github.io/mars.md",
 			"settings":
 			{
-				"buffer_size": 1351,
+				"buffer_size": 690,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/home/simon/Projekte/Homepage/assets/themes/hooligan/_sass/_custom.scss",
+			"file": "/home/rufu1194/Desktop/simmesimme.github.io/ptb.md",
 			"settings":
 			{
-				"buffer_size": 4764,
+				"buffer_size": 594,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/home/simon/Projekte/Homepage/_includes/themes/hooligan/default.html",
+			"file": "/home/rufu1194/Desktop/simmesimme.github.io/index.md",
 			"settings":
 			{
-				"buffer_size": 6678,
+				"buffer_size": 3258,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/rufu1194/Desktop/simmesimme.github.io/assets/themes/hooligan/_sass/_base.scss",
+			"settings":
+			{
+				"buffer_size": 4782,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/rufu1194/Desktop/simmesimme.github.io/_includes/JB/setup",
+			"settings":
+			{
+				"buffer_size": 733,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "website.sublime-project",
+			"settings":
+			{
+				"buffer_size": 353,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/rufu1194/Desktop/simmesimme.github.io/projects.md",
+			"settings":
+			{
+				"buffer_size": 3138,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/rufu1194/Desktop/simmesimme.github.io/_includes/themes/hooligan/nav-page.html",
+			"settings":
+			{
+				"buffer_size": 302,
 				"line_ending": "Unix"
 			}
 		}
@@ -713,31 +753,61 @@
 	},
 	"expanded_folders":
 	[
-		"/home/simon/Projekte/Homepage",
-		"/home/simon/Projekte/Homepage/_includes",
-		"/home/simon/Projekte/Homepage/_includes/JB",
-		"/home/simon/Projekte/Homepage/_includes/Magnific",
-		"/home/simon/Projekte/Homepage/assets/pictures",
-		"/home/simon/Projekte/Homepage/blog",
-		"/home/simon/Projekte/Homepage/_includes/themes/hooligan",
-		"/home/simon/Projekte/Homepage/assets/themes/hooligan/_sass"
+		"/home/rufu1194/Desktop/simmesimme.github.io"
 	],
 	"file_history":
 	[
-		"/home/simon/Projekte/Homepage/_posts/2011-11-02-ppa-launchpad-cmake.md",
-		"/home/simon/Projekte/Homepage/_posts/2011-11-09-translate-gnome-pie.md",
+		"/home/rufu1194/Desktop/simmesimme.github.io/scripts/website.sublime-project",
+		"/home/rufu1194/Desktop/simmesimme.github.io/assets/themes/hooligan/_sass/_custom.scss",
+		"/home/rufu1194/Desktop/simmesimme.github.io/_includes/Magnific/image",
+		"/home/rufu1194/Desktop/simmesimme.github.io/_includes/Magnific/image_right",
+		"/home/rufu1194/Desktop/simmesimme.github.io/assets/themes/hooligan/_sass/_base.scss",
+		"/home/rufu1194/Desktop/simmesimme.github.io/_includes/link_color",
+		"/home/rufu1194/Desktop/simmesimme.github.io/index.md",
+		"/home/rufu1194/Desktop/simmesimme.github.io/formes-et-couleurs.md",
+		"/home/rufu1194/Desktop/simmesimme.github.io/_posts/2012-10-10-bachelor-thesis.md",
+		"/home/rufu1194/Desktop/simmesimme.github.io/_site/atom.xml",
+		"/home/rufu1194/Desktop/simmesimme.github.io/_site/formes-et-couleurs.html",
+		"/home/rufu1194/Desktop/simmesimme.github.io/_site/hzb.html",
+		"/home/rufu1194/Desktop/simmesimme.github.io/_site/news/2012/10/10/bachelor-thesis/index.html",
+		"/home/rufu1194/Desktop/simmesimme.github.io/_site/rss.xml",
+		"/home/rufu1194/Desktop/simmesimme.github.io/_site/ptb.html",
+		"/home/rufu1194/Desktop/simmesimme.github.io/_site/mars.html",
+		"/home/rufu1194/Desktop/simmesimme.github.io/_site/gnome-pie.html",
+		"/home/rufu1194/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/home/rufu1194/Desktop/simmesimme.github.io/_includes/themes/hooligan/nav-page.html",
+		"/home/rufu1194/Desktop/simmesimme.github.io/about.md",
+		"/home/rufu1194/Desktop/simmesimme.github.io/projects.md",
+		"/home/rufu1194/Desktop/simmesimme.github.io/blog/index.html",
+		"/home/rufu1194/Desktop/simmesimme.github.io/_includes/themes/hooligan/post.html",
+		"/home/rufu1194/Desktop/simmesimme.github.io/_site/about.html",
+		"/home/rufu1194/Desktop/simmesimme.github.io/_site/index.html",
+		"/home/rufu1194/Desktop/simmesimme.github.io/_site/projects.html",
+		"/home/rufu1194/Desktop/simmesimme.github.io/_site/news/2015/01/13/new-homepage/index.html",
+		"/home/rufu1194/Desktop/simmesimme.github.io/_site/news/2013/03/17/gnome-pie-055/index.html",
+		"/home/rufu1194/Desktop/simmesimme.github.io/_site/news/2012/07/12/mars-on-github/index.html",
+		"/home/rufu1194/Desktop/simmesimme.github.io/_site/news/2012/05/10/help-baking-pies/index.html",
+		"/home/rufu1194/Desktop/simmesimme.github.io/_site/lessons/2011/11/09/translate-gnome-pie/index.html",
+		"/home/rufu1194/Desktop/simmesimme.github.io/_site/lessons/2011/11/02/ppa-launchpad-cmake/index.html",
+		"/home/rufu1194/Desktop/simmesimme.github.io/_site/blog/page2/index.html",
+		"/home/rufu1194/Desktop/simmesimme.github.io/_site/blog/index.html",
+		"/home/rufu1194/Desktop/simmesimme.github.io/_posts/2013-03-17-gnome-pie-055.md",
+		"/home/rufu1194/Desktop/simmesimme.github.io/scripts/install.sh",
+		"/home/rufu1194/Desktop/simmesimme.github.io/_posts/2015-01-13-new-homepage.md",
+		"/home/simon/Projekte/Homepage/blog/index.html",
 		"/home/simon/Projekte/Homepage/assets/themes/hooligan/_sass/_custom.scss",
 		"/home/simon/Projekte/Homepage/_includes/themes/hooligan/nav-page.html",
 		"/home/simon/Projekte/Homepage/_includes/themes/hooligan/default.html",
+		"/home/simon/Projekte/Homepage/assets/themes/hooligan/_sass/_base.scss",
+		"/home/simon/Projekte/Homepage/_posts/2011-11-02-ppa-launchpad-cmake.md",
+		"/home/simon/Projekte/Homepage/_posts/2011-11-09-translate-gnome-pie.md",
 		"/home/simon/Projekte/Homepage/gnome-pie.md",
 		"/home/simon/Projekte/Homepage/_layouts/nav-page.html",
 		"/home/simon/Projekte/Homepage/_posts/2012-10-10-bachelor-thesis.md",
-		"/home/simon/Projekte/Homepage/assets/themes/hooligan/_sass/_base.scss",
 		"/home/simon/Projekte/Homepage/assets/themes/hooligan/.sass-cache/17f944903a477bc9da483e8668a24ea1e1707770/_min.scssc",
 		"/home/simon/Projekte/Homepage/_includes/JB/comments",
 		"/home/simon/Projekte/Homepage/_includes/themes/hooligan/post.html",
 		"/home/simon/Projekte/Homepage/projects.md",
-		"/home/simon/Projekte/Homepage/blog/index.html",
 		"/home/simon/Projekte/Homepage/about.md",
 		"/home/simon/Projekte/Homepage/hzb.md",
 		"/home/simon/Projekte/Homepage/mars.md",
@@ -814,48 +884,11 @@
 		"/home/simon/Projekte/M.A.R.S./mars/include/Rocket.hpp",
 		"/home/simon/Projekte/M.A.R.S./mars/src/Laser.cpp",
 		"/home/simon/Projekte/M.A.R.S./mars/include/Laser.hpp",
-		"/home/simon/Projekte/M.A.R.S./mars/src/Bullet.cpp",
-		"/home/simon/Projekte/M.A.R.S./mars/include/Bullet.hpp",
-		"/home/simon/Projekte/M.A.R.S./mars/src/Rocket.cpp",
-		"/home/simon/Projekte/M.A.R.S./mars/src/Player.cpp",
-		"/home/simon/Projekte/M.A.R.S./mars/include/LaserGun.hpp",
-		"/home/simon/Projekte/M.A.R.S./mars/include/RocketGun.hpp",
-		"/home/simon/Projekte/M.A.R.S./mars/src/InstaGun.cpp",
-		"/home/simon/Projekte/M.A.R.S./mars/include/Shot.hpp",
-		"/home/simon/Projekte/M.A.R.S./mars/src/Insta.cpp",
-		"/home/simon/.data/Projekte/M.A.R.S./mars/src/ShotGun.cpp",
-		"/home/simon/Projekte/M.A.R.S./mars/include/ShotGun.hpp",
-		"/home/simon/Projekte/M.A.R.S./mars/include/Insta.hpp",
-		"/home/simon/Projekte/M.A.R.S./mars/src/Shot.cpp",
-		"/home/simon/Projekte/M.A.R.S./mars/include/PlayerRegistry.hpp",
-		"/home/simon/Projekte/M.A.R.S./mars/resources/gui/player.css",
-		"/home/simon/Projekte/M.A.R.S./mars/resources/gui/player.html",
-		"/home/simon/Projekte/M.A.R.S./mars/resources/scene/player.json",
-		"/home/simon/Projekte/M.A.R.S./mars/src/Planet.cpp",
-		"/home/simon/Projekte/M.A.R.S./mars/resources/scene/trail_system.json",
-		"/home/simon/Projekte/M.A.R.S./mars/include/TrailManager.hpp",
-		"/home/simon/Projekte/M.A.R.S./mars/include/SpaceMaterial.hpp",
-		"/home/simon/Projekte/M.A.R.S./mars/include/InstaGun.hpp",
-		"/home/simon/.data/Projekte/M.A.R.S./mars/src/Shot.cpp",
-		"/home/simon/.data/Projekte/M.A.R.S./mars/src/Bullet.cpp",
-		"/home/simon/Projekte/M.A.R.S./mars/src/ShotGun.cpp",
-		"/home/simon/.data/Projekte/M.A.R.S./swift2d/include/swift2d/network/Network.hpp",
-		"/home/simon/Projekte/M.A.R.S./mars/src/Mover.cpp",
-		"/home/simon/Projekte/M.A.R.S./mars/resources/gui/player_tag.css",
-		"/home/simon/Projekte/M.A.R.S./mars/resources/gui/network.html",
-		"/home/simon/Projekte/M.A.R.S./mars/resources/gui/options.html",
-		"/home/simon/Projekte/M.A.R.S./mars/resources/gui/chat.css",
-		"/home/simon/Projekte/M.A.R.S./mars/resources/gui/third_party/css/font-awesome.min.css",
-		"/home/simon/Projekte/M.A.R.S./mars/resources/gui/player_tag.html",
-		"/home/simon/Projekte/M.A.R.S./mars/resources/audio/mouse_over.wav",
-		"/home/simon/Projekte/M.A.R.S./mars/resources/gui/mouse.css",
-		"/home/simon/Projekte/M.A.R.S./mars/resources/gui/chat.html",
-		"/home/simon/Projekte/M.A.R.S./mars/include/collision_category.hpp",
-		"/home/simon/Projekte/M.A.R.S./mars/CMakeLists.txt"
+		"/home/simon/Projekte/M.A.R.S./mars/src/Bullet.cpp"
 	],
 	"find":
 	{
-		"height": 37.0
+		"height": 35.0
 	},
 	"find_in_files":
 	{
@@ -881,6 +914,15 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"html",
+			"<a href=\"{{site.url}}",
+			"color=F06F20",
+			"em",
+			"<hr />",
+			"<hr/>",
+			"\n      ",
+			"        <hr/>\n",
+			"<hr/>",
 			"<span class=\"well\">",
 			"</span>",
 			" \"",
@@ -999,16 +1041,7 @@
 			"player_color2",
 			"player_color1",
 			"ship",
-			"iv class='color-select-small' >",
-			"deco",
-			"ship",
-			"select1",
-			"damage",
-			"RocketGun",
-			"translation",
-			"on_message",
-			"gold",
-			"silver"
+			"iv class='color-select-small' >"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1016,6 +1049,8 @@
 		"regex": false,
 		"replace_history":
 		[
+			"color={% include link_color %}",
+			"<hr>",
 			"&amp;color=F06F20",
 			"StartAge",
 			"SettingsWrapper::get().Settings->",
@@ -1048,29 +1083,202 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 7,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "/home/simon/Projekte/Homepage/_includes/themes/hooligan/nav-page.html",
+					"file": "/home/rufu1194/Desktop/simmesimme.github.io/gnome-pie.md",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 304,
+						"buffer_size": 11866,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								254,
-								254
+								563,
+								563
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"syntax": "Packages/Markdown/Markdown.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/home/rufu1194/Desktop/simmesimme.github.io/hzb.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 491,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Markdown/Markdown.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/home/rufu1194/Desktop/simmesimme.github.io/mars.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 690,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Markdown/Markdown.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/home/rufu1194/Desktop/simmesimme.github.io/ptb.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 594,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								594,
+								594
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Markdown/Markdown.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/home/rufu1194/Desktop/simmesimme.github.io/index.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3258,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1598,
+								1598
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Markdown/Markdown.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/home/rufu1194/Desktop/simmesimme.github.io/assets/themes/hooligan/_sass/_base.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4782,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4261,
+								4261
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 4779.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "/home/rufu1194/Desktop/simmesimme.github.io/_includes/JB/setup",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 733,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
@@ -1082,25 +1290,25 @@
 					"type": "text"
 				},
 				{
-					"buffer": 1,
-					"file": "/home/simon/Projekte/Homepage/assets/themes/hooligan/_sass/_base.scss",
+					"buffer": 7,
+					"file": "website.sublime-project",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4854,
+						"buffer_size": 353,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								82,
-								82
+								353,
+								353
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"syntax": "Packages/JavaScript/JSON.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
@@ -1111,20 +1319,56 @@
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "/home/simon/Projekte/Homepage/blog/index.html",
+					"buffer": 8,
+					"file": "/home/rufu1194/Desktop/simmesimme.github.io/projects.md",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1351,
+						"buffer_size": 3138,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								627,
-								627
+								1639,
+								1639
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Markdown/Markdown.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 220.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 9,
+					"file": "/home/rufu1194/Desktop/simmesimme.github.io/_includes/themes/hooligan/nav-page.html",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 302,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								302,
+								302
 							]
 						],
 						"settings":
@@ -1137,67 +1381,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "/home/simon/Projekte/Homepage/assets/themes/hooligan/_sass/_custom.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4764,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								4381,
-								4381
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 3510.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "/home/simon/Projekte/Homepage/_includes/themes/hooligan/default.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 6678,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								6246,
-								6246
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 2160.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
+					"stack_index": 5,
 					"type": "text"
 				}
 			]
@@ -1205,7 +1389,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 23.0
+		"height": 26.0
 	},
 	"input":
 	{
@@ -1220,11 +1404,18 @@
 				0,
 				1,
 				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
 			]
 		],
 		"cols":
 		[
 			0.0,
+			0.794039735099,
 			1.0
 		],
 		"rows":
@@ -1249,7 +1440,7 @@
 	"project": "website.sublime-project",
 	"replace":
 	{
-		"height": 42.0
+		"height": 48.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -1257,6 +1448,26 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"proje",
+				"simmesimme.github.io/projects.md"
+			],
+			[
+				"inde",
+				"simmesimme.github.io/index.md"
+			],
+			[
+				"gnome",
+				"simmesimme.github.io/gnome-pie.md"
+			],
+			[
+				"cust",
+				"_sass/_custom.scss"
+			],
+			[
+				"ima",
+				"simmesimme.github.io/_includes/Magnific/image"
+			],
 			[
 				"cma",
 				"Homepage/_posts/2011-11-02-ppa-launchpad-cmake.md"
@@ -1748,26 +1959,6 @@
 			[
 				"intr",
 				"resources/gui/intro.css"
-			],
-			[
-				"option",
-				"resources/gui/options.html"
-			],
-			[
-				"marsgu",
-				"src/MarsGuiComponent.cpp"
-			],
-			[
-				"marscss",
-				"resources/gui/mars.css"
-			],
-			[
-				"html",
-				"resources/gui/monitor.html"
-			],
-			[
-				"fps",
-				"resources/gui/fps.html"
 			]
 		],
 		"width": 0.0
@@ -1779,7 +1970,7 @@
 		[
 			[
 				"",
-				"~/.data/Projekte/M.A.R.S./swift2d/scripts/Swift2D.sublime-project"
+				"~/Desktop/guacamole/scripts/guacamole.sublime-project"
 			]
 		],
 		"width": 380.0
@@ -1800,7 +1991,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 221.0,
+	"side_bar_width": 295.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

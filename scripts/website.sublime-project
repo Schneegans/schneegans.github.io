@@ -21,18 +21,6 @@
 			"follow_symlinks": true,
 			"path": "..",
 			"folder_exclude_patterns": ["_site"]
-		},
-		{
-			"follow_symlinks": true,
-			"path": "../_includes/themes/hooligan"
-		},
-		{
-			"follow_symlinks": true,
-			"path": "../assets/themes/hooligan/_sass"
-		},
-		{
-			"follow_symlinks": true,
-			"path": "../_posts"
 		}
 	]
 }
