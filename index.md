@@ -55,7 +55,7 @@ tagline: Supporting tagline
       {% assign post_count = 0 %}
       {% for post in site.posts %}
         {% if post.tags contains "featured" %}
-          <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a><hr></li>
+          <li><a href="{{ post.url }}">{{ post.title }}</a><hr></li>
           {% assign post_count=post_count | plus:1 %}
           {% if post_count == 3 %}
             {% break %}
@@ -71,7 +71,7 @@ tagline: Supporting tagline
     <ul class="sub-nav">
       {% assign post_count = 0 %}
       {% for post in site.posts %}
-        <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a><hr></li>
+        <li><a href="{{ post.url }}">{{ post.title }}</a><hr></li>
         {% assign post_count=post_count | plus:1 %}
         {% if post_count == 3 %}
           {% break %}
