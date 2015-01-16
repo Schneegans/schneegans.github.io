@@ -269,7 +269,7 @@ div.content {
 }
 
 /* Sticky footer */
-$footerHeight: 155px;
+$footerHeight: 150px;
 
 //Page full height
 html, body {
@@ -277,6 +277,13 @@ html, body {
 }
 
 #page-content {
+
+	@media only screen and (min-width:767px) {
+	  & {
+		margin-bottom: ($footerHeight + 20);
+	  }
+	}
+
 	margin-bottom: $footerHeight;
 }
 
@@ -293,8 +300,16 @@ html, body {
 //footer fixed height
 footer {
 
+	text-shadow:none;
+
 	.container {
 		text-align:center;
+	}
+
+	@media only screen and (min-width:767px) {
+	  & {
+		padding-top:40px;
+	  }
 	}
 
 	position:fixed;

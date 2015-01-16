@@ -314,10 +314,16 @@ html, body {
 
 /* line 279, ../_sass/_base.scss */
 #page-content {
-  margin-bottom: 155px;
+  margin-bottom: 150px;
+}
+@media only screen and (min-width: 767px) {
+  /* line 282, ../_sass/_base.scss */
+  #page-content {
+    margin-bottom: 170px;
+  }
 }
 
-/* line 283, ../_sass/_base.scss */
+/* line 290, ../_sass/_base.scss */
 #page-background {
   padding-top: 30px;
   padding-bottom: 30px;
@@ -327,22 +333,29 @@ html, body {
   border-top: 1px solid #373737;
 }
 
-/* line 294, ../_sass/_base.scss */
+/* line 301, ../_sass/_base.scss */
 footer {
+  text-shadow: none;
   position: fixed;
   bottom: 0;
   z-index: -1;
-  height: 155px;
+  height: 150px;
   width: 100%;
   padding-top: 20px;
   padding-bottom: 0px;
-  max-height: 135px;
+  max-height: 130px;
   overflow: hidden;
   background: #1b1b1b;
 }
-/* line 296, ../_sass/_base.scss */
+/* line 305, ../_sass/_base.scss */
 footer .container {
   text-align: center;
+}
+@media only screen and (min-width: 767px) {
+  /* line 310, ../_sass/_base.scss */
+  footer {
+    padding-top: 40px;
+  }
 }
 
 /* Responsive Overrides */
