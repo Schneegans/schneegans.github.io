@@ -6,59 +6,72 @@ header : Random artwork
 
 <div class="row magnific-gallery">
     <div class="span4">
-        {% assign link = "/assets/pictures/artwork/knife.jpg" %}
+        {% assign picture = "knife.jpg" %}
+        {% assign size = "small" %}
         {% assign text = "Modelled, textured and rendered in Blender" %}
-        {% include magnific/gallery_item %}
+        {% include gallery_item %}
         <br /><br />
-        {% assign link = "/assets/pictures/artwork/chapell.jpg" %}
+        {% assign picture = "chapell.jpg" %}
+        {% assign size = "small" %}
         {% assign text = "Modelled, textured and rendered in Blender together with a firend of mine" %}
-        {% include magnific/gallery_item %}
+        {% include gallery_item %}
         <br /><br />
-        {% assign link = "/assets/pictures/artwork/alchemy1.jpg" %}
+        {% assign picture = "alchemy1.jpg" %}
+        {% assign size = "small" %}
         {% assign text = "Character test done with Alchemy" %}
-        {% include magnific/gallery_item %}
+        {% include gallery_item %}
         <br /><br />
-        {% assign link = "/assets/pictures/artwork/arthas.jpg" %}
+        {% assign picture = "arthas.jpg" %}
+        {% assign size = "small" %}
         {% assign text = "Character rendered with Blender's internal renderer" %}
-        {% include magnific/gallery_item %}
+        {% include gallery_item %}
         <br /><br />
-        {% assign link = "/assets/pictures/artwork/bird.jpg" %}
+        {% assign picture = "bird.jpg" %}
+        {% assign size = "small" %}
         {% assign text = "A bird drawn with MyPaint" %}
-        {% include magnific/gallery_item %}
+        {% include gallery_item %}
     </div>
     <div class="span4">
-        {% assign link = "/assets/pictures/artwork/alchemy2.jpg" %}
+        {% assign picture = "alchemy2.jpg" %}
+        {% assign size = "small" %}
         {% assign text = "Character test done with Alchemy" %}
-        {% include magnific/gallery_item %}
+        {% include gallery_item %}
         <br /><br />
-        {% assign link = "/assets/pictures/artwork/island.jpg" %}
+        {% assign picture = "island.jpg" %}
+        {% assign size = "small" %}
         {% assign text = "An interestingly shaped island renderered with Terragen" %}
-        {% include magnific/gallery_item %}
+        {% include gallery_item %}
         <br /><br />
-        {% assign link = "/assets/pictures/artwork/micro.jpg" %}
+        {% assign picture = "micro.jpg" %}
+        {% assign size = "small" %}
         {% assign text = "A picture made with Blender and The Gimp" %}
-        {% include magnific/gallery_item %}
+        {% include gallery_item %}
         <br /><br />
-        {% assign link = "/assets/pictures/artwork/faroer.jpg" %}
+        {% assign picture = "faroer.jpg" %}
+        {% assign size = "small" %}
         {% assign text = "A heavily modified photograph taken on the Faroe Islands" %}
-        {% include magnific/gallery_item %}
+        {% include gallery_item %}
         <br /><br />
-        {% assign link = "/assets/pictures/artwork/feder.jpg" %}
+        {% assign picture = "feder.jpg" %}
+        {% assign size = "small" %}
         {% assign text = "A gnome drawn with MyPaint" %}
-        {% include magnific/gallery_item %}
+        {% include gallery_item %}
     </div>
     <div class="span4">
-        {% assign link = "/assets/pictures/artwork/sword.jpg" %}
+        {% assign picture = "sword.jpg" %}
+        {% assign size = "small" %}
         {% assign text = "Sword study done with Alchemy" %}
-        {% include magnific/gallery_item %}
+        {% include gallery_item %}
         <br /><br />
-        {% assign link = "/assets/pictures/artwork/witch.jpg" %}
+        {% assign picture = "witch.jpg" %}
+        {% assign size = "small" %}
         {% assign text = "A turbo-witch drawn with MyPaint" %}
-        {% include magnific/gallery_item %}
+        {% include gallery_item %}
         <br /><br />
-        {% assign link = "/assets/pictures/artwork/ubuntu.jpg" %}
+        {% assign picture = "ubuntu.jpg" %}
+        {% assign size = "small" %}
         {% assign text = "A Ubuntu key ring rendered with Blender's internal renderer" %}
-        {% include magnific/gallery_item %}
+        {% include gallery_item %}
     </div>
 </div>
 

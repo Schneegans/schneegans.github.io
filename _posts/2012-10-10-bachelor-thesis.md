@@ -3,7 +3,7 @@ layout: post
 title: "Bachelor thesis!"
 tagline: "read the results"
 category: news
-teaser: "bachelor/bachelor01.jpg"
+teaser: "bachelor01.jpg"
 tags: ["featured"]
 ---
 
@@ -28,15 +28,17 @@ An incredible variety of Pie-Menus has been developed for numerous reasons. For 
 
 Gnome-Pie was created in order to bring Pie-Menus to the Linux desktop. It is not able to display hierarchies properly but does a good job when there are many items in one menu. This is mainly a result of its icon-based approach to Pie-Menus. There are no labels which clutter up the screen. The evaluation of the statistics of 150 users who did nearly 30.000 selections with Gnome-Pie revealed some interesting details. In contrast to some related user studies, selection time for individual items does not increase significantly when there are many items in one pie. The chart below indicates a rising selection time when there are more than twelve items in one pie, but these figures have to be treated with caution, as only a few users configured pies with that much entries.
 
-{% assign link = "/assets/pictures/bachelor/bachelor10.jpg" %}
+{% assign picture = "bachelor10.jpg" %}
+{% assign size = "large" %}
 {% assign text = "Correlation between item count and selection time in Gnome-Pie" %}
-{% include magnific/image %}
+{% include image %}
 
 Selection performance in Gnome-Pie is generally high. The mode of selection is 1.4 seconds which is quite fast, particularly considering the real-world circumstances of this study: the users were not told to operate the menu as fast as possible. I was surprised by the humble amount of quick-actions used - only a few users employed them at all. And those who did, were only slightly faster. They achieved a mode of 1.2 seconds. This is interesting, as the pointer does not have to be moved at all in order to select a quick action!
 
-{% assign link = "/assets/pictures/bachelor/bachelor09.jpg" %}
+{% assign picture = "bachelor09.jpg" %}
+{% assign size = "large" %}
 {% assign text = "Density functions of selection time done with Gnome-Pie by 150 users" %}
-{% include magnific/image %}
+{% include image %}
 
 Additionally to Gnome-Pie I evaluated many other Pie-Menu concepts and structured their benefits and drawbacks. None of them was able to display both, wide _and_ deep menus. This is necessary to compete with conventional linear menus, which are slow to operate but are able to do both.
 
@@ -104,21 +106,24 @@ When the participants were finished with their tests, they were told to fill in 
 
 When unknown entries had been searched, the linear menu remained the fastest. As shown in the figure below, both prototypes perform similar in narrow menus. They reach approximately 75 % of the performance of linear menus. When the menus get wider, the performance of the Coral-Menu rises to 80 % and the Trace-Menu drops to 55 %. This indicates that the implementation of wide menus is better in the Coral-Menu.
 
-{% assign link = "/assets/pictures/bachelor/bachelor06.jpg" %}
+{% assign picture = "bachelor06.jpg" %}
+{% assign size = "large" %}
 {% assign text = "Prototype search performance for different menu configurations compared to the linear menu" %}
-{% include magnific/image %}
+{% include image %}
 
 When the same entry is selected multiple times, the situation is flipped. After eight or nine selections (graph below) the Trace-Menu performs twice as good as the linear menu. The Coral-Menu is roughly 25 % faster than the linear menu when selecting well-known items. Due to the unnatural circumstances these numbers are suitable as a upper limit which may be reached by real experts only.
 
-{% assign link = "/assets/pictures/bachelor/bachelor07.jpg" %}
+{% assign picture = "bachelor07.jpg" %}
+{% assign size = "large" %}
 {% assign text = "Menu performance for consecutive selections of the same item" %}
-{% include magnific/image %}
+{% include image %}
 
 Very interesting is a comparison of these figures to the control group which selected the same entries in multiple training sessions. The trend of the curves is similar. But the differences between the menu types are much lower and the achieved performance level is only half. At the end of the sixth training, members of this group had selected each entry 30 times.
 
-{% assign link = "/assets/pictures/bachelor/bachelor08.jpg" %}
+{% assign picture = "bachelor08.jpg" %}
+{% assign size = "large" %}
 {% assign text = "Menu performance for multiple selections of the same item distributed over six training sessions" %}
-{% include magnific/image %}
+{% include image %}
 
 ## 4. Summary
 
@@ -128,13 +133,15 @@ What do these results tell about the ubiquitous appliance of Pie-Menus on today'
 
 Both prototypes were mostly used as intended. During the test I recorded the mouse movement of the participants. The results are displayed below. It is clearly visible that users of the Coral-Menu did not try to click on the captions of each slice. They clicked on the sectors belonging to each item. Trace-Menu-Users employed the Marking-Mode quite quickly. They tended to draw the mark a little bit towards the label of the item which might result in errors if the label is very long.
 
-{% assign link = "/assets/pictures/bachelor/coral_paths.jpg" %}
+{% assign picture = "coral_paths.jpg" %}
+{% assign size = "large" %}
 {% assign text = "Cursor movement of users of the Coral-Menu. Green dots visualize mouse clicks" %}
-{% include magnific/image %}
+{% include image %}
 
-{% assign link = "/assets/pictures/bachelor/trace_paths.jpg" %}
+{% assign picture = "trace_paths.jpg" %}
+{% assign size = "large" %}
 {% assign text = "Cursor movement of users of the Trace-Menu. Green dots visualize mouse clicks" %}
-{% include magnific/image %}
+{% include image %}
 
 But there are some design issues which need to be fixed. The biggest problems of the Coral-Menu are:
 

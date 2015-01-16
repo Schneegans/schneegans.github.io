@@ -1,0 +1,1 @@
+<a title="{{text}}" href="/assets/pictures/{{picture}}"><img src="/assets/pictures/{{size}}/{{picture}}" alt="{{text}}"></a>

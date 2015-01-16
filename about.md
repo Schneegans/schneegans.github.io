@@ -20,9 +20,10 @@ header : about
 
   </div>
   <div class="span3">
-    {% assign link = "/assets/pictures/simon.jpg" %}
+    {% assign picture = "simon.jpg" %}
+    {% assign size = "small" %}
     {% assign text = "That's me!" %}
-    {% include magnific/image %}
+    {% include image %}
   </div>
 </div>
 

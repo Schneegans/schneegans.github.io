@@ -10,26 +10,26 @@ tagline: Supporting tagline
       <div class="description">
       <h2><a href="/gnome-pie.html">Gnome-Pie</a></h2>
       Gnome-Pie a slick application launcher for Linux. It’s eye candy and pretty fun to work with. It offers multiple ways to improve your desktop experience.</div>
-      <div class="bg" style="background-image:url('{{ site.url }}/assets/pictures/teaser-gnomepie.jpg')"></div>
+      <div class="bg" style="background-image:url('/assets/pictures/teaser-gnomepie.jpg')"></div>
     </li>
     <li id="panel-2">
       <div class="description">
       <h2><a href="/mars.html">M.A.R.S. - a ridiculous shooter</a></h2>
       M.A.R.S. is a ridiculous, open source 2D shooter. It is a game for two players, flying with ships in a two-dimensional space setting, governed by the laws of gravity.</div>
-      <div class="bg" style="background-image:url('{{ site.url }}/assets/pictures/teaser-mars.jpg')"></div>
+      <div class="bg" style="background-image:url('/assets/pictures/teaser-mars.jpg')"></div>
     </li>
     <li id="panel-3">
       <div class="description">
       <h2><a href="/artwork.html">Random artwork</a></h2>
       When I'm not currently working on a software project, I use open source software to draw images. Here's a collection of various images I've drawn with no real purpose. Most of them are done with Blender, MyPaint, Alchemy and The Gimp.
       </div>
-      <div class="bg" style="background-image:url('{{ site.url }}/assets/pictures/artwork/knife.jpg')"></div>
+      <div class="bg" style="background-image:url('/assets/pictures/knife.jpg')"></div>
     </li>
     <li id="panel-4">
       <div class="description">
       <h2><a href="/formes-et-couleurs.html">Les Formes et les Couleurs</a></h2>
       It is short &amp; funny old-school stop motion video created together with a friend of mine. It feauters 927 frames shot with a Canon EOS 450d.</div>
-      <div class="bg" style="background-image:url('{{ site.url }}/assets/pictures/teaser-formes-et-couleurs.jpg')"></div>
+      <div class="bg" style="background-image:url('/assets/pictures/teaser-formes-et-couleurs.jpg')"></div>
     </li>
 </ul>
 
