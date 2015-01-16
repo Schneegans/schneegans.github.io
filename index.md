@@ -28,7 +28,7 @@ tagline: Supporting tagline
     <li id="panel-4">
       <div class="description">
       <h2><a href="/formes-et-couleurs.html">Les Formes et les Couleurs</a></h2>
-      It is short &amp; funny old-school stop motion video created together with a friend of mine. It feauters 927 frames shot with a Canon EOS 450d.</div>
+      It is short &amp; funny old-school stop motion video created together with a friend of mine. It features 927 frames shot with a Canon EOS 450d.</div>
       <div class="bg" style="background-image:url('/assets/pictures/teaser-formes-et-couleurs.jpg')"></div>
     </li>
 </ul>
