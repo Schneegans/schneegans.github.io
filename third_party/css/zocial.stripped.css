@@ -13,11 +13,11 @@ Enjoy
 	font-family: 'zocial';
 	font-style: normal;
 	font-weight: normal;
-	src: url('zocial-regular-webfont.eot');
-	src: url('zocial-regular-webfont.eot?#iefix') format('embedded-opentype'),
-		url('zocial-regular-webfont.woff') format('woff'),
-		url('zocial-regular-webfont.ttf') format('truetype'),
-		url('zocial-regular-webfont.svg#ZocialRegular') format('svg');
+	src: url('../fonts/zocial-regular-webfont.eot');
+	src: url('../fonts/zocial-regular-webfont.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/zocial-regular-webfont.woff') format('woff'),
+		url('../fonts/zocial-regular-webfont.ttf') format('truetype'),
+		url('../fonts/zocial-regular-webfont.svg#ZocialRegular') format('svg');
 	unicode-range: U+0-U+10FFFF;
 }
 
@@ -33,13 +33,13 @@ a.zocial {
 	text-decoration: none;
 	text-shadow: 0 1px 0 rgba(0,0,0,0.5);
 	white-space: nowrap;
-	
+
 	-moz-user-select: none;
 	-webkit-user-select: none;
 	user-select: none;
-	
+
 	position: relative;
-	
+
 	-moz-border-radius: .3em;
 	-webkit-border-radius: .3em;
 	border-radius: .3em;
@@ -57,11 +57,11 @@ a.zocial {
 	text-align: center;
 	text-decoration: none;
 	text-transform: none;
-	
+
 	/*-moz-box-shadow: 0.075em 0 0 rgba(255,255,255,0.25);
 	-webkit-box-shadow: 0.075em 0 0 rgba(255,255,255,0.25);
 	box-shadow: 0.075em 0 0 rgba(255,255,255,0.25);*/
-	
+
 	-webkit-font-smoothing: antialiased;
 }
 

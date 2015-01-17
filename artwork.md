@@ -5,7 +5,7 @@ header : Random artwork
 ---
 
 <div class="row magnific-gallery">
-    <div class="span4">
+    <div class="col-sm-4">
         {% assign picture = "knife.jpg" %}
         {% assign size = "small" %}
         {% assign text = "Modelled, textured and rendered in Blender" %}
@@ -31,7 +31,7 @@ header : Random artwork
         {% assign text = "A bird drawn with MyPaint" %}
         {% include gallery_item %}
     </div>
-    <div class="span4">
+    <div class="col-sm-4">
         {% assign picture = "alchemy2.jpg" %}
         {% assign size = "small" %}
         {% assign text = "Character test done with Alchemy" %}
@@ -57,7 +57,7 @@ header : Random artwork
         {% assign text = "A gnome drawn with MyPaint" %}
         {% include gallery_item %}
     </div>
-    <div class="span4">
+    <div class="col-sm-4">
         {% assign picture = "sword.jpg" %}
         {% assign size = "small" %}
         {% assign text = "Sword study done with Alchemy" %}

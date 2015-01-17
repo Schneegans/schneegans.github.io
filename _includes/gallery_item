@@ -1,1 +1,1 @@
-<a title="{{text}}" href="/assets/pictures/{{picture}}"><img src="/assets/pictures/{{size}}/{{picture}}" alt="{{text}}"></a>
+<a title="{{text}}" href="/assets/pictures/{{picture}}"><img class="img-responsive" src="/assets/pictures/{{size}}/{{picture}}" alt="{{text}}"></a>

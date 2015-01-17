@@ -8,20 +8,20 @@ group: blog
 {% for post in paginator.posts %}
 
 <div class="row post-preview">
-  <div class="span6 visible-phone">
+  <div class="col-sm-6 visible-xs">
     <div class="banner-right">{{post.date | date_to_string}}</div>
     <a href="{{post.url}}"><div class="teaser" style="background-image:url(/assets/pictures/medium/{{post.teaser}})"> </div></a>
     <br />
     <br />
   </div>
-  <div class="span6">
+  <div class="col-sm-6">
     <h1>
       <a href="{{post.url}}">{{post.title}}</a>
     </h1>
     {{post.excerpt}}
     <a href="{{post.url}}">read on &raquo;</a>
   </div>
-  <div class="span6 hidden-phone">
+  <div class="col-sm-6 hidden-xs">
     <div class="banner-right">{{post.date | date_to_long_string}}</div>
     <a href="{{post.url}}"><div class="teaser" style="background-image:url(/assets/pictures/medium/{{post.teaser}})">  </div></a>
   </div>

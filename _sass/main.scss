@@ -1,7 +1,9 @@
 @import "compass";
 
 /* Partials */
-@import "base";
-@import "responsive";
-@import "post";
+
+@import "compass/reset";
+
+@import "bootstrap";
+@import "darkstrap";
 @import "custom";

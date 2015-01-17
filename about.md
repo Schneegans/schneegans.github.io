@@ -7,7 +7,7 @@ header : about
 <h1>About</h1>
 <hr>
 <div class="row">
-  <div class="span9">
+  <div class="col-sm-9">
   <p>This is the personal blog of Simon Schneegans, a student of computer media science at the <a href="http://www.uni-weimar.de/cms/">Bauhaus University</a> in Weimar.</p>
 
   <address>
@@ -19,7 +19,7 @@ header : about
 
 
   </div>
-  <div class="span3">
+  <div class="col-sm-3">
     {% assign picture = "simon.jpg" %}
     {% assign size = "small" %}
     {% assign text = "That's me!" %}

@@ -36,7 +36,7 @@ tagline: Supporting tagline
 
 
 <div class="row">
-  <div class="span4">
+  <div class="col-sm-4">
     <h2>latest projects</h2>
     <hr>
     <ul class="sub-nav">
@@ -48,7 +48,7 @@ tagline: Supporting tagline
     </ul>
 
   </div>
-  <div class="span4">
+  <div class="col-sm-4">
     <h2>featured posts</h2>
     <hr>
     <ul class="sub-nav">
@@ -65,7 +65,7 @@ tagline: Supporting tagline
     </ul>
 
   </div>
-  <div class="span4">
+  <div class="col-sm-4">
     <h2>latest posts</h2>
     <hr>
     <ul class="sub-nav">
