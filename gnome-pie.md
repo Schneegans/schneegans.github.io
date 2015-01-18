@@ -178,7 +178,7 @@ For me it's the first project involving Vala, Gtk and Cairo. I never used these 
 
 ### Translate Gnome-Pie!
 
-This is really easy: There is an <a href="http://www.simonschneegans.de/?p=439" title="How-To: Translate Gnome-Pie!" target="_blank">easy-to-follow step-by-step-guide available</a>!
+This is really easy: There is an [easy-to-follow step-by-step-guide available]({% post_url 2011-11-09-translate-gnome-pie %})!
 
 ### Code for Gnome-Pie!
 

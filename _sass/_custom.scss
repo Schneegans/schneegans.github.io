@@ -33,6 +33,10 @@ a {
   @include transition(all 0.3s);
 }
 
+ol, ul {
+  list-style: inherit;
+}
+
 // headings --------------------------------------------------------------------
 
 h1,h2,h3,h4,h5,h6 {
