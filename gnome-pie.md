@@ -61,7 +61,7 @@ When this is done, you can launch the application via your main menu. It will st
 This is not more difficult at all. First of all, install all dependancies - this command again is for Debian-flavored distributions; if you've got another package manager you'll have to change this command accordingly. The dependancy libappindicator-dev is optional, if your distribution does not support this system, simply ignore it. Install the following dependencies:
 
 {% highlight bash %}
-sudo apt-get install git build-essential libgtk-3-dev libcairo2-dev libappindicator3-dev libgee-dev libxml2-dev libxtst-dev libgnome-menu-3-dev valac cmake libunique-3.0-dev libbamf3-dev libwnck-3-dev bamfdaemon
+sudo apt-get install git build-essential libgtk-3-dev libcairo2-dev libappindicator3-dev libgee-0.8-dev libxml2-dev libxtst-dev libgnome-menu-3-dev valac cmake libbamf3-dev libwnck-3-dev bamfdaemon
 {% endhighlight %}
 
 Then download Gnome-Pie from GIT, compile and install it:
