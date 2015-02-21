@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Hello World!
-tagline: Supporting tagline
+description: "Projects and Blog of Simon Schneegans. Here you find news related to Gnome-Pie, M.A.R.S. and other interesting projects!"
 ---
 
 <ul class='kwicks kwicks-horizontal'>
@@ -35,11 +35,11 @@ tagline: Supporting tagline
 
 
 
-<div class="row">
-  <div class="col-sm-4">
+<nav class="row">
+  <div class="col-sm-4 sub-nav">
     <h2>latest projects</h2>
     <hr>
-    <ul class="sub-nav">
+    <ul>
       {% for page in site.pages %}
       {% if page.group == "featured-project" %}
         <li><a href="{{ page.url }}">{{ page.title }}</a><hr></li>
@@ -48,10 +48,10 @@ tagline: Supporting tagline
     </ul>
 
   </div>
-  <div class="col-sm-4">
+  <div class="col-sm-4 sub-nav">
     <h2>featured posts</h2>
     <hr>
-    <ul class="sub-nav">
+    <ul>
       {% assign post_count = 0 %}
       {% for post in site.posts %}
         {% if post.tags contains "featured" %}
@@ -65,10 +65,10 @@ tagline: Supporting tagline
     </ul>
 
   </div>
-  <div class="col-sm-4">
+  <div class="col-sm-4 sub-nav">
     <h2>latest posts</h2>
     <hr>
-    <ul class="sub-nav">
+    <ul>
       {% assign post_count = 0 %}
       {% for post in site.posts %}
         <li><a href="{{ post.url }}">{{ post.title }}</a><hr></li>
@@ -80,7 +80,7 @@ tagline: Supporting tagline
     </ul>
 
   </div>
-</div>
+</nav>
 
 
 

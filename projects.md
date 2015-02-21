@@ -1,7 +1,6 @@
 ---
 layout: page
-title : projects
-header : projects
+title : Projects
 group: projects
 ---
 
