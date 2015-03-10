@@ -27,7 +27,9 @@ body {
 
 a {
   color:$link-color;
-  &:hover {
+  &:hover,
+  &:focus,
+  &:active {
     color: lighten($link-color, 30);
     text-decoration:none;
   }
@@ -108,24 +110,9 @@ p {
   margin:0;
 }
 
-.zocial.googleplus:focus,
-.zocial.googleplus:hover {
-  color:#e01d30 !important;
-}
-
-.zocial.twitter:focus,
-.zocial.twitter:hover {
-  color:#46c0fb !important;
-}
-
-.zocial.linkedin:focus,
-.zocial.linkedin:hover {
-  color:#50a1cb !important;
-}
-
-.zocial.rss:focus,
-.zocial.rss:hover {
-  color:#fb9d3a !important;
+.social-icons {
+  font-size: 1.6em;
+  letter-spacing: 1em;
 }
 
 .img-responsive {
@@ -336,6 +323,10 @@ div.teaser {
     height: 0;
   }
 
+  i {
+    margin-right: 5px;
+  }
+
   margin: 20px 5px 0 0;
   padding: 5px 12px;
   @include border-radius(2px 0 0 2px);
@@ -357,6 +348,10 @@ div.teaser {
     border-width: 5px;
     width: 0;
     height: 0;
+  }
+
+  i {
+    margin-right: 5px;
   }
 
   margin: 20px 0 0 -10px;

@@ -11,17 +11,19 @@
     {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
     <meta name="author" content="{{ site.author.name }}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- HTML5 shim, for IE6-8 support of HTML elements -->
-    <!--[if lt IE 9]>
-      <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script>
-      <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
-    <![endif]-->
 
     <link href="/third_party/css/magnific-popup.css" rel="stylesheet">
     <link href="/third_party/css/jquery.kwicks.min.css" rel="stylesheet" type="text/css" media="all">
     <link href="/third_party/css/zocial.stripped.css" rel="stylesheet" type="text/css" >
     <link href="/third_party/css/pygments.css" rel="stylesheet" type="text/css" media="all">
     <link href="/css/main.css?body=1" rel="stylesheet" type="text/css" media="all">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script>
+      <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <![endif]-->
 
     <link rel="shortcut icon" href="favicon.ico">
   </head>
@@ -31,26 +33,16 @@
     <header class="page-header">
       <nav class="container">
         <ul class="main-nav">
-          {% if page.group == "blog" %}
-          <li class="active">
-          {% else %}
-          <li>
-          {% endif %}
-          <a href="/blog">blog</a></li>
-          {% if page.group == "projects" %}
-          <li class="active">
-          {% else %}
-          <li>
-          {% endif %}
-            <a href="/projects.html">projects</a></li>
+          {% if page.url == "/index.html" %}<li class="active">{% else %}<li>{% endif %}
+            <a href="/">{{ site.title | downcase }}</a>
+          </li>
         </ul>
         <ul class="main-nav brand">
-          {% if page.url == "/index.html" %}
-          <li class="active">
-          {% else %}
-          <li>
-          {% endif %}
-            <a href="/">by {{ site.title }}</a>
+          {% if page.group == "blog" %}<li class="active">{% else %}<li>{% endif %}
+            <a href="/blog">blog</a>
+          </li>
+          {% if page.group == "projects" %}<li class="active">{% else %}<li>{% endif %}
+            <a href="/projects.html">projects</a>
           </li>
         </ul>
       </nav>
@@ -68,25 +60,10 @@
 
     <footer class="page-footer">
       <div class="container">
-        <p>
-
-          {% if site.author.github %}
-            <a href="https://github.com/{{ site.author.github }}" class="zocial github icon" target="_blank"></a>
-          {% endif %}
-          {% if site.author.googleplus %}
-            <a href="https://plus.google.com/{{ site.author.googleplus }}" class="zocial googleplus icon" target="_blank"></a>
-          {% endif %}
-          {% if site.author.twitter %}
-            <a href="https://twitter.com/{{ site.author.twitter }}" class="zocial twitter icon" target="_blank"></a>
-          {% endif %}
-          {% if site.author.facebook %}
-            <a href="http://www.facebook.com/{{ site.author.facebook }}" class="zocial facebook icon" target="_blank"></a>
-          {% endif %}
-          {% if site.author.linkedin %}
-            <a href="http://www.linkedin.com/in/{{ site.author.linkedin }}" class="zocial linkedin icon" target="_blank"></a>
-          {% endif %}
-            <a href="{{site.url}}/feed.xml" class="zocial rss icon" target="_blank"></a>
-
+        <p class="social-icons">
+          <a href="https://github.com/{{ site.author.github }}" target="_blank"><i class="fa fa-git"></i></a>
+          <a href="mailto:{{ site.author.email }}" ><i class="fa fa-envelope"></i></a>
+          <a href="{{site.url}}/feed.xml" target="_blank"><i class="fa fa-rss"></i></a>
         </p>
         <p>&copy; {{ site.time | date: '%Y' }} Desgin &amp; Content by <a href="{{ site.path }}/about.html">{{ site.author.name }} (Impressum)</a> with help from <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> and the <a href="https://github.com/danneu/darkstrap" target="_blank">Darkstrap</a>.<br>Proudly hosted on <a href="https://pages.github.com/">github pages</a>. (<a href="https://github.com/Simmesimme/Simmesimme.github.io">repository</a>)
         </p>
