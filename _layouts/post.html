@@ -24,10 +24,10 @@ layout: default
 
     <div class="well">
       {% if page.previous %}
-        <a href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&laquo; {{page.previous.title}}</a>
+        <a href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}"><i class="fa fa-angle-left"></i> {{page.previous.title}}</a>
       {% endif %}
       {% if page.next %}
-        <a class="pull-right" href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">{{page.next.title}} &raquo;</a>
+        <a class="pull-right" href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">{{page.next.title}} <i class="fa fa-angle-right"></i></a>
       {% endif %}
     </div>
     <br />
