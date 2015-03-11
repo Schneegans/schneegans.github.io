@@ -2,9 +2,13 @@
 
 Feel free to visit it at <http://simmesimme.github.io>
 
-## Used Software
+## Used Software and other Resources
 
-The homepage uses a theme based on [The Hooligan Theme](http://github.com/dhulihan/hooligan).
+* [Jekyll](http://jekyllrb.com)
+* [Bootstrap](http://getbootstrap.com)
+* [Darkstrap](https://github.com/danneu/darkstrap)
+* [Font Awesome](http://fortawesome.github.io/Font-Awesome)
+* [Subtle Patterns](http://subtlepatterns.com)
 
 ## License
 
