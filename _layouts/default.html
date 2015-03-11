@@ -14,7 +14,6 @@
 
     <link href="/third_party/css/magnific-popup.css" rel="stylesheet">
     <link href="/third_party/css/jquery.kwicks.min.css" rel="stylesheet" type="text/css" media="all">
-    <link href="/third_party/css/zocial.stripped.css" rel="stylesheet" type="text/css" >
     <link href="/third_party/css/pygments.css" rel="stylesheet" type="text/css" media="all">
     <link href="/css/main.css?body=1" rel="stylesheet" type="text/css" media="all">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
@@ -34,15 +33,15 @@
       <nav class="container">
         <ul class="main-nav">
           {% if page.url == "/index.html" %}<li class="active">{% else %}<li>{% endif %}
-            <a href="/">{{ site.title | downcase }}</a>
+            <a href="/">{{ site.title }}</a>
           </li>
         </ul>
         <ul class="main-nav brand">
           {% if page.group == "blog" %}<li class="active">{% else %}<li>{% endif %}
-            <a href="/blog">blog</a>
+            <a href="/blog">Blog</a>
           </li>
-          {% if page.group == "projects" %}<li class="active">{% else %}<li>{% endif %}
-            <a href="/projects.html">projects</a>
+          {% if page.group == "projects" or page.group == "featured-projects" %}<li class="active">{% else %}<li>{% endif %}
+            <a href="/projects.html">Projects</a>
           </li>
         </ul>
       </nav>

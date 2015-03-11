@@ -108,6 +108,7 @@ p {
   padding-bottom:15px;
   line-height:25px;
   margin:0;
+  text-align: justify;
 }
 
 .social-icons {
@@ -148,7 +149,7 @@ footer {
 
   text-shadow:none;
 
-  .container {
+  p {
     text-align:center;
   }
 
@@ -366,7 +367,9 @@ div.teaser {
 
 // responsive video ------------------------------------------------------------
 
+.responsive-video-1610 iframe,
 .responsive-video-169 iframe,
+.responsive-video-53 iframe,
 .responsive-video-32 iframe,
 .responsive-video-43 iframe {
   position: absolute;
@@ -376,7 +379,9 @@ div.teaser {
   height: 100%;
 }
 
+.responsive-video-1610,
 .responsive-video-169,
+.responsive-video-53,
 .responsive-video-32,
 .responsive-video-43 {
   border-top: 1px solid #373737;
@@ -391,8 +396,16 @@ div.teaser {
   padding-bottom: 56.25%;
 }
 
+.responsive-video-1610 {
+  padding-bottom: 62.5%;
+}
+
 .responsive-video-43 {
   padding-bottom: 75%;
+}
+
+.responsive-video-53 {
+  padding-bottom: 60%;
 }
 
 .responsive-video-32 {

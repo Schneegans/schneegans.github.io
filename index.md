@@ -41,7 +41,7 @@ description: "Projects and Blog of Simon Schneegans. Here you find news related 
     <hr>
     <ul>
       {% for page in site.pages %}
-      {% if page.group == "featured-project" %}
+      {% if page.group == "featured-projects" %}
         <li><a href="{{ page.url }}">{{ page.title }}</a><hr></li>
       {% endif %}
       {% endfor %}

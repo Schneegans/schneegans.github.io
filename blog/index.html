@@ -8,12 +8,15 @@ group: blog
 
 <div class="row post-preview">
   <div class="col-sm-6 visible-xs">
+    <h1>
+      <a href="{{post.url}}">{{post.title}}</a>
+    </h1>
     <div class="banner-right"><i class="fa fa-pencil"></i> {{post.date | date_to_string}}</div>
     <a href="{{post.url}}"><div class="teaser" style="background-image:url(/assets/pictures/medium/{{post.teaser}})"> </div></a>
     <br />
-    <br />
+    {{post.excerpt}}
   </div>
-  <div class="col-sm-6">
+  <div class="col-sm-6 hidden-xs">
     <h1>
       <a href="{{post.url}}">{{post.title}}</a>
     </h1>
@@ -24,16 +27,12 @@ group: blog
     <div class="banner-right"><i class="fa fa-pencil"></i> {{post.date | date_to_long_string}}</div>
     <a href="{{post.url}}"><div class="teaser" style="background-image:url(/assets/pictures/medium/{{post.teaser}})">  </div></a>
   </div>
-
 </div>
 
 {% if forloop.last %}{% else %}<hr>{% endif %}
-
 {% endfor %}
 
-
 <div class="well">
-
   {% if paginator.next_page %}
     <a href="{{ paginator.next_page_path }}" class=""><i class="fa fa-angle-left"></i> older posts</a>
   {% else %}

@@ -4,6 +4,7 @@ title: "Help baking pies!"
 tagline: "for my bachelor thesis"
 category: news
 teaser: "mockup.jpg"
+group: blog
 ---
 
 Now I'm sure: <strong>I'm going to write my Bachelor thesis on pie menus! But I need your help!</strong>

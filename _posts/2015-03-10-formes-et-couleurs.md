@@ -5,6 +5,7 @@ tagline: "Les Formes et les Couleurs"
 category: artwork
 teaser: "formes-et-couleurs-01.jpg"
 description: "We went for very simplistic character design."
+group: blog
 ---
 
 Some time ago, I created in a team of two a stop motion clip for a computer animation class.
@@ -30,25 +31,25 @@ Below you will find some photos taken at "our set" and a screen shot of Blender 
 <div class="row magnific-gallery">
     <div class="col-xs-3">
         {% assign picture = "lfelc-planning.jpg" %}
-        {% assign size = "medium" %}
+        {% assign size = "small" %}
         {% assign text = "The putty characters had been re-modelled quite frequently. 42 eyes were used throughout the entire production." %}
         {% include gallery_item %}
     </div>
     <div class="col-xs-3">
         {% assign picture = "lfelc-setup.jpg" %}
-        {% assign size = "medium" %}
+        {% assign size = "small" %}
         {% assign text = "The stage (a tabled covered with paper) is quite long for we wanted to achieve an intense depth-of-effect." %}
         {% include gallery_item %}
     </div>
     <div class="col-xs-3">
         {% assign picture = "lfelc-shooting.jpg" %}
-        {% assign size = "medium" %}
+        {% assign size = "small" %}
         {% assign text = "The camera was placed quite far away." %}
         {% include gallery_item %}
     </div>
     <div class="col-xs-3">
         {% assign picture = "lfelc-editing.jpg" %}
-        {% assign size = "medium" %}
+        {% assign size = "small" %}
         {% assign text = "Editing and post-processing was done in Blender." %}
         {% include gallery_item %}
     </div>

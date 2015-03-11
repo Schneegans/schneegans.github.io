@@ -5,6 +5,7 @@ tagline: "read the results"
 category: news
 teaser: "bachelor01.jpg"
 tags: ["featured"]
+group: blog
 ---
 
 And finally it's done. After some months of hard work I'm now a Bachelor of Science! I passed with distinction and since many of you helped me by sending in your usage statistics of Gnome-Pie, I owe you many THANKS and a summary of what I achieved. You may just read the abstract and look at the pictures, graphs and videos to get a glimpse of the results or (if you're brave and greedy for knowledge) you may read the entire summary.

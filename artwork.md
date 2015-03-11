@@ -2,6 +2,7 @@
 layout: page
 title : Random artwork
 header : Random artwork
+group : projects
 ---
 
 <div class="row magnific-gallery">

@@ -2,7 +2,7 @@
 layout: page
 title : M.A.R.S
 header : M.A.R.S
-group: featured-project
+group: featured-projects
 ---
 
 <div class="responsive-video-169">

@@ -2,7 +2,7 @@
 layout: page
 title : Les Formes et les Couleurs
 header : Les Formes et les Couleurs
-group: featured-project
+group: featured-projects
 ---
 
 <div class="responsive-video-32">
@@ -11,7 +11,7 @@ group: featured-project
 
 <br>
 
-This is a stop motion project done by Felix Lauer and myself for a computer animation class. It has elements of slapstick, the movement is a bit faster than usual and piano sound is used to support the action. It features 927 frames shot with a Canon EOS 450d and the single shots were post-processed and combined to a video clip in Blender.
+This is a stop motion project done by Felix Lauer and myself for a computer animation class. It has elements of slapstick, the movement is a bit faster than usual and piano sound is used to support the action. It features 927 frames shot with a Canon EOS 450d and the single shots were post-processed and combined to a video clip in Blender. [Read the blog post!]({% post_url 2015-03-10-formes-et-couleurs %})
 
 ## Behind the scenes
 
