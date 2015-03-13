@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Hello World!
-description: "Projects and Blog of Simon Schneegans. Here you find news related to Gnome-Pie, M.A.R.S. and other interesting projects!"
+description: "Homepage of Simon Schneegans. Here you will find news related to Gnome-Pie, M.A.R.S.2 and other projects of mine."
 ---
 
 <ul class='kwicks kwicks-horizontal'>

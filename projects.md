@@ -2,6 +2,7 @@
 layout: page
 title : Projects
 group: projects
+description: "Projects of Simon Schneegans. Explore the list of some projects of mine!"
 ---
 
 <div class="row">
