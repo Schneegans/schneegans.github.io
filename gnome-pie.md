@@ -8,10 +8,12 @@ description: Homepage of Gnome-Pie, the slick application launcher for Linux.
 
 Gnome-Pie is a circular application launcher for Linux. It is made of several pies, each consisting of multiple slices. The user presses a key stroke which opens the desired pie. By activating one of its slices, applications may be launched, key presses may be simulated or files can be opened.
 
+<p>
 <div class="responsive-video-169">
 <iframe src="http://player.vimeo.com/video/30618179?title=0&amp;byline=0&amp;portrait=0&amp;color={% include link_color %}" width="1600" height="900" frameborder="0" webkitAllowFullScreen allowFullScreen></iframe>
 </div>
-<br>
+</p>
+
 
 ## The concept of Gnome-Pie
 
@@ -25,12 +27,21 @@ Gnome-Pie uses a different approach: The user does not need to remember the name
 
 ## Gnome-Pie in action
 
-Here's another showcase of Gnome-Pie. It features the new settings menu of Gnome-Pie.
-
+<p>
 <div class="responsive-video-169">
 <iframe src="http://player.vimeo.com/video/35385121?title=0&amp;byline=0&amp;portrait=0&amp;color={% include link_color %}" width="1600" height="900" frameborder="0" webkitAllowFullScreen allowFullScreen></iframe>
 </div>
-<br>
+</p>
+
+Here's another showcase of Gnome-Pie. It features the new settings menu of Gnome-Pie.
+
+The clip below (Gnome-Pie 0.6.1) shows how to create a launcher with Gnome-Pie in your dock. This launcher will work as if you had some kind of folder in your dock.
+
+<p>
+<div class="responsive-video-169">
+<iframe src="http://player.vimeo.com/video/125339537?title=0&amp;byline=0&amp;portrait=0&amp;color={% include link_color %}" width="1280" height="720" frameborder="0" webkitAllowFullScreen allowFullScreen></iframe>
+</div>
+</p>
 
 <br/>
 <br/>
