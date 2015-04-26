@@ -41,6 +41,10 @@ ol, ul {
   margin-left: 18px;
 }
 
+li {
+  padding: 4px 0;
+}
+
 // headings --------------------------------------------------------------------
 
 h1,h2,h3,h4,h5,h6 {
@@ -307,6 +311,33 @@ div.teaser {
   margin-top: 20px;
   margin-bottom: 30px;
   position:relative;
+}
+
+table {
+    width: 100%;
+
+    td, th {
+      line-height: 1.42857143;
+      padding: 8px;
+      vertical-align: center;
+
+    }
+
+    tbody {
+      tr {
+        border-bottom: 1px solid #373737;
+
+        &:hover {
+          background-color: #222;
+        }
+      }
+    }
+
+    thead {
+      tr {
+        border-bottom: 3px solid #373737;
+      }
+    }
 }
 
 // banners ---------------------------------------------------------------------
