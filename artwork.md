@@ -17,9 +17,19 @@ group : projects
         {% assign text = "Modelled, textured and rendered in Blender together with a firend of mine" %}
         {% include gallery_item %}
         <br />
+        {% assign picture = "rose.jpg" %}
+        {% assign size = "small" %}
+        {% assign text = "A b/w photograph of a rose" %}
+        {% include gallery_item %}
+        <br />
         {% assign picture = "alchemy1.jpg" %}
         {% assign size = "small" %}
         {% assign text = "Character test done with Alchemy" %}
+        {% include gallery_item %}
+        <br />
+        {% assign picture = "moss.jpg" %}
+        {% assign size = "small" %}
+        {% assign text = "A photograph of moss" %}
         {% include gallery_item %}
         <br />
         {% assign picture = "arthas.jpg" %}
@@ -39,6 +49,11 @@ group : projects
         {% assign text = "Character test done with Alchemy" %}
         {% include gallery_item %}
         <br />
+        {% assign picture = "sun.jpg" %}
+        {% assign size = "small" %}
+        {% assign text = "A sunset in California" %}
+        {% include gallery_item %}
+        <br />
         {% assign picture = "island.jpg" %}
         {% assign size = "small" %}
         {% assign text = "An interestingly shaped island renderered with Terragen" %}
@@ -47,6 +62,11 @@ group : projects
         {% assign picture = "micro.jpg" %}
         {% assign size = "small" %}
         {% assign text = "A picture made with Blender and The Gimp" %}
+        {% include gallery_item %}
+        <br />
+        {% assign picture = "stars.jpg" %}
+        {% assign size = "small" %}
+        {% assign text = "A sunset in Arizona" %}
         {% include gallery_item %}
         <br />
         {% assign picture = "faroer.jpg" %}
@@ -61,6 +81,11 @@ group : projects
         <br />
     </div>
     <div class="col-sm-4 col-xs-6">
+        {% assign picture = "sunset.jpg" %}
+        {% assign size = "small" %}
+        {% assign text = "Photograph taken in California" %}
+        {% include gallery_item %}
+        <br />
         {% assign picture = "sword.jpg" %}
         {% assign size = "small" %}
         {% assign text = "Sword study done with Alchemy" %}
@@ -69,6 +94,11 @@ group : projects
         {% assign picture = "witch.jpg" %}
         {% assign size = "small" %}
         {% assign text = "A turbo-witch drawn with MyPaint" %}
+        {% include gallery_item %}
+        <br />
+        {% assign picture = "buchenwald.jpg" %}
+        {% assign size = "small" %}
+        {% assign text = "A picture taken at the Buchenwald concentration camp" %}
         {% include gallery_item %}
         <br />
         {% assign picture = "ubuntu.jpg" %}
