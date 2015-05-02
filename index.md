@@ -37,16 +37,18 @@ description: "Homepage of Simon Schneegans. Here you will find news related to G
 
 <nav class="row">
   <div class="col-sm-4 sub-nav">
-    <h2>latest projects</h2>
+    <h2>latest posts</h2>
     <hr>
     <ul>
-      {% for page in site.pages %}
-      {% if page.group == "featured-projects" %}
-        <li><a href="{{ page.url }}">{{ page.title }}</a><hr></li>
-      {% endif %}
+      {% assign post_count = 0 %}
+      {% for post in site.posts %}
+        <li><a href="{{ post.url }}">{{ post.title }}</a><hr></li>
+        {% assign post_count=post_count | plus:1 %}
+        {% if post_count == 3 %}
+          {% break %}
+        {% endif %}
       {% endfor %}
     </ul>
-
   </div>
   <div class="col-sm-4 sub-nav">
     <h2>featured posts</h2>
@@ -63,22 +65,17 @@ description: "Homepage of Simon Schneegans. Here you will find news related to G
         {% endif %}
       {% endfor %}
     </ul>
-
   </div>
   <div class="col-sm-4 sub-nav">
-    <h2>latest posts</h2>
+    <h2>latest projects</h2>
     <hr>
     <ul>
-      {% assign post_count = 0 %}
-      {% for post in site.posts %}
-        <li><a href="{{ post.url }}">{{ post.title }}</a><hr></li>
-        {% assign post_count=post_count | plus:1 %}
-        {% if post_count == 3 %}
-          {% break %}
-        {% endif %}
+      {% for page in site.pages %}
+      {% if page.group == "featured-projects" %}
+        <li><a href="{{ page.url }}">{{ page.title }}</a><hr></li>
+      {% endif %}
       {% endfor %}
     </ul>
-
   </div>
 </nav>
 
