@@ -5,6 +5,17 @@ header : Random artwork
 group : projects
 ---
 
+<div class="page-header">
+  <h1>
+    random artwork
+  </h1>
+  <hr>
+</div>
+
+<p>
+Below you find a random collection of pictures I have created. Some of them are photographs, some are rendered with 3D software and some are drawn by hand.
+</p>
+
 <div class="row magnific-gallery">
     <div class="col-sm-4 col-xs-6">
         {% assign picture = "knife.jpg" %}
@@ -84,6 +95,11 @@ group : projects
         {% assign picture = "sunset.jpg" %}
         {% assign size = "small" %}
         {% assign text = "Photograph taken in California" %}
+        {% include gallery_item %}
+        <br />
+        {% assign picture = "small_lemur.jpg" %}
+        {% assign size = "small" %}
+        {% assign text = "A picture of a little ring-tailed lemur" %}
         {% include gallery_item %}
         <br />
         {% assign picture = "sword.jpg" %}
