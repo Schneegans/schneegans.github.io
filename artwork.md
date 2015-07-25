@@ -48,6 +48,11 @@ Below you find a random collection of pictures I have created. Some of them are 
         {% assign text = "Character rendered with Blender's internal renderer" %}
         {% include gallery_item %}
         <br />
+        {% assign picture = "faroer_02.jpg" %}
+        {% assign size = "small" %}
+        {% assign text = "A photograph taken on the Faroe Islands" %}
+        {% include gallery_item %}
+        <br />
         {% assign picture = "bird.jpg" %}
         {% assign size = "small" %}
         {% assign text = "A bird drawn with MyPaint" %}
@@ -68,6 +73,11 @@ Below you find a random collection of pictures I have created. Some of them are 
         {% assign picture = "island.jpg" %}
         {% assign size = "small" %}
         {% assign text = "An interestingly shaped island renderered with Terragen" %}
+        {% include gallery_item %}
+        <br />
+        {% assign picture = "faroer_03.jpg" %}
+        {% assign size = "small" %}
+        {% assign text = "A photograph taken on the Faroe Islands" %}
         {% include gallery_item %}
         <br />
         {% assign picture = "micro.jpg" %}
