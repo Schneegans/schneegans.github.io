@@ -45,6 +45,30 @@ li {
   padding: 4px 0;
 }
 
+// tabs --------------------------------------------------------------------
+ul.nav {
+  margin-left: 0px;
+  right: 0;
+
+  li {
+    float:right;
+
+    a {
+      padding: 5px 12px;
+    }
+
+    a:hover {
+      color:$link-color;
+    }
+  }
+
+  li.active a:hover,
+  li.active a:focus,
+  li.active a {
+    background-color: $link-color;
+  }
+}
+
 // headings --------------------------------------------------------------------
 
 h1,h2,h3,h4,h5,h6 {

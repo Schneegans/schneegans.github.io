@@ -72,9 +72,29 @@ When this is done, you can launch the application via your main menu. It will st
 
 This is not more difficult at all. First of all, install all dependencies - this command again is for Debian-flavored distributions; if you've got another package manager you'll have to change this command accordingly. The dependency libappindicator-dev is optional, if your distribution does not support this system, simply ignore it. Install the following dependencies:
 
-{% highlight bash %}
-sudo apt-get install git build-essential libgtk-3-dev libcairo2-dev libappindicator3-dev libgee-0.8-dev libxml2-dev libxtst-dev libgnome-menu-3-dev valac cmake libbamf3-dev libwnck-3-dev bamfdaemon
-{% endhighlight %}
+<div>
+
+  <!-- Nav tabs -->
+  <ul class="nav nav-pills" role="tablist">
+    <li role="presentation" class="active">
+        <a href="#Ubuntu" aria-controls="Ubuntu" role="tab" data-toggle="tab">Ubuntu</a>
+    </li>
+    <li role="presentation">
+        <a href="#Fedora" aria-controls="Fedora" role="tab" data-toggle="tab">Fedora</a>
+    </li>
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane fade in active" id="Ubuntu">
+        <pre><code>sudo apt-get install git build-essential libgtk-3-dev libcairo2-dev libappindicator3-dev libgee-0.8-dev libxml2-dev libxtst-dev libgnome-menu-3-dev valac cmake libbamf3-dev libwnck-3-dev bamfdaemon</code></pre>
+    </div>
+    <div role="tabpanel" class="tab-pane fade" id="Fedora">
+        <pre><code>sudo dnf install cmake make automake gcc gcc-c++ vala gtk3-devel libwnck3-devel bamf-devel libgee-devel libxml2-devel libXtst-devel gnome-menus-devel</code></pre>
+    </div>
+  </div>
+
+</div>
 
 Make sure, that you have a version of the vala compiler which is `>= 0.24`. You may check your current version by running `valac --version`. If it does not fit, please install a newer version. In Ubuntu 14.04 this can be done with the following commands:
 
@@ -84,11 +104,22 @@ sudo apt-get update
 sudo apt-get upgrade
 {% endhighlight %}
 
-Then download Gnome-Pie from GIT, compile and install it:
+Then download Gnome-Pie from GIT and compile it:
 
 {% highlight bash %}
 git clone git://github.com/Simmesimme/Gnome-Pie.git
 cd Gnome-Pie && ./make.sh
+{% endhighlight %}
+
+Now you can launch your local version of Gnome-Pie:
+
+{% highlight bash %}
+./gnome-pie
+{% endhighlight %}
+
+If you want to install it system wide:
+
+{% highlight bash %}
 cd build && sudo make install
 {% endhighlight %}
 
