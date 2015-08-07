@@ -199,23 +199,17 @@ For each element there are some attributes which can be specified. Not all of th
     <tr><td><strong>colorize</strong><br><small>Whether this layer gets colorized according to the icon of this slice </small></td><td class="pull-right">false</td></tr>
     <tr><td><strong>file</strong><br><small>If type is file: the image file to use, is type is icon: a mask - the icon will be visible at the non-transparent parts of this image </small></td><td class="pull-right"> mandatory if type="file" </td></tr>
     <tr><td><strong>scale</strong><br><small>Scale of this layer </small></td><td class="pull-right">1.0 </td></tr>
-    <tr><td><strong>type</strong><br><small>Type of this slice layer, can be one of the following: file (an image file), icon (the actual icon of the slice is placed at this level of slice)</small></td><td class="pull-right"> file</td></tr>
+    <tr><td><strong>visibility</strong><br><small>Can be set either to with_caption, without_caption or to any. The layer will be shown or hidden according to caption visibility selected in the user's preferences.</small></td><td class="pull-right">any</td></tr>
+    <tr><td><strong>type</strong><br><small>Type of this slice layer, can be one of the following: file (an image file), icon (the actual icon of the slice is placed at this level of slice) or caption (the name of the slice will be written here)</small></td><td class="pull-right"> file</td></tr>
+    <tr><td><strong>x</strong><br><small>Horizontal position offset of the layer </small></td><td class="pull-right"> 0.0 </td></tr>
+    <tr><td><strong>y</strong><br><small>Vertical position offset of the layer </small></td><td class="pull-right"> 0.0 </td></tr>
+    <tr><td><strong>color</strong><br><small>Only for type caption: Color of the font </small></td><td class="pull-right">#FFFFFF </td></tr>
+    <tr><td><strong>font</strong><br><small>Only for type caption: Font of the caption </small></td><td class="pull-right">sans 12 </td></tr>
+    <tr><td><strong>height</strong><br><small>Only for type caption: Maximum height </small></td><td class="pull-right">100 </td></tr>
+    <tr><td><strong>width</strong><br><small>Only for type caption: Maximum width </small></td><td class="pull-right">100 </td></tr>
 </tbody>
 </table>
 
-###The &lt;caption&gt; element
-<table>
-<thead>
-    <tr><th><h4>Element</h4></th><th class="pull-right"><h4>Default value</h4></th></tr>
-</thead>
-<tbody>
-    <tr><td><strong>color</strong><br><small>Color of the font </small></td><td class="pull-right">#FFFFFF </td></tr>
-    <tr><td><strong>font</strong><br><small>Font of the caption </small></td><td class="pull-right">sans 12 </td></tr>
-    <tr><td><strong>height</strong><br><small>Maximum height </small></td><td class="pull-right">100 </td></tr>
-    <tr><td><strong>position</strong><br><small>Vertical position of the caption </small></td><td class="pull-right"> 0.0 </td></tr>
-    <tr><td><strong>width</strong><br><small>Maximum width </small></td><td class="pull-right">100 </td></tr>
-</tbody>
-</table>
 
 ##4. Post a screenshot in the comments
 
