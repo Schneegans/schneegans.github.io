@@ -11,6 +11,8 @@ It would be really cool if you could create a translation of Gnome-Pie into your
 
 <!--more-->
 
+<div class="alert well">The information below is deprecated. For a much more convenient way to translate Gnome-Pie refer to the <a href ="{% post_url 2015-08-07-translate-gnome-pie %}">new blog post</a>!</div>
+
 All you need is the source code of Gnome-Pie and the locale string for your language. You can get the source code with the terminal command
 
 {% highlight bash %}

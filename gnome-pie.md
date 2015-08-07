@@ -31,7 +31,7 @@ Gnome-Pie is a circular application launcher for Linux. It is made of several pi
         <div class="well text-center"><a href="https://github.com/Simmesimme/Gnome-Pie/issues"><i style="font-size:2em" class="fa fa-lightbulb-o"></i><br> Improvements</a></div>
     </div>
     <div class="col-sm-4">
-        <div class="well text-center"><a href="{% post_url 2011-11-09-translate-gnome-pie %}"><i style="font-size:2em" class="fa fa-flag"></i><br> Translations</a></div>
+        <div class="well text-center"><a href="{% post_url 2015-08-07-translate-gnome-pie %}"><i style="font-size:2em" class="fa fa-flag"></i><br> Translations</a></div>
     </div>
     <div class="col-sm-4">
         <div class="well text-center"><a href="{% post_url 2015-04-26-themes-for-gnome-pie %}"><i style="font-size:2em" class="fa fa-paint-brush"></i><br> Themes</a></div>
@@ -237,7 +237,7 @@ For me it's the first project involving Vala, Gtk and Cairo. I never used these 
 
 ### Translate Gnome-Pie!
 
-This is really easy: There is an [easy-to-follow step-by-step-guide available]({% post_url 2011-11-09-translate-gnome-pie %})!
+This is really easy: There is an [how-to available]({% post_url 2015-08-07-translate-gnome-pie %})!
 
 ### Code for Gnome-Pie!
 
