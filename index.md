@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Hello World!
+title: Projects and Blog
 description: "Homepage of Simon Schneegans. Here you will find news related to Gnome-Pie, M.A.R.S.2 and other projects of mine."
 ---
 
@@ -14,16 +14,16 @@ description: "Homepage of Simon Schneegans. Here you will find news related to G
     </li>
     <li id="panel-2">
       <div class="description">
-      <h2><a href="/mars.html">M.A.R.S. - a ridiculous shooter</a></h2>
-      M.A.R.S. is a ridiculous, open source 2D shooter. It is a game for two players, flying with ships in a two-dimensional space setting, governed by the laws of gravity.</div>
-      <div class="bg" style="background-image:url('/assets/pictures/teaser-mars.jpg')"></div>
-    </li>
-    <li id="panel-3">
-      <div class="description">
       <h2><a href="/artwork.html">Random artwork</a></h2>
       When I'm not currently working on a software project, I use open source software to draw images. Here's a collection of various images I've drawn with no real purpose. Most of them are done with Blender, MyPaint, Alchemy and The Gimp.
       </div>
-      <div class="bg" style="background-image:url('/assets/pictures/knife.jpg')"></div>
+      <div class="bg" style="background-image:url('/assets/pictures/teaser-art.jpg')"></div>
+    </li>
+    <li id="panel-3">
+      <div class="description">
+      <h2><a href="/mars.html">M.A.R.S. - a ridiculous shooter</a></h2>
+      M.A.R.S. is a ridiculous, open source 2D shooter. It is a game for two players, flying with ships in a two-dimensional space setting, governed by the laws of gravity.</div>
+      <div class="bg" style="background-image:url('/assets/pictures/teaser-mars.jpg')"></div>
     </li>
     <li id="panel-4">
       <div class="description">

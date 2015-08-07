@@ -6,13 +6,38 @@ group: featured-projects
 description: Homepage of Gnome-Pie, the slick application launcher for Linux.
 ---
 
-Gnome-Pie is a circular application launcher for Linux. It is made of several pies, each consisting of multiple slices. The user presses a key stroke which opens the desired pie. By activating one of its slices, applications may be launched, key presses may be simulated or files can be opened.
-
-<p>
 <div class="responsive-video-169">
 <iframe src="http://player.vimeo.com/video/30618179?title=0&amp;byline=0&amp;portrait=0&amp;color={% include link_color %}" width="1600" height="900" frameborder="0" webkitAllowFullScreen allowFullScreen></iframe>
 </div>
-</p>
+
+<br>
+
+Gnome-Pie is a circular application launcher for Linux. It is made of several pies, each consisting of multiple slices. The user presses a key stroke which opens the desired pie. By activating one of its slices, applications may be launched, key presses may be simulated or files can be opened.
+
+
+## Quick Links
+
+<div class="row">
+    <div class="col-sm-4">
+        <div class="well text-center"><a href="https://github.com/Simmesimme/Gnome-Pie"><i style="font-size:2em" class="fa fa-github"></i><br> Source Code</a></div>
+    </div>
+    <div class="col-sm-4">
+        <div class="well text-center"><a href="https://github.com/Simmesimme/Gnome-Pie/issues"><i style="font-size:2em" class="fa fa-bug"></i><br> Bug Reports</a></div>
+    </div>
+    <div class="col-sm-4">
+        <div class="well text-center"><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=X65SUVC4ZTQSC"><i style="font-size:2em" class="fa fa-dollar"></i><br> Donations</a></div>
+    </div>
+    <div class="col-sm-4">
+        <div class="well text-center"><a href="https://github.com/Simmesimme/Gnome-Pie/issues"><i style="font-size:2em" class="fa fa-lightbulb-o"></i><br> Improvements</a></div>
+    </div>
+    <div class="col-sm-4">
+        <div class="well text-center"><a href="{% post_url 2011-11-09-translate-gnome-pie %}"><i style="font-size:2em" class="fa fa-flag"></i><br> Translations</a></div>
+    </div>
+    <div class="col-sm-4">
+        <div class="well text-center"><a href="{% post_url 2015-04-26-themes-for-gnome-pie %}"><i style="font-size:2em" class="fa fa-paint-brush"></i><br> Themes</a></div>
+    </div>
+</div>
+
 
 
 ## The concept of Gnome-Pie
@@ -24,8 +49,6 @@ Gnome-Pie is designed to be fun, fast and visually appealing. It implements Fitt
 Many application launchers of today's Linux desktops are made for people using their keyboard mainly. Launchers like <a href="http://do.davebsd.com/">Gnome-Do</a>, <a href="https://launchpad.net/synapse-project">Synapse</a>, <a href="http://kaizer.se/wiki/kupfer/">Kupfer</a>, Unity's Dash or Gnome-Shell's Activities are designed for keyboard users. It's necessary to type the first letters of the desired action in order to launch it.
 
 Gnome-Pie uses a different approach: The user does not need to remember the name of an application - just the <em>direction</em> has to be remembered. Combined with the implementations of Fitts' law - users don't have to click directly on the icon of an action, but somewhere on the screen in its direction - Gnome-Pie is an alternative to text-based launchers.
-
-## Gnome-Pie in action
 
 <p>
 <div class="responsive-video-169">
@@ -70,11 +93,9 @@ When this is done, you can launch the application via your main menu. It will st
 
 ## Installation from source
 
-This is not more difficult at all. First of all, install all dependencies - this command again is for Debian-flavored distributions; if you've got another package manager you'll have to change this command accordingly. The dependency libappindicator-dev is optional, if your distribution does not support this system, simply ignore it. Install the following dependencies:
+This is not more difficult at all. First of all, install all dependencies - below you will find the appropriate commands for Fedora and Ubuntu; if you have another package manager you'll have to change this command accordingly. The dependency libappindicator3-dev is optional, if your distribution does not support this system, simply ignore it.
 
 <div>
-
-  <!-- Nav tabs -->
   <ul class="nav nav-pills" role="tablist">
     <li role="presentation" class="active">
         <a href="#Ubuntu" aria-controls="Ubuntu" role="tab" data-toggle="tab">Ubuntu</a>
@@ -84,7 +105,6 @@ This is not more difficult at all. First of all, install all dependencies - this
     </li>
   </ul>
 
-  <!-- Tab panes -->
   <div class="tab-content">
     <div role="tabpanel" class="tab-pane fade in active" id="Ubuntu">
         <pre><code>sudo apt-get install git build-essential libgtk-3-dev libcairo2-dev libappindicator3-dev libgee-0.8-dev libxml2-dev libxtst-dev libgnome-menu-3-dev valac cmake libbamf3-dev libwnck-3-dev bamfdaemon</code></pre>
@@ -93,10 +113,9 @@ This is not more difficult at all. First of all, install all dependencies - this
         <pre><code>sudo dnf install cmake make automake gcc gcc-c++ vala gtk3-devel libwnck3-devel bamf-devel libgee-devel libxml2-devel libXtst-devel gnome-menus-devel</code></pre>
     </div>
   </div>
-
 </div>
 
-Make sure, that you have a version of the vala compiler which is `>= 0.24`. You may check your current version by running `valac --version`. If it does not fit, please install a newer version. In Ubuntu 14.04 this can be done with the following commands:
+Make sure, that you have a version of the vala compiler which is at least `0.24`. You may check your current version by running `valac --version`. If it does not fit, please install a newer version. In Ubuntu 14.04 or later this can be done with the following commands:
 
 {% highlight bash %}
 sudo add-apt-repository ppa:vala-team/ppa
