@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Translate Gnome-Pie!"
-tagline: "with a new theme!"
+tagline: "help making it awesome!"
 category: news
 teaser: "translate2.jpg"
 description: "Translate Gnome-Pie into your language!"
