@@ -15,26 +15,31 @@ description: Homepage of Gnome-Pie, the slick application launcher for Linux.
 Gnome-Pie is a circular application launcher for Linux. It is made of several pies, each consisting of multiple slices. The user presses a key stroke which opens the desired pie. By activating one of its slices, applications may be launched, key presses may be simulated or files can be opened.
 
 
+The most recent version of Gnome-Pie is 0.6.5. You can read the <a href="{% post_url 2015-08-07-gnome-pie-065 %}">release announcement here</a> or have a look at the <a href="/gnome-pie-changelog.html">changelog</a>.
+
 ## Quick Links
 
 <div class="row">
     <div class="col-sm-4">
-        <div class="well text-center"><a href="https://github.com/Simmesimme/Gnome-Pie"><i style="font-size:2em" class="fa fa-github"></i><br> Source Code</a></div>
+        <a href="https://github.com/Simmesimme/Gnome-Pie"><div class="well text-center"><i style="font-size:2em" class="fa fa-github"></i><br> Source Code</div></a>
+    </div>
+    <div class="col-sm-8">
+        <a href="https://github.com/Simmesimme/Gnome-Pie/issues"><div class="well text-center"><i style="font-size:2em" class="fa fa-bug"></i><br> Bug Reports</div></a>
     </div>
     <div class="col-sm-4">
-        <div class="well text-center"><a href="https://github.com/Simmesimme/Gnome-Pie/issues"><i style="font-size:2em" class="fa fa-bug"></i><br> Bug Reports</a></div>
+        <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=X65SUVC4ZTQSC"><div class="well text-center"><i style="font-size:2em" class="fa fa-dollar"></i><br> Donations</div></a>
     </div>
     <div class="col-sm-4">
-        <div class="well text-center"><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=X65SUVC4ZTQSC"><i style="font-size:2em" class="fa fa-dollar"></i><br> Donations</a></div>
+        <a href="https://github.com/Simmesimme/Gnome-Pie/issues"><div class="well text-center"><i style="font-size:2em" class="fa fa-lightbulb-o"></i><br> Improvements</div></a>
     </div>
     <div class="col-sm-4">
-        <div class="well text-center"><a href="https://github.com/Simmesimme/Gnome-Pie/issues"><i style="font-size:2em" class="fa fa-lightbulb-o"></i><br> Improvements</a></div>
+        <a href="{% post_url 2015-08-07-translate-gnome-pie %}"><div class="well text-center"><i style="font-size:2em" class="fa fa-flag"></i><br> Translations</div></a>
+    </div>
+    <div class="col-sm-8">
+        <a href="{% post_url 2015-04-26-themes-for-gnome-pie %}"><div class="well text-center"><i style="font-size:2em" class="fa fa-paint-brush"></i><br> Themes</div></a>
     </div>
     <div class="col-sm-4">
-        <div class="well text-center"><a href="{% post_url 2015-08-07-translate-gnome-pie %}"><i style="font-size:2em" class="fa fa-flag"></i><br> Translations</a></div>
-    </div>
-    <div class="col-sm-4">
-        <div class="well text-center"><a href="{% post_url 2015-04-26-themes-for-gnome-pie %}"><i style="font-size:2em" class="fa fa-paint-brush"></i><br> Themes</a></div>
+        <a href="/gnome-pie-changelog.html"><div class="well text-center"><i style="font-size:2em" class="fa fa-list-ol"></i><br> Change Log</div></a>
     </div>
 </div>
 
