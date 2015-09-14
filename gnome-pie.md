@@ -112,10 +112,10 @@ This is not more difficult at all. First of all, install all dependencies - belo
 
   <div class="tab-content">
     <div role="tabpanel" class="tab-pane fade in active" id="Ubuntu">
-        <pre><code>sudo apt-get install git build-essential libgtk-3-dev libcairo2-dev libappindicator3-dev libgee-0.8-dev libxml2-dev libxtst-dev libgnome-menu-3-dev valac cmake libbamf3-dev libwnck-3-dev bamfdaemon</code></pre>
+        <pre><code>sudo apt-get install git build-essential libgtk-3-dev libcairo2-dev libappindicator3-dev libgee-0.8-dev libxml2-dev libxtst-dev libgnome-menu-3-dev valac cmake libbamf3-dev libwnck-3-dev bamfdaemon libarchive-dev</code></pre>
     </div>
     <div role="tabpanel" class="tab-pane fade" id="Fedora">
-        <pre><code>sudo dnf install cmake make automake gcc gcc-c++ vala gtk3-devel libwnck3-devel bamf-devel libgee-devel libxml2-devel libXtst-devel gnome-menus-devel</code></pre>
+        <pre><code>sudo dnf install cmake make automake gcc gcc-c++ vala gtk3-devel libwnck3-devel bamf-devel libgee-devel libxml2-devel libXtst-devel gnome-menus-devel libarchive-devel</code></pre>
     </div>
   </div>
 </div>
