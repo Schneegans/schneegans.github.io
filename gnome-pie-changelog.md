@@ -6,6 +6,19 @@ description: A chronological list of changes of Gnome-Pie.
 ---
 
 
+## Gnome-Pie 0.6.6
+
+* **New Feature:** New Numix theme. Similar to Adwaita Big but with dark colors.
+* **New Feature:** It's now possible to export and to import themes.
+* **New Feature:** There is a little info widget in the settings menu. It shows useful tips and tricks regarding Gnome-Pie.
+* **Update:** Gnome-Pie now uses [Zanata](https://translate.zanata.org/zanata/iteration/view/gnome-pie/develop) for translations.
+* **Update:** Translation updates for Spanish locale (thank you,[Gabriel Dubatti](https://github.com/gabdub)!). Please feel free to contribute to the [translation into your language]({% post_url 2015-08-07-translate-gnome-pie %})!
+* **Update:** Translation updates for German locale.
+* **Update:** The settings menu layout has been changed a bit.
+* **Update:** The translations are now compiled at build time. Actually there was no reason for them being included in the repository.
+* **Bugfix:** When typing slice names to select them, the typed letters are reset after a short delay. This allows for selecting an item even if you typed some wrong letters in the first place.
+
+
 ## Gnome-Pie 0.6.5
 
 * **New Feature:** Added possibility to select slices by typing their names.

@@ -15,34 +15,11 @@ description: Homepage of Gnome-Pie, the slick application launcher for Linux.
 Gnome-Pie is a circular application launcher for Linux. It is made of several pies, each consisting of multiple slices. The user presses a key stroke which opens the desired pie. By activating one of its slices, applications may be launched, key presses may be simulated or files can be opened.
 
 
-The most recent version of Gnome-Pie is 0.6.5. You can read the <a href="{% post_url 2015-08-07-gnome-pie-065 %}">release announcement here</a> or have a look at the <a href="/gnome-pie-changelog.html">changelog</a>.
+The most recent version of Gnome-Pie is 0.6.6. You can read the <a href="{% post_url 2015-09-15-gnome-pie-066 %}">release announcement here</a> or have a look at the <a href="/gnome-pie-changelog.html">changelog</a>.
 
 ## Quick Links
 
-<div class="row">
-    <div class="col-sm-4">
-        <a href="https://github.com/Simmesimme/Gnome-Pie"><div class="well text-center"><i style="font-size:2em" class="fa fa-github"></i><br> Source Code</div></a>
-    </div>
-    <div class="col-sm-8">
-        <a href="https://github.com/Simmesimme/Gnome-Pie/issues"><div class="well text-center"><i style="font-size:2em" class="fa fa-bug"></i><br> Bug Reports</div></a>
-    </div>
-    <div class="col-sm-4">
-        <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=X65SUVC4ZTQSC"><div class="well text-center"><i style="font-size:2em" class="fa fa-dollar"></i><br> Donations</div></a>
-    </div>
-    <div class="col-sm-4">
-        <a href="https://github.com/Simmesimme/Gnome-Pie/issues"><div class="well text-center"><i style="font-size:2em" class="fa fa-lightbulb-o"></i><br> Improvements</div></a>
-    </div>
-    <div class="col-sm-4">
-        <a href="{% post_url 2015-08-07-translate-gnome-pie %}"><div class="well text-center"><i style="font-size:2em" class="fa fa-flag"></i><br> Translations</div></a>
-    </div>
-    <div class="col-sm-8">
-        <a href="{% post_url 2015-04-26-themes-for-gnome-pie %}"><div class="well text-center"><i style="font-size:2em" class="fa fa-paint-brush"></i><br> Themes</div></a>
-    </div>
-    <div class="col-sm-4">
-        <a href="/gnome-pie-changelog.html"><div class="well text-center"><i style="font-size:2em" class="fa fa-list-ol"></i><br> Change Log</div></a>
-    </div>
-</div>
-
+{% include quick_links %}
 
 
 ## The concept of Gnome-Pie
@@ -82,7 +59,7 @@ The clip below (Gnome-Pie 0.6.1) shows how to create a launcher with Gnome-Pie i
 {% assign text = "How to install Gnome-Pie!" %}
 {% include image %}
 
-Besides from installing from source there are other ways to install Gnome-Pie. I maintain a PPA for easy installation on ubuntu-ish distributions and there are several repositories for other distributions, like <a href="https://aur.archlinux.org/packages.php?ID=52732&detail=0">Arch Linux</a>.
+Besides from installing from source there are other ways to install Gnome-Pie. I maintain a PPA for easy installation on ubuntu-ish distributions and there are several repositories for other distributions, like <a href="https://aur.archlinux.org/packages/gnome-pie-git/">Arch Linux</a>.
 
 ## Installation from my PPA
 
