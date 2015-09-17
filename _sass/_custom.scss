@@ -301,12 +301,24 @@ footer {
 
   .description {
     display: none;
-    color:#D7D7D7;
+    color: $link-color;
 
     h2 {
-      color:#D7D7D7;
+      color: $link-color;
       margin-top:10px;
+      @include transition(color 0.3s);
     }
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: lighten($link-color, 30);
+
+      h2 {
+        color: lighten($link-color, 30);
+      }
+    }
+    @include transition(color 0.3s);
 
     width:100%;
 

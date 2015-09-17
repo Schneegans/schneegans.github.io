@@ -92,7 +92,7 @@
 
         $(".kwicks").on('expand-complete.kwicks', function(e, data) {
           if (data.expanded) {
-            $(data.expanded.children[0]).fadeIn();
+            $(data.expanded.children[0].children[0]).fadeIn();
           }
         });
       })

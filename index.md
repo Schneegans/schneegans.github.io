@@ -6,30 +6,45 @@ description: "Homepage of Simon Schneegans. Here you will find news related to G
 
 <ul class='kwicks kwicks-horizontal'>
     <li id="panel-1">
+      <a href="/gnome-pie.html">
 
-      <div class="description">
-      <h2><a href="/gnome-pie.html">Gnome-Pie</a></h2>
-      Gnome-Pie a slick application launcher for Linux. It’s eye candy and pretty fun to work with. It offers multiple ways to improve your desktop experience.</div>
-      <div class="bg" style="background-image:url('/assets/pictures/teaser-gnomepie.jpg')"></div>
+        <div class="description">
+          <h2>Gnome-Pie</h2>
+          Gnome-Pie a slick application launcher for Linux. It’s eye candy and pretty fun to work with. It offers multiple ways to improve your desktop experience.
+          <div class="pull-right">read on <i class="fa fa-angle-right"></i></div>
+        </div>
+        <div class="bg" style="background-image:url('/assets/pictures/teaser-gnomepie.jpg')"></div>
+      </a>
     </li>
     <li id="panel-2">
-      <div class="description">
-      <h2><a href="/artwork.html">Random artwork</a></h2>
-      When I'm not currently working on a software project, I use open source software to draw images. Here's a collection of various images I've drawn with no real purpose. Most of them are done with Blender, MyPaint, Alchemy and The Gimp.
-      </div>
-      <div class="bg" style="background-image:url('/assets/pictures/teaser-art.jpg')"></div>
+      <a href="/artwork.html">
+        <div class="description">
+          <h2>Random artwork</h2>
+          When I'm not currently working on a software project, I use open source software to draw images. Here's a collection of various images I've drawn with no real purpose. Most of them are done with Blender, MyPaint, Alchemy and The Gimp.
+          <div class="pull-right">read on <i class="fa fa-angle-right"></i></div>
+        </div>
+        <div class="bg" style="background-image:url('/assets/pictures/teaser-art.jpg')"></div>
+      </a>
     </li>
     <li id="panel-3">
-      <div class="description">
-      <h2><a href="/mars.html">M.A.R.S. - a ridiculous shooter</a></h2>
-      M.A.R.S. is a ridiculous, open source 2D shooter. It is a game for two players, flying with ships in a two-dimensional space setting, governed by the laws of gravity.</div>
-      <div class="bg" style="background-image:url('/assets/pictures/teaser-mars.jpg')"></div>
+      <a href="/mars.html">
+        <div class="description">
+          <h2>M.A.R.S. - a ridiculous shooter</h2>
+          M.A.R.S. is a ridiculous, open source 2D shooter. It is a game for two players, flying with ships in a two-dimensional space setting, governed by the laws of gravity.
+          <div class="pull-right">read on <i class="fa fa-angle-right"></i></div>
+        </div>
+        <div class="bg" style="background-image:url('/assets/pictures/teaser-mars.jpg')"></div>
+      </a>
     </li>
     <li id="panel-4">
-      <div class="description">
-      <h2><a href="/formes-et-couleurs.html">Les Formes et les Couleurs</a></h2>
-      It is short &amp; funny old-school stop motion video created together with a friend of mine. It features 927 frames shot with a Canon EOS 450d.</div>
-      <div class="bg" style="background-image:url('/assets/pictures/teaser-formes-et-couleurs.jpg')"></div>
+      <a href="/formes-et-couleurs.html">
+        <div class="description">
+          <h2>Les Formes et les Couleurs</h2>
+          It is short &amp; funny old-school stop motion video created together with a friend of mine. It features 927 frames shot with a Canon EOS 450d.
+          <div class="pull-right">read on <i class="fa fa-angle-right"></i></div>
+        </div>
+        <div class="bg" style="background-image:url('/assets/pictures/teaser-formes-et-couleurs.jpg')"></div>
+      </a>
     </li>
 </ul>
 
