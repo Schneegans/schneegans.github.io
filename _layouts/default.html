@@ -27,7 +27,7 @@
     <link rel="shortcut icon" href="favicon.ico">
   </head>
 
-  <body>
+  <body class="link-color-1">
 
     <header class="page-header">
       <nav class="container">
@@ -100,6 +100,11 @@
     {% endif %}
 
      <script>
+      var random_colors_count = 9;
+      var random_color = Math.floor(Math.random() * random_colors_count) + 1;
+      $("body").removeClass();
+      $("body").addClass("link-color-" + random_color);
+
       $(document).ready(function() {
         $('.magnific-image').magnificPopup({
           type:'image',
@@ -140,6 +145,7 @@
             enabled: true
           }
         });
+
       })
      </script>
 

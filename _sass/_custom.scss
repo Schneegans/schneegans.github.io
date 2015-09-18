@@ -2,7 +2,7 @@
 @import url(https://fonts.googleapis.com/css?family=Oxygen);
 
 /* Theme Vars */
-$link-color: #FF9758;
+$link-colors: #FF9758 #F3735E #99D569 #CC9FE0 #A1E09F #EA8372 #C9D26E #EF7676 #86C3D7;
 
 $bg1: "../img/body_dark.png";
 $bg2: "../img/body.png";
@@ -11,6 +11,28 @@ $bg2: "../img/body.png";
 $default-box-shadow-color: #000;
 $default-box-shadow-v-offset: 1px;
 $default-box-shadow-blur: 1px;
+
+@mixin link-color() {
+  @for $i from 1 through length($link-colors) {
+    body.link-color-#{$i} & {
+      color: nth($link-colors, $i);
+    }
+  }
+}
+@mixin link-color-background() {
+  @for $i from 1 through length($link-colors) {
+    body.link-color-#{$i} & {
+      background-color: nth($link-colors, $i);
+    }
+  }
+}
+@mixin link-color-highlight() {
+  @for $i from 1 through length($link-colors) {
+    body.link-color-#{$i} & {
+      color: lighten(nth($link-colors, $i), 20);
+    }
+  }
+}
 
 //Page full height
 html, body {
@@ -26,15 +48,15 @@ body {
 }
 
 a {
-  color:$link-color;
+  @include link-color();
   &:hover,
   &:focus,
   &:active {
-    color: lighten($link-color, 30);
+    @include link-color-highlight();
     text-decoration:none;
   }
-  @include transition(color 0.3s);
 }
+
 
 ol, ul {
   list-style: circle;
@@ -62,14 +84,14 @@ ul.nav {
     }
 
     a:hover {
-      color:$link-color;
+      @include link-color();
     }
   }
 
   li.active a:hover,
   li.active a:focus,
   li.active a {
-    background-color: $link-color;
+    @include link-color-background();
   }
 }
 
@@ -301,24 +323,22 @@ footer {
 
   .description {
     display: none;
-    color: $link-color;
+    @include link-color();
 
     h2 {
-      color: $link-color;
+      @include link-color();
       margin-top:10px;
-      @include transition(color 0.3s);
     }
 
     &:hover,
     &:focus,
     &:active {
-      color: lighten($link-color, 30);
+      @include link-color-highlight();
 
       h2 {
-        color: lighten($link-color, 30);
+        @include link-color-highlight();
       }
     }
-    @include transition(color 0.3s);
 
     width:100%;
 
@@ -534,15 +554,14 @@ table {
     a {
       color:#bbb;
       &:hover {
-        color:$link-color;
+        @include link-color();
       }
-      @include transition(all 0.1s);
     }
 
     li {
 
       &.toc-active a {
-          color:$link-color;
+        @include link-color();
       }
 
       list-style: none;
