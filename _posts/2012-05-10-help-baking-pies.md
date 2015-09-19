@@ -4,6 +4,7 @@ title: "Help baking pies!"
 tagline: "for my bachelor thesis"
 category: news
 teaser: "mockup.jpg"
+colors: "color-mockup"
 group: blog
 ---
 

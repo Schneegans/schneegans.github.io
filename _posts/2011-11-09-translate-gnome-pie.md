@@ -4,6 +4,7 @@ title: "Translate Gnome-Pie!"
 tagline: "a step-by-step guide"
 category: lessons
 teaser: "translate.jpg"
+colors: "color-translate"
 group: blog
 ---
 

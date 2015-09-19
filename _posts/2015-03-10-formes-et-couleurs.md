@@ -4,6 +4,7 @@ title: "Stop Motion Clip!"
 tagline: "Les Formes et les Couleurs"
 category: artwork
 teaser: "formes-et-couleurs-01.jpg"
+colors: "color-formes-et-couleurs-01"
 description: "We went for very simplistic character design."
 group: blog
 ---

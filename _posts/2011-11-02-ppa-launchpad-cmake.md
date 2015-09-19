@@ -4,6 +4,7 @@ title: "PPA with CMake!"
 tagline: "a step-by-step guide"
 category: lessons
 teaser: "launchpad.jpg"
+colors: "color-launchpad"
 tags: ["featured"]
 group: blog
 ---

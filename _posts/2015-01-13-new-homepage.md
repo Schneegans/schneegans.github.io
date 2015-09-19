@@ -4,6 +4,7 @@ title: "Updated homepage!"
 tagline: "because there will be news to be told "
 category: news
 teaser: "sunset.jpg"
+colors: "color-sunset"
 description: "A new start"
 tags: ["featured"]
 group: blog

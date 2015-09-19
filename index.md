@@ -2,6 +2,7 @@
 layout: page
 title: Projects and Blog
 description: "Homepage of Simon Schneegans. Here you will find news related to Gnome-Pie, M.A.R.S.2 and other projects of mine."
+colors: color-fallback
 ---
 
 <ul class='kwicks kwicks-horizontal'>

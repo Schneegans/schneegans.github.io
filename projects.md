@@ -3,6 +3,7 @@ layout: page
 title : Projects
 group: projects
 description: "Projects of Simon Schneegans. Explore the list of some projects of mine!"
+colors: color-fallback
 ---
 
 <div class="row">

@@ -2,6 +2,7 @@
 layout: page
 title : about
 header : about
+colors: color-simon
 ---
 
 <h1>About</h1>

@@ -2,8 +2,6 @@
 @import url(https://fonts.googleapis.com/css?family=Oxygen);
 
 /* Theme Vars */
-$link-colors: #FF9758 #F3735E #99D569 #CC9FE0 #A1E09F #EA8372 #C9D26E #EF7676 #86C3D7;
-
 $bg1: "../img/body_dark.png";
 $bg2: "../img/body.png";
 
@@ -13,23 +11,23 @@ $default-box-shadow-v-offset: 1px;
 $default-box-shadow-blur: 1px;
 
 @mixin link-color() {
-  @for $i from 1 through length($link-colors) {
-    body.link-color-#{$i} & {
-      color: nth($link-colors, $i);
+  @each $class, $color in $link-colors {
+    .#{$class} & {
+      color: $color;
     }
   }
 }
 @mixin link-color-background() {
-  @for $i from 1 through length($link-colors) {
-    body.link-color-#{$i} & {
-      background-color: nth($link-colors, $i);
+  @each $class, $color in $link-colors {
+    .#{$class} & {
+      background-color: $color;
     }
   }
 }
 @mixin link-color-highlight() {
-  @for $i from 1 through length($link-colors) {
-    body.link-color-#{$i} & {
-      color: lighten(nth($link-colors, $i), 20);
+  @each $class, $color in $link-colors {
+    .#{$class} & {
+      color: lighten($color, 20);
     }
   }
 }

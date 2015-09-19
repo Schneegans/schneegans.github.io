@@ -3,6 +3,7 @@ layout: page
 title : M.A.R.S
 header : M.A.R.S
 group: featured-projects
+colors: color-project-gnomepie
 ---
 
 <div class="responsive-video-169">

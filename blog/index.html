@@ -3,11 +3,13 @@ layout: page
 title : Blog
 group: blog
 description: "Blog of Simon Schneegans. Read news on Gnome-Pie, M.A.R.S.2 and other things I'm working on."
+colors: color-fallback
 ---
+
 
 {% for post in paginator.posts %}
 
-<div class="row post-preview">
+<div class="row post-preview {{post.colors}}">
   <div class="col-sm-6 visible-xs">
     <h1>
       <a href="{{post.url}}">{{post.title}}</a>

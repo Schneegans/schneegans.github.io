@@ -1,3 +1,5 @@
 *.sublime-workspace
 _site
 .sass-cache
+_color_extractor/color_extractor
+_sass/_colors.scss

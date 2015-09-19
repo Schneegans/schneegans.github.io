@@ -4,6 +4,7 @@ title: "Bachelor thesis!"
 tagline: "read the results"
 category: news
 teaser: "bachelor01.jpg"
+colors: "color-bachelor01"
 tags: ["featured"]
 group: blog
 ---
