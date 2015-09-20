@@ -23,15 +23,6 @@ layout: default
     <br />
     <br />
 
-    <hr>
-
-    <br />
-    <br />
-
-    {% include comments %}
-
-    <br />
-    <br />
 
     <div class="well">
       {% if page.previous %}
@@ -41,6 +32,16 @@ layout: default
         <a class="pull-right" href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">{{page.next.title}} <i class="fa fa-angle-right"></i></a>
       {% endif %}
     </div>
+
+
+    <br />
+    <br />
+
+    {% include comments %}
+
+    <br />
+    <br />
+
   </div>
 
 
