@@ -142,6 +142,25 @@
           }
         });
 
+        $('.highlight').each(function() {
+          if ($(this).find('pre').height() > 100) {
+            var inner_div = $(this).find('pre');
+            inner_div.css({"height": inner_div.outerHeight() + "px"});
+            inner_div.addClass("collapsable");
+            inner_div.addClass("collapsed");
+            $(this).prepend("<div class='code-expander'>Expand Code <i class='fa fa-angle-down'></i></div>");
+            $(this).find('.code-expander').click(function() {
+              if (inner_div.hasClass("collapsed")) {
+                inner_div.removeClass("collapsed");
+                $(this).html("Collapse Code <i class='fa fa-angle-up'></i>");
+              } else {
+                inner_div.addClass("collapsed");
+                $(this).html("Expand Code <i class='fa fa-angle-down'></i>");
+              }
+            });
+          }
+        });
+
       })
      </script>
 

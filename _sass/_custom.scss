@@ -137,9 +137,34 @@ h2 {
   font-size: 30px;
 }
 
+.highlight {
+  position: relative;
+}
+
 pre, code {
   color:#ccc;
+  @include transition(height 0.3s);
+  overflow-y: hidden;
+  &.collapsed {
+    height: 90px !important;
+  }
 }
+
+.code-expander {
+  position: absolute;
+  right: 0;
+  text-align: center;
+  padding: 6px 10px 6px 12px;
+  background-color: rgba(0, 0, 0, 0.8);
+  @include link-color();
+  @include border-radius(0 4px 0 20px);
+  cursor: pointer;
+
+  &:hover {
+    @include link-color-highlight();
+  }
+}
+
 
 pre > code {
   white-space: pre;
