@@ -6,7 +6,6 @@ category: news
 teaser: "sunset.jpg"
 colors: "color-sunset"
 description: "A new start"
-tags: ["featured"]
 group: blog
 ---
 

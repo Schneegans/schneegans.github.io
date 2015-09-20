@@ -142,6 +142,8 @@ pre, code {
 }
 
 pre > code {
+  white-space: pre;
+  overflow: auto;
   background:none;
   box-shadow:none;
   -moz-box-shadow: none;
