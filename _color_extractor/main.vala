@@ -10,7 +10,7 @@ void main (string[] args) {
 
         try {
             string css = "$link-colors: (\n";
-            css += "  color-fallback: #FF917F,\n";
+            css += "  color-fallback: #FF7E56,\n";
             string file = "";
             string directory = GLib.Environment.get_current_dir() + "/" + args[1];
             var d = Dir.open(directory);

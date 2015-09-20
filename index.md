@@ -53,12 +53,21 @@ colors: color-fallback
 
 <nav class="row">
   <div class="col-sm-4 sub-nav">
+    <h2>navigation</h2>
+    <hr>
+    <ul>
+        <li><a href="/blog">Blog / News</a><br></li>
+        <li><a href="/projects.html">Projects</a><br></li>
+        <li><a href="/about.html">About</a><br></li>
+    </ul>
+  </div>
+  <div class="col-sm-4 sub-nav">
     <h2>latest posts</h2>
     <hr>
     <ul>
       {% assign post_count = 0 %}
       {% for post in site.posts %}
-        <li><a href="{{ post.url }}">{{ post.title }}</a><hr></li>
+        <li><a href="{{ post.url }}">{{ post.title }}</a><br></li>
         {% assign post_count=post_count | plus:1 %}
         {% if post_count == 3 %}
           {% break %}
@@ -73,7 +82,7 @@ colors: color-fallback
       {% assign post_count = 0 %}
       {% for post in site.posts %}
         {% if post.tags contains "featured" %}
-          <li><a href="{{ post.url }}">{{ post.title }}</a><hr></li>
+          <li><a href="{{ post.url }}">{{ post.title }}</a><br></li>
           {% assign post_count=post_count | plus:1 %}
           {% if post_count == 3 %}
             {% break %}
@@ -82,18 +91,16 @@ colors: color-fallback
       {% endfor %}
     </ul>
   </div>
-  <div class="col-sm-4 sub-nav">
+  <!-- <div class="col-sm-4 sub-nav">
     <h2>latest projects</h2>
     <hr>
     <ul>
       {% for page in site.pages %}
       {% if page.group == "featured-projects" %}
-        <li><a href="{{ page.url }}">{{ page.title }}</a><hr></li>
+        <li><a href="{{ page.url }}">{{ page.title }}</a><br></li>
       {% endif %}
       {% endfor %}
     </ul>
-  </div>
+  </div> -->
 </nav>
-
-
 
