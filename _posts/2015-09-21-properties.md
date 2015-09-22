@@ -15,7 +15,7 @@ Based on the signal class from the previous post we can implement a class which 
 
 ## What's the Observer Pattern?
 
-<div class="well"><p class="quote"> [...] a a software design pattern in which an object, called the subject, maintains a list of its dependants, called observers, and notifies them automatically of any state changes, usually by calling one of their methods.<a href="https://en.wikipedia.org/wiki/Observer_pattern"> - Wikipedia</a></p></div>
+<div class="well"><p class="quote"> [...] a software design pattern in which an object, called the subject, maintains a list of its dependants, called observers, and notifies them automatically of any state changes, usually by calling one of their methods.<a href="https://en.wikipedia.org/wiki/Observer_pattern"> - Wikipedia</a></p></div>
 
 So basically it allows for automatic notification event propagation whenever a value changed. Since these state change notifications work really well with the  [Vala Properties](https://wiki.gnome.org/Projects/Vala/PropertiesSample) (and similarly with C# Properties), I'll present a method how to implement something similar in C++.
 
