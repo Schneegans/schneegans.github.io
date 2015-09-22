@@ -60,7 +60,7 @@ colors: color-fallback
     </ul>
   </div>
   <div class="col-sm-4 sub-nav">
-    <h2>featured posts</h2>
+    <h2>popular posts</h2>
     <hr>
     <ul>
       {% assign post_count = 0 %}
