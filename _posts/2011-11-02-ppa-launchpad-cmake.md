@@ -95,11 +95,28 @@ mkdir debian && cd debian
 
 ### 3.1 The control file
 
-Now we will go through each individual file and check what it is for. You can download the file of each section with the given command. Just execute it inside the "debian"-directory and open the downloaded file in an editor of your choice.
+Now we will go through each individual file and check what it is for. You can download the file of each section with the given command. Just execute it inside the "debian"-directory and open the downloaded file in an editor of your choice. Or copy & paste the contents from below.
 
 {% highlight bash %}
 wget http://www.simonschneegans.de/assets/files/ppa-howto/control
 {% endhighlight %}
+
+{% highlight bash %}
+Source: greet-the-world
+Section: devel
+Priority: optional
+Maintainer: Your Name <your.email@some.where>
+Build-Depends: cmake, build-essential
+Homepage: http://www.yourhomepage.org
+
+Package: greet-the-world
+Architecture: any
+Depends:
+Description: First test-package
+ Long description of greet-the-world.
+ It can span multiple lines!
+{% endhighlight %}
+
 
 This first file is "control". It specifies which packages are needed for building your package, what it is called and some information on you. The first section of the file describes the source package. The second part is the configuration for the resulting binary package.
 
@@ -112,6 +129,37 @@ The second file, "rules", is very important, too. It tells launchpad how to exac
 
 {% highlight bash %}
 wget http://www.simonschneegans.de/assets/files/ppa-howto/rules
+{% endhighlight %}
+
+{% highlight bash %}
+#!/usr/bin/make -f
+
+BUILDDIR = build_dir
+
+# secondly called by launchpad
+build:
+    mkdir $(BUILDDIR);
+    cd $(BUILDDIR); cmake -DCMAKE_INSTALL_PREFIX=../debian/tmp/usr ..
+    make -C $(BUILDDIR)
+
+# thirdly called by launchpad
+binary: binary-indep binary-arch
+
+binary-indep:
+    # nothing to be done
+
+binary-arch:
+    cd $(BUILDDIR); cmake -P cmake_install.cmake
+    mkdir debian/tmp/DEBIAN
+    dpkg-gencontrol -pgreet-the-world
+    dpkg --build debian/tmp ..
+
+# firstly called by launchpad
+clean:
+    rm -f build
+    rm -rf $(BUILDDIR)
+
+.PHONY: binary binary-arch binary-indep clean
 {% endhighlight %}
 
 The target "clean" is called firstly. Then launchpad will execute "build", which does the same thing as we tested above. It will create a build directory, change to it, execute CMake (with the install prefix set to a directory inside the debian directory) and compile the application.
@@ -127,17 +175,47 @@ The third file is "changelog". It contains some information on what you have don
 wget http://www.simonschneegans.de/assets/files/ppa-howto/changelog
 {% endhighlight %}
 
+{% highlight bash %}
+greet-the-world (0.1-0ppa0) oneiric; urgency=low
+
+  * Initial upload!
+
+ -- Your Name <your.email@some.where>  Tue, 01 Nov 2011 20:32:17 +0100
+{% endhighlight %}
+
 The first line specifies for what distribution your package is made and its version. Then there can be multiple lines containing the change log information. The last line has to be _exactly_ like it is shown there. Mind the **two spaces** after your e-mail address! Without them, your package will be rejected!
 
 Please change the date and the e-mail address accordingly. The date string can be obtained by the terminal command `date -R`.
 
 ### 3.4 The copyright file
 
+The last file contains your copyright information. It does not follow any structure and can contain everything you want. Here is a GPL-3 example. Just insert your name.
+
 {% highlight bash %}
 wget http://www.simonschneegans.de/assets/files/ppa-howto/copyright
 {% endhighlight %}
 
-The last file contains your copyright information. It does not follow any structure and can contain everything you want. Here is a GPL-3 example. Just insert your name.
+{% highlight bash %}
+####################################################################
+#                    greet-the-world                               #
+####################################################################
+
+Copyright (C) 2011 Your Name
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but
+WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+{% endhighlight %}
+
 
 
 ## 4. Uploading to launchpad

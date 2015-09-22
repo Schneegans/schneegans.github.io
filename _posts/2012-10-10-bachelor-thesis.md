@@ -48,9 +48,7 @@ Additionally to Gnome-Pie I evaluated many other Pie-Menu concepts and structure
 
 Pie-Menus may have a high degree of usability. Thus they are efficient (fast to operate), effective (not error-prone) and funny (users like them - they get a feeling of success while learning). They are efficient because of the implementation of Fitt's law, which
 
-<div class="well">
-[...] is a model of human movement primarily used in human–computer interaction and ergonomics that predicts that the time required to rapidly move to a target area is a function of the distance to the target and the size of the target.<a href="http://en.wikipedia.org/wiki/Fitts's_law" class="alignright"> - Wikipedia</a>
-</div>
+<div class="well"><p class="quote">[...] is a model of human movement primarily used in human–computer interaction and ergonomics that predicts that the time required to rapidly move to a target area is a function of the distance to the target and the size of the target.<a href="http://en.wikipedia.org/wiki/Fitts's_law" class="alignright"> - Wikipedia</a></p></div>
 
 For the same reason they are effective. But by far the most remarkable advantage is their continuous learning curve. Users may become extremely fast just by using the menu. Every time they make a selection, they get faster and more accurate. At some point it is not necessary to read the labels anymore, because the user remembers the direction of an entry. With "normal" linear menus that is not possible. The maximum selection speed with a mouse is very limited and soon obtained. The only possibility of getting an expert is learning a hot-key. But these are not a solution:
 
