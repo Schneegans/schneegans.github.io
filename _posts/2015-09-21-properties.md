@@ -9,7 +9,7 @@ description: "I think there is a tight connection. Image by <a href='https://www
 group: blog
 ---
 
-Based on the signal class from the [previous post]({% post_url 2015-09-20-signal-slot %}) we can implement a class which holds a value and notifies anyone who's interested in value changes.
+Based on the signal class from the previous post we can implement a class which holds a value and notifies anyone who's interested in value changes.
 
 <!--more-->
 

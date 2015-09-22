@@ -320,64 +320,141 @@ footer {
 
 // slider ----------------------------------------------------------------------
 
-.kwicks {
-  height:500px;
-  margin-bottom:30px;
-}
-
-@media only screen and (max-width:768px) {
-  .kwicks {
-    height:400px;
-    margin-bottom:10px;
-  }
-}
-
-
-@media only screen and (max-width:600px) {
-  .kwicks {
-    height:300px;
-    margin-bottom:0px;
-  }
-}
-
-.kwicks > li {
-  height:100%;
-  border-top: 1px solid #373737;
+.accordion {
+  margin: 30px auto;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 1);
+
+  position: relative;
   overflow: hidden;
 
-  .description {
-    display: none;
-    @include link-color();
+  ul {
+    white-space: nowrap;
+    margin: 0;
+    padding: 0;
+    font-size: 0;
 
-    h2 {
-      @include link-color();
-      margin-top:10px;
-    }
+    li {
+      font-size: 14px;
 
-    &:hover,
-    &:focus,
-    &:active {
-      @include link-color-highlight();
+      @media only screen and (max-width:600px) {
+        font-size: 12px;
+      }
 
-      h2 {
-        @include link-color-highlight();
+      @media only screen and (max-width:400px) {
+        font-size: 10px;
+      }
+
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      @include transition(all 400ms);
+      padding: 0;
+      border-top: 1px solid #373737;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 1);
+      display: inline-block;
+      position: relative;
+
+      div {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+
+        a {
+          display: block;
+          width: 100%;
+          position: relative;
+          padding: 130px 20px 0 20px;
+          @include transition(all 200ms);
+          white-space: normal;
+          opacity: 0;
+
+          @include background-image(linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%));
+
+          p {
+            text-align: left;
+          }
+
+          h2, p {
+            opacity: 0;
+            margin: 0;
+            width: 100%;
+            position: relative;
+
+            @include translateX(-30px);
+            @include transition(all 500ms);
+
+            &.read-on {
+              @include translateX(-60px);
+            }
+          }
+
+          h2 {
+            text-overflow: ellipsis;
+            color: inherit;
+
+            @media only screen and (max-width:600px) {
+              display: none;
+            }
+          }
+        }
       }
     }
 
-    width:100%;
+    &:hover li:hover a {
+      opacity: 1;
 
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 0 15px 15px 15px;
-    bottom: 0;
-    position: absolute;
+      h2, p {
+        opacity: 1;
+        @include translateX(0);
+      }
+    }
   }
 
-  .bg {
-    height:100%;
-    width:100%;
-    background-size:cover;
+  &.large {
+    height: 0;
+    padding-bottom: 56.25%;
+
+    ul li {
+      width: 75%;
+      height: 0;
+      padding-bottom: 56.25%;
+      margin: 0 -41.667% 0 0;
+    }
+
+    ul:hover li { margin: 0 -62.5% 0 0; }
+    ul:hover li:hover { margin: 0; }
   }
+
+  &.medium {
+    height: 0;
+    padding-bottom: 53%;
+
+    ul li {
+      width: 75%;
+      height: 0;
+      padding-bottom: 53%;
+      margin: 0 -50% 0 0;
+    }
+
+    ul:hover li { margin: 0 -66.667% 0 0; }
+    ul:hover li:hover { margin: 0; }
+  }
+
+  &.small {
+    height: 0;
+    padding-bottom: 30%;
+
+    ul li {
+      width: 45%;
+      padding-bottom: 30%;
+      height: 0;
+      margin: 0 -35% 0 0;
+    }
+
+    ul:hover li { margin: 0 -38.889% 0 0; }
+    ul:hover li:hover { margin: 0; }
+  }
+
 }
 
 // blog style ------------------------------------------------------------------

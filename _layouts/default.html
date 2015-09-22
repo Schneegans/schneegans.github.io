@@ -13,7 +13,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link href="/third_party/css/magnific-popup.css" rel="stylesheet">
-    <link href="/third_party/css/jquery.kwicks.min.css" rel="stylesheet" type="text/css" media="all">
     <link href="/third_party/css/pygments.css" rel="stylesheet" type="text/css" media="all">
     <link href="/css/main.css" rel="stylesheet" type="text/css" media="all">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
@@ -74,33 +73,7 @@
     <script src="/third_party/js/jquery.toc.min.js"></script>
     <script src="/third_party/js/jquery.sticky-kit.min.js"></script>
     <script src="/third_party/js/bootstrap.min.js"></script>
-
-    {% if page.url == "/index.html" %}
-      <script src="/third_party/js/jquery.kwicks.min.js"></script>
-      <script>
-      $(document).ready(function() {
-        $(".kwicks").kwicks({
-          maxSize : "75%",
-          behavior: 'menu',
-          spacing:0
-        });
-
-        $(".kwicks").on('expand.kwicks', function(e, data) {
-          // $(".kwicks .description").fadeOut();
-          $(".kwicks .description").hide("slide");
-        });
-
-        $(".kwicks").on('expand-complete.kwicks', function(e, data) {
-          if (data.expanded) {
-            $(data.expanded.children[0].children[0]).fadeIn();
-          }
-        });
-      })
-      </script>
-    {% endif %}
-
-     <script>
-
+    <script>
       $(document).ready(function() {
         $('.magnific-image').magnificPopup({
           type:'image',

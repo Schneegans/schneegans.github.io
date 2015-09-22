@@ -5,50 +5,34 @@ description: "Homepage of Simon Schneegans. Here you will find news related to G
 colors: color-fallback
 ---
 
-<ul class='kwicks kwicks-horizontal'>
-    <li id="panel-1">
-      <a href="/gnome-pie.html">
-
-        <div class="description">
-          <h2>Gnome-Pie</h2>
-          Gnome-Pie a slick application launcher for Linux. It’s eye candy and pretty fun to work with. It offers multiple ways to improve your desktop experience.
-          <div class="pull-right">read on <i class="fa fa-angle-right"></i></div>
-        </div>
-        <div class="bg" style="background-image:url('/assets/pictures/teaser-gnomepie.jpg')"></div>
-      </a>
+<div class="accordion medium">
+  <ul>
+    <li class="color-gnome-pie065" style="background-image:url('/assets/pictures/teaser-gnomepie.jpg')">
+      <div><a href="/gnome-pie.html">
+        <h2>Gnome-Pie</h2>
+        <p>Gnome-Pie is a slick application launcher for Linux. It’s eye candy and pretty fun to work with. It offers multiple ways to improve your desktop experience. </p><p class="read-on">read on <i class="fa fa-angle-right"></i></p>
+      </a></div>
     </li>
-    <li id="panel-2">
-      <a href="/artwork.html">
-        <div class="description">
-          <h2>Random artwork</h2>
-          When I'm not currently working on a software project, I use open source software to draw images. Here's a collection of various images I've drawn with no real purpose. Most of them are done with Blender, MyPaint, Alchemy and The Gimp.
-          <div class="pull-right">read on <i class="fa fa-angle-right"></i></div>
-        </div>
-        <div class="bg" style="background-image:url('/assets/pictures/teaser-art.jpg')"></div>
-      </a>
+    <li class="color-sunset" style="background-image:url('/assets/pictures/teaser-art.jpg')">
+      <div><a href="/artwork.html">
+        <h2>Random artwork</h2>
+        <p>When I'm not currently working on a software project, I use open source software to draw images. Here's a collection of various images I've drawn with no real purpose. Most of them are done with Blender, MyPaint, Alchemy and The Gimp. </p><p class="read-on">read on <i class="fa fa-angle-right"></i></p>
+      </a></div>
     </li>
-    <li id="panel-3">
-      <a href="/mars.html">
-        <div class="description">
-          <h2>M.A.R.S. - a ridiculous shooter</h2>
-          M.A.R.S. is a ridiculous, open source 2D shooter. It is a game for two players, flying with ships in a two-dimensional space setting, governed by the laws of gravity.
-          <div class="pull-right">read on <i class="fa fa-angle-right"></i></div>
-        </div>
-        <div class="bg" style="background-image:url('/assets/pictures/teaser-mars.jpg')"></div>
-      </a>
+    <li class="color-project-gnomepie" style="background-image:url('/assets/pictures/teaser-mars.jpg')">
+      <div><a href="/mars.html">
+        <h2>M.A.R.S. - a ridiculous shooter</h2>
+        <p>M.A.R.S. is a ridiculous, open source 2D shooter. It is a game for two players, flying with ships in a two-dimensional space setting, governed by the laws of gravity. </p><p class="read-on">read on <i class="fa fa-angle-right"></i></p>
+      </a></div>
     </li>
-    <li id="panel-4">
-      <a href="/formes-et-couleurs.html">
-        <div class="description">
-          <h2>Les Formes et les Couleurs</h2>
-          It is short &amp; funny old-school stop motion video created together with a friend of mine. It features 927 frames shot with a Canon EOS 450d.
-          <div class="pull-right">read on <i class="fa fa-angle-right"></i></div>
-        </div>
-        <div class="bg" style="background-image:url('/assets/pictures/teaser-formes-et-couleurs.jpg')"></div>
-      </a>
+    <li class="color-lfelc-planning" style="background-image:url('/assets/pictures/teaser-formes-et-couleurs.jpg')">
+      <div><a href="/formes-et-couleurs.html">
+        <h2>Les Formes et les Couleurs</h2>
+        <p>Les Formes et les Couleurs is a short &amp; funny old-school stop motion video created together with a friend of mine. It features 927 frames shot with a Canon EOS 450d. </p><p class="read-on">read on <i class="fa fa-angle-right"></i></p>
+      </a></div>
     </li>
-</ul>
-
+  </ul>
+</div>
 
 
 <nav class="row">
