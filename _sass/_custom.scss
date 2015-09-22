@@ -145,19 +145,22 @@ pre, code {
   color:#ccc;
   @include transition(height 0.3s);
   overflow-y: hidden;
+  position: relative;
   &.collapsed {
-    height: 90px !important;
+    height: 92px !important;
   }
 }
 
 .code-expander {
   position: absolute;
   right: 0;
-  text-align: center;
+  top: 0;
+  z-index:1;
   padding: 6px 10px 6px 12px;
-  background-color: rgba(0, 0, 0, 0.8);
+  background: url($bg2) repeat;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
   @include link-color();
-  @include border-radius(0 4px 0 20px);
+  @include border-radius(0 0 0 4px);
   cursor: pointer;
 
   &:hover {
@@ -172,8 +175,8 @@ pre > code {
   background:none;
   box-shadow:none;
   -moz-box-shadow: none;
-    -webkit-box-shadow: none;
-    -o-box-shadow: none;
+  -webkit-box-shadow: none;
+  -o-box-shadow: none;
 }
 
 hr {
@@ -610,10 +613,15 @@ table {
 }
 
 // alerts ----------------------------------------------------------------------
-
 .alert {
   background-color: rgba(250, 167, 50, 0.29);
   border-color: rgba(255, 157, 18, 0.1);
+}
+
+// quotes ----------------------------------------------------------------------
+p.quote {
+  padding: 0 0 0 10px;
+  border-left: 4px #555 solid;
 }
 
 // magnific zoom ---------------------------------------------------------------

@@ -27,7 +27,7 @@ The most recent version of Gnome-Pie is 0.6.6. You can read the <a href="{% post
 
 Gnome-Pie is designed to be fun, fast and visually appealing. It implements Fitts' law, which...
 
-<div class="well"> [...] is a model of human movement primarily used in human–computer interaction and ergonomics that predicts that the time required to rapidly move to a target area is a function of the distance to the target and the size of the target.<a href="http://en.wikipedia.org/wiki/Fitts's_law"> - Wikipedia</a></div>
+<div class="well"><p class="quote"> [...] is a model of human movement primarily used in human–computer interaction and ergonomics that predicts that the time required to rapidly move to a target area is a function of the distance to the target and the size of the target.<a href="http://en.wikipedia.org/wiki/Fitts's_law"> - Wikipedia</a></p></div>
 
 Many application launchers of today's Linux desktops are made for people using their keyboard mainly. Launchers like <a href="http://do.davebsd.com/">Gnome-Do</a>, <a href="https://launchpad.net/synapse-project">Synapse</a>, <a href="http://kaizer.se/wiki/kupfer/">Kupfer</a>, Unity's Dash or Gnome-Shell's Activities are designed for keyboard users. It's necessary to type the first letters of the desired action in order to launch it.
 
@@ -246,9 +246,9 @@ If you want to write code for Gnome-Pie, please have a look at the existing file
 An example of well-formatted code:
 
 {% highlight c++ %}
-/////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////
 /// Some cool method.
-/////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////
 
 public string does_cool_stuff(int input) {
     string local_variable = "";
