@@ -4,6 +4,7 @@ title : M.A.R.S
 header : M.A.R.S
 group: featured-projects
 colors: color-project-gnomepie
+parents: ["Projects"]
 ---
 
 <div class="responsive-video-169">

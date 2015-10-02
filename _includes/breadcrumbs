@@ -1,0 +1,11 @@
+<ul class="breadcrumb">
+  <li><a href="/">Home</a> <span class="divider"></span></li>
+  {% for crumb in page.parents %}
+    {% if crumb == "Projects" %} {% assign link = "/projects.html" %} {% endif %}
+    {% if crumb == "Gnome-Pie" %} {% assign link = "/gnome-pie.html" %} {% endif %}
+    {% if crumb == "Blog" %} {% assign link = "/blog" %} {% endif %}
+    <li><a href="{{ link }}">{{ crumb }}</a><span class="divider"></span></li>
+  {% endfor %}
+
+  <li class="active">{{ page.title }}</li>
+</ul>

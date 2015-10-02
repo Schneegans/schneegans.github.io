@@ -1,8 +1,9 @@
 ---
 layout: page
-title : about
+title : About
 header : about
 colors: color-simon
+parents: []
 ---
 
 <h1>About</h1>

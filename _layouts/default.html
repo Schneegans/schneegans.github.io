@@ -48,11 +48,12 @@
 
     <div id="page-content">
       <div id="page-background">
-
         <main class="container">
+          {% if page.url != "/index.html" %}
+            {% include breadcrumbs %}
+          {% endif %}
           {{ content }}
         </main> <!-- /container -->
-
       </div>
     </div>
 

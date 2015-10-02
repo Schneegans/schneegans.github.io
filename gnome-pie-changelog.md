@@ -4,6 +4,7 @@ title : Gnome-Pie's Changelog
 header : Gnome-Pie Changelog
 description: A chronological list of changes of Gnome-Pie.
 colors: color-use
+parents: ["Projects", "Gnome-Pie"]
 ---
 
 

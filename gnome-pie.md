@@ -5,6 +5,7 @@ header : Gnome-Pie
 group: featured-projects
 description: Homepage of Gnome-Pie, the slick application launcher for Linux.
 colors: color-use
+parents: ["Projects"]
 ---
 
 <div class="responsive-video-169">

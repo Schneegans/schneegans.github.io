@@ -4,11 +4,12 @@ title : Random artwork
 header : Random artwork
 group : projects
 colors: color-faroer_03
+parents: ["Projects"]
 ---
 
 <div class="page-header">
   <h1>
-    random artwork
+    Random Artwork
   </h1>
   <hr>
 </div>

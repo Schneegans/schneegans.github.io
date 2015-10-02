@@ -4,6 +4,7 @@ title : Projects
 group: projects
 description: "Projects of Simon Schneegans. Explore the list of some projects of mine!"
 colors: color-fallback
+parents: []
 ---
 
 <div class="row">
@@ -52,7 +53,7 @@ colors: color-fallback
 
 <div class="row">
     <div class="col-sm-6 post-preview">
-        <h1><a href="{{site.url}}/artwork.html">random artwork</a></h1>
+        <h1><a href="{{site.url}}/artwork.html">Random Artwork</a></h1>
         <div>
             <div class="banner-left">Random work of mine</div>
             <a href="{{site.url}}/artwork.html"><img class="img-responsive" src="/assets/pictures/medium/project-artwork.jpg" alt=""></a>
@@ -60,7 +61,7 @@ colors: color-fallback
          It’s a collection of various images I created. Most of them are done with Blender, MyPaint, Alchemy and The Gimp.<br/><br/></p>
     </div>
     <div class="col-sm-6 post-preview">
-        <h1><a href="{{site.url}}/formes-et-couleurs.html">stop motion</a></h1>
+        <h1><a href="{{site.url}}/formes-et-couleurs.html">Stop Motion</a></h1>
         <div>
             <div class="banner-right">Stop motion clip</div>
             <a href="{{site.url}}/formes-et-couleurs.html"><img class="img-responsive" src="/assets/pictures/medium/project-formes-et-couleurs.jpg" alt=""></a>
