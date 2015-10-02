@@ -20,7 +20,7 @@ $default-box-shadow-blur: 1px;
 @mixin link-color-background() {
   @each $class, $color in $link-colors {
     .#{$class} & {
-      background-color: $color;
+      background-color: rgba($color, 0.1);
     }
   }
 }
@@ -55,6 +55,9 @@ a {
   }
 }
 
+em {
+  font-style: italic;
+}
 
 ol, ul {
   list-style: circle;
@@ -76,8 +79,10 @@ ul.nav {
 
   li {
     float:right;
+    padding: 0;
 
     a {
+      @include border-radius(4px 4px 0 0);
       padding: 5px 12px;
     }
 
@@ -101,40 +106,40 @@ h1,h2,h3,h4,h5,h6 {
   color:#999;
   text-rendering:optimizelegibility;
   font-family: 'Advent Pro', sans-serif;
-}
 
-
-h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
-  font-weight:normal;
-  color:#999999;
-}
-
-h1 small {
-  font-size: 18px;
-}
-
-h1 {
-  margin: 0 0 15px;
-}
-
-h2 {
-  margin: 30px 0 15px;
-}
-
-h3, h4 {
-  margin: 20px 0 0;
-}
-
-h4 {
-  font-size: 14px;
+  small {
+    font-weight:normal;
+    color:#999999;
+  }
 }
 
 h1 {
   font-size:40px;
+  margin: 0 0 15px;
+
+  small {
+    font-size: 18px;
+  }
 }
 
 h2 {
   font-size: 30px;
+  margin: 40px 0 15px;
+}
+
+h3 {
+  font-size: 24px;
+  margin: 30px 0 15px;
+}
+
+h4 {
+  font-size: 20px;
+  margin: 30px 0 15px;
+}
+
+h5 {
+  font-size: 16px;
+  margin: 16px 0 0px;
 }
 
 .highlight {
@@ -170,7 +175,7 @@ pre, code {
 
 
 pre > code {
-  white-space: pre;
+  // white-space: pre;
   overflow: auto;
   background:none;
   box-shadow:none;
@@ -615,7 +620,10 @@ table {
 // alerts ----------------------------------------------------------------------
 .alert {
   background-color: rgba(250, 167, 50, 0.29);
-  border-color: rgba(255, 157, 18, 0.1);
+}
+
+.adaptive-alert {
+  @include link-color-background();
 }
 
 // quotes ----------------------------------------------------------------------
@@ -677,10 +685,10 @@ p.quote {
       list-style: none;
 
       &.toc-h1 {
-        margin:15px 0 0 0;
+        margin:10px 0 0 0;
       }
       &.toc-h2 {
-        margin:5px 0 0 0;
+        margin:0px 0 0 0;
       }
       &.toc-h3 {
         margin:0 0 0 0;
