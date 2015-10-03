@@ -30,28 +30,21 @@
 
     <header class="page-header">
       <nav class="container">
-        <ul class="main-nav">
-          {% if page.url == "/index.html" %}<li class="active">{% else %}<li>{% endif %}
-            <a href="/">{{ site.title }}</a>
-          </li>
-        </ul>
+
+        {% include breadcrumbs %}
+
         <ul class="main-nav brand">
-          {% if page.group == "blog" %}<li class="active">{% else %}<li>{% endif %}
-            <a href="/blog">Blog</a>
-          </li>
-          {% if page.group == "projects" or page.group == "featured-projects" %}<li class="active">{% else %}<li>{% endif %}
-            <a href="/projects.html">Projects</a>
-          </li>
+            <li title="Blog"><a href="/blog">Blog</a></li>
+            <li title="Projects"><a href="/projects.html">Projects</a></li>
         </ul>
       </nav>
     </header>
 
+
     <div id="page-content">
       <div id="page-background">
         <main class="container">
-          {% if page.url != "/index.html" %}
-            {% include breadcrumbs %}
-          {% endif %}
+
           {{ content }}
         </main> <!-- /container -->
       </div>
@@ -98,10 +91,18 @@
 
         $('#toc').toc({
           selectors: 'h1,h2',
-          highlightOffset: 200
+          highlightOffset: 100
         });
         $('#toc').parent().stick_in_parent({
-          offset_top:30
+          offset_top:100
+        });
+
+        $(window).scroll(function() {
+          if ($(document).scrollTop() > 100) {
+            $('.page-header').addClass('shrink');
+          } else {
+            $('.page-header').removeClass('shrink');
+          }
         });
 
         $('.magnific-gallery').magnificPopup({

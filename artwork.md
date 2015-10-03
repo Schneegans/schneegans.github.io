@@ -7,13 +7,6 @@ colors: color-faroer_03
 parents: ["Projects"]
 ---
 
-<div class="page-header">
-  <h1>
-    Random Artwork
-  </h1>
-  <hr>
-</div>
-
 <p>
 Below you find a random collection of pictures I have created. Some of them are photographs, some are rendered with 3D software and some are drawn by hand.
 </p>

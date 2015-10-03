@@ -2,18 +2,25 @@
 layout: default
 ---
 
-<div class="page-header">
-  <h1>
-    {{ page.title }}
-    {% if page.tagline %}
-      <small>{{ page.tagline }}</small>
-    {% endif %}
-  </h1>
-  <hr>
-</div>
-
 <div class="row">
   <div class="col-sm-8">
+
+    {% if page.teaser %}
+      <a class="magnific-image" title="{{page.description}}" href="/assets/pictures/{{page.teaser}}">
+        <div class="teaser" style="background-image:url(/assets/pictures/large/{{page.teaser}})">
+          <div class="caption">
+
+            <h1>
+              {{ page.title }}
+            </h1>
+            {% if page.tagline %}
+              <p>{{ page.tagline }}</p>
+            {% endif %}
+          </div>
+        </div>
+      </a>
+    {% endif %}
+
     {{ content }}
   </div>
   <div class="col-sm-4 hidden-xs">

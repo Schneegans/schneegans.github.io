@@ -8,7 +8,7 @@ parents: []
 ---
 
 <div class="row">
-    <div class="col-sm-6 post-preview">
+    <div class="col-sm-6">
         <h1><a href="{{site.url}}/gnome-pie.html">Gnome-Pie</a></h1>
         <div>
             <div class="banner-left">Software</div>
@@ -17,7 +17,7 @@ parents: []
         It's a slick application launcher for Linux. It’s eye candy and pretty fun to work with. It offers multiple ways to improve your desktop experience.<br/><br/></p>
         <hr>
     </div>
-    <div class="col-sm-6 post-preview">
+    <div class="col-sm-6">
         <h1><a href="{{site.url}}/mars.html">M.A.R.S.</a></h1>
         <div>
             <div class="banner-right">Game</div>
@@ -30,7 +30,7 @@ parents: []
 
 
 <div class="row">
-    <div class="col-sm-6 post-preview">
+    <div class="col-sm-6">
         <h1><a href="{{site.url}}/hzb.html">BERLinPro animation</a></h1>
         <div>
             <div class="banner-left">3D-Animation</div>
@@ -39,7 +39,7 @@ parents: []
          It's an 3D PR-animation describing an Energy Recovery Linac. It was done for the Helmholtz-Zentrum Berlin.<br/><br/></p>
         <hr>
     </div>
-    <div class="col-sm-6 post-preview">
+    <div class="col-sm-6">
         <h1><a href="{{site.url}}/ptb.html">PTB animation</a></h1>
         <div>
             <div class="banner-right">3D-Animation</div>
@@ -52,7 +52,7 @@ parents: []
 
 
 <div class="row">
-    <div class="col-sm-6 post-preview">
+    <div class="col-sm-6">
         <h1><a href="{{site.url}}/artwork.html">Random Artwork</a></h1>
         <div>
             <div class="banner-left">Random work of mine</div>
@@ -60,7 +60,7 @@ parents: []
         </div><br/><p>
          It’s a collection of various images I created. Most of them are done with Blender, MyPaint, Alchemy and The Gimp.<br/><br/></p>
     </div>
-    <div class="col-sm-6 post-preview">
+    <div class="col-sm-6">
         <h1><a href="{{site.url}}/formes-et-couleurs.html">Stop Motion</a></h1>
         <div>
             <div class="banner-right">Stop motion clip</div>

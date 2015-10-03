@@ -3,7 +3,9 @@ layout: nav-page
 title : Gnome-Pie's Changelog
 header : Gnome-Pie Changelog
 description: A chronological list of changes of Gnome-Pie.
-colors: color-use
+teaser: "gnome-pie065.jpg"
+colors: "color-gnome-pie065"
+tagline: "A chronological list of changes of Gnome-Pie"
 parents: ["Projects", "Gnome-Pie"]
 ---
 

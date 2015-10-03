@@ -4,6 +4,7 @@
 /* Theme Vars */
 $bg1: "../img/body_dark.png";
 $bg2: "../img/body.png";
+$bg3: "../img/body_bright.png";
 
 /* Compass Vars */
 $default-box-shadow-color: #000;
@@ -30,11 +31,6 @@ $default-box-shadow-blur: 1px;
       color: lighten($color, 20);
     }
   }
-}
-
-//Page full height
-html, body {
-  height: 100%;
 }
 
 body {
@@ -72,8 +68,19 @@ li {
   display: none;
 }
 
-.breadcrumb {
-  margin: 15px 0px 30px 0;
+.breadcrumbs {
+  margin: 0;
+  list-style: none;
+  display: inline;
+
+  li {
+    display: inline-block;
+    padding: 0;
+
+    .divider {
+      padding: 0 0 0 6px;
+    }
+  }
 }
 
 // tabs ------------------------------------------------------------------------
@@ -113,7 +120,7 @@ h1,h2,h3,h4,h5,h6 {
 
   small {
     font-weight:normal;
-    color:#999999;
+    color:inherit;
   }
 }
 
@@ -124,11 +131,25 @@ h1 {
   small {
     font-size: 18px;
   }
+
+  &:before {
+    content:"";
+    display:block;
+    height:100px; /* fixed header height*/
+    margin:-100px 0 0; /* negative fixed header height */
+  }
 }
 
 h2 {
   font-size: 30px;
   margin: 40px 0 15px;
+
+  &:before {
+    content:"";
+    display:block;
+    height:60px; /* fixed header height*/
+    margin:-60px 0 0; /* negative fixed header height */
+  }
 }
 
 h3 {
@@ -221,17 +242,23 @@ $footerHeight: 150px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
   }
 
-  margin-top: -10px;
   margin-bottom: ($footerHeight + 40);
 }
 
 #page-background {
-  padding-top:10px;
+  margin-top: 80px;
+  padding-top:20px;
   padding-bottom:30px;
   background-color: #2a2a2a;
   background: url($bg2) repeat;
   box-shadow: 0 0px 10px rgba(0, 0, 0, 0.8);
   border-top: 1px solid #373737;
+}
+
+@media only screen and (max-width:600px) {
+  #page-background {
+    margin-top: 60px;
+  }
 }
 
 
@@ -272,16 +299,25 @@ footer {
 
 .page-header {
   font-family: 'Advent Pro', sans-serif;
-  font-size: 30px;
-
-  padding-top: 30px;
-  padding-bottom: 17px;
-
-  box-shadow: none;
+  font-size: 25px;
+  position: fixed;
+  background: url($bg2) repeat;
+  background-size: auto 100%;
+  z-index: 2;
+  box-shadow: 0 0px 10px rgba(0, 0, 0, 0.8);
+  top: 0;
+  padding: 13px 0 6px 0;
 
   width:100%;
-  border:none;
-  margin: 0px;
+  margin: 0;
+
+  @include transition(all 300ms);
+
+  &.shrink {
+    background: url($bg3) repeat;
+    font-size:20px;
+    padding: 5px 0;
+  }
 
   h1 {
     color:#eee;
@@ -300,6 +336,7 @@ footer {
     &.brand {
       position:absolute;
       right:15px;
+      margin: 0;
     }
 
     li {
@@ -310,31 +347,31 @@ footer {
   }
 
   li.active {
-    background-color: #2a2a2a;
-    background: url($bg2) repeat ;
-    border-top: 1px solid #373737;
-    @include border-radius(3px);
+
   }
+}
+
+.post-header {
+  position: relative;
+  height: 300px;
 }
 
 @media only screen and (max-width:600px) {
   .page-header {
-    font-size: 20px;
+    font-size: 18px;
+
+    &.shrink {
+      font-size:18px;
+    }
   }
 }
 
-@media only screen and (max-width:400px) {
-  .page-header {
-    font-size: 15px;
-  }
-}
 
 
 
 // slider ----------------------------------------------------------------------
 
 .accordion {
-  margin: 30px auto;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 1);
 
   position: relative;
@@ -475,17 +512,53 @@ div.teaser {
   width:100%;
   height: 300px;
 
+  position: relative;
+
   background-size: cover;
   background-position: 50% 50%;
 
+  color: #fff;
+
+  margin-bottom: 30px;
+
   border-top: 1px solid #373737;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+
+  .caption {
+    display: block;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    padding: 60px 20px 0px 20px;
+    white-space: normal;
+
+    @include background-image(linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%));
+
+    p {
+      text-align: left;
+    }
+
+    h1, p {
+      margin: 0;
+      width: 100%;
+      position: relative;
+    }
+
+    h1 {
+      text-overflow: ellipsis;
+      color: inherit;
+    }
+  }
 }
 
 .post-preview {
   margin-top: 30px;
-  margin-bottom: 30px;
+  margin-bottom: 0px;
   position:relative;
+
+  &:first-child {
+    margin-top: 0px;
+  }
 }
 
 table {
@@ -539,6 +612,7 @@ table {
   @include border-radius(2px 0 0 2px);
   position: absolute;
   right:0;
+  z-index: 1;
   border-top: 1px solid #373737;
   @include box-shadow(0 2px 5px rgba(0, 0, 0, 0.8));
   @include background-image(linear-gradient(to bottom, #2f2f2f, #1f1f1f));
@@ -566,6 +640,7 @@ table {
   @include border-radius(2px 0 0 2px);
   position: absolute;
   left:15px;
+  z-index: 1;
   border-top: 1px solid #373737;
   @include box-shadow(0 2px 5px rgba(0, 0, 0, 0.8));
   @include background-image(linear-gradient(to bottom, #2f2f2f, #1f1f1f));
@@ -619,7 +694,7 @@ table {
 }
 
 .post-meta {
-  margin-top: -20px;
+  margin-top: -15px;
 }
 
 // alerts ----------------------------------------------------------------------
