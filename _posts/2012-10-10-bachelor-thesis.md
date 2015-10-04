@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Bachelor thesis!"
-tagline: "read the results"
+tagline: "read the results here."
 category: news
 teaser: "bachelor01.jpg"
 colors: "color-bachelor01"

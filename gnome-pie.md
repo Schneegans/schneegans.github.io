@@ -12,7 +12,7 @@ parents: ["Projects"]
 
 Gnome-Pie is a circular application launcher (*pie menu*) for Linux. It is made of several pies, each consisting of multiple slices. The user presses a key stroke which opens the desired pie. By activating one of its slices, applications may be launched, key presses may be simulated or files can be opened.
 
-<div class="adaptive-alert well">The most recent version of Gnome-Pie is 0.6.6. You can read the <a href="{% post_url 2015-09-17-gnome-pie-066 %}">release announcement here</a> or have a look at the <a href="/gnome-pie-changelog.html">changelog</a>.</div>
+<div class="adaptive-alert well">The most recent version of Gnome-Pie is 0.6.7. You can read the <a href="{% post_url 2015-10-04-gnome-pie-067 %}">release announcement here</a> or have a look at the <a href="/gnome-pie-changelog.html">changelog</a>.</div>
 
 
 
@@ -60,11 +60,11 @@ The clip below (Gnome-Pie 0.6.1) shows how to create a launcher with Gnome-Pie i
 {% assign text = "How to install Gnome-Pie!" %}
 {% include image %}
 
-Besides from installing from source there are other ways to install Gnome-Pie. I maintain a PPA for easy installation on ubuntu-ish distributions and there are several repositories for other distributions, like [Arch Linux]("https://aur.archlinux.org/packages/gnome-pie-git/"){:target="_blank"}.
+Besides from installing from source there are other ways to install Gnome-Pie. I maintain a [PPA for easy installation](https://launchpad.net/~simonschneegans/+archive/ubuntu/testing){:target="_blank"} on ubuntu-ish distributions and there are several repositories for other distributions, like [Arch Linux](https://aur.archlinux.org/packages/gnome-pie-git/){:target="_blank"}.
 
 ## Installation from my PPA
 
-This works for Ubuntu and similar distributions. Simply enter the following commands in a terminal.
+This will add [my PPA](https://launchpad.net/~simonschneegans/+archive/ubuntu/testing){:target="_blank"} as a package source to your system and will work for Ubuntu and similar distributions. Simply enter the following commands in a terminal.
 
 {% highlight bash %}
 sudo add-apt-repository ppa:simonschneegans/testing

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Updated homepage!"
-tagline: "because there will be news to be told "
+tagline: "because there will be news to be told."
 category: news
 teaser: "sunset.jpg"
 colors: "color-sunset"

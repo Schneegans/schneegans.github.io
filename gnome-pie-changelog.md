@@ -10,6 +10,22 @@ parents: ["Projects", "Gnome-Pie"]
 ---
 
 
+## Gnome-Pie 0.6.7
+
+* **New Feature:** The Clipboard Group. It remembers an adjustable amount of your last copied items and allows for pasting them.
+* **New Feature:** It's now possible to delete imported themes.
+* **New Feature:** Slices can be activated with the key pad's return key (thank you, [Gabriel Dubatti](https://github.com/gabdub)!).
+* **New Feature:** It's now possible to load themes which are stored in a directory in an archive.
+* **Update:** The window list groups have been merged into one group. This new group has an option whether to show windows of the current workspace only.
+* **Update:** The default configuration of Gnome-Pie contains a Pie with a Window List Group now.
+* **Update:** The default configuration hides Slice labels now.
+* **Update:** Translation updates for Spanish locale (thank you, [Gabriel Dubatti](https://github.com/gabdub)!). Please feel free to contribute to the [translation into your language]({% post_url 2015-08-07-translate-gnome-pie %})!
+* **Update:** Translation updates for French locale (thank you, [Raphaël Rochet](https://github.com/RaphaelRochet)!).
+* **Update:** Translation updates for Lithuanian locale (thank you, Moo!).
+* **Update:** Translation updates for German locale.
+* **Bugfix:** The response time when opening Pies over the D-Bus (e.g. with `gnome-pie --open ID`) has been reduced a lot.
+
+
 ## Gnome-Pie 0.6.6
 
 * **New Feature:** New Numix theme. Similar to Adwaita Big but with dark colors.
@@ -87,39 +103,39 @@ parents: ["Projects", "Gnome-Pie"]
 ## Gnome-Pie 0.5.7
 
 * **New Feature:** Maximum activation radius: It can be set in the settings menu
-* **Update** ported all Glade ui-files to GTK3
-* **Update** removed old GTK2 code
-* **Update** removed a lot deprecated code
-* **Update** switched from libunique to GLib.Application
-* **Update** switched from gee-0.6 to gee-0.8
-* **Bugfix** added missing keyword to desktop file (thanks for the hint, [JoergFF](https://github.com/JoergFF))
+* **Update:** ported all Glade ui-files to GTK3
+* **Update:** removed old GTK2 code
+* **Update:** removed a lot deprecated code
+* **Update:** switched from libunique to GLib.Application
+* **Update:** switched from gee-0.6 to gee-0.8
+* **Bugfix:** added missing keyword to desktop file (thanks for the hint, [JoergFF](https://github.com/JoergFF))
 
 
 ## Gnome-Pie 0.5.6
 
-* **Bugfix** Transparency under Gnome 3.10+ (thank you, [Raphaël Rochet](https://github.com/RaphaelRochet))
-* **Bugfix** Pie hotkeys start numbering with one (instead of zero, since the zero key is really hard to press)
-* **Bugfix** option windows are now resizable since they are too small with certain window managers (e.g. Gala)
+* **Bugfix:** Transparency under Gnome 3.10+ (thank you, [Raphaël Rochet](https://github.com/RaphaelRochet))
+* **Bugfix:** Pie hotkeys start numbering with one (instead of zero, since the zero key is really hard to press)
+* **Bugfix:** option windows are now resizable since they are too small with certain window managers (e.g. Gala)
 
 
 ## Gnome-Pie 0.5.5
 
-* **Bugfix** The drag'n'drop between Pies in the editor has been improved a bit.
-* **Bugfix** A major segmentation fault on start up when some icons were not found has been fixed.
+* **Bugfix:** The drag'n'drop between Pies in the editor has been improved a bit.
+* **Bugfix:** A major segmentation fault on start up when some icons were not found has been fixed.
 
 
 ## Gnome-Pie 0.5.4
 
 * **Update** Statistics are not tracked anymore and new users wont be questioned to send the statistics file. I got files by more than 150 users and was able to [write a successful Bachelor thesis]({% post_url 2012-10-10-bachelor-thesis %}).
-* **New Feature** A Bulgarian translation has been added. Thanks to Martin Dinov!
-* **New Feature** A Chinese translation has been added. Thanks to Ting Zhou!
-* **New Feature** It's now possible to drag and drop Slices between Pies in the configuration window.
-* **Bugfix** It's now possible to bind Pies to hot keys containing the Super-key (normally referred to as the Windows-key)
-* **Bugfix** A possible segmentation fault on start-up has been fixed.
+* **New Feature:** A Bulgarian translation has been added. Thanks to Martin Dinov!
+* **New Feature:** A Chinese translation has been added. Thanks to Ting Zhou!
+* **New Feature:** It's now possible to drag and drop Slices between Pies in the configuration window.
+* **Bugfix:** It's now possible to bind Pies to hot keys containing the Super-key (normally referred to as the Windows-key)
+* **Bugfix:** A possible segmentation fault on start-up has been fixed.
 
 
 ## Gnome-Pie 0.5.3
 
-* **Update** The French locale got updated (thanks Mathilde!)
-* **Bugfix** There was a major bug which prevented the auto-start option to work at all (thanks to barteltm for pointing at this issue!).
-* **New Feature** I implemented a popup window requesting the statistics file from you (as [described earlier]({% post_url 2012-05-10-help-baking-pies %})).
+* **Update:** The French locale got updated (thanks Mathilde!)
+* **Bugfix:** There was a major bug which prevented the auto-start option to work at all (thanks to barteltm for pointing at this issue!).
+* **New Feature:** I implemented a popup window requesting the statistics file from you (as [described earlier]({% post_url 2012-05-10-help-baking-pies %})).
