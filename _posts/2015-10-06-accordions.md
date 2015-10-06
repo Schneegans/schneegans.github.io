@@ -13,11 +13,11 @@ With this tutorial I will show you how I implemented the accordion on the landin
 
 <!--more-->
 
-There is one main advantage of the approach presented here over others I found on the internet: The slides truly overlap each other. This prevents ugly text reflow during the animation (as seen in [this prominent example](http://blogs.sitepointstatic.com/examples/tech/css3-target/accordionhorz.html), [this one](http://csswizardry.com/demos/accordion/) or [this one](http://experiments.wemakesites.net/animated-css3-only-horizontal-accordion.html)) and allows for multiple lines of text in the captions (as opposed to [this example](http://codepen.io/ferry/pen/ZYVwxz)).
+There is one main advantage of the approach presented here over others I found on the internet: The slides truly overlap each other. This prevents ugly text reflow during the animation (as seen in [this prominent example](http://blogs.sitepointstatic.com/examples/tech/css3-target/accordionhorz.html){:target="_blank"}, [this one](http://csswizardry.com/demos/accordion/){:target="_blank"} or [this one](http://experiments.wemakesites.net/animated-css3-only-horizontal-accordion.html){:target="_blank"}) and allows for multiple lines of text in the captions (as opposed to [this example](http://codepen.io/ferry/pen/ZYVwxz){:target="_blank"}).
 
-Furthermore the horizontal accordion presented here is fully responsive - no fixed width is required; it will always fill `100%` of its parent container (other accordions, such as [this one](http://thecodeplayer.com/walkthrough/make-an-accordian-style-slider-in-css3) or [this one](http://codepen.io/rrenula/pen/DGrhf) are hard-coded to a fixed width).
+Furthermore the horizontal accordion presented here is fully responsive - no fixed width is required; it will always fill `100%` of its parent container (other accordions, such as [this one](http://thecodeplayer.com/walkthrough/make-an-accordian-style-slider-in-css3){:target="_blank"} or [this one](http://codepen.io/rrenula/pen/DGrhf){:target="_blank"} are hard-coded to a fixed width).
 
-At first we will set up the basic behavior, then we will add background images and as a last step we will add captions. All style code will be provided as [SASS code](http://sass-lang.com/).
+At first we will set up the basic behavior, then we will add background images and as a last step we will add captions. All style code will be provided as [SASS code](http://sass-lang.com/){:target="_blank"}.
 
 ## The Basic Bahavior
 
