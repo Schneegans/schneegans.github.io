@@ -1,7 +1,7 @@
 <ul class="breadcrumbs">
   {% if page.url == "/index.html" %}
 
-  <li><a href="/">Simon Schneegans</a></li>
+  <li><a href="/about.html">Simon Schneegans</a></li>
   {% else %}
   <li><a href="/">Home</a><span class="divider">/</span></li>
   {% for crumb in page.parents %}
