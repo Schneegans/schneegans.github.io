@@ -9,6 +9,15 @@ tagline: "A chronological list of changes of Gnome-Pie"
 parents: ["Projects", "Gnome-Pie"]
 ---
 
+## Gnome-Pie 0.6.8
+
+* **New Feature:** Center layers in themes support now four new rotation modes: `turn_to_second`, `turn_to_minute`, `turn_to_hour_12` and `turn_to_hour_24`.
+* **New Feature:** New theme: Simple Clock.
+* **New Feature:** New theme: Space Clock.
+* **New Feature:** It's now possible to reload all themes with a button in the settings menu.
+* **New Feature:** It's now possible to open a file browser at the location of the currently selected theme with a button in the settings menu.
+* **Bugfix:** A bug has been fixed which caused the running instance of Gnome-Pie to open a pie when the settings menu was requested over the D-Bus (Thank you [Marc-Antoine](https://github.com/washburn94){:target="_blank"}).
+
 
 ## Gnome-Pie 0.6.7
 
