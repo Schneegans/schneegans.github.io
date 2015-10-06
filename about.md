@@ -9,7 +9,7 @@ parents: []
 
 <div class="row">
   <div class="col-sm-9">
-  <p>This is the personal blog of Simon Schneegans, a student of computer media science at the <a href="http://www.uni-weimar.de/cms/">Bauhaus University</a> in Weimar.</p>
+  <p>This is the personal blog of Simon Schneegans, a student of computer media science at the <a href="http://www.uni-weimar.de/cms/">Bauhaus University</a> in Weimar. Here you will find new news regarding Gnome-Pie, some tutorials and other (hopefully) interesting stuff!</p>
 
   <address>
     <strong>Simon Schneegans</strong><br>
