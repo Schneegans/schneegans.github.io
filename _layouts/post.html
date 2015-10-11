@@ -26,6 +26,17 @@ layout: default
 
     <div class="well">
       {% if page.previous %}
+        <span style="margin:0 9px">
+          Previous post:
+        </span>
+      {% endif %}
+      {% if page.next %}
+        <span class="pull-right" style="margin:0 9px">
+          Next post:
+        </span>
+      {% endif %}
+      <br />
+      {% if page.previous %}
         <a href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}"><i class="fa fa-angle-left"></i> {{page.previous.title}}</a>
       {% endif %}
       {% if page.next %}
