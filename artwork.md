@@ -13,6 +13,11 @@ Below you find a random collection of pictures I have created. Some of them are 
 
 <div class="row magnific-gallery">
     <div class="col-sm-4 col-xs-6">
+        {% assign picture = "london.jpg" %}
+        {% assign size = "small" %}
+        {% assign text = "A slightly modified picture of the London skyline" %}
+        {% include gallery_item %}
+        <br />
         {% assign picture = "knife.jpg" %}
         {% assign size = "small" %}
         {% assign text = "Modelled, textured and rendered in Blender" %}
@@ -55,6 +60,11 @@ Below you find a random collection of pictures I have created. Some of them are 
         <br />
     </div>
     <div class="col-sm-4 col-xs-6">
+        {% assign picture = "leaf.jpg" %}
+        {% assign size = "small" %}
+        {% assign text = "A picture of a leaf" %}
+        {% include gallery_item %}
+        <br />
         {% assign picture = "alchemy2.jpg" %}
         {% assign size = "small" %}
         {% assign text = "Character test done with Alchemy" %}
@@ -97,6 +107,11 @@ Below you find a random collection of pictures I have created. Some of them are 
         <br />
     </div>
     <div class="col-sm-4 col-xs-6">
+        {% assign picture = "grass.jpg" %}
+        {% assign size = "small" %}
+        {% assign text = "Photo of grass with some dew" %}
+        {% include gallery_item %}
+        <br />
         {% assign picture = "sunset.jpg" %}
         {% assign size = "small" %}
         {% assign text = "Photograph taken in California" %}
