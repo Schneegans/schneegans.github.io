@@ -6,7 +6,7 @@ category: tutorials
 teaser: "properties.jpg"
 colors: "color-properties"
 description: "I think there is a tight connection. Image by <a href='https://www.flickr.com/photos/hulagway/6020190512/'>whologwhy</a>."
-group: blog
+tags: ["tutorial", "c++"]
 ---
 
 Based on the signal class from the previous post we can implement a class which holds a value and notifies anyone who's interested in value changes.

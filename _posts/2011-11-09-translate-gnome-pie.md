@@ -5,7 +5,7 @@ tagline: "a (deprecated) step-by-step guide."
 category: lessons
 teaser: "translate.jpg"
 colors: "color-translate"
-group: blog
+tags: ["tutorial", "gnome-pie"]
 ---
 
 It would be really cool if you could create a translation of Gnome-Pie into your language! It is quite easy and involves the following steps.

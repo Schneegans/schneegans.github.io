@@ -49,13 +49,8 @@ colors: color-fallback
     <h2>latest posts</h2>
     <hr>
     <ul>
-      {% assign post_count = 0 %}
-      {% for post in site.posts %}
+      {% for post in site.posts limit: 3 %}
         <li><a href="{{ post.url }}">{{ post.title }}</a><br></li>
-        {% assign post_count=post_count | plus:1 %}
-        {% if post_count == 3 %}
-          {% break %}
-        {% endif %}
       {% endfor %}
     </ul>
   </div>
@@ -75,16 +70,5 @@ colors: color-fallback
       {% endfor %}
     </ul>
   </div>
-  <!-- <div class="col-sm-4 sub-nav">
-    <h2>latest projects</h2>
-    <hr>
-    <ul>
-      {% for page in site.pages %}
-      {% if page.group == "featured-projects" %}
-        <li><a href="{{ page.url }}">{{ page.title }}</a><br></li>
-      {% endif %}
-      {% endfor %}
-    </ul>
-  </div> -->
 </nav>
 

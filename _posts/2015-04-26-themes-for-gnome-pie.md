@@ -6,7 +6,7 @@ category: lessons
 teaser: "themes_for_gnome-pie.jpg"
 colors: "color-themes_for_gnome-pie"
 description: "Designing themes is fun!"
-group: blog
+tags: ["tutorial", "gnome-pie"]
 ---
 
 It is quite easy to create custom themes for Gnome-Pie. All you need to do is creating some images and editing an XML-file to make the theme behave as you want. With this little tutorial I'll give an overview of the steps needed to create a theme.

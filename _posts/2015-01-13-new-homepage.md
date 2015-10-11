@@ -6,7 +6,7 @@ category: news
 teaser: "sunset.jpg"
 colors: "color-sunset"
 description: "A new start"
-group: blog
+tags: ["news", "html", "jekyll"]
 ---
 
 It's been a while since my last post. But since I'm planning to release new updates for Gnome-Pie, I decided to create a new homepage! It is now hosted on github pages and built with jekyll. I ported some of the old wordpress posts and managed to import all your comments to disqus.

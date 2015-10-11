@@ -2,7 +2,6 @@
 layout: nav-page
 title : Gnome-Pie
 header : Gnome-Pie
-group: featured-projects
 description: Homepage of Gnome-Pie, the slick application launcher for Linux.
 teaser: "gnome-pie065.jpg"
 colors: "color-gnome-pie065"

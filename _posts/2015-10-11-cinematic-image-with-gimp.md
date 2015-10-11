@@ -4,9 +4,9 @@ title: "Create a cinematic image!"
 tagline: "enhance your boring photos with the gimp."
 category: tutorials
 teaser: "london.jpg"
-colors: "color-london"
+colors: "color-london_01"
 description: "You can quickly turn your dull pictures to awesome shots like this."
-group: blog
+tags: ["tutorial", "gimp", "artwork"]
 ---
 
 You were on holidays and all your pictures look a little... dull? Maybe this quick tutorial will give you some inspiration!
@@ -112,7 +112,7 @@ Finally I used some additional sunrise images to add a sun glare to the image. I
 
 ## Final comparison
 
-That's it! You can download the [full resolution result here](/assets/pictures/london.jpg){:target="_blank"}. Below you can check the differences between the original photo and the final version. Please post a link in the comments if you created some cool images with a similar technique!
+That's it! You can [download the full resolution result here](/assets/pictures/london.jpg){:target="_blank"}. Below you can check the differences between the original photo and the final version. Please post a link in the comments if you created some cool images with a similar technique!
 
 {% assign picture_a = "london_01.jpg" %}
 {% assign picture_b = "london.jpg" %}

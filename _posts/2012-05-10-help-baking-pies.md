@@ -5,7 +5,7 @@ tagline: "for my bachelor thesis."
 category: news
 teaser: "mockup.jpg"
 colors: "color-mockup"
-group: blog
+tags: ["news", "gnome-pie"]
 ---
 
 Now I'm sure: <strong>I'm going to write my Bachelor thesis on pie menus! But I need your help!</strong>

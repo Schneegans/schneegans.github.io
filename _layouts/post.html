@@ -50,12 +50,20 @@ layout: default
       <h5>Published</h5>
       <div class="date"><span>{{ page.date | date_to_long_string }}</span></div>
     </section>
-    {% if page.category %}
+    <section>
+      <h5>Author</h5>
+      <span class="category">
+        Simon Schneegans
+      </span>
+    </section>
+    {% if page.tags %}
       <section>
-        <h5>Category</h5>
-        <span class="category">
-          {{ page.category }}
-        </span>
+        <h5>Tags</h5>
+        {% for tag in page.tags %}
+        <a href="/blog/tags/{{ tag }}" class="badge">
+          <i class="fa fa-tag"></i> {{ tag }}
+        </a>
+        {% endfor %}
       </section>
     {% endif %}
   </div>

@@ -6,8 +6,7 @@ category: tutorials
 teaser: "signals.jpg"
 colors: "color-signals"
 description: "A slot canyon. Image by <a href='https://www.flickr.com/photos/photophilde/5000685616/'>photophilde</a>."
-group: blog
-tags: ["featured"]
+tags: ["featured", "tutorial", "c++"]
 ---
 
 I've been asked multiple times how I would implement a signal / slot mechanism in modern C++. Here is the answer!

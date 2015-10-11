@@ -6,7 +6,7 @@ category: news
 teaser: "translate2.jpg"
 colors: "color-translate2"
 description: "Translate Gnome-Pie into your language!"
-group: blog
+tags: ["tutorial", "gnome-pie"]
 ---
 
 Translating Gnome-Pie just became much easier! Read on to discover how you could contribute to Gnome-Pie!

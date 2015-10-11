@@ -2,7 +2,6 @@
 layout: page
 title : Random artwork
 header : Random artwork
-group : projects
 colors: color-faroer_03
 parents: ["Projects"]
 ---

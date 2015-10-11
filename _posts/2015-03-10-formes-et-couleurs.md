@@ -6,7 +6,7 @@ category: artwork
 teaser: "formes-et-couleurs-01.jpg"
 colors: "color-formes-et-couleurs-01"
 description: "We went for very simplistic character design."
-group: blog
+tags: ["artwork"]
 ---
 
 Some time ago, I created in a team of two a stop motion clip for a computer animation class.

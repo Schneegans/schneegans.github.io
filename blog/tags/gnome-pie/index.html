@@ -1,0 +1,17 @@
+---
+layout: page
+title : "Tag: gnome-pie"
+colors: color-fallback
+---
+
+{% assign first = true %}
+
+{% for post in site.posts %}
+    {% if post.tags contains "gnome-pie" %}
+
+        {% if first %}{% assign first = false %}{% else %}<hr>{% endif %}
+
+        {% include post %}
+
+    {% endif %}
+{% endfor %}
