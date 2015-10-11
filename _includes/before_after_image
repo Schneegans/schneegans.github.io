@@ -1,0 +1,10 @@
+<div class="before-after-slider">
+    <div class="after">
+        <img class="img-responsive" src="/assets/pictures/{{size}}/{{picture_b}}"/>
+        <div class="label">after</div>
+    </div>
+    <div class="before">
+        <img class="img-responsive" src="/assets/pictures/{{size}}/{{picture_a}}"/>
+        <div class="label">before</div>
+    </div>
+</div>

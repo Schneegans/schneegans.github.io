@@ -89,6 +89,22 @@
           }
         });
 
+        $('.before-after-slider').each(function() {
+          var before = $(this).find(".before");
+          var after = $(this).find(".after");
+          $(this).mousemove(function(e){
+            var offset = (e.offsetX || e.clientX - before.offset().left);
+            var width  = after.width();
+            before.stop();
+            before.width(offset/width*100 + "%");
+          });
+          $(this).mouseleave(function(e){
+            before.stop().animate({
+              width: "50%"
+            }, 300);
+          });
+        });
+
         $('#toc').toc({
           selectors: 'h1,h2',
           highlightOffset: 100

@@ -230,7 +230,46 @@ p {
 
 .img-responsive {
   width: 100%;
+  max-width:inherit;
 }
+
+.before-after-slider {
+  position: relative;
+
+  .label {
+    position: absolute;
+    bottom: 0;
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    @include box-shadow(none);
+  }
+
+  .after .label {
+    right: 0;
+    @include border-radius(4px 0 0 0);
+  }
+
+  .before {
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 50%;
+
+    .label {
+      left: 0;
+      @include border-radius(0 4px 0 0);
+    }
+
+    img {
+      height: 100%;
+      width: auto;
+    }
+  }
+}
+
 
 /* Sticky footer */
 $footerHeight: 150px;

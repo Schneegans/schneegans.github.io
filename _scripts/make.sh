@@ -1,7 +1,7 @@
 #!/bin/bash
 
-./_color_extractor/make.sh
-./_color_extractor/color_extractor assets/pictures _sass/_colors.scss
+# ./_color_extractor/make.sh
+# ./_color_extractor/color_extractor assets/pictures _sass/_colors.scss
 
 compass compile _sass
 
