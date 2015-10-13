@@ -5,7 +5,7 @@ tagline: "learn it with a detailed step-by-step guide."
 category: lessons
 teaser: "launchpad.jpg"
 colors: "color-launchpad"
-tags: ["tutorial", "featured", "c++", "cmake"]
+tags: ["tutorial", "featured", "c++", "cmake", "code"]
 ---
 
 When I first wanted to create a PPA for Ubuntu, it was a pain. It was barely documented, unnecessarily complex and --- the worst thing of all --- if there was a tutorial, it employed rather old build tools and no guide covered code generated with CMake.

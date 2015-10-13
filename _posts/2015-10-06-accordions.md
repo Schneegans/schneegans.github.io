@@ -6,7 +6,7 @@ category: tutorials
 teaser: "accordions.jpg"
 colors: "color-accordions"
 description: "The accordion on my homepage uses CSS3 only. No JavaScript is required!"
-tags: ["html", "tutorial", "css"]
+tags: ["html5", "tutorial", "css3", "code"]
 ---
 
 With this tutorial I will show you how I implemented the accordion on the landing page of my website. It is based on CSS3, requires no JavaScript and is fully responsive.

@@ -6,7 +6,7 @@ category: news
 teaser: "color_splash.jpg"
 colors: "color-color_splash"
 description: "That happens if you combine thirty seconds of exposure, a mobile phone and someone jumping around wildly."
-tags: ["jekyll"]
+tags: ["jekyll", "code"]
 ---
 
 I added a nifty feature to my homepage: Links are now colored according to corresponding images!

@@ -39,6 +39,7 @@ body {
   font-family: 'Oxygen', sans-serif;
   background: url($bg1) repeat;
   background-attachment: fixed;
+  padding-top:70px;
 }
 
 a {
@@ -147,7 +148,7 @@ h1 {
 
 h2 {
   font-size: 30px;
-  margin: 40px 0 15px;
+  margin: 20px 0 15px;
 
   &:before {
     content:"";
@@ -290,7 +291,7 @@ $footerHeight: 150px;
 }
 
 #page-background {
-  margin-top: 80px;
+  margin-top: 10px;
   padding-top:20px;
   padding-bottom:30px;
   background-color: #2a2a2a;
@@ -298,14 +299,6 @@ $footerHeight: 150px;
   box-shadow: 0 0px 10px rgba(0, 0, 0, 0.8);
   border-top: 1px solid #373737;
 }
-
-@media only screen and (max-width:600px) {
-  #page-background {
-    margin-top: 60px;
-  }
-}
-
-
 
 //footer fixed height
 footer {
@@ -490,7 +483,7 @@ footer {
   @for $slides from 3 through 10 {
     &.accordion-items-#{$slides} {
 
-      $accordion_aspect_ratio: 1 + $slides / 5;
+      $accordion_aspect_ratio: 1.5 + $slides / 5;
       $slide_aspect_ratio: 4/3;
 
       $slide_h: 100% / $accordion_aspect_ratio;
