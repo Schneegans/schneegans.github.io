@@ -1,0 +1,17 @@
+---
+layout: page
+title : "Tag: animation"
+colors: color-fallback
+---
+
+{% assign first = true %}
+
+{% for post in site.posts %}
+    {% if post.tags contains "animation" %}
+
+        {% if first %}{% assign first = false %}{% else %}<hr>{% endif %}
+
+        {% include post %}
+
+    {% endif %}
+{% endfor %}
