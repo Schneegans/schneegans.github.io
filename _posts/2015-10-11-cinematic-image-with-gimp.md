@@ -36,22 +36,20 @@ Since the blue sky of the original image is a little plain, I [searched the inte
 
 I deleted the sky from the original image with the eraser tool and pasted the new sky to a new layer below the original image.
 
-<p>
-    <div class="row magnific-gallery">
-        <div class="col-xs-6">
-            {% assign picture = "london_03.jpg" %}
-            {% assign size = "medium" %}
-            {% assign text = "The old sky was boring." %}
-            {% include gallery_item %}
-        </div>
-        <div class="col-xs-6">
-            {% assign picture = "london_04.jpg" %}
-            {% assign size = "medium" %}
-            {% assign text = "The new sky is much more awesome." %}
-            {% include gallery_item %}
-        </div>
+<div class="row magnific-gallery">
+    <div class="col-xs-6">
+        {% assign picture = "london_03.jpg" %}
+        {% assign size = "medium" %}
+        {% assign text = "The old sky was boring." %}
+        {% include gallery_item %}
     </div>
-</p>
+    <div class="col-xs-6">
+        {% assign picture = "london_04.jpg" %}
+        {% assign size = "medium" %}
+        {% assign text = "The new sky is much more awesome." %}
+        {% include gallery_item %}
+    </div>
+</div>
 
 {% assign picture_a = "london_02.jpg" %}
 {% assign picture_b = "london_05.jpg" %}
@@ -62,22 +60,20 @@ I deleted the sky from the original image with the eraser tool and pasted the ne
 
 The picture looks quite interesting, but we need to adjust the colors of the skyline. Therefore I duplicated the skyline layer and tinted the copy to some warm orange with `Colors > Colorize...`. Then I deleted most of the tinted version; only on the right hand side where the sun is supposed to be I kept the orange version.
 
-<p>
-    <div class="row magnific-gallery">
-        <div class="col-xs-6">
-            {% assign picture = "london_06.jpg" %}
-            {% assign size = "medium" %}
-            {% assign text = "The tinted skyline layer." %}
-            {% include gallery_item %}
-        </div>
-        <div class="col-xs-6">
-            {% assign picture = "london_07.jpg" %}
-            {% assign size = "medium" %}
-            {% assign text = "Most of the tinted skyline layer has been erased." %}
-            {% include gallery_item %}
-        </div>
+<div class="row magnific-gallery">
+    <div class="col-xs-6">
+        {% assign picture = "london_06.jpg" %}
+        {% assign size = "medium" %}
+        {% assign text = "The tinted skyline layer." %}
+        {% include gallery_item %}
     </div>
-</p>
+    <div class="col-xs-6">
+        {% assign picture = "london_07.jpg" %}
+        {% assign size = "medium" %}
+        {% assign text = "Most of the tinted skyline layer has been erased." %}
+        {% include gallery_item %}
+    </div>
+</div>
 
 {% assign picture_a = "london_05.jpg" %}
 {% assign picture_b = "london_08.jpg" %}
@@ -88,22 +84,20 @@ The picture looks quite interesting, but we need to adjust the colors of the sky
 
 Finally I used some additional sunrise images to add a sun glare to the image. I used [this CC by SA image by Zimmermanns](https://commons.wikimedia.org/wiki/File:Sunrise_above_Oberwiesenthal.JPG){:target="_blank"} and [this public domain image](http://www.public-domain-image.com/free-images/nature-landscapes/sunrise/beautiful-sunrise-over-volcanoes-in-guatemala/attachment/beautiful-sunrise-over-volcanoes-in-guatemala){:target="_blank"}. I put both on separate layers, moved them around, blurred, mirrored and erased some parts. Both blend modes were set to `Soft Light`.
 
-<p>
-    <div class="row magnific-gallery">
-        <div class="col-xs-6">
-            {% assign picture = "london_09.jpg" %}
-            {% assign size = "medium" %}
-            {% assign text = "A subtle glare." %}
-            {% include gallery_item %}
-        </div>
-        <div class="col-xs-6">
-            {% assign picture = "london_10.jpg" %}
-            {% assign size = "medium" %}
-            {% assign text = "Some glare over the skyline." %}
-            {% include gallery_item %}
-        </div>
+<div class="row magnific-gallery">
+    <div class="col-xs-6">
+        {% assign picture = "london_09.jpg" %}
+        {% assign size = "medium" %}
+        {% assign text = "A subtle glare." %}
+        {% include gallery_item %}
     </div>
-</p>
+    <div class="col-xs-6">
+        {% assign picture = "london_10.jpg" %}
+        {% assign size = "medium" %}
+        {% assign text = "Some glare over the skyline." %}
+        {% include gallery_item %}
+    </div>
+</div>
 
 {% assign picture_a = "london_08.jpg" %}
 {% assign picture_b = "london.jpg" %}

@@ -148,7 +148,7 @@ h1 {
 
 h2 {
   font-size: 30px;
-  margin: 20px 0 10px;
+  margin: 40px 0 10px;
 
   &:before {
     content:"";
@@ -241,6 +241,7 @@ p {
 
 .before-after-slider {
   position: relative;
+  margin:20px 0;
 
   .label {
     position: absolute;
