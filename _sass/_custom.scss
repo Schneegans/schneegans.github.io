@@ -148,7 +148,7 @@ h1 {
 
 h2 {
   font-size: 30px;
-  margin: 20px 0 15px;
+  margin: 20px 0 10px;
 
   &:before {
     content:"";
@@ -467,6 +467,7 @@ footer {
           @include transition(all 500ms);
           @include translateX(-60px);
           color:#fff;
+          text-align: left;
         }
       }
 
@@ -483,8 +484,8 @@ footer {
   @for $slides from 3 through 10 {
     &.accordion-items-#{$slides} {
 
-      $accordion_aspect_ratio: 1.5 + $slides / 5;
-      $slide_aspect_ratio: 4/3;
+      $accordion_aspect_ratio: 1.3 + $slides / 5;
+      $slide_aspect_ratio: 16/10;
 
       $slide_h: 100% / $accordion_aspect_ratio;
       $slide_w: $slide_h * $slide_aspect_ratio;

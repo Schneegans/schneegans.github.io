@@ -1,9 +1,9 @@
 <ul class="breadcrumbs">
   {% if page.url == "/index.html" %}
 
-  <li><a href="/about.html">Simon Schneegans</a></li>
+  <li><a href="/about.html"><i class="fa fa-home hidden-xs"></i> Simon Schneegans</a></li>
   {% else %}
-  <li><a href="/">Home</a><span class="divider">/</span></li>
+  <li><a href="/"><i class="fa fa-home hidden-xs"></i> Home</a><span class="divider">/</span></li>
   {% for crumb in page.parents %}
     {% if crumb == "Projects" %} {% assign link = "/projects.html" %} {% endif %}
     {% if crumb == "Gnome-Pie" %} {% assign link = "/gnome-pie.html" %} {% endif %}
