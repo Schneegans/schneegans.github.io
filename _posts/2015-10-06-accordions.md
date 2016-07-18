@@ -13,6 +13,8 @@ With this tutorial I will show you how I implemented the accordion on the landin
 
 <!--more-->
 
+**Update: Scroll down to the end of the post for the final SASS code!**
+
 There is one main advantage of the approach presented here over others I found on the internet: The slides truly overlap each other. This prevents ugly text reflow during the animation (as seen in [this prominent example](http://blogs.sitepointstatic.com/examples/tech/css3-target/accordionhorz.html){:target="_blank"}, [this one](http://csswizardry.com/demos/accordion/){:target="_blank"} or [this one](http://experiments.wemakesites.net/animated-css3-only-horizontal-accordion.html){:target="_blank"}) and allows for multiple lines of text in the captions (as opposed to [this example](http://codepen.io/ferry/pen/ZYVwxz){:target="_blank"}).
 
 Furthermore the horizontal accordion presented here is fully responsive - no fixed width is required; it will always fill `100%` of its parent container (other accordions, such as [this one](http://thecodeplayer.com/walkthrough/make-an-accordian-style-slider-in-css3){:target="_blank"} or [this one](http://codepen.io/rrenula/pen/DGrhf){:target="_blank"} are hard-coded to a fixed width).
@@ -87,7 +89,7 @@ Here is the most basic version of the accordion. It has three items, each has a 
   // appearance of the accordion
   $slides:                  3;
   $accordion_aspect_ratio:  2/1;
-  $slide_aspect_ratio:      4/3;
+  $slide_aspect_ratio:      16/10;
 
   // these values are required multiple times, therefore I
   // store them in some variables here
@@ -167,8 +169,8 @@ Our next goal is to support any number of items. This can be achieved by replaci
   &.accordion-items-#{$slides} {
 
     // decrease height for increasing number of items
-    $accordion_aspect_ratio: 1 + $slides / 5;
-    $slide_aspect_ratio: 4/3;
+    $accordion_aspect_ratio: 1.3 + $slides / 5;
+    $slide_aspect_ratio: 16/10;
 
     $slide_h: 100% / $accordion_aspect_ratio;
     $slide_w: $slide_h * $slide_aspect_ratio;
@@ -352,4 +354,126 @@ Finally we want to have some captions on our slides. Since they should look real
 
 ## Final Words
 
-That's it! I hope you can use this technique somewhere. If you have further questions just use the comment form below! And it would be awesome if you could post a link if you used this accordion somewhere!
+That's it! I hope you can use this technique somewhere. If you have further questions just use the comment form below! And it would be awesome if you could post a link if you used this accordion somewhere! Below you find the final SASS class.
+
+
+{% highlight scss %}
+.accordion {
+
+  ////////////////////////////////////////////////////////////
+  // the first part of the style code is independent from   //
+  // the number of slides in the accordion                  //
+  ////////////////////////////////////////////////////////////
+
+  // the accordion shall always have a fixed aspect ration in
+  // order to prevent distortion. Therefore we set the height
+  // to zero and define a bottom padding in percent. This is
+  // done down in the second half.
+  height: 0;
+
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 1);
+
+  ul {
+    margin: 0;
+    padding: 0;
+
+    // remove white space between slides
+    font-size: 0;
+
+    li {
+      height: 0;
+      margin: 0;
+      padding: 0;
+      display: inline-block;
+      position: relative;
+      border-top: 1px solid #373737;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 1);
+      @include transition(all 400ms);
+
+      // these three lines are only required if you
+      // are using background images
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+
+      // from here to the and of li is only necessary
+      // if you want to have captions
+      font-size: 14px;
+
+      div {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        padding: 20px;
+
+        overflow: hidden;
+        opacity: 0;
+
+        @include transition(all 300ms);
+        @include background-image(linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%));
+
+        h2 {
+          @include transition(all 500ms);
+          @include translateX(-30px);
+        }
+
+        a {
+          display: inline-block;
+          @include transition(all 500ms);
+          @include translateX(-30px);
+        }
+
+        p {
+          display: inline-block;
+          @include transition(all 500ms);
+          @include translateX(-60px);
+        }
+      }
+
+      &:hover div {
+        opacity: 1;
+
+        h2, a, p {
+          @include translateX(0px);
+        }
+      }
+    }
+  }
+
+  ////////////////////////////////////////////////////////////
+  // this second part of the code provides sub classes for  //
+  // different item counts                                  //
+  ////////////////////////////////////////////////////////////
+
+  @for $slides from 3 through 10 {
+
+    &.accordion-items-#{$slides} {
+
+      // decrease height for increasing number of items
+      $accordion_aspect_ratio: 1.3 + $slides / 5;
+      $slide_aspect_ratio: 16/10;
+
+      $slide_h: 100% / $accordion_aspect_ratio;
+      $slide_w: $slide_h * $slide_aspect_ratio;
+
+      padding-bottom: $slide_h;
+
+      ul li {
+        width: $slide_w;
+        margin-right: 100% / $slides - $slide_w;
+        padding-bottom: $slide_h;
+      }
+
+      ul:hover li {
+        margin-right: (100%-$slide_w) / ($slides - 1) - $slide_w;
+      }
+
+      ul:hover li:hover {
+        margin-right: 0;
+      }
+    }
+  }
+}
+{% endhighlight %}

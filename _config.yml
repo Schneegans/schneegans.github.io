@@ -1,12 +1,12 @@
 permalink: /:categories/:year/:month/:day/:title
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
-highlighter: pygments
+gems: [jekyll-paginate]
 
 title : Simon Schneegans
 tagline: Projects and Blog
 author :
   name : Simon Schneegans
-  email : code@simonschneegans.de
+  email : admin@simonschneegans.de
   github : simmesimme
 
 # The production_url is only used when full-domain names are needed

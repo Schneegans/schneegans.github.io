@@ -1,8 +1,8 @@
 ---
 layout: page
-title : M.A.R.S
-header : M.A.R.S
-colors: color-project-gnomepie
+title : M.A.R.S - a ridiculous shooter
+teaser: teaser-mars.jpg
+colors: color-teaser-mars
 parents: ["Projects"]
 ---
 
@@ -12,4 +12,4 @@ parents: ["Projects"]
 
 <br>
 
-M.A.R.S. is a ridiculous, open source 2D shooter developed by Felix Lauer and myself. It is a game for two players, flying with ships in a two-dimensional space setting, governed by the laws of gravity. Visit the <a href="http://mars-game.sourceforge.net/">official homepage</a> for more details or watch the trailer above!
+M.A.R.S. is a ridiculous, open source 2D shooter developed by Felix Lauer and myself. It is a game for two players, flying with ships in a two-dimensional space setting, governed by the laws of gravity. Visit the <a href='http://mars-game.sourceforge.net/'>official homepage</a> for more details or watch the trailer below!

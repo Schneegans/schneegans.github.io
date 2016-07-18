@@ -1,6 +1,6 @@
 ---
 layout: nav-page
-title : Gnome-Pie's Changelog
+title : Changelog
 header : Gnome-Pie Changelog
 description: A chronological list of changes of Gnome-Pie.
 teaser: "gnome-pie065.jpg"

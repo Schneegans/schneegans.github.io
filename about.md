@@ -2,6 +2,7 @@
 layout: page
 title : About
 header : about
+teaser: simon.jpg
 colors: color-simon
 parents: []
 ---
@@ -9,12 +10,12 @@ parents: []
 
 <div class="row">
   <div class="col-sm-9">
-  <p>This is the personal blog of Simon Schneegans, a student of computer media science at the <a href="http://www.uni-weimar.de/cms/">Bauhaus University</a> in Weimar. On this website you will find news regarding Gnome-Pie, some tutorials and other (hopefully) interesting stuff!</p>
+  <p>This is the personal blog of Simon Schneegans, researcher at the <a href="http://www.dlr.de">DLR (German Aerospace Center)</a> in Braunschweig. On this website you will find news regarding Gnome-Pie, some tutorials and other (hopefully) interesting stuff!</p>
 
   <address>
     <strong>Simon Schneegans</strong><br>
-    Trierer Strasse 60<br>
-    99423 Weimar, Germany<br>
+    Hasselfelder Straße 5c<br>
+    38124 Braunschweig, Germany<br>
     admin (at) simonschneegans.de
   </address>
 

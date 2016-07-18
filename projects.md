@@ -1,8 +1,9 @@
 ---
-layout: page
+layout: header-page
 title : Projects
-description: "Projects of Simon Schneegans. Explore the list of some projects of mine!"
-colors: color-fallback
+description: "Explore the list of some projects of mine."
+teaser: "sunset.jpg"
+colors: "color-sunset"
 parents: []
 ---
 

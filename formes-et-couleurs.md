@@ -1,8 +1,8 @@
 ---
 layout: page
 title : Les Formes et les Couleurs
-header : Les Formes et les Couleurs
-colors: color-lfelc-planning
+teaser: project-formes-et-couleurs.jpg
+colors: color-project-formes-et-couleurs
 parents: ["Projects"]
 ---
 

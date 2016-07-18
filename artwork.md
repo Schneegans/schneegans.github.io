@@ -1,14 +1,11 @@
 ---
-layout: page
-title : Random artwork
-header : Random artwork
-colors: color-faroer_03
+layout: header-page
+title: Random artwork
+description: Below you find a random collection of pictures I have created. Some of them are photographs, some are rendered with 3D software and some are drawn by hand.
+teaser: "leaf.jpg"
+colors: "color-leaf"
 parents: ["Projects"]
 ---
-
-<p>
-Below you find a random collection of pictures I have created. Some of them are photographs, some are rendered with 3D software and some are drawn by hand.
-</p>
 
 <div class="row magnific-gallery">
     <div class="col-sm-4 col-xs-6">

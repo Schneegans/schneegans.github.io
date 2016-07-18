@@ -1,5 +1,5 @@
 <ul class="breadcrumbs">
-  {% if page.url == "/index.html" %}
+  {% if page.url == "/" %}
 
   <li><a href="/about.html"><i class="fa fa-home hidden-xs"></i> Simon Schneegans</a></li>
   {% else %}

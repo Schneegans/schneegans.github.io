@@ -2,6 +2,7 @@
 layout: page
 title : PTB Animation
 header : PTB Animation
+teaser: project-hzb.jpg
 colors: color-project-hzb
 parents: ["Projects"]
 ---

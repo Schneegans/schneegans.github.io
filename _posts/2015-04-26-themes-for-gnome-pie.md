@@ -13,6 +13,8 @@ It is quite easy to create custom themes for Gnome-Pie. All you need to do is cr
 
 <!--more-->
 
+<div class="adaptive-alert well">There is a <a href="/gnome-pie-themes.html">gallery of existing Gnome-Pie themes available</a>. You can download some themes there! If you create a new theme, just drop a note and I will add it to this collection!</div>
+
 The themes of Gnome-Pie are either installed to `/usr/share/gnome-pie/themes` or `/usr/local/share/gnome-pie/themes` - you can have a look at these to get an impression.
 
 When you create a new theme you should put it in your home directory in `~/.config/gnome-pie/themes`, there they'll discovered as well.

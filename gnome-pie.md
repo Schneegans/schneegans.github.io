@@ -13,10 +13,6 @@ Gnome-Pie is a circular application launcher (*pie menu*) for Linux. It is made 
 
 <div class="adaptive-alert well">The most recent version of Gnome-Pie is 0.6.8. You can read the <a href="{% post_url 2015-10-06-gnome-pie-068 %}">release announcement here</a> or have a look at the <a href="/gnome-pie-changelog.html">changelog</a>.</div>
 
-
-
-## Quick Links
-
 {% include quick_links %}
 
 

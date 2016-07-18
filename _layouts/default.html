@@ -24,10 +24,12 @@
       <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
     <![endif]-->
 
-    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="shortcut icon" href="/favicon.ico">
   </head>
 
   <body class="{{ page.colors }}">
+    <div id="image-background" style="background-image:url('/assets/pictures/{{page.teaser}}')"></div>
+    <div id="dark-background"></div>
 
     <header class="page-header">
       <nav class="container">
@@ -41,13 +43,7 @@
       </nav>
     </header>
 
-    <div id="page-content">
-      <div id="page-background">
-        <main class="container">
-          {{ content }}
-        </main> <!-- /container -->
-      </div>
-    </div>
+    {{ content }}
 
     <footer class="page-footer">
       <div class="container">
@@ -122,7 +118,7 @@
 
         $('.magnific-gallery').magnificPopup({
           type:'image',
-          delegate:'a',
+          delegate:'.gallery-item',
           mainClass: 'mfp-with-zoom',
           zoom: {
             enabled: true
