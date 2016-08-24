@@ -27,8 +27,7 @@
     <link rel="shortcut icon" href="/favicon.ico">
   </head>
 
-  <body class="{{ page.colors }}">
-    <div id="image-background" style="background-image:url('/assets/pictures/{{page.teaser}}')"></div>
+  <body onload="document.body.className += ' loaded';" class="{{ page.colors }}">
     <div id="dark-background"></div>
 
     <header class="page-header">
@@ -108,13 +107,13 @@
           offset_top:100
         });
 
-        $(window).scroll(function() {
-          if ($(document).scrollTop() > 100) {
-            $('.page-header').addClass('shrink');
-          } else {
-            $('.page-header').removeClass('shrink');
-          }
-        });
+        // $(window).scroll(function() {
+        //   if ($(document).scrollTop() > 100) {
+        //     $('.page-header').addClass('shrink');
+        //   } else {
+        //     $('.page-header').removeClass('shrink');
+        //   }
+        // });
 
         $('.magnific-gallery').magnificPopup({
           type:'image',

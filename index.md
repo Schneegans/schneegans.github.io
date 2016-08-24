@@ -1,6 +1,6 @@
 ---
 layout: header-page
-title: Homepage
+title: Welcome!
 description: "This is the homepage of Simon Schneegans. Greetings! <br>Explore the <a href='/blog'><i class='fa fa-pencil'></i> blog</a>, discover my <a href='/projects.html'><i class='fa fa-gears'></i> projects</a> or use the <i class='fa fa-tag'></i> tags below to find something specific."
 teaser: teaser-mars.jpg
 colors: color-teaser-mars

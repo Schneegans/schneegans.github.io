@@ -2,7 +2,9 @@
 layout: default
 ---
 
-<div class="container">
+<div id="page-content">
+<div id="page-background">
+<main class="container">
 <div class="row">
   <div class="text-center col-xs-12">
     <br><br>
@@ -13,14 +15,12 @@ layout: default
 <div class="row">
   <div class="text-center col-sm-8 col-sm-offset-2 col-xs-12">
     {{page.description}}
-    <br><br><br>
+  </div>
+  <div class="text-center col-xs-8 col-xs-offset-2">
+    <br><hr><br>
   </div>
 </div>
-</div>
 
-<div id="page-content">
-<div id="page-background">
-<main class="container">
 
 {{ content }}
 

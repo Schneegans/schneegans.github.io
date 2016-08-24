@@ -19,10 +19,24 @@ $default-box-shadow-blur: 1px;
     }
   }
 }
-@mixin link-color-background() {
+@mixin link-color-background-highlight() {
   @each $class, $color in $link-colors {
     .#{$class} & {
       background-color: rgba($color, 0.1);
+    }
+  }
+}
+@mixin link-color-background() {
+  @each $class, $color in $link-colors {
+    .#{$class} & {
+      background-color: rgba($color, 0.07);
+    }
+  }
+}
+@mixin link-color-background-full() {
+  @each $class, $color in $link-colors {
+    &.#{$class} {
+      background-color: $color;
     }
   }
 }
@@ -39,34 +53,48 @@ body {
   text-shadow:1px 1px 2px #000;
   font-family: 'Oxygen', sans-serif;
   padding-top:70px;
+
+  @include transition(background-color 0.5s);
+
+  &.loaded {
+    @include link-color-background-full();
+  }
+
+  background-color: #272727;
 }
 
 #image-background {
-  background-size: cover;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: -2;
-  @include filter(blur(1px));
-  // @include transform(scale(1.1));
-  // overflow: hidden;
-  // top: -3px;
-  // bottom: -3px;
-  // left: -3px;
-  // right: -3px;
+  overflow: hidden; // added for pseudo-element
+  position: relative; // added for pseudo-element
+
+  &:before {
+    content: ' ';
+    background-size: cover;
+    background-position: center center;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    will-change: transform;
+    z-index: -2;
+    top: 0;
+  }
 }
 
 #dark-background {
-  background: url($bg4) repeat;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: -1;
-  opacity: 0.7;
+  overflow: hidden; // added for pseudo-element
+  position: relative; // added for pseudo-element
+
+  &:before {
+    content: ' ';
+    background: url($bg4) repeat;
+    opacity: 0.9;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    will-change: transform;
+    z-index: -1;
+  }
 }
 
 a {
@@ -138,7 +166,7 @@ ul.nav {
   li.active a:hover,
   li.active a:focus,
   li.active a {
-    @include link-color-background();
+    @include link-color-background-highlight();
   }
 }
 
@@ -373,7 +401,7 @@ footer {
   width:100%;
   margin: 0;
 
-  @include transition(all 300ms);
+  // @include transition(all 300ms);
 
   &.shrink {
     // background: url($bg3) repeat;
@@ -753,13 +781,35 @@ table {
   margin-top: -15px;
 }
 
+// button ----------------------------------------------------------------------
+.button {
+  box-shadow: 0 2px 5px rgba(0,0,0,0.8);
+  border-top: 1px solid #373737;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  margin: 8px 0;
+  padding: 8px;
+  border-radius: 5px;
+
+  @include link-color-background();
+
+  &:hover {
+    @include link-color-background-highlight();
+  }
+
+  &:active {
+    top: 1px;
+  }
+}
+
 // alerts ----------------------------------------------------------------------
 .alert {
   background-color: rgba(250, 167, 50, 0.29);
 }
 
 .adaptive-alert {
-  @include link-color-background();
+  @include link-color-background-highlight();
 }
 
 // quotes ----------------------------------------------------------------------

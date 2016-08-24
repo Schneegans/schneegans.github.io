@@ -14,7 +14,7 @@ Out there are several community-made themes for Gnome-Pie. I compiled a page wit
 <!--more-->
 
 <div>
-    <a href="/gnome-pie-themes.html"><div class="well text-center"><i style="font-size:2em" class="fa fa-paint-brush"></i><br>Themes Gallery</div></a>
+    <a href="/gnome-pie-themes.html"><div class="button text-center"><i style="font-size:2em" class="fa fa-paint-brush"></i><br>Themes Gallery</div></a>
 </div>
 
 
