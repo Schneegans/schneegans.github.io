@@ -11,7 +11,7 @@ parents: ["Projects"]
 
 Gnome-Pie is a circular application launcher (*pie menu*) for Linux. It is made of several pies, each consisting of multiple slices. The user presses a key stroke which opens the desired pie. By activating one of its slices, applications may be launched, key presses may be simulated or files can be opened.
 
-<div class="adaptive-alert well">The most recent version of Gnome-Pie is 0.6.9. You can read the <a href="{% post_url 2016-08-24-gnome-pie-069 %}">release announcement here</a> or have a look at the <a href="/gnome-pie-changelog.html">changelog</a>.</div>
+<div class="adaptive-alert well">The most recent version of Gnome-Pie is 0.7.0. You can read the <a href="{% post_url 2016-09-20-gnome-pie-070 %}">release announcement here</a> or have a look at the <a href="/gnome-pie-changelog.html">changelog</a>.</div>
 
 {% include quick_links %}
 
@@ -85,10 +85,10 @@ This is not more difficult at all. First of all, install all dependencies - belo
 
   <div class="tab-content">
     <div role="tabpanel" class="tab-pane fade in active" id="Ubuntu">
-        <pre><code>sudo apt-get install git build-essential libgtk-3-dev libcairo2-dev libappindicator3-dev libgee-0.8-dev libxml2-dev libxtst-dev libgnome-menu-3-dev valac cmake libbamf3-dev libwnck-3-dev bamfdaemon libarchive-dev</code></pre>
+        <pre><code>sudo apt-get install git build-essential libgtk-3-dev libcairo2-dev libappindicator3-dev libgee-0.8-dev libxml2-dev libxtst-dev libgnome-menu-3-dev valac cmake libwnck-3-dev libarchive-dev</code></pre>
     </div>
     <div role="tabpanel" class="tab-pane fade" id="Fedora">
-        <pre><code>sudo dnf install cmake make automake gcc gcc-c++ vala gtk3-devel libwnck3-devel bamf-devel libgee-devel libxml2-devel libXtst-devel gnome-menus-devel libarchive-devel</code></pre>
+        <pre><code>sudo dnf install cmake make automake gcc gcc-c++ vala gtk3-devel libwnck3-devel libgee-devel libxml2-devel libXtst-devel gnome-menus-devel libarchive-devel</code></pre>
     </div>
   </div>
 </div>
