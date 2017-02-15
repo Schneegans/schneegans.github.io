@@ -48,11 +48,20 @@ class Signal {
   // copy creates new signal
   Signal(Signal const& other) : current_id_(0) {}
 
-  // connects a member function of a given object to this Signal
-  template <typename F, typename... A>
-  int connect_member(F&& f, A&& ... a) const {
-    slots_.insert({++current_id_, std::bind(f, a...)});
-    return current_id_;
+  // connects a member function to this Signal
+  template <typename T>
+  int connect_member(T *inst, void (T::*func)(Args...)) {
+    return connect([=](Args... args) { 
+      (inst->*func)(args...); 
+    });
+  }
+
+  // connects a const member function to this Signal
+  template <typename T>
+  int connect_member(T *inst, void (T::*func)(Args...) const) {
+    return connect([=](Args... args) {
+      (inst->*func)(args...); 
+    });
   }
 
   // connects a std::function to the signal. The returned
@@ -154,7 +163,7 @@ int main() {
   Button  button;
   Message message;
 
-  button.on_click.connect_member(&Message::display, message);
+  button.on_click.connect_member(&message, &Message::display);
   button.on_click.emit();
 
   return 0;
@@ -162,6 +171,39 @@ int main() {
 
 {% endhighlight %}
 
+You may also connect member functions which take arguments (Thank you FlashingChris for pointing out how to do this without std::placeholders!). In the following example Alice and Bob may say something and the other will hear it:
+
+{% highlight c++ %}
+#include "Signal.hpp"
+#include <iostream>
+
+class Person {
+public:
+  Person(std::string const &name) : name_(name) {}
+
+  Signal<std::string const &> say;
+
+  void listen(std::string const &message) {
+    std::cout << name_ << " received: " << message << std::endl;
+  }
+
+private:
+  std::string name_;
+};
+
+int main() {
+  Person alice("Alice"), bob("Bob");
+
+  alice.say.connect_member(&bob, &Person::listen);
+  bob.say.connect_member(&alice, &Person::listen);
+
+  alice.say.emit("Have a nice day!");
+  bob.say.emit("Thank you!");
+
+  return 0;
+}
+
+{% endhighlight %}
 
 ## Issues & Next Steps
 
@@ -170,3 +212,5 @@ There are two drawbacks in this simple implementation: It's not threadsafe and y
 Using this Signal class other patterns can be implemented easily. In a follow-up post I'll present another simple class: the Property. This will allow for a clean implementation of the [observer pattern](https://en.wikipedia.org/wiki/Observer_pattern).
 
 Have some fun coding events in C++!
+
+*- Last updated on 15 Februray 2017 -*
