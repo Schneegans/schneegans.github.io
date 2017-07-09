@@ -11,7 +11,7 @@ parents: ["Projects"]
 
 Gnome-Pie is a circular application launcher (*pie menu*) for Linux. It is made of several pies, each consisting of multiple slices. The user presses a key stroke which opens the desired pie. By activating one of its slices, applications may be launched, key presses may be simulated or files can be opened.
 
-<div class="adaptive-alert well">The most recent version of Gnome-Pie is 0.7.0. You can read the <a href="{% post_url 2016-09-20-gnome-pie-070 %}">release announcement here</a> or have a look at the <a href="/gnome-pie-changelog.html">changelog</a>.</div>
+<div class="adaptive-alert well">The most recent version of Gnome-Pie is 0.7.1. You can read the <a href="{% post_url 2017-07-09-gnome-pie-071 %}">release announcement here</a> or have a look at the <a href="/gnome-pie-changelog.html">changelog</a>.</div>
 
 {% include quick_links %}
 

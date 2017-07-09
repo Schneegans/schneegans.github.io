@@ -9,6 +9,51 @@ tagline: "A chronological list of changes of Gnome-Pie"
 parents: ["Projects", "Gnome-Pie"]
 ---
 
+## Gnome-Pie 0.7.1
+
+* **New Feature:** Basic Wayland support with the following limitations:
+  * No key bindings. 
+  * No delayed activation.
+  * No turbo activation.
+  * No mouse pointer warping.
+  * Only centered Pies.
+  * Transparent fullscreen windows are used.
+  * No window list slice group
+* All related options are removed from the user interface when Gnome-Pie is started on Wayland.  
+* **Improvement:** The code for bookmark monitoring has been simplified.
+* **Improvement:** Many deprecation warnings of GTK 3.20 and GTK 3.22 have been fixed.
+* **Improvement:** The Russian translation has been updated (thank you, [Ashed](https://github.com/ashed)).
+* **Improvement:** When an icon is not found, "image-missing" is used as fallback. This is a standard icon name and should be available in almost all icon themes.
+* **Improvement:** Gnome-Pie will now search for icons in ~/.icons. All images put in this directory will be available in the icon selection dialog1
+* **Improvement:** Gnome-Pie will use GTK3 bookmarks if .gtk-bookmarks are not found.
+* **Improvement:** The default ALT-Tab pie will use a standard icon now.
+* **Improvement:** Bamf is used again (if available) since there are some cases in which the the discovered application icons are more appropriate (thank you, [Tiago de Oliveira Corrêa](https://github.com/tcorreabr), you have been added to the authors list).
+* **Bugfix:** Bookmarks slice group now supports bookmark names with spaces.
+* **Bugfix:** The window list slice group now shows all windows (thank you again, [Tiago de Oliveira Corrêa](https://github.com/tcorreabr)).
+* **Bugfix:** The items of the window list slice group update their names labels when the application title changes (thank you once more, [Tiago de Oliveira Corrêa](https://github.com/tcorreabr))
+* **Bugfix:** The button linking to the [theme creation tutorial]({% post_url 2015-04-26-themes-for-gnome-pie %}) works now.
+* **Bugfix:** Fixed critical error when deleting last pie in the pie list.
+
+
+## Gnome-Pie 0.7.0
+
+* **New Feature:** Added the possibility to automatically fill the fields "name", "command" and "icon" of a new slice by selecting an application from a list.
+* **Improvement:** The library "bamf" which has been made optional before is now completely removed from the dependencies. This makes the code base easier to manage and it seems that there is no improvement to the icon selection when using this library.
+* **Bugfix:** It is now possible again to drag'n'drop URLs and URIs to the pie preview.
+* **Bugfix:** Long press for activation of slices works again (hopefully :D). This closes issues [136](https://github.com/Simmesimme/Gnome-Pie/issues/136) and [132](https://github.com/Simmesimme/Gnome-Pie/issues/132)
+
+
+## Gnome-Pie 0.6.9
+
+* **New Feature:** Added the possibility to assign hotkeys to combinations of mouse buttons and modifier keys. It's now possible to open Pies with combinations such as Ctrl-RightButton.
+* **Improvement:** The library "bamf" (which is used for matching icons to applications by the window-list slice-group) has been made an optional dependency. On systems where bamf is not available, it's still possible to use Gnome-Pie. In most cases the icons chosen without bamf will be the same anyway.
+* **Improvement:** The clock's fingers of the Simple Clock theme do not disappear fully when a slice is active.
+* **Improvement:** The preferences window now has the Gnome-Pie icon when it is present in the user's icon theme.
+* **Improvement:** Several translations have been updated.
+* **Bugfix:** Improved modifier key managment. Activating a hotkey with a Slice is now possible even if the user holds down a modifier which is not part of the hotkey. Until now, when a user clicked on a Slice which simulates Ctrl-Z the desired action was not triggered when the user held the Alt while clicking. Doing this is possible now.
+* **Bugfix:** Turbo mode works quite reliably again. There were certain conditions under which the turbo mode would not work as expected. Hopefully, most of the issues are fixed now.
+
+
 ## Gnome-Pie 0.6.8
 
 * **New Feature:** Center layers in themes support now four new rotation modes: `turn_to_second`, `turn_to_minute`, `turn_to_hour_12` and `turn_to_hour_24`.
