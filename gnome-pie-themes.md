@@ -11,9 +11,9 @@ parents: ["Projects", "Gnome-Pie"]
     {% for theme in site.data.themes %}
         <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
             <div class="theme-gallery-item">
-                    {% assign picture = {{theme.preview}} %}
+                    {% assign picture = theme.preview %}
                     {% assign size = "medium" %}
-                    {% assign text = {{theme.name}} %}
+                    {% assign text = theme.name %}
                     {% include gallery_item %}
                 <div class="caption">
                     <h1>

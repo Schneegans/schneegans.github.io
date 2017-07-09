@@ -1,6 +1,6 @@
 permalink: /:categories/:year/:month/:day/:title
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
-gems: [jekyll-paginate]
+plugins: [jekyll-paginate]
 
 title : Simon Schneegans
 tagline: Projects and Blog
