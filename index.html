@@ -1,0 +1,46 @@
+---
+layout: default
+title: Blog
+description: "This is the homepage of Simon Schneegans. Greetings! <br>Explore the <a href='/blog'><i class='fa fa-pencil'></i> blog</a>, discover my <a href='/projects.html'><i class='fa fa-gears'></i> projects</a> or use the <i class='fa fa-tag'></i> tags below to find something specific."
+teaser: "gnome-pie071.jpg"
+colors: color-fallback
+---
+
+
+<div class="page-header">
+  <div class="container">
+    {% if paginator.page == 1 %}
+      {% assign post = paginator.posts | first %}
+      {% include post-preview-latest.html %}
+    {% else %}
+      <div class="row" style="margin: 0">
+        <div class="col s12 center-align">
+          {% include pagination.html %}
+        </div>
+      </div>
+    {% endif %}
+  </div>
+</div>
+
+
+<div class="page-background" style="padding-top: 80px;margin-top: -80px">
+  <div class="page-content" style="padding: 30px 0;">
+    <div class="container">
+      {% for post in paginator.posts %}
+        <!-- skip first post on first page -->
+        {% unless paginator.page == 1 and forloop.first %}
+          {% include post-preview.html %}
+          {% if forloop.last %}{% else %}<hr>{% endif %}
+        {% endunless %}
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col s12 center-align">
+        {% include pagination.html %}
+      </div>
+    </div>
+  </div>
+</div>

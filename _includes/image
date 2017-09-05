@@ -1,3 +1,0 @@
-<a href="/assets/pictures/{{picture}}" class="magnific-image" title="{{text}}">
-    <img class="img-responsive" src="/assets/pictures/{{size}}/{{picture}}" alt="{{text}}" title="{{text}}"/>
-</a>

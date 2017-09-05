@@ -1,19 +1,27 @@
 ---
-layout: nav-page
+layout: header-page
 title : Gnome-Pie
 header : Gnome-Pie
 description: Homepage of Gnome-Pie, the slick application launcher for Linux.
 teaser: "gnome-pie065.jpg"
 colors: "color-gnome-pie065"
 tagline: "The pie menu for Linux"
+contents: true
 parents: ["Projects"]
 ---
 
-Gnome-Pie is a circular application launcher (*pie menu*) for Linux. It is made of several pies, each consisting of multiple slices. The user presses a key stroke which opens the desired pie. By activating one of its slices, applications may be launched, key presses may be simulated or files can be opened.
+## Summary
 
 <div class="adaptive-alert well">The most recent version of Gnome-Pie is 0.7.1. You can read the <a href="{% post_url 2017-07-09-gnome-pie-071 %}">release announcement here</a> or have a look at the <a href="/gnome-pie-changelog.html">changelog</a>.</div>
 
-{% include quick_links %}
+{% include quick-links.html %}
+
+
+<div class="responsive-video-169">
+<iframe src="http://player.vimeo.com/video/30618179?title=0&amp;byline=0&amp;portrait=0&amp;color={% include link-color.html %}" width="1600" height="900" frameborder="0" webkitAllowFullScreen allowFullScreen></iframe>
+</div>
+
+Gnome-Pie is a circular application launcher (*pie menu*) for Linux. It is made of several pies, each consisting of multiple slices. The user presses a key stroke which opens the desired pie. By activating one of its slices, applications may be launched, key presses may be simulated or files can be opened.
 
 
 ## The concept of Gnome-Pie
@@ -25,39 +33,29 @@ Gnome-Pie is designed to be fun, fast and visually appealing. It implements Fitt
 Many application launchers of today's Linux desktops are made for people using their keyboard mainly. Launchers like [Gnome-Do](http://do.cooperteam.net/){:target="_blank"}, [Synapse](https://launchpad.net/synapse-project){:target="_blank"}, [Kupfer](http://engla.github.io/kupfer/){:target="_blank"}, Unity's Dash or Gnome-Shell's Activities are designed for keyboard users. It's necessary to type the first letters of the desired action in order to launch it.
 
 <div class="responsive-video-169">
-<iframe src="http://player.vimeo.com/video/30618179?title=0&amp;byline=0&amp;portrait=0&amp;color={% include link_color %}" width="1600" height="900" frameborder="0" webkitAllowFullScreen allowFullScreen></iframe>
+<iframe src="http://player.vimeo.com/video/35385121?title=0&amp;byline=0&amp;portrait=0&amp;color={% include link-color.html %}" width="1600" height="900" frameborder="0" webkitAllowFullScreen allowFullScreen></iframe>
 </div>
 
 Gnome-Pie uses a different approach: The user does not need to remember the name of an application - just the *direction* has to be remembered. Combined with the implementations of Fitts' law - users don't have to click directly on the icon of an action, but somewhere on the screen in its direction - Gnome-Pie is an alternative to text-based launchers.
 
-Here's another showcase of Gnome-Pie. It features the new settings menu of Gnome-Pie.
-<p>
-<div class="responsive-video-169">
-<iframe src="http://player.vimeo.com/video/35385121?title=0&amp;byline=0&amp;portrait=0&amp;color={% include link_color %}" width="1600" height="900" frameborder="0" webkitAllowFullScreen allowFullScreen></iframe>
-</div>
-</p>
-
 The clip below (Gnome-Pie 0.6.1) shows how to create a launcher with Gnome-Pie in your dock. This launcher will work as if you had some kind of folder in your dock.
-<p>
+
 <div class="responsive-video-169">
-<iframe src="http://player.vimeo.com/video/125339537?title=0&amp;byline=0&amp;portrait=0&amp;color={% include link_color %}" width="1280" height="720" frameborder="0" webkitAllowFullScreen allowFullScreen></iframe>
+<iframe src="http://player.vimeo.com/video/125339537?title=0&amp;byline=0&amp;portrait=0&amp;color={% include link-color.html %}" width="1280" height="720" frameborder="0" webkitAllowFullScreen allowFullScreen></iframe>
 </div>
-</p>
 
 <br/>
 <br/>
 
-# Installation of Gnome-Pie
-<hr>
+## Installation of Gnome-Pie
 
 {% assign picture = "install.jpg" %}
-{% assign size = "large" %}
 {% assign text = "How to install Gnome-Pie!" %}
-{% include image %}
+{% include image.html %}
 
 Besides from installing from source there are other ways to install Gnome-Pie. I maintain a [PPA for easy installation](https://launchpad.net/~simonschneegans/+archive/ubuntu/testing){:target="_blank"} on ubuntu-ish distributions and there are several repositories for other distributions, like [Arch Linux](https://aur.archlinux.org/packages/gnome-pie-git/){:target="_blank"}.
 
-## Installation from my PPA
+### Installation from my PPA
 
 This will add [my PPA](https://launchpad.net/~simonschneegans/+archive/ubuntu/testing){:target="_blank"} as a package source to your system and will work for Ubuntu and similar distributions. Simply enter the following commands in a terminal.
 
@@ -69,7 +67,7 @@ sudo apt-get install gnome-pie
 
 When this is done, you can launch the application via your main menu. It will start silently, only an indicator in your panel will be visible. Press Ctrl-Alt-A to open an example pie.
 
-## Installation from source
+### Installation from source
 
 This is not more difficult at all. First of all, install all dependencies - below you will find the appropriate commands for Fedora and Ubuntu; if you have another package manager you'll have to change this command accordingly. The dependency libappindicator3-dev is optional, if your distribution does not support this system, simply ignore it.
 
@@ -137,15 +135,13 @@ This way you can launch the application via your main menu. It will start silent
 <br/>
 <br/>
 
-# Using Gnome-Pie
-<hr>
+## Using Gnome-Pie
 
 {% assign picture = "use.jpg" %}
-{% assign size = "large" %}
 {% assign text = "How to use Gnome-Pie!" %}
-{% include image %}
+{% include image.html %}
 
-## Tweaking the behavior of Gnome-Pie
+### Tweaking the behavior of Gnome-Pie
 
 By clicking on the panel-indicator of Gnome-Pie or by launching the application a second time, you can open its settings menu. When started for the first time Gnome-Pie generates some example Pies. Feel free to use them as a starting point for your custom configuration!
 
@@ -153,9 +149,8 @@ By clicking on the panel-indicator of Gnome-Pie or by launching the application 
 ### Adding Slices via Drag'n'Drop
 
 {% assign picture = "gnome-pie_06.jpg" %}
-{% assign size = "medium" %}
 {% assign text = "The settings menu of Gnome-Pie" %}
-{% include image_right %}Here you can set up your Pies. All your Pies are listed on the left --- you can add new or delete existing pies with the little plus and minus sign in the lower left-hand corner. On the right is a preview of each Pie. Simply drag and drop the Slices to reorder them.
+{% include image-small.html %}Here you can set up your Pies. All your Pies are listed on the left --- you can add new or delete existing pies with the little plus and minus sign in the lower left-hand corner. On the right is a preview of each Pie. Simply drag and drop the Slices to reorder them.
 
 You can drag stuff from your computer to this preview in order to add it to the Pie. You can drag almost anything there:
 
@@ -169,9 +164,8 @@ You can drag stuff from your computer to this preview in order to add it to the 
 ### Adding Slices manually
 
 {% assign picture = "gnome-pie_07.jpg" %}
-{% assign size = "medium" %}
 {% assign text = "The settings menu of each Slice" %}
-{% include image_right %}There is also a little button between two Slices which allows you to add new Slices manually. This way you can add other action types to your Pie:
+{% include image-small.html %}There is also a little button between two Slices which allows you to add new Slices manually. This way you can add other action types to your Pie:
 
 * Simulate key press
 * A group of slices, one for each open window (allows for application switching, almost like Alt-Tab) or one for each open window of your current workspace only
@@ -184,18 +178,16 @@ You can drag stuff from your computer to this preview in order to add it to the 
 ### Adjusting Pie Options
 
 {% assign picture = "gnome-pie_02.jpg" %}
-{% assign size = "medium" %}
 {% assign text = "The settings menu of each Pie" %}
-{% include image_right %}You can change some settings for each Pie by double-clicking the Pie in the list on the left. There you can assign a new hotkey for the Pie, select the icon, specify the name and adjust other options, for example you can change the shape of the Pie.
+{% include image-small.html %}You can change some settings for each Pie by double-clicking the Pie in the list on the left. There you can assign a new hotkey for the Pie, select the icon, specify the name and adjust other options, for example you can change the shape of the Pie.
 
 <div class="clearfix"></div>
 
 ### General Options
 
 {% assign picture = "gnome-pie_08.jpg" %}
-{% assign size = "medium" %}
 {% assign text = "The general settings menu of Gnome-Pie" %}
-{% include image_right %}By clicking on the "General Settings"-button in the tool bar, you can specify some behavior options. For instance you can enable *Startup on Login* or set a *Global Scale* factor. Additionally you can limit the *maximum number of displayed items* per Pie and a distance beyond which Slices cannot be selected. Furthermore you can select a theme which skins all of your pies to match your taste.
+{% include image-small.html %}By clicking on the "General Settings"-button in the tool bar, you can specify some behavior options. For instance you can enable *Startup on Login* or set a *Global Scale* factor. Additionally you can limit the *maximum number of displayed items* per Pie and a distance beyond which Slices cannot be selected. Furthermore you can select a theme which skins all of your pies to match your taste.
 
 
 <div class="clearfix"></div>
@@ -213,18 +205,16 @@ Where `123` is the ID of the desired pie. The ID of each pie is displayed in the
 ### Opening pies with gestures
 
 {% assign picture = "gnome-pie_04.jpg" %}
-{% assign size = "medium" %}
 {% assign text = "Assigning gestures with easystroke" %}
-{% include image_right %}With the open source application _Easystroke_ you can easily execute any command when performing a user defined action. You can install this tool and bind each pie you want to a gesture. For example you may draw a big B on your screen to open the bookmarks-pie. It's easy to set up and really cool!
+{% include image-small.html %}With the open source application _Easystroke_ you can easily execute any command when performing a user defined action. You can install this tool and bind each pie you want to a gesture. For example you may draw a big B on your screen to open the bookmarks-pie. It's easy to set up and really cool!
 
 Easystroke has an interface which is quite to understand. If you want some additional information you can have a look at the [official documentation](https://github.com/thjaeger/easystroke/wiki){:target="_blank"}.
 
 ### Opening pies with a Launcher
 
 {% assign picture = "gnome-pie_03.jpg" %}
-{% assign size = "large" %}
 {% assign text = "Creating a launcher for opening pies" %}
-{% include image_right %}You can also create a launcher on your desktop which opens pies. Simply drag'n'drop a pie from the configuration menu to your desktop. Where you dropped the pie, a launcher will appear. Clicking on this launcher will then open your pie. Maybe you can drag'n'drop this launcher to your panel/dock/whats-o-ever to suit your needs!
+{% include image-small.html %}You can also create a launcher on your desktop which opens pies. Simply drag'n'drop a pie from the configuration menu to your desktop. Where you dropped the pie, a launcher will appear. Clicking on this launcher will then open your pie. Maybe you can drag'n'drop this launcher to your panel/dock/whats-o-ever to suit your needs!
 
 <div class="clearfix"></div>
 
@@ -232,16 +222,14 @@ Easystroke has an interface which is quite to understand. If you want some addit
 <br/>
 <br/>
 
-# Getting involved
-<hr>
+## Getting involved
 
 {% assign picture = "contribute.jpg" %}
-{% assign size = "large" %}
 {% assign text = "Contribute to Gnome-Pie!" %}
-{% include image %}
+{% include image.html %}
 
 
-## I need your help!
+### I need your help!
 
 I really like working on Gnome-Pie --- and you can help improving it! There are many people sending mails to me, praising the possibilities Gnome-Pie offers to them. But I think it can be even better! Let's try to improve this piece of software together! There are multiple things you can do in order to become a part of Gnome-Pie's history:
 

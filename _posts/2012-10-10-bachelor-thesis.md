@@ -32,14 +32,14 @@ Gnome-Pie was created in order to bring Pie-Menus to the Linux desktop. It is no
 {% assign picture = "bachelor10.jpg" %}
 {% assign size = "large" %}
 {% assign text = "Correlation between item count and selection time in Gnome-Pie" %}
-{% include image %}
+{% include image.html %}
 
 Selection performance in Gnome-Pie is generally high. The mode of selection is 1.4 seconds which is quite fast, particularly considering the real-world circumstances of this study: the users were not told to operate the menu as fast as possible. I was surprised by the humble amount of quick-actions used - only a few users employed them at all. And those who did, were only slightly faster. They achieved a mode of 1.2 seconds. This is interesting, as the pointer does not have to be moved at all in order to select a quick action!
 
 {% assign picture = "bachelor09.jpg" %}
 {% assign size = "large" %}
 {% assign text = "Density functions of selection time done with Gnome-Pie by 150 users" %}
-{% include image %}
+{% include image.html %}
 
 Additionally to Gnome-Pie I evaluated many other Pie-Menu concepts and structured their benefits and drawbacks. None of them was able to display both, wide _and_ deep menus. This is necessary to compete with conventional linear menus, which are slow to operate but are able to do both.
 
@@ -75,16 +75,16 @@ Both prototypes were coded with Vala on Ubuntu Linux. The source code can be <a 
 
 The first prototype is targeted at users who often search for items due to their manifold menu usage. It displays hierarchies with ease. Even very deep hierarchies are easy to explore. Many items are displayed by increasing the pie's radius and stacking the labels which are displayed next to their sector on top of each other. The following clip demonstrates the behavior. As you can see, the items of sub-menus are indicated by little dark blobs at their parents. This menu is quite fast to use because of the mouse making a smooth movement.
 
-<div class="responsive-video-43">
-<iframe src="http://player.vimeo.com/video/51072812?title=0&amp;byline=0&amp;portrait=0&amp;color={% include link_color %}" width="1200" height="900" frameborder="0" webkitAllowFullScreen allowFullScreen></iframe>
+<div class="responsive-video-43 z-depth-2">
+<iframe src="http://player.vimeo.com/video/51072812?title=0&amp;byline=0&amp;portrait=0&amp;color={% include link-color.html %}" width="1200" height="900" frameborder="0" webkitAllowFullScreen allowFullScreen></iframe>
 </div>
 
 ### 2.2. The Trace-Menu
 
 The second prototype addresses itself to users who often make use of the same menus. Thus they know where to find an entry and want to select it blazingly fast. In contrast to the Coral-Menu each sub-menu is a complete 360-degree-Pie-Menu with one entry being the parent menu. The hierarchy is visualized by a path between the visited menus. This menu features a so-called "Marking-Mode": The user may _draw_ the path (the "trace") to the desired entry with one continuous gesture. Watch the following clip and you will understand this behavior - the Marking-Mode is used for the very last selection.
 
-<div class="responsive-video-43">
-<iframe src="http://player.vimeo.com/video/51073078?title=0&amp;byline=0&amp;portrait=0&amp;color={% include link_color %}" width="1200" height="900" frameborder="0" webkitAllowFullScreen allowFullScreen></iframe>
+<div class="responsive-video-43 z-depth-2">
+<iframe src="http://player.vimeo.com/video/51073078?title=0&amp;byline=0&amp;portrait=0&amp;color={% include link-color.html %}" width="1200" height="900" frameborder="0" webkitAllowFullScreen allowFullScreen></iframe>
 </div>
 
 The visualization of wide menus is not shown in this clip. For this purpose the Trace-Menu generates artificial sub-menus when there are more than eight entries at one level. These sub-menus are labeled with all contained items. In order to select an item, the user first selects the generated sub-menu which contains the desired item and secondly selects the item itself.
@@ -108,21 +108,21 @@ When unknown entries had been searched, the linear menu remained the fastest. As
 {% assign picture = "bachelor06.jpg" %}
 {% assign size = "large" %}
 {% assign text = "Prototype search performance for different menu configurations compared to the linear menu" %}
-{% include image %}
+{% include image.html %}
 
 When the same entry is selected multiple times, the situation is flipped. After eight or nine selections (graph below) the Trace-Menu performs twice as good as the linear menu. The Coral-Menu is roughly 25 % faster than the linear menu when selecting well-known items. Due to the unnatural circumstances these numbers are suitable as a upper limit which may be reached by real experts only.
 
 {% assign picture = "bachelor07.jpg" %}
 {% assign size = "large" %}
 {% assign text = "Menu performance for consecutive selections of the same item" %}
-{% include image %}
+{% include image.html %}
 
 Very interesting is a comparison of these figures to the control group which selected the same entries in multiple training sessions. The trend of the curves is similar. But the differences between the menu types are much lower and the achieved performance level is only half. At the end of the sixth training, members of this group had selected each entry 30 times.
 
 {% assign picture = "bachelor08.jpg" %}
 {% assign size = "large" %}
 {% assign text = "Menu performance for multiple selections of the same item distributed over six training sessions" %}
-{% include image %}
+{% include image.html %}
 
 ## 4. Summary
 
@@ -135,12 +135,12 @@ Both prototypes were mostly used as intended. During the test I recorded the mou
 {% assign picture = "coral_paths.jpg" %}
 {% assign size = "large" %}
 {% assign text = "Cursor movement of users of the Coral-Menu. Green dots visualize mouse clicks" %}
-{% include image %}
+{% include image.html %}
 
 {% assign picture = "trace_paths.jpg" %}
 {% assign size = "large" %}
 {% assign text = "Cursor movement of users of the Trace-Menu. Green dots visualize mouse clicks" %}
-{% include image %}
+{% include image.html %}
 
 But there are some design issues which need to be fixed. The biggest problems of the Coral-Menu are:
 

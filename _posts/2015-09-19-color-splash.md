@@ -13,7 +13,7 @@ I added a nifty feature to my homepage: Links are now colored according to corre
 
 <!--more-->
 
-## What's new?
+## What is new?
 
 Every link on this homepage is now colored based on the dominant color of a related image. Blog posts for example take the primary color from their teaser image. Links on the [blog roll](/blog) are colored according to the teaser image of the posts they link to. Some other pages such as the [home page](/) or the [projects page](/projects.html) use a custom default color.
 

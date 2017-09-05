@@ -1,0 +1,20 @@
+<div>
+  {% if page.next %}
+    <span style="margin: 0 0 0 28px;">Newer post:</span>
+  {% else %}
+    <span style="visibility: hidden">Newer post:</span>
+  {% endif %}
+  {% if page.previous %}
+    <span class="right" style="margin: 0 28px 0 0;">Older post:</span>
+  {% endif %}
+</div>
+<div>
+  {% if page.next %}
+    <a href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}"><i class="material-icons">chevron_left</i> {{page.next.title}}</a>
+  {% else %}
+    <a style="visibility: hidden;" href="#"><i class="material-icons">chevron_left</i> #</a>
+  {% endif %}
+  {% if page.previous %}
+    <a class="right" href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">{{page.previous.title}} <i class="material-icons">chevron_right</i></a>
+  {% endif %}
+</div>

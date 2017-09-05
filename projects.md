@@ -1,67 +1,40 @@
 ---
 layout: header-page
-title : Projects
-description: "Explore the list of some projects of mine."
+title: Projects
+description: Below you find some of the projects I worked on.
 teaser: "sunset.jpg"
 colors: "color-sunset"
 parents: []
 ---
-
 <div class="row">
-    <div class="col-sm-6">
-        <h1><a href="{{site.url}}/gnome-pie.html">Gnome-Pie</a></h1>
-        <div>
-            <div class="banner-left">Software</div>
-            <a href="{{site.url}}/gnome-pie.html"><img class="img-responsive" src="/assets/pictures/medium/project-gnomepie.jpg" alt=""></a>
-        </div><br/><p>
-        It's a slick application launcher for Linux. It’s eye candy and pretty fun to work with. It offers multiple ways to improve your desktop experience.<br/><br/></p>
+  <div class="col s12">
+    <div class="accordion accordion-items-4">
+      <ul>
+        <li class="color-teaser-gnomepie" style="background-image:url('/assets/pictures/teaser-gnomepie.jpg')">
+          <div>
+            <h3>Gnome-Pie</h3>
+            <p>Gnome-Pie is a slick application launcher for Linux. It’s eye candy and pretty fun to work with. It offers multiple ways to improve your desktop experience. <br><a href="/gnome-pie.html">Gnome-Pie's homepage <i class="material-icons tiny top-offset">chevron_right</i></a></p>
+          </div>
+        </li>
+        <li class="color-project-gnomepie" style="background-image:url('/assets/pictures/teaser-mars.jpg')">
+          <div>
+            <h3>M.A.R.S. - a ridiculous shooter</h3>
+            <p>M.A.R.S. is a ridiculous, open source 2D shooter. It is a game for two players, flying with ships in a two-dimensional space setting, governed by the laws of gravity. <br> <a href="/mars.html">watch the trailer <i class="material-icons tiny top-offset">chevron_right</i></a></p>
+          </div>
+        </li>
+        <li class="color-lfelc-planning" style="background-image:url('/assets/pictures/teaser-formes-et-couleurs.jpg')">
+          <div>
+            <h3>Animations</h3>
+            <p>Some time ago, I created several animations using Blender and Stop Motions. Have fun watching them!<br> <a href="/animations.html">watch the video <i class="material-icons tiny top-offset">chevron_right</i></a></p>
+          </div>
+        </li>
+        <li class="color-london" style="background-image:url('/assets/pictures/london.jpg')">
+          <div>
+            <h3>Random artwork</h3>
+            <p>When I'm not currently working on a software project, I take photographs or use open source software to draw images. Here's a collection of various images I've drawn with no real purpose.<br> <a href="/artwork.html">view the artwork <i class="material-icons tiny top-offset">chevron_right</i></a></p>
+          </div>
+        </li>
+      </ul>
     </div>
-    <div class="col-sm-6">
-        <h1><a href="{{site.url}}/mars.html">M.A.R.S.</a></h1>
-        <div>
-            <div class="banner-right">Game</div>
-            <a href="{{site.url}}/mars.html"><img class="img-responsive" src="/assets/pictures/medium/project-mars.jpg" alt=""></a>
-        </div><br/><p>
-         It's a game for two players, flying with ships in a two-dimensional space setting, governed by the laws of gravity.<br/><br/></p>
-    </div>
+  </div>
 </div>
-
-<div class="row">
-    <div class="col-sm-6">
-        <h1><a href="{{site.url}}/artwork.html">Random Artwork</a></h1>
-        <div>
-            <div class="banner-left">Random work of mine</div>
-            <a href="{{site.url}}/artwork.html"><img class="img-responsive" src="/assets/pictures/medium/project-artwork.jpg" alt=""></a>
-        </div><br/><p>
-         It’s a collection of various images I created. Most of them are done with Blender, MyPaint, Alchemy and The Gimp.<br/><br/></p>
-    </div>
-    <div class="col-sm-6">
-        <h1><a href="{{site.url}}/formes-et-couleurs.html">Stop Motion</a></h1>
-        <div>
-            <div class="banner-right">Stop motion clip</div>
-            <a href="{{site.url}}/formes-et-couleurs.html"><img class="img-responsive" src="/assets/pictures/medium/project-formes-et-couleurs.jpg" alt=""></a>
-        </div><br/><p>
-         It is short &amp; funny old-school stop motion video created together with a friend of mine.<br/><br/></p>
-    </div>
-</div>
-
-<div class="row">
-    <div class="col-sm-6">
-        <h1><a href="{{site.url}}/hzb.html">BERLinPro animation</a></h1>
-        <div>
-            <div class="banner-left">3D-Animation</div>
-            <a href="{{site.url}}/hzb.html"><img class="img-responsive" src="/assets/pictures/medium/project-hzb.jpg" alt=""></a>
-        </div><br/><p>
-         It's an 3D PR-animation describing an Energy Recovery Linac. It was done for the Helmholtz-Zentrum Berlin.<br/><br/></p>
-    </div>
-    <div class="col-sm-6">
-        <h1><a href="{{site.url}}/ptb.html">PTB animation</a></h1>
-        <div>
-            <div class="banner-right">3D-Animation</div>
-            <a href="{{site.url}}/ptb.html"><img class="img-responsive" src="/assets/pictures/medium/project-ptb.jpg" alt=""></a>
-        </div><br/><p>
-         It's an short 3D-animation describing the use cases of the electron accelerator Willy-Wien in Berlin.<br/><br/></p>
-    </div>
-</div>
-
-

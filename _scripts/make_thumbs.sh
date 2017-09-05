@@ -28,7 +28,7 @@ E_BADARGS=65
 if [ ! -n "$1" ]
 then
   echo "Usage: `basename $0` some_image_to_process"
-  echo "Will make a thumb/ dir and a thumbnail of a given png in it."
+  echo "Will make a thumbs/ dir and a thumbnail of a given png in it."
   echo "Run from a top of a tree of images to thumbnail all image files below it."
   echo "Tip: use find's exec to run this script."
   exit $E_BADARGS
@@ -44,38 +44,16 @@ filename=`basename "$1"`
 cwd=`dirname "$paf"`
 
 
-# small
+# thumbs
 
-## Make small if it's not there. Also touch the file to make date same so that we trigger thumb creation later on.
-if [ ! -e "$cwd/small" ]; then
-   mkdir "$cwd/small"
+## Make thumbs if it's not there. Also touch the file to make date same so that we trigger thumb creation later on.
+if [ ! -e "$cwd/thumbs" ]; then
+   mkdir "$cwd/thumbs"
    touch "$paf"
 fi
 
 ## make a string of the new thumbnail path and name
-new_thumb_file="$cwd/small/$filename"
-
-## Test new thumb file against current image. If it's older, then we remake it>
-## (This also covers the case where the thumbnail does not exist at all.)
-if [[ "$paf" -nt "$new_thumb_file" ]]; then
-   convert -geometry 370x "$paf" "$new_thumb_file"
-   if [ $? -ne 0 ]; then
-      echo ERROR making $new_thumb_file
-   else
-      echo Made new small thumb:  $paf TO $new_thumb_file
-   fi
-fi
-
-# medium
-
-## Make medium if it's not there. Also touch the file to make date same so that we trigger thumb creation later on.
-if [ ! -e "$cwd/medium" ]; then
-   mkdir "$cwd/medium"
-   touch "$paf"
-fi
-
-## make a string of the new thumbnail path and name
-new_thumb_file="$cwd/medium/$filename"
+new_thumb_file="$cwd/thumbs/$filename"
 
 ## Test new thumb file against current image. If it's older, then we remake it>
 ## (This also covers the case where the thumbnail does not exist at all.)
@@ -84,28 +62,28 @@ if [[ "$paf" -nt "$new_thumb_file" ]]; then
    if [ $? -ne 0 ]; then
       echo ERROR making $new_thumb_file
    else
-      echo Made new medium thumb:  $paf TO $new_thumb_file
+      echo Made new thumb:  $paf TO $new_thumb_file
    fi
 fi
 
-# large
+# blurred
 
-## Make medium if it's not there. Also touch the file to make date same so that we trigger thumb creation later on.
-if [ ! -e "$cwd/large" ]; then
-   mkdir "$cwd/large"
+## Make blurred if it's not there. Also touch the file to make date same so that we trigger thumb creation later on.
+if [ ! -e "$cwd/blurred" ]; then
+   mkdir "$cwd/blurred"
    touch "$paf"
 fi
 
 ## make a string of the new thumbnail path and name
-new_thumb_file="$cwd/large/$filename"
+new_thumb_file="$cwd/blurred/$filename"
 
 ## Test new thumb file against current image. If it's older, then we remake it>
 ## (This also covers the case where the thumbnail does not exist at all.)
 if [[ "$paf" -nt "$new_thumb_file" ]]; then
-   convert -geometry 770x "$paf" "$new_thumb_file"
+   convert -geometry 250x -blur 0x5 "$paf" "$new_thumb_file"
    if [ $? -ne 0 ]; then
       echo ERROR making $new_thumb_file
    else
-      echo Made new large thumb:  $paf TO $new_thumb_file
+      echo Made new blurred image:  $paf TO $new_thumb_file
    fi
 fi

@@ -1,0 +1,23 @@
+.gallery {
+  display: flex;
+  flex-flow: row wrap; 
+  margin: -6px;
+
+  .item {
+    flex: auto;
+    margin: 6px;
+    position: relative;
+
+    .materialboxed {
+      position: absolute;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+    }
+  }
+
+}

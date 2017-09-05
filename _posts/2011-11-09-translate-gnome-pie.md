@@ -12,6 +12,8 @@ It would be really cool if you could create a translation of Gnome-Pie into your
 
 <!--more-->
 
+## Translating Gnome-Pie (deprecated)
+
 <div class="alert well">The information below is deprecated. For a much more convenient way to translate Gnome-Pie refer to the <a href ="{% post_url 2015-08-07-translate-gnome-pie %}">new blog post</a>!</div>
 
 All you need is the source code of Gnome-Pie and the locale string for your language. You can get the source code with the terminal command
@@ -26,7 +28,7 @@ Your current locale can be obtained with
 echo $LANG
 {% endhighlight %}
 
-## CREATING A NEW TRANSLATION
+## Creating a new translation
 
 A translation of Gnome-Pie is done by editing a *.po file. This has to be generated first. Just follow the four steps below.
 
@@ -57,7 +59,7 @@ A translation of Gnome-Pie is done by editing a *.po file. This has to be genera
 </ol>
 
 
-## UPDATING AN EXISTENT TRANSLATION
+## Updating an existent translation
 
 Updating a language which already has been translated is easy as well. Just follow the steps below.
 

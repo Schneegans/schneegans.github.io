@@ -21,8 +21,8 @@ production_url : http://simmesimme.github.io
 
 # you can specify your own separator, of course.
 excerpt_separator: <!--more-->
-paginate: 8
-paginate_path: "blog/page:num/"
+paginate: 6
+paginate_path: "/page:num/"
 
 disqus_short_name : simonschneegans
 

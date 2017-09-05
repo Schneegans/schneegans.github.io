@@ -5,7 +5,7 @@ tagline: "how I code them."
 category: tutorials
 teaser: "signals.jpg"
 colors: "color-signals"
-description: "A slot canyon. Image by <a href='https://www.flickr.com/photos/photophilde/5000685616/'>photophilde</a>."
+description: "A slot canyon. Image by photophilde (https://www.flickr.com/photos/photophilde/5000685616/)"
 tags: ["featured", "tutorial", "c++", "code"]
 ---
 
@@ -15,13 +15,13 @@ I've been asked multiple times how I would implement a signal / slot mechanism i
 
 ## What's the Signal / Slot Pattern?
 
-<div class="well"><p class="quote"> [...] a language construct [...] which makes it easy to implement the Observer pattern while avoiding boilerplate code. The concept is that GUI widgets can send signals containing event information which can be received by other controls using special functions known as slots.<a href="https://en.wikipedia.org/wiki/Signals_and_slots"> - Wikipedia</a></p></div>
+<div class="well"> [...] a language construct [...] which makes it easy to implement the Observer pattern while avoiding boilerplate code. The concept is that GUI widgets can send signals containing event information which can be received by other controls using special functions known as slots.<a href="https://en.wikipedia.org/wiki/Signals_and_slots"> - Wikipedia</a></div>
 
 So basically it allows for event based inter-object communication. In my opinion it's intuitive to use and produces easily readable code when used in a moderate amount. And the big plus: It can be added to your program with one simple template class!
 
 There are many libraries around (refer to the linked Wikipedia article) implementing this pattern, but it's so easy to implement on you own that I would recommend to do this without an additional dependency. All you need is the header I posted below. And it's a good exercise.
 
-## The Signal Template Class
+## The signal template class
 
 Below you can find the entire class. Because this class is using variadic templates you can define signals which pass any kind of data to their slots. Basically you can create signals which allow for arbitrary slot signatures. The emit method will accept the same argument types you declared as template parameters for the Signal class. The class is documented with comments and should be quite understandable. Further below you will find two usage examples.
 
@@ -101,7 +101,7 @@ class Signal {
 #endif /* SIGNAL_HPP */
 {% endhighlight %}
 
-## Simple Usage
+## Simple usage
 
 The example below creates a simple signal. To this signal functions may be connected which accept a string and an integer. A lambda is connected and gets called when the emit method of the signal is called.
 
@@ -139,7 +139,7 @@ The answer: 42
 {% endhighlight %}
 
 
-## Advanced Usage
+## Advanced usage
 
 This example shows the usage with classes. A message gets displayed when the button is clicked. Note that neither the button knows anything of a message nor does the message know anything about a button. That's awesome! You can compile this example in the same way as the first.
 
@@ -205,7 +205,7 @@ int main() {
 
 {% endhighlight %}
 
-## Issues & Next Steps
+## Issues & next steps
 
 There are two drawbacks in this simple implementation: It's not threadsafe and you cannot disconnect a slot from a signal from within the slot callback. Both problems are easy to solve but would make this example more complex.
 

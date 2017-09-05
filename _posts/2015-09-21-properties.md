@@ -5,7 +5,7 @@ tagline: "how I code them."
 category: tutorials
 teaser: "properties.jpg"
 colors: "color-properties"
-description: "I think there is a tight connection. Image by <a href='https://www.flickr.com/photos/hulagway/6020190512/'>whologwhy</a>."
+description: "A tight connection. Image by whologwhy (https://www.flickr.com/photos/hulagway/6020190512/)"
 tags: ["tutorial", "c++", "code"]
 ---
 
@@ -13,13 +13,13 @@ Based on the signal class from the previous post we can implement a class which 
 
 <!--more-->
 
-## What's the Observer Pattern?
+## What's the observer pattern?
 
 <div class="well"><p class="quote"> [...] a software design pattern in which an object, called the subject, maintains a list of its dependants, called observers, and notifies them automatically of any state changes, usually by calling one of their methods.<a href="https://en.wikipedia.org/wiki/Observer_pattern"> - Wikipedia</a></p></div>
 
 So basically it allows for automatic notification event propagation whenever a value changed. Since these state change notifications work really well with the  [Vala Properties](https://wiki.gnome.org/Projects/Vala/PropertiesSample) (and similarly with C# Properties), I'll present a method how to implement something similar in C++.
 
-## The Basic Property Template Class
+## The basic property template class
 
 In its most basic form the Property template looks like the following. An instance of the template encapsulates a value which can be changed with the `set()` and `get()` methods. If the value is changed this way, the signal `on_change()` will be emitted.
 
@@ -91,7 +91,7 @@ class Property {
 {% endhighlight %}
 
 
-## Simple Usage Example
+## Simple usage example
 
 You can copy the above code and save it in a file named `Property.hpp`. Save this file in a directory together with the Signal template from the [previous post]({% post_url 2015-09-20-signal-slot %}). Save the ode below as `main.cpp` in the same directory.
 
@@ -125,11 +125,11 @@ And if you execute the resulting application you will get the following output:
 Value changed to: 42
 {% endhighlight %}
 
-## Improving the Basic Template Class
+## Improving the basic template class
 
 There are several ways in which we can improve this template! First we will add a default constructor, then we will add stream operator support and then we will add the possibility to connect properties to another.
 
-### Default Constructor
+### Default constructor
 
 First of all, we can add a default constructor and some copy and move constructors. This is a little bit tricky, since the default constructor for built-in types does not initialize the value. This will cause problems because the value comparison in `set()` might fail if the value is not initialized. Therefore we need template specialisations for the default constructor! Let's look at the code. First, replace the current constructor with the following list of constructors:
 
@@ -231,7 +231,7 @@ Value changed to: 42
 {% endhighlight %}
 
 
-### Connect Properties amongst each other
+### Connect properties amongst each other
 
 This final change allows for data flow modelling. I won't post the code here for it's a little bit longer but you can [download the final version of the class here](/assets/files/code/Property.hpp). But I'll show you an example of what's possible with this class:
 

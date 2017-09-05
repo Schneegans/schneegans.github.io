@@ -2,87 +2,83 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
+
     <title>
       {% if page.title %}
         {{ page.title }} -
       {% endif %}
       {{ site.title }}
     </title>
-    {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
+
+    {% if page.description %}
+      <meta name="description" content="{{ page.description }}">
+    {% endif %}
+
     <meta name="author" content="{{ site.author.name }}">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}"      href="/feed.xml">
-    <link href="/third_party/css/magnific-popup.css" rel="stylesheet">
-    <link href="/third_party/css/pygments.css" rel="stylesheet" type="text/css" media="all">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="/feed.xml">
+    <link rel="shortcut icon" href="/favicon.ico">
+    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="/css/main.css" rel="stylesheet" type="text/css" media="all">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-
-    <!-- HTML5 shim, for IE6-8 support of HTML elements -->
+    <link href="/third_party/css/pygments.css" rel="stylesheet" type="text/css" media="all">
+  
     <!--[if lt IE 9]>
       <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script>
       <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
     <![endif]-->
-
-    <link rel="shortcut icon" href="/favicon.ico">
   </head>
 
-  <body onload="document.body.className += ' loaded';" class="{{ page.colors }}">
-    <div id="dark-background"></div>
+  <body class="{{ page.colors }}" style="background-image: url(/assets/pictures/blurred/{{page.teaser}});">
 
-    <header class="page-header">
-      <nav class="container">
-
-        {% include breadcrumbs %}
-
-        <ul class="main-nav brand">
-            <li title="Blog"><a href="/blog"><i class="fa fa-pencil hidden-xs"></i> Blog</a></li>
-            <li title="Projects"><a href="/projects.html"><i class="fa fa-gears hidden-xs"></i> Projects</a></li>
-        </ul>
-      </nav>
+    <header>
+    <nav>
+        
+      <div class="nav-wrapper">
+      <div class="container">
+        {% include breadcrumbs.html %}
+        <div class="right">
+          {% if page.parents[0] == "Blog" %}
+            <a href="/projects.html"><i class="material-icons left">play_arrow</i>Explore my projects</a>
+          {% else %}
+            <a href="/"><i class="material-icons left">play_arrow</i>Read my blog</a>
+          {% endif %}
+        </div>
+      </div>
+      </div>
+    </nav>
     </header>
 
-    {{ content }}
+    <main>
+      {{ content }}
+    </main>
 
-    <footer class="page-footer">
+    <footer>
       <div class="container">
-        <p class="social-icons">
-          <a href="https://github.com/{{ site.author.github }}" target="_blank"><i class="fa fa-git"></i></a>
-          <a href="mailto:{{ site.author.email }}" ><i class="fa fa-envelope"></i></a>
-          <a href="{{site.url}}/feed.xml" target="_blank"><i class="fa fa-rss"></i></a>
-        </p>
-        <p>&copy; {{ site.time | date: '%Y' }} Desgin &amp; Content by <a href="{{ site.path }}/about.html">{{ site.author.name }} (Impressum)</a> with help from <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> and the <a href="https://github.com/danneu/darkstrap" target="_blank">Darkstrap</a>.<br>Proudly hosted on <a href="https://pages.github.com/">github pages</a>. (<a href="https://github.com/Simmesimme/Simmesimme.github.io">repository</a>)
-        </p>
-      </div> <!-- /container -->
+        <div class="row">
+          <div class="col s12 center-align">
+            <p class="social-icons">
+              <a href="https://github.com/{{ site.author.github }}" target="_blank"><i class="small material-icons">code</i></a>
+              <a href="mailto:{{ site.author.email }}"><i class="small material-icons">mail</i></a>
+              <a href="{{site.url}}/feed.xml" target="_blank"><i class="small material-icons">rss_feed</i></a>
+            </p>
+          </div>
+          <div class="col s12 center-align">
+            &copy; {{ site.time | date: '%Y' }} Desgin &amp; Content by <a href="{{ site.path }}/about.html">{{ site.author.name }} (Impressum)</a> with help from <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> and <a href="http://materializecss.com/" target="_blank">Materialize</a>, inspired by <a href="https://github.com/danneu/darkstrap" target="_blank">Darkstrap</a>.<br>Proudly hosted on <a href="https://pages.github.com/">github pages</a>. (<a href="https://github.com/Simmesimme/Simmesimme.github.io">repository</a>)
+          </div>
+        </div>
+      </div>
     </footer>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="/third_party/js/jquery.magnific-popup.min.js"></script>
-    <script src="/third_party/js/jquery.toc.min.js"></script>
-    <script src="/third_party/js/jquery.sticky-kit.min.js"></script>
-    <script src="/third_party/js/bootstrap.min.js"></script>
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="/third_party/js/bin/materialize.min.js"></script>
+
     <script>
       $(document).ready(function() {
-        $('.magnific-image').magnificPopup({
-          type:'image',
-          mainClass: 'mfp-with-zoom',
-          zoom: {
-            enabled: true,
-            opener: function(openerElement) {
-              if (openerElement.is('img')) {
-                return openerElement;
-              }
 
-              var imgs = openerElement.find('img');
-              if (imgs.length > 0) {
-                return imgs;
-              }
-
-              return openerElement.find('div');
-            }
-          }
-        });
-
+        // initialize before-after sliders -----------------------------------------------
         $('.before-after-slider').each(function() {
           var before = $(this).find(".before");
           var after = $(this).find(".after");
@@ -99,53 +95,52 @@
           });
         });
 
-        $('#toc').toc({
-          selectors: 'h1,h2',
-          highlightOffset: 100
-        });
-        $('#toc').parent().stick_in_parent({
-          offset_top:100
-        });
+        // add table of contents with scroll-spy -----------------------------------------
 
-        // $(window).scroll(function() {
-        //   if ($(document).scrollTop() > 100) {
-        //     $('.page-header').addClass('shrink');
-        //   } else {
-        //     $('.page-header').removeClass('shrink');
-        //   }
-        // });
-
-        $('.magnific-gallery').magnificPopup({
-          type:'image',
-          delegate:'.gallery-item',
-          mainClass: 'mfp-with-zoom',
-          zoom: {
-            enabled: true
-          },
-          gallery: {
-            enabled: true
-          }
+        // add an entry for each h1 and h2 to the toc
+        $("h2:not(.no-toc)").each(function(i) {
+          var id = $(this).attr("id");
+          $("#toc").append("<li><a href='#" + id + "'>" + $(this).html() + "</a></li>");
         });
 
+        // add a <section> for each h2, give it the id of the corresponding h2
+        $("h2").each(function(i) {
+          var id = $(this).attr('id');
+          $(this).removeAttr('id');
+          $(this).nextUntil("h2").add($(this)).wrapAll("<section id='" + id + "'></section>");
+        });
+
+        $('section').scrollSpy({scrollOffset:20});
+        
+        // pin sidebar -------------------------------------------------------------------
+        $('#sidebar').each(function() {
+          var parent = $(this).parent().parent();
+          $(this).width($(this).innerWidth());
+          $(this).pushpin({
+            top: $(this).offset().top,
+            bottom: parent.offset().top + parent.innerHeight() - $(this).outerHeight()
+          });
+        });
+        
+        // add code collapse buttons -----------------------------------------------------
         $('.highlight').each(function() {
           if ($(this).find('pre').height() > 100) {
             var inner_div = $(this).find('pre');
             inner_div.css({"height": inner_div.outerHeight() + "px"});
             inner_div.addClass("collapsable");
             inner_div.addClass("collapsed");
-            inner_div.prepend("<div class='code-expander'>Expand <i class='fa fa-angle-down'></i></div>");
+            inner_div.prepend("<div class='code-expander'>Expand <i class='material-icons top-offset tiny'>keyboard_arrow_down</i></div>");
             inner_div.find('.code-expander').click(function() {
               if (inner_div.hasClass("collapsed")) {
                 inner_div.removeClass("collapsed");
-                $(this).html("Collapse <i class='fa fa-angle-up'></i>");
+                $(this).html("Collapse <i class='material-icons top-offset tiny'>keyboard_arrow_up</i>");
               } else {
                 inner_div.addClass("collapsed");
-                $(this).html("Expand <i class='fa fa-angle-down'></i>");
+                $(this).html("Expand <i class='material-icons top-offset tiny'>keyboard_arrow_down</i>");
               }
             });
           }
         });
-
       })
      </script>
 

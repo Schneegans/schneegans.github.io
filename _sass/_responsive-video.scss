@@ -1,0 +1,42 @@
+.responsive-video-1610 iframe,
+.responsive-video-169 iframe,
+.responsive-video-53 iframe,
+.responsive-video-32 iframe,
+.responsive-video-43 iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.responsive-video-1610,
+.responsive-video-169,
+.responsive-video-53,
+.responsive-video-32,
+.responsive-video-43 {
+  position: relative;
+  padding-top: 0px;
+  height: 0;
+  overflow: hidden;
+}
+
+.responsive-video-169 {
+  padding-bottom: 56.25%;
+}
+
+.responsive-video-1610 {
+  padding-bottom: 62.5%;
+}
+
+.responsive-video-43 {
+  padding-bottom: 75%;
+}
+
+.responsive-video-53 {
+  padding-bottom: 60%;
+}
+
+.responsive-video-32 {
+  padding-bottom: 66.66%;
+}

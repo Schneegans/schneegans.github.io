@@ -1,0 +1,30 @@
+{% if page.url == "/" %}
+  <a href="/" class="breadcrumb"><i class="material-icons left">create</i>Blog by Simon Schneegans</a>
+{% elsif page.url == "/projects" %}
+  <a href="/" class="breadcrumb"><i class="material-icons left">settings</i>Projects by Simon Schneegans</a>
+{% else %}
+  {% for crumb in page.parents %}
+    {% if crumb == "Blog" %} 
+      {% assign link = "/" %}
+      {% assign icon = "create" %}
+      {% assign class = "" %}
+    {% elsif crumb == "Projects" %} 
+      {% assign link = "/projects.html" %}
+      {% assign icon = "settings" %}
+      {% assign class = "" %}
+    {% elsif crumb == "Gnome-Pie" %} 
+      {% assign link = "/gnome-pie.html" %}
+      {% assign icon = "" %}
+      {% assign class = "hide-on-small-only" %}
+    {% else %}
+      {% assign class = "hide-on-small-only" %}
+    {% endif %}
+    <a href="{{ link }}" class="breadcrumb {{ class }}"><i class="material-icons left">{{ icon }}</i>{{ crumb }}</a>
+  {% endfor %}
+  {% if page.title == "Blog" %}
+    <span class="breadcrumb hide-on-small-only">Older Posts</span>
+  {% else %}
+    <span class="breadcrumb hide-on-small-only">{{ page.title }}</span>
+  {% endif %}
+{% endif %}
+

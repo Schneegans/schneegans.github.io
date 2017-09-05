@@ -12,6 +12,8 @@ When I first wanted to create a PPA for Ubuntu, it was a pain. It was barely doc
 
 <!--more-->
 
+## Motivation
+
 The goal was to upload <a href="http://mars-game.sourceforge.net/">M.A.R.S.</a> to a PPA: M.A.R.S. uses CMake and I did not find any resource how to create a source package which launchpad would compile. With this tutorial I want to help those being in a similar situation I was some months ago. Please remark that I don't have inside knowledge on what is going on here --- it is the result of trial and error, but it works as supposed! So let's get started...
 
 

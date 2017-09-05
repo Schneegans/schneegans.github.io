@@ -1,5 +1,5 @@
 ---
-layout: nav-page
+layout: header-page
 title : Changelog
 header : Gnome-Pie Changelog
 description: A chronological list of changes of Gnome-Pie.
@@ -7,6 +7,7 @@ teaser: "gnome-pie065.jpg"
 colors: "color-gnome-pie065"
 tagline: "A chronological list of changes of Gnome-Pie"
 parents: ["Projects", "Gnome-Pie"]
+contents: true
 ---
 
 ## Gnome-Pie 0.7.1

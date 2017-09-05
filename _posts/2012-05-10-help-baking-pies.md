@@ -14,6 +14,7 @@ So please read on...
 
 <!--more-->
 
+## Statistics!
 
 I'll evaluate many existing implementations in order to figure out why pie menus aren't ubiquitous on today's desktops. Having done this, I'm going to present a pie menu design which is capable of being used as a complete menu replacement --- if that's possible. Hopefully Gnome-Pie will be improved in many ways by these results...
 
@@ -26,4 +27,4 @@ There is no personal information in this file. Only information on your usage fr
 
 If you have any questions regarding this topic please use the comment form below or send an email to code@simonschneegans.de!
 
-<h3>Thank you so much! It's going to be exciting!</h3>
+<div class="well">Thank you so much! It's going to be exciting!</div>

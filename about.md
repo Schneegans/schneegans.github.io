@@ -1,34 +1,28 @@
 ---
-layout: page
+layout: header-page
 title : About
 header : about
 teaser: simon.jpg
+description: "This is the personal blog of Simon Schneegans, researcher at the <a href='http://www.dlr.de'>DLR (German Aerospace Center)</a> in Braunschweig. On this website you will find news regarding Gnome-Pie, some tutorials and other (hopefully) interesting stuff!"
 colors: color-simon
-parents: []
+parents: ["Blog"]
+contents: false
 ---
 
+## Contact
 
-<div class="row">
-  <div class="col-sm-9">
-  <p>This is the personal blog of Simon Schneegans, researcher at the <a href="http://www.dlr.de">DLR (German Aerospace Center)</a> in Braunschweig. On this website you will find news regarding Gnome-Pie, some tutorials and other (hopefully) interesting stuff!</p>
+{% assign picture = "simon.jpg" %}
+{% assign text = "That's me :)" %}
+{% include image-small.html %}
 
-  <address>
-    <strong>Simon Schneegans</strong><br>
-    Hasselfelder Straße 5c<br>
-    38124 Braunschweig, Germany<br>
-    admin (at) simonschneegans.de
-  </address>
+<address>
+  <strong>Simon Schneegans</strong><br>
+  Hasselfelder Straße 5c<br>
+  38124 Braunschweig, Germany<br>
+  admin (at) simonschneegans.de
+</address>
 
-
-  </div>
-  <div class="col-sm-3">
-    {% assign picture = "simon.jpg" %}
-    {% assign size = "small" %}
-    {% assign text = "That's me!" %}
-    {% include image %}
-  </div>
-</div>
-
+<div style="clear: both;"></div>
 
 ## License Information
 
@@ -47,9 +41,7 @@ parents: []
 </table>
 </div>
 
-### German disclaimer (Rechtliche Hinweise)
-
-
+## German disclaimer (Rechtliche Hinweise)
 
 <small>Alle Inhalte meines Internetauftritts wurden mit Sorgfalt und nach bestem Gewissen erstellt. Eine Gewähr für die Aktualität, Vollständigkeit und Richtigkeit sämtlicher Seiten kann jedoch nicht übernommen werden. Gemäß § 7 Abs. 1 TMG bin ich als Dienstanbieter für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich, nach den §§ 8 bis 10 TMG jedoch nicht verpflichtet, die übermittelten oder gespeicherten fremden Informationen zu überwachen. Eine umgehende Entfernung dieser Inhalte erfolgt ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung und wir haften nicht vor dem Zeitpunkt der Kenntniserlangung.</small>
 

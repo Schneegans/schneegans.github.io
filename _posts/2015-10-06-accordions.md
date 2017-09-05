@@ -9,9 +9,11 @@ description: "The accordion on my homepage uses CSS3 only. No JavaScript is requ
 tags: ["html5", "tutorial", "css3", "code"]
 ---
 
-With this tutorial I will show you how I implemented the accordion on the landing page of my website. It is based on CSS3, requires no JavaScript and is fully responsive.
+With this tutorial I will show you how I implemented the accordion on the project page of my website. It is based on CSS3, requires no JavaScript and is fully responsive.
 
 <!--more-->
+
+## Yet another accordion?
 
 **Update: Scroll down to the end of the post for the final SASS code!**
 
@@ -21,7 +23,7 @@ Furthermore the horizontal accordion presented here is fully responsive - no fix
 
 At first we will set up the basic behavior, then we will add background images and as a last step we will add captions. All style code will be provided as [SASS code](http://sass-lang.com/){:target="_blank"}.
 
-## The Basic Bahavior
+## The basic bahavior
 
 Here is the most basic version of the accordion. It has three items, each has a specific background color. If you hover over one slide it will expand, shrinking the others.
 
@@ -129,7 +131,7 @@ Here is the most basic version of the accordion. It has three items, each has a 
 
 As you can see, the behavior is configured with three variables. `$slides` adjusts the number of supported entries, `$accordion_aspect_ratio` sets the aspect ratio of the accordion (when the size of the website changes, so will the accordion) and `$slide_aspect_ratio`. The latter describes the aspect ratio of the expanded slide and should not be set to a greater value than the `$accordion_aspect_ratio`.
 
-## Variable Number of Slides
+## Variable number of slides
 
 Our next goal is to support any number of items. This can be achieved by replacing the bottom half of the style code above with a for-loop.
 
@@ -240,25 +242,25 @@ Finally we want to have some captions on our slides. Since they should look real
   <ul>
     <li style="background-image:url('http://lorempixel.com/560/420/nature/5')">
       <div>
-        <h2>Lorem Ipsum</h2>
+        <h3>Lorem Ipsum</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br><a href="#">read on »</a></p>
       </div>
     </li>
     <li style="background-image:url('http://lorempixel.com/560/420/nature/6')">
       <div>
-        <h2>Lorem Ipsum</h2>
+        <h3>Lorem Ipsum</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br><a href="#">read on »</a></p>
       </div>
     </li>
     <li style="background-image:url('http://lorempixel.com/560/420/nature/7')">
       <div>
-        <h2>Lorem Ipsum</h2>
+        <h3>Lorem Ipsum</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br><a href="#">read on »</a></p>
       </div>
     </li>
     <li style="background-image:url('http://lorempixel.com/560/420/nature/8')">
       <div>
-        <h2>Lorem Ipsum</h2>
+        <h3>Lorem Ipsum</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br><a href="#">read on »</a></p>
       </div>
     </li>
@@ -270,7 +272,7 @@ Finally we want to have some captions on our slides. Since they should look real
   <ul>
     <li style="background-image:url('http://lorempixel.com/560/420/nature/5')">
       <div>
-        <h2>Lorem Ipsum</h2>
+        <h3>Lorem Ipsum</h3>
         <p>Lorem ipsum...
            <br><a href="#">read on »</a>
         </p>
@@ -278,7 +280,7 @@ Finally we want to have some captions on our slides. Since they should look real
     </li>
     <li style="background-image:url('http://lorempixel.com/560/420/nature/6')">
       <div>
-        <h2>Lorem Ipsum</h2>
+        <h3>Lorem Ipsum</h3>
         <p>Lorem ipsum...
            <br><a href="#">read on »</a>
         </p>
@@ -286,7 +288,7 @@ Finally we want to have some captions on our slides. Since they should look real
     </li>
     <li style="background-image:url('http://lorempixel.com/560/420/nature/7')">
       <div>
-        <h2>Lorem Ipsum</h2>
+        <h3>Lorem Ipsum</h3>
         <p>Lorem ipsum...
            <br><a href="#">read on »</a>
         </p>
@@ -294,7 +296,7 @@ Finally we want to have some captions on our slides. Since they should look real
     </li>
     <li style="background-image:url('http://lorempixel.com/560/420/nature/8')">
       <div>
-        <h2>Lorem Ipsum</h2>
+        <h3>Lorem Ipsum</h3>
         <p>Lorem ipsum ...
            <br><a href="#">read on »</a>
         </p>
@@ -323,7 +325,7 @@ Finally we want to have some captions on our slides. Since they should look real
       @include transition(all 300ms);
       @include background-image(linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%));
 
-      h2 {
+      h3 {
         @include transition(all 500ms);
         @include translateX(-30px);
       }
@@ -344,7 +346,7 @@ Finally we want to have some captions on our slides. Since they should look real
     &:hover div {
       opacity: 1;
 
-      h2, a, p {
+      h3, a, p {
         @include translateX(0px);
       }
     }
@@ -352,7 +354,7 @@ Finally we want to have some captions on our slides. Since they should look real
 }
 {% endhighlight %}
 
-## Final Words
+## Final words
 
 That's it! I hope you can use this technique somewhere. If you have further questions just use the comment form below! And it would be awesome if you could post a link if you used this accordion somewhere! Below you find the final SASS class.
 
@@ -414,7 +416,7 @@ That's it! I hope you can use this technique somewhere. If you have further ques
         @include transition(all 300ms);
         @include background-image(linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%));
 
-        h2 {
+        h3 {
           @include transition(all 500ms);
           @include translateX(-30px);
         }
@@ -435,7 +437,7 @@ That's it! I hope you can use this technique somewhere. If you have further ques
       &:hover div {
         opacity: 1;
 
-        h2, a, p {
+        h3, a, p {
           @include translateX(0px);
         }
       }

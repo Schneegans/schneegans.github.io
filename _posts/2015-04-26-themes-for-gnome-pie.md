@@ -13,13 +13,15 @@ It is quite easy to create custom themes for Gnome-Pie. All you need to do is cr
 
 <!--more-->
 
-<div class="adaptive-alert well">There is a <a href="/gnome-pie-themes.html">gallery of existing Gnome-Pie themes available</a>. You can download some themes there! If you create a new theme, just drop a note and I will add it to this collection!</div>
+## Themes of Gnome-Pie
+
+<div class="well">There is a <a href="/gnome-pie-themes.html">gallery of existing Gnome-Pie themes available</a>. You can download some themes there! If you created a new theme, just drop a note and I will add it to this collection!</div>
 
 The themes of Gnome-Pie are either installed to `/usr/share/gnome-pie/themes` or `/usr/local/share/gnome-pie/themes` - you can have a look at these to get an impression.
 
 When you create a new theme you should put it in your home directory in `~/.config/gnome-pie/themes`, there they'll discovered as well.
 
-##1. Decide what you want
+## 1. Decide what you want
 
 This step might be difficult if it's your very first theme due to your limited knowledge on what is possible with the themes of Gnome-Pie. Therefore I list some possibilities and restrictions here:
 
@@ -32,41 +34,35 @@ This step might be difficult if it's your very first theme due to your limited k
     * For slice layers you can specify its colorization, opacity and scale.
 
 
-##2. Draw the necessary images
+## 2. Draw the necessary images
 
 This can be done with the image manipulating application of your choice. For svg's this probably will be <a href="http://inkscape.org/">Inkscape</a>, if you decide to use another image format, the <a href="http://www.gimp.org/">Gimp</a> may be a good choice. I won't get into detail how to draw those images, but I'll post the images used for an old version of the theme "Adwaita" as an example.
 
-<p>
-<div class="row magnific-gallery">
-    <div class="col-xs-3">
+<div class="row">
+    <div class="col s3">
         {% assign picture = "icon_inactive.svg_.jpg" %}
-        {% assign size = "small" %}
         {% assign text = "icon_inactive.svg" %}
-        {% include gallery_item %}
+        {% include image.html %}
     </div>
-    <div class="col-xs-3">
+    <div class="col s3">
         {% assign picture = "icon_active.svg_.jpg" %}
-        {% assign size = "small" %}
         {% assign text = "icon_active.svg" %}
-        {% include gallery_item %}
+        {% include image.html %}
     </div>
-    <div class="col-xs-3">
+    <div class="col s3">
         {% assign picture = "ring.svg_.jpg" %}
-        {% assign size = "small" %}
         {% assign text = "ring.svg" %}
-        {% include gallery_item %}
+        {% include image.html %}
     </div>
-    <div class="col-xs-3">
+    <div class="col s3">
         {% assign picture = "arrow.svg_.jpg" %}
-        {% assign size = "small" %}
         {% assign text = "arrow.svg" %}
-        {% include gallery_item %}
+        {% include image.html %}
     </div>
 </div>
-</p>
 
 
-##3. Create a theme.xml file
+## 3. Create a theme.xml file
 
 If you have your images, they need to be combined to one theme with an `theme.xml` file. Place all your images in the directory `~/.config/gnome-pie/themes/name_of_your_theme`. You may have to create this directory if it doesn't exist. Then create a new file in this directory called `theme.xml`.
 
@@ -122,7 +118,7 @@ The most basic, working theme without any images looks like that. Maybe you can 
 
 For each element there are some attributes which can be specified. Not all of them are necessary, the following is a complete list as reference. On the right side there is the default value. Each element with a default value is optional, all others are marked as mandatory.
 
-###The &lt;theme&gt; element
+### The &lt;theme&gt; element
 <table>
 <thead>
     <tr><th><h4>Element</h4></th><th class="pull-right"><h4>Default value</h4></th></tr>
@@ -135,7 +131,7 @@ For each element there are some attributes which can be specified. Not all of th
 </tbody>
 </table>
 
-###The &lt;pie&gt; element
+### The &lt;pie&gt; element
 <table>
 <thead>
     <tr><th><h4>Element</h4></th><th class="pull-right"><h4>Default value</h4></th></tr>
@@ -156,7 +152,7 @@ For each element there are some attributes which can be specified. Not all of th
 </tbody>
 </table>
 
-###The &lt;center&gt; element
+### The &lt;center&gt; element
 <table>
 <thead>
     <tr><th><h4>Element</h4></th><th class="pull-right"><h4>Default value</h4></th></tr>
@@ -167,7 +163,7 @@ For each element there are some attributes which can be specified. Not all of th
 </tbody>
 </table>
 
-###The &lt;center_layer&gt; element
+### The &lt;center_layer&gt; element
 <table>
 <thead>
     <tr><th><h4>Element</h4></th><th class="pull-right"><h4>Default value</h4></th></tr>
@@ -182,7 +178,7 @@ For each element there are some attributes which can be specified. Not all of th
 </tbody>
 </table>
 
-###The &lt;slices&gt; element
+### The &lt;slices&gt; element
 <table>
 <thead>
     <tr><th><h4>Element</h4></th><th class="pull-right"><h4>Default value</h4></th></tr>
@@ -193,7 +189,7 @@ For each element there are some attributes which can be specified. Not all of th
 </tbody>
 </table>
 
-###The &lt;slice_layer&gt; element
+### The &lt;slice_layer&gt; element
 <table>
 <thead>
     <tr><th><h4>Element</h4></th><th class="pull-right"><h4>Default value</h4></th></tr>
@@ -214,36 +210,30 @@ For each element there are some attributes which can be specified. Not all of th
 </table>
 
 
-##4. Post a screenshot in the comments
+## 4. Post a screenshot in the comments
 
-<p>
-<div class="row magnific-gallery">
-    <div class="col-xs-3">
+<div class="row">
+    <div class="col s3">
         {% assign picture = "gnome-pie_adwaita.jpg" %}
-        {% assign size = "small" %}
         {% assign text = "The Adwaita theme." %}
-        {% include gallery_item %}
+        {% include image.html %}
     </div>
-    <div class="col-xs-3">
+    <div class="col s3">
         {% assign picture = "gnome-pie_glossy.jpg" %}
-        {% assign size = "small" %}
         {% assign text = "The glossy theme." %}
-        {% include gallery_item %}
+        {% include image.html %}
     </div>
-    <div class="col-xs-3">
+    <div class="col s3">
         {% assign picture = "gnome-pie_opie.jpg" %}
-        {% assign size = "small" %}
         {% assign text = "The O-Pie theme." %}
-        {% include gallery_item %}
+        {% include image.html %}
     </div>
-    <div class="col-xs-3">
+    <div class="col s3">
         {% assign picture = "gnome-pie_unity.jpg" %}
-        {% assign size = "small" %}
         {% assign text = "The Unity theme." %}
-        {% include gallery_item %}
+        {% include image.html %}
     </div>
 </div>
-</p>
 
 If you created a theme you're happy with, share it! Please post a screenshot or the entire theme in the comments! I'm very pleased to include new themes in future releases of Gnome-Pie!
 
