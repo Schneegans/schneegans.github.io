@@ -2,8 +2,8 @@
 layout: header-page
 title: Random artwork
 description: Below you find a random collection of pictures I have created. Some of them are photographs, some are rendered with 3D software and some are drawn by hand.
-teaser: "sognefjellet.jpg"
-colors: "color-sognefjellet"
+teaser: "sunset.jpg"
+colors: "color-sunset"
 parents: ["Projects"]
 ---
 

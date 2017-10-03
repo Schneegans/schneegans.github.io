@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Gnome-Pie Theme Gallery!"
-tagline: "a collection of themes."
 category: news
 teaser: "Theme_O-Pie.jpg"
 colors: "color-Theme_O-Pie"

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "M.A.R.S on github!"
-tagline: "yay, finally!"
+description: "yay, finally!"
 category: news
 teaser: "mars.jpg"
 colors: "color-mars"

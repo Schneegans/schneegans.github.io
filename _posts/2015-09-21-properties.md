@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "C++11 Properties!"
-tagline: "how I code them."
 category: tutorials
 teaser: "properties.jpg"
 colors: "color-properties"

@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "CSS3-only Accordions!"
-tagline: "how I code them."
 category: tutorials
 teaser: "accordions.jpg"
 colors: "color-accordions"

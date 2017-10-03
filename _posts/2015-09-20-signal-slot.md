@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "C++11 Signals and Slots!"
-tagline: "how I code them."
 category: tutorials
 teaser: "signals.jpg"
 colors: "color-signals"

@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Create a theme for Gnome-Pie!"
-tagline: "it will look awesome."
 category: lessons
 teaser: "themes_for_gnome-pie.jpg"
 colors: "color-themes_for_gnome-pie"

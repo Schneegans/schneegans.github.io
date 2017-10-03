@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Color Splash!"
-tagline: "new adaptive link colors!"
 category: news
 teaser: "color_splash.jpg"
 colors: "color-color_splash"

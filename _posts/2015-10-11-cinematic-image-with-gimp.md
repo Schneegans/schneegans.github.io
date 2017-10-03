@@ -1,10 +1,9 @@
 ---
 layout: post
 title: "Create a cinematic image!"
-tagline: "enhance your boring photos with the gimp."
 category: tutorials
 teaser: "london.jpg"
-colors: "color-london_01"
+colors: "color-london"
 description: "You can quickly turn your dull pictures to awesome shots like this."
 tags: ["tutorial", "gimp", "artwork"]
 ---
