@@ -4,6 +4,7 @@ title: "C++11 Properties!"
 category: tutorials
 teaser: "properties.jpg"
 colors: "color-properties"
+license: "public domain"
 description: "A tight connection. Image by whologwhy (https://www.flickr.com/photos/hulagway/6020190512/)"
 tags: ["tutorial", "c++", "code"]
 ---

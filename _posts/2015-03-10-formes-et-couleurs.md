@@ -4,6 +4,7 @@ title: "Stop Motion Clip!"
 category: artwork
 teaser: "formes-et-couleurs-01.jpg"
 colors: "color-formes-et-couleurs-01"
+license: "cc-by"
 description: "We went for very simplistic character design."
 tags: ["artwork", "animation"]
 ---

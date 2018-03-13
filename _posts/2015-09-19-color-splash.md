@@ -4,6 +4,7 @@ title: "Color Splash!"
 category: news
 teaser: "color_splash.jpg"
 colors: "color-color_splash"
+license: "public domain"
 description: "That happens if you combine thirty seconds of exposure, a mobile phone and someone jumping around wildly."
 tags: ["jekyll", "code"]
 ---

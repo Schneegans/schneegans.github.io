@@ -17,7 +17,7 @@ contents: false
 
 <address>
   <strong>Simon Schneegans</strong><br>
-  Hasselfelder Straße 5c<br>
+  Römerstraße 1<br>
   38124 Braunschweig, Germany<br>
   admin (at) simonschneegans.de
 </address>
@@ -30,16 +30,76 @@ contents: false
 <table>
 <tbody>
 <tr>
-<td width="100px"><a href="http://www.gnu.org/licenses/gpl.html"><img src="http://creativecommons.org/images/public/cc-GPL-a.png" border="0" alt="CC-GNU GPL" /></a></td>
-<td>Most of the code posted on this page, except where otherwise noted, is licensed under the GNU GPL v3 or later and therefore you can download and modify it as you like it.  Content which was created by third parties is published in regard to their license conditions.</td>
+<td width="100px">
+    <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/license-MIT-blue.svg" border="0" alt="public domain" /></a><br>
+    <a href="http://unlicense.org/"><img src="https://img.shields.io/badge/license-PD-blue.svg" border="0" alt="public domain" /></a>
+</td>
+<td>Code posted on this blog, except where otherwise noted, is published either under the <a href="https://opensource.org/licenses/MIT">MIT license</a> (Option A) or released to the <a href="http://unlicense.org/">public domain</a> (Option B). You are free to choose whichever you prefer. Content which was created by third parties is published in regard to their license conditions.
+</td>
 </tr>
 <tr>
-<td><a rel="license" href="http://creativecommons.org/licenses/by/3.0/"><img style="border-width: 0;" src="http://i.creativecommons.org/l/by/3.0/88x31.png" alt="Creative Commons Lizenzvertrag" /></a></td>
+<td><a rel="license" href="http://creativecommons.org/licenses/by/3.0/"><img style="border-width: 0;" src="https://img.shields.io/badge/artwork-cc--by-blue.svg" alt="Creative Commons Lizenzvertrag" /></a></td>
 <td>The artwork and media of this web page is, except where otherwise noted, licensed under Creative Commons Attribution 3.0 License.</td>
 </tr>
 </tbody>
 </table>
 </div>
+
+### Option A (MIT)
+
+{% highlight biml %}
+
+Copyright 2018 Simon Schneegans
+
+Permission is hereby granted, free of charge, to any person obtaining a
+copy of this software and associated documentation files (the "Software"),
+to deal in the Software without restriction, including without limitation
+the rights to use, copy, modify, merge, publish, distribute, sublicense,
+and/or sell copies of the Software, and to permit persons to whom the
+Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+DEALINGS IN THE SOFTWARE.
+
+{% endhighlight %}
+
+### Option B (Public Domain)
+
+{% highlight biml %}
+
+The source code presented on the blog is free and unencumbered software
+released into the public domain.
+
+Anyone is free to copy, modify, publish, use, compile, sell, or
+distribute this software, either in source code form or as a compiled
+binary, for any purpose, commercial or non-commercial, and by any
+means.
+
+In jurisdictions that recognize copyright laws, the author or authors
+of this software dedicate any and all copyright interest in the
+software to the public domain. We make this dedication for the benefit
+of the public at large and to the detriment of our heirs and
+successors. We intend this dedication to be an overt act of
+relinquishment in perpetuity of all present and future rights to this
+software under copyright law.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR
+OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+OTHER DEALINGS IN THE SOFTWARE.
+
+{% endhighlight %}
 
 ## German disclaimer (Rechtliche Hinweise)
 

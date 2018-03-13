@@ -4,6 +4,7 @@ title: "C++11 Signals and Slots!"
 category: tutorials
 teaser: "signals.jpg"
 colors: "color-signals"
+license: "public domain"
 description: "A slot canyon. Image by photophilde (https://www.flickr.com/photos/photophilde/5000685616/)"
 tags: ["featured", "tutorial", "c++", "code"]
 ---

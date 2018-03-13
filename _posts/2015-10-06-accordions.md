@@ -4,6 +4,7 @@ title: "CSS3-only Accordions!"
 category: tutorials
 teaser: "accordions.jpg"
 colors: "color-accordions"
+license: "public domain"
 description: "The accordion on my homepage uses CSS3 only. No JavaScript is required!"
 tags: ["html5", "tutorial", "css3", "code"]
 ---

@@ -4,6 +4,7 @@ title: "Create a cinematic image!"
 category: tutorials
 teaser: "london.jpg"
 colors: "color-london"
+license: "cc-by"
 description: "You can quickly turn your dull pictures to awesome shots like this."
 tags: ["tutorial", "gimp", "artwork"]
 ---

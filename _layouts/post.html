@@ -31,8 +31,12 @@ layout: default
             <span class="category">
               Simon Schneegans
             </span>
-              <!-- <h5>tl;dr</h5>
-              {{ page.excerpt }} -->
+            {% if page.license %}
+                <h5><i class="material-icons top-offset">copyright</i> License</h5>
+                <a href="/about.html">
+                  {{ page.license }}
+                </a>
+            {% endif %}
             {% if page.tags %}
                 <h5><i class="material-icons top-offset">loyalty</i> Tags</h5>
                 {% for tag in page.tags %}
