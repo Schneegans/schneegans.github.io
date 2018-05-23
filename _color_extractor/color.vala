@@ -24,7 +24,7 @@ public class Color: GLib.Object {
     /////////////////////////////////////////////////////////////////////
 
     public Color() {
-        Color.from_rgb(1.0f, 1.0f, 1.0f);
+        this.from_rgb(1.0f, 1.0f, 1.0f);
     }
 
     /////////////////////////////////////////////////////////////////////
@@ -32,7 +32,7 @@ public class Color: GLib.Object {
     /////////////////////////////////////////////////////////////////////
 
     public Color.from_rgb(float red, float green, float blue) {
-        Color.from_rgba(red, green, blue, 1.0f);
+        this.from_rgba(red, green, blue, 1.0f);
     }
 
     /////////////////////////////////////////////////////////////////////
@@ -81,7 +81,7 @@ public class Color: GLib.Object {
             }
         }
 
-        Color.from_rgb((float)(rtotal/total), (float)(gtotal/total), (float)(btotal/total));
+        this.from_rgb((float)(rtotal/total), (float)(gtotal/total), (float)(btotal/total));
 
         if (s < 0.5f) s = 0.5f;
 

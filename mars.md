@@ -7,7 +7,7 @@ colors: color-mars
 parents: ["Projects"]
 ---
 
-<div class="responsive-video-169 z-depth-2">
+<div class="responsive-video-1610 z-depth-2">
 <iframe src="http://player.vimeo.com/video/19975252?title=0&amp;byline=0&amp;portrait=0&amp;color={% include link-color.html %}" width="1600" height="900" frameborder="0" webkitAllowFullScreen allowFullScreen></iframe>
 </div>
 

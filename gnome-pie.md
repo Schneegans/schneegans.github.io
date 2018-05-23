@@ -71,24 +71,20 @@ When this is done, you can launch the application via your main menu. It will st
 
 This is not more difficult at all. First of all, install all dependencies - below you will find the appropriate commands for Fedora and Ubuntu; if you have another package manager you'll have to change this command accordingly. The dependency libappindicator3-dev is optional, if your distribution does not support this system, simply ignore it.
 
-<div>
-  <ul class="nav nav-pills" role="tablist">
-    <li role="presentation" class="active">
-        <a href="#Ubuntu" aria-controls="Ubuntu" role="tab" data-toggle="tab">Ubuntu</a>
-    </li>
-    <li role="presentation">
-        <a href="#Fedora" aria-controls="Fedora" role="tab" data-toggle="tab">Fedora</a>
-    </li>
-  </ul>
-
-  <div class="tab-content">
-    <div role="tabpanel" class="tab-pane fade in active" id="Ubuntu">
-        <pre><code>sudo apt-get install git build-essential libgtk-3-dev libcairo2-dev libappindicator3-dev libgee-0.8-dev libxml2-dev libxtst-dev libgnome-menu-3-dev valac cmake libwnck-3-dev libarchive-dev libbamf3-dev bamfdaemon</code></pre>
-    </div>
-    <div role="tabpanel" class="tab-pane fade" id="Fedora">
-        <pre><code>sudo dnf install cmake make automake gcc gcc-c++ vala gtk3-devel libwnck3-devel libgee-devel libxml2-devel libXtst-devel gnome-menus-devel libarchive-devel bamf-devel</code></pre>
-    </div>
+<div class="row">
+  <div class="col s12">
+    <ul class="tabs">
+      <li class="tab col s3"><a href="#tab1">Debian / Ubuntu</a></li>
+      <li class="tab col s3"><a href="#tab2">Fedora</a></li>
+    </ul>
   </div>
+
+<div class="col s12" id="tab1">
+    <pre><code>sudo apt-get install git build-essential libgtk-3-dev libcairo2-dev libappindicator3-dev libgee-0.8-dev libxml2-dev libxtst-dev libgnome-menu-3-dev valac cmake libwnck-3-dev libarchive-dev libbamf3-dev bamfdaemon</code></pre>
+</div>
+<div class="col s12" id="tab2">
+    <pre><code>sudo dnf install cmake make automake gcc gcc-c++ vala gtk3-devel libwnck3-devel libgee-devel libxml2-devel libXtst-devel gnome-menus-devel libarchive-devel bamf-devel</code></pre>
+</div>
 </div>
 
 Make sure, that you have a version of the vala compiler which is at least `0.24`. You may check your current version by running `valac --version`. If it does not fit, please install a newer version. In Ubuntu 14.04 or later this can be done with the following commands:

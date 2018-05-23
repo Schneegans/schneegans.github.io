@@ -1,5 +1,4 @@
 @import "compass";
-@import "materialize";
 @import "colors";
 @import "accordion";
 @import "banners";
@@ -43,7 +42,7 @@
 @mixin link-color-background-transparent() {
   @each $class, $color in $link-colors {
     .#{$class} & {
-      background-color: rgba(lighten($color, 35), 0.7);
+      background-color: rgba(darken($color, 15), 0.1);
     }
   }
 }
@@ -63,24 +62,6 @@ a {
   &:active {
     @include link-color-highlight();
   }
-}
-
-
-
-.splash-background {
-  // @include link-color-background();
-}
-
-.splash-background-dark {
-  // @include link-color-background-darken();
-}
-
-.splash-background-lght {
-  // @include link-color-background-lighten();
-}
-
-.splash-background-transparent {
-  // @include link-color-background-transparent();
 }
 
 
@@ -115,7 +96,7 @@ body {
 header,
 main,
 footer {
-    background: url("../img/paper.png");
+    background: url("../img/symphony.png");
     // background-attachment: fixed;
 }
 
@@ -237,6 +218,24 @@ footer {
 
 .social-icons {
   letter-spacing: 1rem;
+}
+
+.tabs {
+  background-color: transparent;
+
+  a {
+    @include link-color();
+
+    &.active:focus,
+    &:focus {
+      @include link-color-background-transparent();
+    }
+    
+    &:hover,
+    &.active {
+      @include link-color-highlight();
+    }
+  }
 }
 
 // hr ------------------------------------------------------------------------------------

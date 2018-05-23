@@ -21,8 +21,9 @@
     <link rel="shortcut icon" href="/favicon.ico">
     
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="/css/main.css" rel="stylesheet" type="text/css" media="all">
     <link href="/third_party/css/pygments.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/third_party/css/materialize.min.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/main.css" rel="stylesheet" type="text/css" media="all">
   
     <!--[if lt IE 9]>
       <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script>
@@ -73,10 +74,14 @@
 
     <!--Import jQuery before materialize.js-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script type="text/javascript" src="/third_party/js/bin/materialize.min.js"></script>
+    <script type="text/javascript" src="/third_party/js/materialize.min.js"></script>
 
     <script>
       $(document).ready(function() {
+
+        // initialize materialize css ----------------------------------------------------
+        $('.materialboxed').materialbox();
+        $('.tabs').tabs();
 
         // initialize before-after sliders -----------------------------------------------
         $('.before-after-slider').each(function() {
