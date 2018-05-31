@@ -28,7 +28,7 @@ Gnome-Pie is a circular application launcher (*pie menu*) for Linux. It is made 
 
 Gnome-Pie is designed to be fun, fast and visually appealing. It implements Fitts' law, which...
 
-<div class="well"><p class="quote"> [...] is a model of human movement primarily used in human–computer interaction and ergonomics that predicts that the time required to rapidly move to a target area is a function of the distance to the target and the size of the target.<a href="http://en.wikipedia.org/wiki/Fitts's_law"> - Wikipedia</a></p></div>
+<div class="quote"> [...] is a model of human movement primarily used in human–computer interaction and ergonomics that predicts that the time required to rapidly move to a target area is a function of the distance to the target and the size of the target.<br><a href="http://en.wikipedia.org/wiki/Fitts's_law" target="_blank"> - Wikipedia</a></div>
 
 Many application launchers of today's Linux desktops are made for people using their keyboard mainly. Launchers like [Gnome-Do](http://do.cooperteam.net/){:target="_blank"}, [Synapse](https://launchpad.net/synapse-project){:target="_blank"}, [Kupfer](http://engla.github.io/kupfer/){:target="_blank"}, Unity's Dash or Gnome-Shell's Activities are designed for keyboard users. It's necessary to type the first letters of the desired action in order to launch it.
 

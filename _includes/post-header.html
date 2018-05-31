@@ -1,11 +1,13 @@
 <!-- side-by-side version -->
 <div class="row hide-on-med-and-down" style="position: relative;">
   <div class="col s12">
-    <div data-caption="{{post.description}}" class="z-depth-2 materialboxed" style="position: absolute; top:0; bottom: 0; width: 40%; background-position: center; background-repeat: no-repeat;background-size: cover; background-image: url(/assets/teasers/{{post.teaser}});">
+    <div data-caption="{{post.description}}" class="z-depth-2 materialboxed" style="position: absolute; top:0; bottom: 0; width: 350px; background-position: center; background-repeat: no-repeat;background-size: cover; background-image: url(/assets/teasers/{{post.teaser}});">
     </div>
-    <div style="position: relative; padding-left: 24px; width: 60%; left: 40%">
+    <div style="position: relative; margin-left: 374px;">
       <h1 class="no-toc">{{post.title}}</h1>
+      <div style="min-height: 120px">
       {{ post.excerpt }}
+      </div>
       <br>
       {% include post-nav.html %}
     </div>
@@ -15,9 +17,9 @@
 <!-- side-by-side-nav-below version -->
 <div class="row hide-on-small-only hide-on-large-only" style="position: relative;">
   <div class="col s12">
-    <div data-caption="{{post.description}}" class="z-depth-2 materialboxed" style="position: absolute; top:0; bottom: 24px; width: 40%; background-position: center; background-repeat: no-repeat;background-size: cover; background-image: url(/assets/teasers/{{post.teaser}});">
+    <div data-caption="{{post.description}}" class="z-depth-2 materialboxed" style="position: absolute; top:0; bottom: 24px; width: 250px; background-position: center; background-repeat: no-repeat;background-size: cover; background-image: url(/assets/teasers/{{post.teaser}});">
     </div>
-    <div style="position: relative; padding-left: 24px; width: 60%; left: 40%; min-height: 240px">
+    <div style="position: relative; margin-left: 274px; min-height: 240px">
       <h1 class="no-toc">{{post.title}}</h1>
       {{ post.excerpt }}
     </div>
