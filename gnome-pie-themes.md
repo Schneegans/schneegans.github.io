@@ -10,7 +10,7 @@ parents: ["Gnome-Pie"]
 <div class="row">
   {% for theme in site.data.themes %}
   <div class="col xl4 l6 m6 s12">
-    <div class="theme-gallery-item">
+    <div class="gallery-item">
       {% assign picture = theme.preview %}
       {% assign text = theme.name %}
       {% include image.html %}

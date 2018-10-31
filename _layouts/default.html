@@ -68,6 +68,8 @@
     <!--Import jQuery before materialize.js-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="/third_party/js/materialize.min.js"></script>
+    <script type="text/javascript" src="/third_party/js/masonry.pkgd.min.js"></script>
+    <script type="text/javascript" src="/third_party/js/imagesloaded.pkgd.min.js"></script>
 
     <script>
       $(document).ready(function() {
@@ -139,6 +141,19 @@
             });
           }
         });
+
+        // add code collapse buttons -----------------------------------------------------
+        var grid = $('.grid').masonry({
+          columnWidth: '.grid-sizer',
+          gutter: '.gutter-sizer',
+          itemSelector: '.grid-item',
+          percentPosition: true
+        });
+
+        grid.imagesLoaded().progress( function() {
+          grid.masonry('layout');
+        });
+
       })
      </script>
   </body>
