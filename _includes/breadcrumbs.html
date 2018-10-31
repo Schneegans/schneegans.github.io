@@ -1,25 +1,13 @@
 {% if page.url == "/" %}
-  <a href="/" class="breadcrumb"><i class="material-icons left">create</i>Blog by Simon Schneegans</a>
-{% elsif page.url == "/projects" %}
-  <a href="/" class="breadcrumb"><i class="material-icons left">settings</i>Projects by Simon Schneegans</a>
+  <a href="/about.html" style="font-size: 18px;"><i class="material-icons left">home</i>Simon Schneegans</a>
+{% elsif page.url == "/about.html" %}
+  <a href="/" class="breadcrumb"><i class="material-icons left">home</i>Home</a>
 {% else %}
+   <a href="/" class="breadcrumb"><i class="material-icons left">home</i> Home</a>
   {% for crumb in page.parents %}
-    {% if crumb == "Blog" %} 
-      {% assign link = "/" %}
-      {% assign icon = "create" %}
-      {% assign class = "" %}
-    {% elsif crumb == "Projects" %} 
-      {% assign link = "/projects.html" %}
-      {% assign icon = "settings" %}
-      {% assign class = "" %}
-    {% elsif crumb == "Gnome-Pie" %} 
-      {% assign link = "/gnome-pie.html" %}
-      {% assign icon = "" %}
-      {% assign class = "hide-on-small-only" %}
-    {% else %}
-      {% assign class = "hide-on-small-only" %}
+    {% if crumb == "Gnome-Pie" %} 
+      <a href="/gnome-pie.html" class="breadcrumb hide-on-small-only">{{ crumb }}</a>
     {% endif %}
-    <a href="{{ link }}" class="breadcrumb {{ class }}"><i class="material-icons left">{{ icon }}</i>{{ crumb }}</a>
   {% endfor %}
   {% if page.title == "Blog" %}
     <span class="breadcrumb hide-on-small-only">Older Posts</span>
@@ -28,3 +16,9 @@
   {% endif %}
 {% endif %}
 
+<ul class="right" id="project-list">
+    <li class="preselected"><a href="/gnome-pie.html"><i class="material-icons left">bubble_chart</i>Gnome-Pie</a></li>
+    <li><a href="/mars.html"><i class="material-icons left">videogame_asset</i>M.A.R.S.</a></li>
+    <li><a href="/artwork.html"><i class="material-icons left">brush</i>Pictures</a></li>
+    <li><a href="/animations.html"><i class="material-icons left">play_circle_filled</i>Videos</a></li>
+</ul>

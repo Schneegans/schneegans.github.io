@@ -163,12 +163,12 @@ i.left {
     margin-right: 8px;
 }
 
+h1 {
+  margin: 0 0 6px 0;
+}
+
 .page-header {
   padding: 40px 0 10px 0;
-
-  h1 {
-    margin: 0 0 6px 0;
-  }
 }
 
 .excerpt {
@@ -267,6 +267,24 @@ section ul li {
 
 section ul {
   padding-left: 15px !important;
+}
+
+#project-list:not(:hover) {
+  li.preselected {
+    width: 120px;
+
+  }
+}
+
+#project-list li {
+  width: 40px;
+  overflow: hidden;
+  white-space: nowrap;
+  transition: width 0.3s;
+
+  &:hover {
+    width: 120px;
+  }
 }
 
 // beautiful code snippets ---------------------------------------------------------------

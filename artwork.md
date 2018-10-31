@@ -1,10 +1,9 @@
 ---
 layout: header-page
-title: Random artwork
+title: Some Pictures
 description: Below you find a random collection of pictures I have created. Some of them are photographs, some are rendered with 3D software and some are drawn by hand.
 teaser: "sunset.jpg"
 colors: "color-sunset"
-parents: ["Projects"]
 ---
 
 <div class="gallery">

@@ -32,21 +32,14 @@
   </head>
 
   <body class="{{ page.colors }}" style="background-image: url(/assets/teasers/blurred/{{page.teaser}});">
-
+      
     <header>
-    <nav>
-        
+
+    <nav>     
       <div class="nav-wrapper">
-      <div class="container">
-        {% include breadcrumbs.html %}
-        <div class="right">
-          {% if page.parents[0] == "Blog" %}
-            <a href="/projects.html"><i class="material-icons left">play_arrow</i>Explore my projects</a>
-          {% else %}
-            <a href="/"><i class="material-icons left">play_arrow</i>Read my blog</a>
-          {% endif %}
+        <div class="container">
+          {% include breadcrumbs.html %}
         </div>
-      </div>
       </div>
     </nav>
     </header>

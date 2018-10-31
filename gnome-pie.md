@@ -7,7 +7,6 @@ teaser: "gnome-pie065.jpg"
 colors: "color-gnome-pie065"
 tagline: "The pie menu for Linux"
 contents: true
-parents: ["Projects"]
 ---
 
 ## Summary

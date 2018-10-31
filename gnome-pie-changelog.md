@@ -6,9 +6,22 @@ description: A chronological list of changes of Gnome-Pie.
 teaser: "gnome-pie065.jpg"
 colors: "color-gnome-pie065"
 tagline: "A chronological list of changes of Gnome-Pie"
-parents: ["Projects", "Gnome-Pie"]
+parents: ["Gnome-Pie"]
 contents: true
 ---
+
+## Gnome-Pie 0.7.2
+
+* **New Feature:** Pies will not close when CTRL or SHIFT is pressed while clicking. This feature got requested several times so it is now reality! You can now perform multiple actions without having to re-open the pie.
+* **Improvement:** Gnome-Pie switched from GPL to MIT license.
+* **Improvement:** Gnome-Pie will now hide when it looses focus. This is helpful under wayland when users click on panels for example.
+* **Improvement:** Fixed several deprecation warnings.
+* **Improvement:** Added Dutch translation (thank you, [Heimen Stoffels](https://github.com/Vistaus)).
+* **Bugfix:** Fixed a segmentation fault when a new pie was added under Wayland.
+* **Bugfix:** Fixed some typos in the English translation (thank you, [Jörg Frings-Fürst](https://github.com/JoergFF)).
+* **Bugfix:** Removed creation of obsolete statistics file.
+* **Bugfix:** Fixed build with vala 0.42 (thank you, [Rico Tzschichholz](https://github.com/ricotz)).
+
 
 ## Gnome-Pie 0.7.1
 
