@@ -83,7 +83,7 @@ class Signal {
 
   // calls all connected functions
   void emit(Args... p) {
-    for(auto it : slots_) {
+    for(auto const& it : slots_) {
       it.second(p...);
     }
   }
@@ -181,9 +181,9 @@ class Person {
 public:
   Person(std::string const &name) : name_(name) {}
 
-  Signal<std::string const &> say;
+  Signal<std::string const&> say;
 
-  void listen(std::string const &message) {
+  void listen(std::string const& message) {
     std::cout << name_ << " received: " << message << std::endl;
   }
 
