@@ -84,7 +84,7 @@ class Signal {
   // calls all connected functions
   void emit(Args... p) {
     for(auto const& it : slots_) {
-      it.second(p...);
+      it.second(std::forward<Args>(p)...);
     }
   }
 
