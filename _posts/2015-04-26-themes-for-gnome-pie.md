@@ -4,7 +4,7 @@ title: "Create a theme for Gnome-Pie!"
 category: lessons
 teaser: "themes_for_gnome-pie.jpg"
 colors: "color-themes_for_gnome-pie"
-description: "Designing themes is fun!"
+tagline: "Designing themes is fun!"
 tags: ["tutorial", "gnome-pie"]
 ---
 

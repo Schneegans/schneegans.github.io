@@ -1,5 +1,6 @@
 {% for tag in site.tags %}
-<a href="/tags/{{ tag | first | slugize }}" class="chip" style="font-size: {{ tag | last | size | times: 100 | divided_by: site.tags.size | plus: 50 }}%">
+<a href="/tags/{{ tag | first | slugize }}" class="chip"
+  style="font-size: {{ tag | last | size | times: 100 | divided_by: site.tags.size | plus: 50 }}%">
   {{ tag | first }}
 </a>
 {% endfor %}

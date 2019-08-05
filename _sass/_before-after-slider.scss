@@ -10,7 +10,7 @@
     background-color: rgba(0, 0, 0, 0.5);
     font-size: 0.9em;
     padding: 0 3px;
-    @include box-shadow(none);
+    box-shadow: none;
   }
 
   img {
@@ -19,7 +19,7 @@
 
   .after .label {
     right: 0;
-    @include border-radius(4px 0 0 0);
+    border-radius: 4px 0 0 0;
   }
 
   .before {
@@ -32,7 +32,7 @@
 
     .label {
       left: 0;
-      @include border-radius(0 4px 0 0);
+      border-radius: 0 4px 0 0;
     }
 
     img {

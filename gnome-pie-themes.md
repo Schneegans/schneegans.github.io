@@ -1,7 +1,7 @@
 ---
 layout: header-page
-title : Themes Gallery
-description: "This is a list of Gnome-Pie themes I am aware of. You can download several themes here! If you discovered or created a new theme and want this theme to be added to the gallery, just send a link to <a href='mailto:code@simonschneegans.de'>code@simonschneegans.de</a> or drop a note in the commment section of the <a href='news/2016/07/17/gnome-pie-themes'>announcement post</a>!"
+title : Theme Gallery
+excerpt: "This is a list of Gnome-Pie themes I am aware of. You can download several themes here! If you discovered or created a new theme and want this theme to be added to the gallery, just send a link to <a href='mailto:code@simonschneegans.de'>code@simonschneegans.de</a> or drop a note in the commment section of the <a href='news/2016/07/17/gnome-pie-themes'>announcement post</a>!"
 teaser: "gnome-pie065.jpg"
 colors: "color-gnome-pie065"
 parents: ["Gnome-Pie"]

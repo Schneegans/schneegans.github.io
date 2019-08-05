@@ -2,11 +2,11 @@
 layout: header-page
 title : Gnome-Pie
 header : Gnome-Pie
-description: Homepage of Gnome-Pie, the slick application launcher for Linux.
+excerpt: Homepage of Gnome-Pie, the slick application launcher for Linux.
 teaser: "gnome-pie065.jpg"
 colors: "color-gnome-pie065"
-tagline: "The pie menu for Linux"
 contents: true
+featured: true
 ---
 
 ## Summary

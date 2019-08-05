@@ -5,7 +5,7 @@ category: tutorials
 teaser: "signals.jpg"
 colors: "color-signals"
 license: "public domain"
-description: "A slot canyon. Image by photophilde (https://www.flickr.com/photos/photophilde/5000685616/)"
+tagline: "A slot canyon. Image by photophilde (https://www.flickr.com/photos/photophilde/5000685616/)"
 tags: ["featured", "tutorial", "c++", "code"]
 ---
 
@@ -15,7 +15,7 @@ I've been asked multiple times how I would implement a signal / slot mechanism i
 
 ## What's the Signal / Slot Pattern?
 
-<div class="well"> [...] a language construct [...] which makes it easy to implement the Observer pattern while avoiding boilerplate code. The concept is that GUI widgets can send signals containing event information which can be received by other controls using special functions known as slots.<a href="https://en.wikipedia.org/wiki/Signals_and_slots"> - Wikipedia</a></div>
+<div class="quote"> [...] a language construct [...] which makes it easy to implement the Observer pattern while avoiding boilerplate code. The concept is that GUI widgets can send signals containing event information which can be received by other controls using special functions known as slots.<a href="https://en.wikipedia.org/wiki/Signals_and_slots"> - Wikipedia</a></div>
 
 So basically it allows for event based inter-object communication. In my opinion it's intuitive to use and produces easily readable code when used in a moderate amount. And the big plus: It can be added to your program with one simple template class!
 

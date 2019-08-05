@@ -1,34 +1,44 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+title: Simon Schneegans' Blog
+author: Simon Schneegans
+email: mail@simonschneegans.de
+disqus_short_name : simonschneegans
+github: simmesimme
+description: >- # this means to ignore newlines until "baseurl:"
+  Personal blog of Simon Schneegans with news regarding Gnome-Pie and other projects.
+
+# Build settings
 permalink: /:categories/:year/:month/:day/:title
-exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
-plugins: [jekyll-paginate]
-
-title : Simon Schneegans
-tagline: Projects and Blog
-author :
-  name : Simon Schneegans
-  email : admin@simonschneegans.de
-  github : simmesimme
-
-# The production_url is only used when full-domain names are needed
-# such as sitemap.txt
-# Most places will/should use BASE_PATH to make the urls
-#
-# If you have set a CNAME (pages.github.com) set your custom domain here.
-# Else if you are pushing to username.github.io, replace with your username.
-# Finally if you are pushing to a GitHub project page, include the project name at the end.
-#
 production_url : http://simmesimme.github.io
-
-# you can specify your own separator, of course.
-excerpt_separator: <!--more-->
+markdown: kramdown
 paginate: 6
 paginate_path: "/page:num/"
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
 
-disqus_short_name : simonschneegans
-
-defaults:
-  -
-    scope:
-      path: ""
-    values:
-      parents: ["Blog"]
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/

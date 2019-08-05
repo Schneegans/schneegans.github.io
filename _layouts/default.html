@@ -1,161 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
 
-    <title>
-      {% if page.title %}
-        {{ page.title }} -
-      {% endif %}
-      {{ site.title }}
-    </title>
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  {%- seo -%}
 
-    {% if page.description %}
-      <meta name="description" content="{{ page.description }}">
+  <title>
+    {% if page.title %}
+    {{ page.title }} -
     {% endif %}
+    {{ site.title }}
+  </title>
 
-    <meta name="author" content="{{ site.author.name }}">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    
-    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="/feed.xml">
-    <link rel="shortcut icon" href="/favicon.ico">
-    
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="/third_party/css/pygments.css" rel="stylesheet" type="text/css" media="all">
-    <link href="/third_party/css/materialize.min.css" rel="stylesheet" type="text/css" media="all">
-    <link href="/css/main.css" rel="stylesheet" type="text/css" media="all">
-  
-    <!--[if lt IE 9]>
+  {% if page.description %}
+  <meta name="description" content="{{ page.description }}">
+  {% endif %}
+
+  <meta name="author" content="{{ site.author.name }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="/feed.xml">
+  <link rel="shortcut icon" href="/favicon.ico">
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel='stylesheet' href='{{ "/assets/css/main.css" | relative_url }}'>
+  <link rel='stylesheet' href='{{ "/assets/css/pygments.css" | relative_url }}'>
+
+  <!--[if lt IE 9]>
       <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script>
       <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
     <![endif]-->
-  </head>
 
-  <body class="{{ page.colors }}" style="background-image: url(/assets/pictures/teasers/blurred/{{page.teaser}});">
-      
-    <header>
+  {%- feed_meta -%}
+</head>
 
-    <nav>     
+<body class="{{ page.colors }} flow-text"
+  style="background-image: url(/assets/pictures/teasers/blurred/{{page.teaser}});">
+
+  <header>
+
+    <nav>
       <div class="nav-wrapper">
         <div class="container">
-          {% include breadcrumbs.html %}
+          <div class="row">
+            <div class="col s12">
+              {% include breadcrumbs.html %}
+            </div>
+          </div>
         </div>
       </div>
     </nav>
-    </header>
+  </header>
 
-    <main>
-      {{ content }}
-    </main>
+  <main>
+    {{ content }}
+  </main>
 
-    <footer>
-      <div class="container">
-        <div class="row">
-          <div class="col s12 center-align">
-            <p class="social-icons">
-              <a href="https://github.com/{{ site.author.github }}" target="_blank"><i class="small material-icons">code</i></a>
-              <a href="mailto:{{ site.author.email }}"><i class="small material-icons">mail</i></a>
-              <a href="{{site.url}}/feed.xml" target="_blank"><i class="small material-icons">rss_feed</i></a>
-            </p>
-          </div>
-          <div class="col s12 center-align">
-            &copy; {{ site.time | date: '%Y' }} Desgin &amp; Content by <a href="{{ site.path }}/about.html">{{ site.author.name }} (Impressum)</a> with help from <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> and <a href="http://materializecss.com/" target="_blank">Materialize</a>, inspired by <a href="https://github.com/danneu/darkstrap" target="_blank">Darkstrap</a>.<br>Proudly hosted on <a href="https://pages.github.com/">github pages</a>. (<a href="https://github.com/Simmesimme/Simmesimme.github.io">repository</a>)
-          </div>
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col s12 center-align">
+          <p class="social-icons">
+            <a href="https://github.com/{{ site.author.github }}" target="_blank"><i
+                class="small material-icons">code</i></a>
+            <a href="mailto:{{ site.author.email }}"><i class="small material-icons">mail</i></a>
+            <a href="{{site.url}}/feed.xml" target="_blank"><i class="small material-icons">rss_feed</i></a>
+          </p>
+        </div>
+        <div class="col s12 center-align">
+          &copy; {{ site.time | date: '%Y' }} Desgin &amp; Content by <a
+            href="{{ site.path }}/about.html">{{ site.author.name }} (Impressum)</a> with help from <a
+            href="http://jekyllrb.com/" target="_blank">Jekyll</a> and <a href="http://materializecss.com/"
+            target="_blank">Materialize</a>, inspired by <a href="https://github.com/danneu/darkstrap"
+            target="_blank">Darkstrap</a>.<br>Proudly hosted on <a href="https://pages.github.com/">github pages</a>.
+          (<a href="https://github.com/Simmesimme/Simmesimme.github.io">repository</a>)
         </div>
       </div>
-    </footer>
+    </div>
+  </footer>
 
-    <!--Import jQuery before materialize.js-->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script type="text/javascript" src="/third_party/js/materialize.min.js"></script>
-    <script type="text/javascript" src="/third_party/js/masonry.pkgd.min.js"></script>
-    <script type="text/javascript" src="/third_party/js/imagesloaded.pkgd.min.js"></script>
+  <!--Import jQuery before materialize.js-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="{{ '/assets/js/materialize.min.js' | relative_url }}"></script>
+  <script type="text/javascript" src="{{ '/assets/js/masonry.pkgd.min.js' | relative_url }}"></script>
+  <script type="text/javascript" src="{{ '/assets/js/imagesloaded.pkgd.min.js' | relative_url }}"></script>
 
-    <script>
-      $(document).ready(function() {
+  <script>
+    $(document).ready(function () {
 
-        // initialize materialize css ----------------------------------------------------
-        $('.materialboxed').materialbox();
-        $('.tabs').tabs();
+      // initialize materialize css ----------------------------------------------------
+      $('.materialboxed').materialbox();
+      $('.tabs').tabs();
 
-        // initialize before-after sliders -----------------------------------------------
-        $('.before-after-slider').each(function() {
-          var before = $(this).find(".before");
-          var after = $(this).find(".after");
-          $(this).mousemove(function(e){
-            var offset = (e.offsetX || e.clientX - before.offset().left);
-            var width  = after.width();
-            before.stop();
-            before.width(offset/width*100 + "%");
+      // initialize before-after sliders -----------------------------------------------
+      $('.before-after-slider').each(function () {
+        var before = $(this).find(".before");
+        var after = $(this).find(".after");
+        $(this).mousemove(function (e) {
+          var offset = (e.offsetX || e.clientX - before.offset().left);
+          var width = after.width();
+          before.stop();
+          before.width(offset / width * 100 + "%");
+        });
+        $(this).mouseleave(function (e) {
+          before.stop().animate({
+            width: "50%"
+          }, 300);
+        });
+      });
+
+      // add table of contents with scroll-spy -----------------------------------------
+
+      // add an entry for each h1 and h2 to the toc
+      $("h2:not(.no-toc)").each(function (i) {
+        var id = $(this).attr("id");
+        $("#toc").append("<li><a href='#" + id + "'>" + $(this).html() + "</a></li>");
+      });
+
+      // add a <section> for each h2, give it the id of the corresponding h2
+      $("h2").each(function (i) {
+        var id = $(this).attr('id');
+        $(this).removeAttr('id');
+        $(this).nextUntil("h2").add($(this)).wrapAll("<section id='" + id + "'></section>");
+      });
+
+      $('section').scrollSpy({ scrollOffset: 20 });
+
+      // pin sidebar -------------------------------------------------------------------
+      $('#sidebar').each(function () {
+        var parent = $(this).parent().parent();
+        $(this).width($(this).innerWidth());
+        $(this).pushpin({
+          top: $(this).offset().top,
+          bottom: parent.offset().top + parent.innerHeight() - $(this).outerHeight()
+        });
+      });
+
+      // add code collapse buttons -----------------------------------------------------
+      $('.highlight').each(function () {
+        if ($(this).find('pre').height() > 100) {
+          var inner_div = $(this).find('pre');
+          inner_div.css({ "height": inner_div.outerHeight() + "px" });
+          inner_div.addClass("collapsable");
+          inner_div.addClass("collapsed");
+          inner_div.prepend("<div class='code-expander'>Expand <i class='material-icons top-offset tiny'>keyboard_arrow_down</i></div>");
+          inner_div.find('.code-expander').click(function () {
+            if (inner_div.hasClass("collapsed")) {
+              inner_div.removeClass("collapsed");
+              $(this).html("Collapse <i class='material-icons top-offset tiny'>keyboard_arrow_up</i>");
+            } else {
+              inner_div.addClass("collapsed");
+              $(this).html("Expand <i class='material-icons top-offset tiny'>keyboard_arrow_down</i>");
+            }
           });
-          $(this).mouseleave(function(e){
-            before.stop().animate({
-              width: "50%"
-            }, 300);
-          });
-        });
+        }
+      });
 
-        // add table of contents with scroll-spy -----------------------------------------
+      // add code collapse buttons -----------------------------------------------------
+      var grid = $('.grid').masonry({
+        columnWidth: '.grid-sizer',
+        gutter: '.gutter-sizer',
+        itemSelector: '.grid-item',
+        percentPosition: true
+      });
 
-        // add an entry for each h1 and h2 to the toc
-        $("h2:not(.no-toc)").each(function(i) {
-          var id = $(this).attr("id");
-          $("#toc").append("<li><a href='#" + id + "'>" + $(this).html() + "</a></li>");
-        });
+      grid.imagesLoaded().progress(function () {
+        grid.masonry('layout');
+      });
 
-        // add a <section> for each h2, give it the id of the corresponding h2
-        $("h2").each(function(i) {
-          var id = $(this).attr('id');
-          $(this).removeAttr('id');
-          $(this).nextUntil("h2").add($(this)).wrapAll("<section id='" + id + "'></section>");
-        });
+    })
+  </script>
+</body>
 
-        $('section').scrollSpy({scrollOffset:20});
-        
-        // pin sidebar -------------------------------------------------------------------
-        $('#sidebar').each(function() {
-          var parent = $(this).parent().parent();
-          $(this).width($(this).innerWidth());
-          $(this).pushpin({
-            top: $(this).offset().top,
-            bottom: parent.offset().top + parent.innerHeight() - $(this).outerHeight()
-          });
-        });
-        
-        // add code collapse buttons -----------------------------------------------------
-        $('.highlight').each(function() {
-          if ($(this).find('pre').height() > 100) {
-            var inner_div = $(this).find('pre');
-            inner_div.css({"height": inner_div.outerHeight() + "px"});
-            inner_div.addClass("collapsable");
-            inner_div.addClass("collapsed");
-            inner_div.prepend("<div class='code-expander'>Expand <i class='material-icons top-offset tiny'>keyboard_arrow_down</i></div>");
-            inner_div.find('.code-expander').click(function() {
-              if (inner_div.hasClass("collapsed")) {
-                inner_div.removeClass("collapsed");
-                $(this).html("Collapse <i class='material-icons top-offset tiny'>keyboard_arrow_up</i>");
-              } else {
-                inner_div.addClass("collapsed");
-                $(this).html("Expand <i class='material-icons top-offset tiny'>keyboard_arrow_down</i>");
-              }
-            });
-          }
-        });
-
-        // add code collapse buttons -----------------------------------------------------
-        var grid = $('.grid').masonry({
-          columnWidth: '.grid-sizer',
-          gutter: '.gutter-sizer',
-          itemSelector: '.grid-item',
-          percentPosition: true
-        });
-
-        grid.imagesLoaded().progress( function() {
-          grid.masonry('layout');
-        });
-
-      })
-     </script>
-  </body>
 </html>
-

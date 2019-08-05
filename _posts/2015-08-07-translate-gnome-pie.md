@@ -4,7 +4,7 @@ title: "Translate Gnome-Pie!"
 category: news
 teaser: "translate2.jpg"
 colors: "color-translate2"
-description: "Translate Gnome-Pie into your language!"
+tagline: "Translate Gnome-Pie into your language!"
 tags: ["tutorial", "gnome-pie"]
 ---
 

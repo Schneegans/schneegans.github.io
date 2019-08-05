@@ -4,7 +4,7 @@ title: "Updated homepage!"
 category: news
 teaser: "sunset.jpg"
 colors: "color-sunset"
-description: "A new start"
+tagline: "A new start"
 tags: ["news", "html5", "jekyll"]
 ---
 

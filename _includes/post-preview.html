@@ -4,7 +4,11 @@
       <a href="{{post.url}}">{{post.title}}</a>
     </h1>
     <div class="banner-right"><i class="material-icons tiny">create</i>{{post.date | date_to_string}}</div>
-    <a href="{{post.url}}"><div class="post-preview z-depth-2" style="background-image:url(/assets/pictures/teasers/thumbs/{{post.teaser}})"> </div></a>
+    <a href="{{post.url}}">
+      <div class="post-preview z-depth-2 rounded"
+        style="background-image:url(/assets/pictures/teasers/thumbs/{{post.teaser}})">
+      </div>
+    </a>
     {{post.excerpt}}
   </div>
   <div class="col s6 hide-on-small-only">
@@ -16,6 +20,10 @@
   </div>
   <div class="col s6 hide-on-small-only">
     <div class="banner-right"><i class="material-icons tiny">create</i>{{post.date | date_to_long_string}}</div>
-    <a href="{{post.url}}"><div class="post-preview z-depth-2" style="background-image:url(/assets/pictures/teasers/thumbs/{{post.teaser}})">  </div></a>
+    <a href="{{post.url}}">
+      <div class="post-preview z-depth-2 rounded"
+        style="background-image:url(/assets/pictures/teasers/thumbs/{{post.teaser}})">
+      </div>
+    </a>
   </div>
 </div>

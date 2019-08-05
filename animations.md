@@ -2,7 +2,7 @@
 layout: header-page
 title : Some Animations
 teaser: formes-et-couleurs-01.jpg
-description: Some time ago, I created several animations using Blender and Stop Motions. Have fun watching them!
+excerpt: Some time ago, I created several animations using Blender and Stop Motions. Have fun watching them!
 colors: color-formes-et-couleurs-01
 ---
 

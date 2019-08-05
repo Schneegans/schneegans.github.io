@@ -5,8 +5,9 @@ category: tutorials
 teaser: "london.jpg"
 colors: "color-london"
 license: "cc-by"
-description: "You can quickly turn your dull pictures to awesome shots like this."
+tagline: "You can quickly turn your dull pictures to awesome shots like this."
 tags: ["tutorial", "gimp", "artwork"]
+featured: true
 ---
 
 You were on holidays and all your pictures look a little... dull? Maybe this quick tutorial will give you some inspiration!

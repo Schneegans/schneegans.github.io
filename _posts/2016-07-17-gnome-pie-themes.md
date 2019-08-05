@@ -4,7 +4,7 @@ title: "Gnome-Pie Theme Gallery!"
 category: news
 teaser: "Theme_O-Pie.jpg"
 colors: "color-Theme_O-Pie"
-description: "There are many themes for Gnome-Pie out there. I will try to catch them all!"
+tagline: "There are many themes for Gnome-Pie out there. I will try to catch them all!"
 tags: ["news", "gnome-pie"]
 ---
 

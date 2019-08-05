@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Help baking pies!"
-description: "for my bachelor thesis."
+tagline: "for my bachelor thesis."
 category: news
 teaser: "mockup.jpg"
 colors: "color-mockup"

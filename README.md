@@ -6,9 +6,8 @@ Feel free to visit it at <http://simmesimme.github.io>
 
 * [Jekyll](http://jekyllrb.com)
 * [Bootstrap](http://getbootstrap.com)
-* [Materializecss](http://materializecss.com)
+* [Compass](https://github.com/Igosuki/compass-mixins)
 * [Material Icons](https://material.io/icons)
-* [Font Awesome](http://fortawesome.github.io/Font-Awesome)
 * [Subtle Patterns](http://subtlepatterns.com)
 
 ## License

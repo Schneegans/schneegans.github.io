@@ -1,18 +1,19 @@
 ---
 layout: page
 title : "Tag: jekyll"
-teaser: "signals.jpg"
+teaser: "gnome-pie065.jpg"
 colors: color-fallback
 ---
 
 {% assign first = true %}
 
 {% for post in site.posts %}
-    {% if post.tags contains "jekyll" %}
+{% if post.tags contains "jekyll" %}
 
-        {% if first %}{% assign first = false %}{% else %}<hr>{% endif %}
+{% if first %}{% assign first = false %}{% else %}
+<hr>{% endif %}
 
-        {% include post-preview.html %}
+{% include post-preview.html %}
 
-    {% endif %}
+{% endif %}
 {% endfor %}

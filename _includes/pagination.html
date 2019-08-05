@@ -1,27 +1,28 @@
 {% if paginator.total_pages > 1 %}
-  <ul class="pagination">
+<ul class="pagination">
 
-    {% if paginator.previous_page %}
-       <li class=""><a href="{{ paginator.previous_page_path }}"><i class="material-icons top-offset">chevron_left</i></a></li>
-    {% else %}
-       <li class="disabled"><a href="#"><i class="material-icons top-offset">chevron_left</i></a></li>
-    {% endif %}
+   {% if paginator.previous_page %}
+   <li class=""><a href="{{ paginator.previous_page_path }}"><i class="material-icons top-offset">chevron_left</i></a>
+   </li>
+   {% else %}
+   <li class="disabled"><a href="#"><i class="material-icons top-offset">chevron_left</i></a></li>
+   {% endif %}
 
-    {% for page in (1..paginator.total_pages) %}
-      {% if page == paginator.page %}
-         <li class="well inline-well"><a href="#">{{ page }}</a></li>
-      {% elsif page == 1 %}
-         <li class=""><a href="/">{{ page }}</a></li>
-      {% else %}
-         <li class=""><a href="{{ site.paginate_path | replace: ':num', page }}">{{ page }}</a></li>
-      {% endif %}
-    {% endfor %}
+   {% for page in (1..paginator.total_pages) %}
+   {% if page == paginator.page %}
+   <li class="well inline-well"><a href="#">{{ page }}</a></li>
+   {% elsif page == 1 %}
+   <li class=""><a href="/">{{ page }}</a></li>
+   {% else %}
+   <li class=""><a href="{{ site.paginate_path | replace: ':num', page }}">{{ page }}</a></li>
+   {% endif %}
+   {% endfor %}
 
-    {% if paginator.next_page %}
-       <li class=""><a href="{{ paginator.next_page_path }}"><i class="material-icons top-offset">chevron_right</i></a></li>
-    {% else %}
-       <li class="disabled"><a href="#"><i class="material-icons top-offset">chevron_right</i></a></li>
-    {% endif %}
+   {% if paginator.next_page %}
+   <li class=""><a href="{{ paginator.next_page_path }}"><i class="material-icons top-offset">chevron_right</i></a></li>
+   {% else %}
+   <li class="disabled"><a href="#"><i class="material-icons top-offset">chevron_right</i></a></li>
+   {% endif %}
 
-  </ul>
+</ul>
 {% endif %}

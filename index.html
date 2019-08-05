@@ -1,24 +1,49 @@
 ---
 layout: default
 title: Blog
-description: "This is the homepage of Simon Schneegans. Greetings! <br>Explore the <a href='/blog'><i class='fa fa-pencil'></i> blog</a>, discover my <a href='/projects.html'><i class='fa fa-gears'></i> projects</a> or use the <i class='fa fa-tag'></i> tags below to find something specific."
-teaser: "gnome-pie072.jpg"
+excerpt: "This is the homepage of Simon Schneegans. Greetings! <br>Explore the <a href='/blog'><i
+    class='fa fa-pencil'></i> blog</a>, discover my <a href='/projects.html'><i class='fa fa-gears'></i> projects</a> or
+use the <i class='fa fa-tag'></i> tags below to find something specific."
+teaser: "gnome-pie065.jpg"
 colors: color-fallback
 ---
 
 
 <div class="page-header">
   <div class="container">
-    {% if paginator.page == 1 %}
-      {% assign post = paginator.posts | first %}
-      {% include post-preview-latest.html %}
-    {% else %}
-      <div class="row" style="margin: 0">
-        <div class="col s12 center-align">
-          {% include pagination.html %}
+    <div class="row">
+      {% if paginator.page == 1 %}
+      <div class="col s12">
+        {% assign featuredPages = site.pages | where: "featured", "true" %}
+        {% assign featuredPosts = site.posts | where: "featured", "true" %}
+        {% assign featured = featuredPages | concat: featuredPosts %}
+
+        <div class="rounded accordion accordion-items-{{ featured.size }}">
+          <ul>
+            {% for page in featured %}
+            <li style="background-image:url(/assets/pictures/teasers/{{page.teaser}})">
+              <div class="{{page.colors}}">
+                <h3>{{page.title}}</h3>
+                <p>{{page.excerpt}}
+                  <br><a href="{{page.url}}">read on <i class="material-icons tiny top-offset">chevron_right</i></a>
+                </p>
+              </div>
+            </li>
+            {% endfor %}
+          </ul>
         </div>
+        <small class="right" style="margin: 5px 0 -5px 0">* This accordion requires no Javascript at all. <a
+            href="{% post_url 2015-10-06-accordions %}">Here you can learn
+            how I created it.</a></small>
       </div>
-    {% endif %}
+
+
+      {% else %}
+      <div class="col s12 center-align" style="margin: 20px 0 -20px 0">
+        {% include pagination.html %}
+      </div>
+      {% endif %}
+    </div>
   </div>
 </div>
 
@@ -27,11 +52,10 @@ colors: color-fallback
   <div class="page-content" style="padding: 30px 0;">
     <div class="container">
       {% for post in paginator.posts %}
-        <!-- skip first post on first page -->
-        {% unless paginator.page == 1 and forloop.first %}
-          {% include post-preview.html %}
-          {% if forloop.last %}{% else %}<hr>{% endif %}
-        {% endunless %}
+      <!-- skip first post on first page -->
+      {% include post-preview.html %}
+      {% if forloop.last %}{% else %}
+      <hr>{% endif %}
       {% endfor %}
     </div>
   </div>

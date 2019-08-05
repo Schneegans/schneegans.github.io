@@ -5,8 +5,9 @@ category: tutorials
 teaser: "properties.jpg"
 colors: "color-properties"
 license: "public domain"
-description: "A tight connection. Image by whologwhy (https://www.flickr.com/photos/hulagway/6020190512/)"
+tagline: "A tight connection. Image by whologwhy (https://www.flickr.com/photos/hulagway/6020190512/)"
 tags: ["tutorial", "c++", "code"]
+featured: true
 ---
 
 Based on the signal class from the previous post we can implement a class which holds a value and notifies anyone who's interested in value changes.
@@ -15,7 +16,7 @@ Based on the signal class from the previous post we can implement a class which 
 
 ## What's the observer pattern?
 
-<div class="well"><p class="quote"> [...] a software design pattern in which an object, called the subject, maintains a list of its dependants, called observers, and notifies them automatically of any state changes, usually by calling one of their methods.<a href="https://en.wikipedia.org/wiki/Observer_pattern"> - Wikipedia</a></p></div>
+<div class="quote"> [...] a software design pattern in which an object, called the subject, maintains a list of its dependants, called observers, and notifies them automatically of any state changes, usually by calling one of their methods.<a href="https://en.wikipedia.org/wiki/Observer_pattern"> - Wikipedia</a></div>
 
 So basically it allows for automatic notification event propagation whenever a value changed. Since these state change notifications work really well with the  [Vala Properties](https://wiki.gnome.org/Projects/Vala/PropertiesSample) (and similarly with C# Properties), I'll present a method how to implement something similar in C++.
 

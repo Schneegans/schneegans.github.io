@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Translate Gnome-Pie!"
-description: "a (deprecated) step-by-step guide."
+tagline: "a (deprecated) step-by-step guide."
 category: lessons
 teaser: "translate.jpg"
 colors: "color-translate"
