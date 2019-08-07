@@ -90,11 +90,11 @@
   <script>
     $(document).ready(function () {
 
-      // initialize materialize css ----------------------------------------------------
+      // initialize materialize css ---------------------------------------------------------------
       $('.materialboxed').materialbox();
       $('.tabs').tabs();
 
-      // initialize before-after sliders -----------------------------------------------
+      // initialize before-after sliders ----------------------------------------------------------
       $('.before-after-slider').each(function () {
         var before = $(this).find(".before");
         var after = $(this).find(".after");
@@ -111,7 +111,7 @@
         });
       });
 
-      // add table of contents with scroll-spy -----------------------------------------
+      // add table of contents with scroll-spy ----------------------------------------------------
 
       // add an entry for each h1 and h2 to the toc
       $("h2:not(.no-toc)").each(function (i) {
@@ -128,7 +128,7 @@
 
       $('section').scrollSpy({ scrollOffset: 20 });
 
-      // pin sidebar -------------------------------------------------------------------
+      // pin sidebar ------------------------------------------------------------------------------
       $('#sidebar').each(function () {
         var parent = $(this).parent().parent();
         $(this).width($(this).innerWidth());
@@ -138,10 +138,10 @@
         });
       });
 
-      // add code collapse buttons -----------------------------------------------------
+      // add code collapse buttons ----------------------------------------------------------------
       $('.highlight').each(function () {
-        if ($(this).find('pre').height() > 100) {
-          var inner_div = $(this).find('pre');
+        var inner_div = $(this).children().first();
+        if (inner_div.height() > 100) {
           inner_div.css({ "height": inner_div.outerHeight() + "px" });
           inner_div.addClass("collapsable");
           inner_div.addClass("collapsed");
@@ -158,7 +158,7 @@
         }
       });
 
-      // add code collapse buttons -----------------------------------------------------
+      // use masonry for grid layouts -------------------------------------------------------------
       var grid = $('.grid').masonry({
         columnWidth: '.grid-sizer',
         gutter: '.gutter-sizer',

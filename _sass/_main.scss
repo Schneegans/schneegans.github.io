@@ -110,14 +110,14 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 code,
-pre,
+.highlight > pre,
 .well {
     box-shadow: rgba(255,255,255,0.1) 0 1px 0,rgba(0,0,0,0.8) 0 1px 7px 0px inset;
     background-color: rgba(0,0,0,0.3);
     border-radius: 4px;
 }
 
-pre,
+.highlight > pre,
 .well {
     min-height: 20px;
     padding: 14px 8px;
@@ -127,14 +127,6 @@ pre,
 .inline-well {
   padding: 0;
   margin-bottom: 0;
-}
-
-code {
-  padding: 5px;
-}
-
-pre > code {
-  padding: 0px;
 }
 
 @for $num from 0 through 5 {
@@ -307,11 +299,32 @@ section ul {
 
 // beautiful code snippets ---------------------------------------------------------------
 
+code {
+  padding: 0.3em;
+}
+
+figure {
+  margin: 1em 0px;
+}
+
+pre > code {
+  padding: 0;
+  overflow: auto;
+  background:none;
+  font-size: 1.0em;
+  box-shadow: none;
+}
+
+pre {
+  padding: 0;
+  margin: 0;
+}
+
 .highlight {
   position: relative;
 }
 
-pre, code {
+.highlight > pre, code {
   color:#ccc;
   font-size: 0.7em;
   transition: height 0.3s;
@@ -340,15 +353,16 @@ pre, code {
   }
 }
 
-figure {
-  margin: 1em 0px;
+.lineno {
+  color: #444;
 }
 
-pre > code {
-  overflow: auto;
-  background:none;
-  font-size: 1.0em;
-  box-shadow: none;
+td.code {
+  padding: 0;
+}
+
+td.gutter {
+  padding: 0 5px 0 0;
 }
 
 // quote ---------------------------------------------------------------------------------
