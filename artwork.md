@@ -12,6 +12,21 @@ colors: "color-sunset"
   <div class="grid-sizer"></div>
   <div class="gutter-sizer"></div>
 
+  {% assign picture = "artwork/photographs/flower_01.jpg" %}
+  {% assign size = "1" %}
+  {% assign text = "A flower in Jotunheimen" %}
+  {% include image-gallery.html %}
+
+  {% assign picture = "artwork/photographs/flower_02.jpg" %}
+  {% assign size = "1" %}
+  {% assign text = "Sunset in at Nordfjord in Norway" %}
+  {% include image-gallery.html %}
+
+  {% assign picture = "artwork/photographs/tree.jpg" %}
+  {% assign size = "1" %}
+  {% assign text = "A tree at a frozen lake in Braunschweig" %}
+  {% include image-gallery.html %}
+
   {% assign picture = "artwork/photographs/sunset_03.jpg" %}
   {% assign size = "1" %}
   {% assign text = "Sunset in lower saxony" %}
@@ -37,9 +52,9 @@ colors: "color-sunset"
   {% assign text = "A picture of a leaf" %}
   {% include image-gallery.html %}
 
-  {% assign picture = "artwork/photographs/leaf_02.jpg" %}
+  {% assign picture = "artwork/photographs/beetle.jpg" %}
   {% assign size = "1" %}
-  {% assign text = "Another picture of a leaf" %}
+  {% assign text = "A close-up of a beetle" %}
   {% include image-gallery.html %}
 
   {% assign picture = "artwork/photographs/sognefjellet.jpg" %}
@@ -54,7 +69,7 @@ colors: "color-sunset"
 
   {% assign picture = "artwork/photographs/faroer_01.jpg" %}
   {% assign size = "1" %}
-  {% assign text = "A heavily modified photograph taken on the Faroe Islands" %}
+  {% assign text = "A photograph taken on the Faroe Islands" %}
   {% include image-gallery.html %}
 
   {% assign picture = "artwork/photographs/nordfjordeid.jpg" %}
@@ -84,7 +99,17 @@ colors: "color-sunset"
 
   {% assign picture = "artwork/photographs/stars_01.jpg" %}
   {% assign size = "1" %}
-  {% assign text = "The milky way." %}
+  {% assign text = "The milky way" %}
+  {% include image-gallery.html %}
+
+  {% assign picture = "artwork/photographs/street_01.jpg" %}
+  {% assign size = "1" %}
+  {% assign text = "A long exposure in Braunschweig" %}
+  {% include image-gallery.html %}
+
+  {% assign picture = "artwork/photographs/street_02.jpg" %}
+  {% assign size = "1" %}
+  {% assign text = "An autobahn at night time" %}
   {% include image-gallery.html %}
 
   {% assign picture = "artwork/photographs/stars_02.jpg" %}
@@ -102,9 +127,9 @@ colors: "color-sunset"
   {% assign text = "An aggressive sheep on the Faroe Islands" %}
   {% include image-gallery.html %}
 
-  {% assign picture = "artwork/photographs/buchenwald.jpg" %}
+  {% assign picture = "artwork/photographs/ant.jpg" %}
   {% assign size = "1" %}
-  {% assign text = "A picture taken at the Buchenwald concentration camp" %}
+  {% assign text = "A close-up of an ant" %}
   {% include image-gallery.html %}
 
   {% assign picture = "artwork/photographs/staircase.jpg" %}

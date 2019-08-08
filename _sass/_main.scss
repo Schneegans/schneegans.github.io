@@ -78,10 +78,14 @@ a {
     top: 1px;
   }
 
+  
+}
+
+.pagination li a {
   font-size: 1.1em;
 
   i {
-  font-size: 1.1em;
+    font-size: 1.1em;
   }
 }
 
@@ -167,7 +171,7 @@ nav {
 
 .material-icons.top-offset {
   position: relative;
-  top: 3px;
+  top: 4px;
 }
 
 i.left {
@@ -188,6 +192,10 @@ i.left {
 
 .crop {
   overflow: hidden;
+}
+
+.materialbox-caption {
+  font-size: 0.8em;
 }
 
 .btn, .btn-large, .btn-flat {
@@ -380,10 +388,6 @@ td.gutter {
 }
 
 // table of contents ---------------------------------------------------------------------
-
-#sidebar-container {
-  padding-top: 80px
-}
 
 #sidebar h5 {
   margin: 1.12em 0 .256em 0;

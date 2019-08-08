@@ -7,7 +7,7 @@ div.gallery-item {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
   overflow: hidden;
 
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 
   .caption {
     display: block;
@@ -82,19 +82,5 @@ div.gallery-item {
     }
   }
   .gutter-sizer { width: 2%; }
-}
-
-@media only screen and (min-width: 1201px) {
-  .grid-sizer,
-  .grid-item {
-    width: 33%; 
-    &.item-size-2 {
-      width: 66.5%; 
-    }
-    &.item-size-3 {
-      width: 100%; 
-    }
-  }
-  .gutter-sizer { width: 0.5%; }
 }
 
