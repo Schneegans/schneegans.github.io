@@ -53,7 +53,7 @@ contents: true
 * **New Feature:** Added the possibility to automatically fill the fields "name", "command" and "icon" of a new slice by selecting an application from a list.
 * **Improvement:** The library "bamf" which has been made optional before is now completely removed from the dependencies. This makes the code base easier to manage and it seems that there is no improvement to the icon selection when using this library.
 * **Bugfix:** It is now possible again to drag'n'drop URLs and URIs to the pie preview.
-* **Bugfix:** Long press for activation of slices works again (hopefully :D). This closes issues [136](https://github.com/Simmesimme/Gnome-Pie/issues/136) and [132](https://github.com/Simmesimme/Gnome-Pie/issues/132)
+* **Bugfix:** Long press for activation of slices works again (hopefully :D). This closes issues [136](https://github.com/schneegans/Gnome-Pie/issues/136) and [132](https://github.com/schneegans/Gnome-Pie/issues/132)
 
 
 ## Gnome-Pie 0.6.9
@@ -109,7 +109,7 @@ contents: true
 ## Gnome-Pie 0.6.5
 
 * **New Feature:** Added possibility to select slices by typing their names.
-* **New Feature:** Its now possible to position each theme layer (icons, files and slice caption) relative to their centers with a x-offset and a y-offset (fixes [issue #115](https://github.com/Simmesimme/Gnome-Pie/issues/115)).
+* **New Feature:** Its now possible to position each theme layer (icons, files and slice caption) relative to their centers with a x-offset and a y-offset (fixes [issue #115](https://github.com/schneegans/Gnome-Pie/issues/115)).
 * **Update:** Translation updates for French locale (thank you, [Raphaël Rochet](https://github.com/RaphaelRochet)!). Please feel free to contribute to the [translation into your language]({% post_url 2011-11-09-translate-gnome-pie %})!
 * **Update:** Translation updates for German locale.
 * **Bugfix:** Fixed hard to read text when displaying slice hotkeys for some themes.

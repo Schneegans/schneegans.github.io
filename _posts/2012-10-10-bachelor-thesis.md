@@ -69,7 +69,7 @@ The goal of my thesis was to develop Pie-Menus which provide a solution for both
 
 ## 2. Development of new prototypes
 
-Both prototypes were coded with Vala on Ubuntu Linux. The source code can be <a href="https://github.com/Simmesimme/Exploding-Menus">downloaded from Github</a>. The prototypes are able to display a custom (hard-coded) menu structure which can be explored interactively.
+Both prototypes were coded with Vala on Ubuntu Linux. The source code can be <a href="https://github.com/schneegans/Exploding-Menus">downloaded from Github</a>. The prototypes are able to display a custom (hard-coded) menu structure which can be explored interactively.
 
 ### 2.1. The Coral-Menu
 

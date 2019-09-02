@@ -97,7 +97,7 @@ sudo apt-get upgrade
 Then download Gnome-Pie from GIT and compile it:
 
 {% highlight bash %}
-git clone git://github.com/Simmesimme/Gnome-Pie.git
+git clone git://github.com/schneegans/Gnome-Pie.git
 cd Gnome-Pie
 {% endhighlight %}
 
@@ -230,7 +230,7 @@ I really like working on Gnome-Pie --- and you can help improving it! There are 
 
 ### Report bugs!
 
-For me it's the first project involving Vala, Gtk and Cairo. I never used these tools before, so I assume there is much to be improved. The easiest way to get involved is to fork the <a href="https://github.com/Simmesimme/Gnome-Pie">project on Github</a>. Or send an e-mail to code(at)simonschneegans.de. If you want to report a bug, please open an issue at the <a href="https://github.com/Simmesimme/Gnome-Pie">project page at github.com</a>.
+For me it's the first project involving Vala, Gtk and Cairo. I never used these tools before, so I assume there is much to be improved. The easiest way to get involved is to fork the <a href="https://github.com/schneegans/Gnome-Pie">project on Github</a>. Or send an e-mail to code(at)simonschneegans.de. If you want to report a bug, please open an issue at the <a href="https://github.com/schneegans/Gnome-Pie">project page at github.com</a>.
 
 ### Translate Gnome-Pie!
 
@@ -238,7 +238,7 @@ This is really easy: There is an [how-to available]({% post_url 2015-08-07-trans
 
 ### Code for Gnome-Pie!
 
-If you know Vala or are willing to learn (it's incredibly easy, like C# --- you'll love this language if you happen to know C++ or Java), you may check the <a href="https://github.com/Simmesimme/Gnome-Pie/issues">issues at Github.com</a>. Or you may introduce a total new feature you always wanted in Gnome-Pie!
+If you know Vala or are willing to learn (it's incredibly easy, like C# --- you'll love this language if you happen to know C++ or Java), you may check the <a href="https://github.com/schneegans/Gnome-Pie/issues">issues at Github.com</a>. Or you may introduce a total new feature you always wanted in Gnome-Pie!
 
 ### Donate!
 

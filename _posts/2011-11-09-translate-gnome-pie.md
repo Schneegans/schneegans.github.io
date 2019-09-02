@@ -19,7 +19,7 @@ It would be really cool if you could create a translation of Gnome-Pie into your
 All you need is the source code of Gnome-Pie and the locale string for your language. You can get the source code with the terminal command
 
 {% highlight bash %}
-git clone git://github.com/Simmesimme/Gnome-Pie.git
+git clone git://github.com/schneegans/Gnome-Pie.git
 {% endhighlight %}
 
 Your current locale can be obtained with

@@ -17,13 +17,13 @@ title: Simon Schneegans' Blog
 author: Simon Schneegans
 email: mail@simonschneegans.de
 disqus_short_name : simonschneegans
-github: simmesimme
+github: schneegans
 description: >- # this means to ignore newlines until "baseurl:"
   Personal blog of Simon Schneegans with news regarding Gnome-Pie and other projects.
 
 # Build settings
 permalink: /:categories/:year/:month/:day/:title
-production_url : http://simmesimme.github.io
+production_url : http://schneegans.github.io
 markdown: kramdown
 paginate: 6
 paginate_path: "/page:num/"

@@ -22,7 +22,7 @@ You can use the navigation links on the bottom of this page to jump through the 
 
 ## How does it work?
 
-I wrote a little [Vala](https://wiki.gnome.org/Projects/Vala) program called "color_extractor" which is automatically executed when I upload this website to github. The source code of the color_extractor is available [here](https://github.com/Simmesimme/Simmesimme.github.io/tree/master/_color_extractor). This program extracts a dominant color from [each picture](https://github.com/Simmesimme/Simmesimme.github.io/tree/master/assets/pictures) used on this website. It stores the colors in a file as a sass map. This file looks like this:
+I wrote a little [Vala](https://wiki.gnome.org/Projects/Vala) program called "color_extractor" which is automatically executed when I upload this website to github. The source code of the color_extractor is available [here](https://github.com/schneegans/schneegans.github.io/tree/master/_color_extractor). This program extracts a dominant color from [each picture](https://github.com/schneegans/schneegans.github.io/tree/master/assets/pictures) used on this website. It stores the colors in a file as a sass map. This file looks like this:
 
 {% highlight sass %}
 $link-colors: (

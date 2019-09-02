@@ -1,6 +1,6 @@
 # Homepage of Simon Schneegans
 
-Feel free to visit it at <http://simmesimme.github.io>
+Feel free to visit it at <http://schneegans.github.io>
 
 ## Used Software and other Resources
 
