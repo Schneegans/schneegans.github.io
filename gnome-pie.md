@@ -17,7 +17,7 @@ featured: true
 
 
 <div class="responsive-video-169">
-<iframe src="http://player.vimeo.com/video/30618179?title=0&amp;byline=0&amp;portrait=0&amp;color={% include link-color.html %}" width="1600" height="900" frameborder="0" webkitAllowFullScreen allowFullScreen></iframe>
+<iframe src="https://player.vimeo.com/video/30618179?title=0&amp;byline=0&amp;portrait=0&amp;color={% include link-color.html %}" width="1600" height="900" frameborder="0" webkitAllowFullScreen allowFullScreen></iframe>
 </div>
 
 Gnome-Pie is a circular application launcher (*pie menu*) for Linux. It is made of several pies, each consisting of multiple slices. The user presses a key stroke which opens the desired pie. By activating one of its slices, applications may be launched, key presses may be simulated or files can be opened.
@@ -32,7 +32,7 @@ Gnome-Pie is designed to be fun, fast and visually appealing. It implements Fitt
 Many application launchers of today's Linux desktops are made for people using their keyboard mainly. Launchers like [Gnome-Do](http://do.cooperteam.net/){:target="_blank"}, [Synapse](https://launchpad.net/synapse-project){:target="_blank"}, [Kupfer](http://engla.github.io/kupfer/){:target="_blank"}, Unity's Dash or Gnome-Shell's Activities are designed for keyboard users. It's necessary to type the first letters of the desired action in order to launch it.
 
 <div class="responsive-video-169">
-<iframe src="http://player.vimeo.com/video/35385121?title=0&amp;byline=0&amp;portrait=0&amp;color={% include link-color.html %}" width="1600" height="900" frameborder="0" webkitAllowFullScreen allowFullScreen></iframe>
+<iframe src="https://player.vimeo.com/video/35385121?title=0&amp;byline=0&amp;portrait=0&amp;color={% include link-color.html %}" width="1600" height="900" frameborder="0" webkitAllowFullScreen allowFullScreen></iframe>
 </div>
 
 Gnome-Pie uses a different approach: The user does not need to remember the name of an application - just the *direction* has to be remembered. Combined with the implementations of Fitts' law - users don't have to click directly on the icon of an action, but somewhere on the screen in its direction - Gnome-Pie is an alternative to text-based launchers.
@@ -40,7 +40,7 @@ Gnome-Pie uses a different approach: The user does not need to remember the name
 The clip below (Gnome-Pie 0.6.1) shows how to create a launcher with Gnome-Pie in your dock. This launcher will work as if you had some kind of folder in your dock.
 
 <div class="responsive-video-169">
-<iframe src="http://player.vimeo.com/video/125339537?title=0&amp;byline=0&amp;portrait=0&amp;color={% include link-color.html %}" width="1280" height="720" frameborder="0" webkitAllowFullScreen allowFullScreen></iframe>
+<iframe src="https://player.vimeo.com/video/125339537?title=0&amp;byline=0&amp;portrait=0&amp;color={% include link-color.html %}" width="1280" height="720" frameborder="0" webkitAllowFullScreen allowFullScreen></iframe>
 </div>
 
 <br/>

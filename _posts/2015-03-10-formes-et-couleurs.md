@@ -16,7 +16,7 @@ Some time ago, I created in a team of two a stop motion clip for a computer anim
 ## Watch the short
 
 <div class="responsive-video-32 z-depth-2">
-<iframe src="http://player.vimeo.com/video/69958297?title=0&amp;byline=0&amp;portrait=0&amp;color={% include link-color.html %}" width="1600" height="900" frameborder="0" webkitAllowFullScreen allowFullScreen></iframe>
+<iframe src="https://player.vimeo.com/video/69958297?title=0&amp;byline=0&amp;portrait=0&amp;color={% include link-color.html %}" width="1600" height="900" frameborder="0" webkitAllowFullScreen allowFullScreen></iframe>
 </div>
 
 This project was done by Felix Lauer and myself. The goal was to create an entertaining clip with elements of slapstick. Three colored putty characters with individual personalities and ways of interacting with each other frequently change their shapes during the animation. Eventually they become the Bauhaus-symbols.
