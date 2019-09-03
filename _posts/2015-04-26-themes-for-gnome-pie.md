@@ -35,7 +35,7 @@ This step might be difficult if it's your very first theme due to your limited k
 
 ## 2. Draw the necessary images
 
-This can be done with the image manipulating application of your choice. For svg's this probably will be <a href="http://inkscape.org/">Inkscape</a>, if you decide to use another image format, the <a href="http://www.gimp.org/">Gimp</a> may be a good choice. I won't get into detail how to draw those images, but I'll post the images used for an old version of the theme "Adwaita" as an example.
+This can be done with the image manipulating application of your choice. For svg's this probably will be <a href="https://inkscape.org/">Inkscape</a>, if you decide to use another image format, the <a href="https://www.gimp.org/">Gimp</a> may be a good choice. I won't get into detail how to draw those images, but I'll post the images used for an old version of the theme "Adwaita" as an example.
 
 <div class="row">
     <div class="col s3">

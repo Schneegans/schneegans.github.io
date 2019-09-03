@@ -3,7 +3,7 @@ Section: devel
 Priority: optional
 Maintainer: Your Name <your.email@some.where>
 Build-Depends: cmake, build-essential
-Homepage: http://www.yourhomepage.org
+Homepage: https://www.yourhomepage.org
 
 Package: greet-the-world
 Architecture: any

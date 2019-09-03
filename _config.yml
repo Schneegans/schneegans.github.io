@@ -23,7 +23,7 @@ description: >- # this means to ignore newlines until "baseurl:"
 
 # Build settings
 permalink: /:categories/:year/:month/:day/:title
-production_url : http://schneegans.github.io
+production_url : https://schneegans.github.io
 markdown: kramdown
 paginate: 6
 paginate_path: "/page:num/"

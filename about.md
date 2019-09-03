@@ -3,7 +3,7 @@ layout: header-page
 title : About
 header : about
 teaser: signals.jpg
-excerpt: "This is the personal blog of Simon Schneegans, researcher at the <a href='http://www.dlr.de'>DLR (German Aerospace Center)</a> in Braunschweig. On this website you will find news regarding Gnome-Pie, some tutorials and other (hopefully) interesting stuff!"
+excerpt: "This is the personal blog of Simon Schneegans, researcher at the <a href='https://www.dlr.de'>DLR (German Aerospace Center)</a> in Braunschweig. On this website you will find news regarding Gnome-Pie, some tutorials and other (hopefully) interesting stuff!"
 colors: color-signals
 contents: false
 ---
@@ -31,13 +31,13 @@ contents: false
 <tr>
 <td width="100px">
     <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/license-MIT-blue.svg" border="0" alt="public domain" /></a><br>
-    <a href="http://unlicense.org/"><img src="https://img.shields.io/badge/license-PD-blue.svg" border="0" alt="public domain" /></a>
+    <a href="https://unlicense.org/"><img src="https://img.shields.io/badge/license-PD-blue.svg" border="0" alt="public domain" /></a>
 </td>
-<td>Code posted on this blog, except where otherwise noted, is published either under the <a href="https://opensource.org/licenses/MIT">MIT license</a> (Option A) or released to the <a href="http://unlicense.org/">public domain</a> (Option B). You are free to choose whichever you prefer. Content which was created by third parties is published in regard to their license conditions.
+<td>Code posted on this blog, except where otherwise noted, is published either under the <a href="https://opensource.org/licenses/MIT">MIT license</a> (Option A) or released to the <a href="https://unlicense.org/">public domain</a> (Option B). You are free to choose whichever you prefer. Content which was created by third parties is published in regard to their license conditions.
 </td>
 </tr>
 <tr>
-<td><a rel="license" href="http://creativecommons.org/licenses/by/3.0/"><img style="border-width: 0;" src="https://img.shields.io/badge/artwork-cc--by-blue.svg" alt="Creative Commons Lizenzvertrag" /></a></td>
+<td><a rel="license" href="https://creativecommons.org/licenses/by/3.0/"><img style="border-width: 0;" src="https://img.shields.io/badge/artwork-cc--by-blue.svg" alt="Creative Commons Lizenzvertrag" /></a></td>
 <td>The artwork and media of this web page is, except where otherwise noted, licensed under Creative Commons Attribution 3.0 License.</td>
 </tr>
 </tbody>

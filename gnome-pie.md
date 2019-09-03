@@ -27,9 +27,9 @@ Gnome-Pie is a circular application launcher (*pie menu*) for Linux. It is made 
 
 Gnome-Pie is designed to be fun, fast and visually appealing. It implements Fitts' law, which...
 
-<div class="quote"> [...] is a model of human movement primarily used in human–computer interaction and ergonomics that predicts that the time required to rapidly move to a target area is a function of the distance to the target and the size of the target.<br><a href="http://en.wikipedia.org/wiki/Fitts's_law" target="_blank"> - Wikipedia</a></div>
+<div class="quote"> [...] is a model of human movement primarily used in human–computer interaction and ergonomics that predicts that the time required to rapidly move to a target area is a function of the distance to the target and the size of the target.<br><a href="https://en.wikipedia.org/wiki/Fitts's_law" target="_blank"> - Wikipedia</a></div>
 
-Many application launchers of today's Linux desktops are made for people using their keyboard mainly. Launchers like [Gnome-Do](http://do.cooperteam.net/){:target="_blank"}, [Synapse](https://launchpad.net/synapse-project){:target="_blank"}, [Kupfer](http://engla.github.io/kupfer/){:target="_blank"}, Unity's Dash or Gnome-Shell's Activities are designed for keyboard users. It's necessary to type the first letters of the desired action in order to launch it.
+Many application launchers of today's Linux desktops are made for people using their keyboard mainly. Launchers like [Gnome-Do](https://do.cooperteam.net/){:target="_blank"}, [Synapse](https://launchpad.net/synapse-project){:target="_blank"}, [Kupfer](https://engla.github.io/kupfer/){:target="_blank"}, Unity's Dash or Gnome-Shell's Activities are designed for keyboard users. It's necessary to type the first letters of the desired action in order to launch it.
 
 <div class="responsive-video-169">
 <iframe src="https://player.vimeo.com/video/35385121?title=0&amp;byline=0&amp;portrait=0&amp;color={% include link-color.html %}" width="1600" height="900" frameborder="0" webkitAllowFullScreen allowFullScreen></iframe>
@@ -242,7 +242,7 @@ If you know Vala or are willing to learn (it's incredibly easy, like C# --- you'
 
 ### Donate!
 
-If you can't afford the time to do the stuff mentioned above, but still want to help --- you can help improving this software by buying some drinks for a poor student! You can do this with <a href="http://flattr.com/thing/468485/Gnome-Pie">Flattr</a> or by <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=X65SUVC4ZTQSC">donating via PayPal</a>. If you happen to dislike PayPal, send a mail to code@simonschneegans.de and we can chat about this!
+If you can't afford the time to do the stuff mentioned above, but still want to help --- you can help improving this software by buying some drinks for a poor student! You can do this with <a href="https://flattr.com/thing/468485/Gnome-Pie">Flattr</a> or by <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=X65SUVC4ZTQSC">donating via PayPal</a>. If you happen to dislike PayPal, send a mail to code@simonschneegans.de and we can chat about this!
 
 ## The code of Gnome-Pie
 

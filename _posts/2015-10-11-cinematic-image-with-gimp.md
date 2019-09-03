@@ -16,7 +16,7 @@ You were on holidays and all your pictures look a little... dull? Maybe this qui
 
 ## Improving the white balance
 
-Last weekend I was at the [London Eye](https://www.londoneye.com/){:target="_blank"} and took the following photograph. It features an interseting view at the Shard but it looks quite boring. So I decided to use my favourite image manipulation program, [the gimp](http://www.gimp.org/){:target="_blank"}, to enhance the picture.
+Last weekend I was at the [London Eye](https://www.londoneye.com/){:target="_blank"} and took the following photograph. It features an interseting view at the Shard but it looks quite boring. So I decided to use my favourite image manipulation program, [the gimp](https://www.gimp.org/){:target="_blank"}, to enhance the picture.
 
 {% assign picture = "london_01.jpg" %}
 {% assign text = "A cool perspective but boring colors." %}
@@ -31,7 +31,7 @@ At first, I improved the white balance. There is a lot of haze in this picture a
 
 ## Replace the sky
 
-Since the blue sky of the original image is a little plain, I [searched the internet](https://www.google.com/search?q=sunrise+sky&source=lnms&tbm=isch&sa=X#q=sunrise+sky&tbm=isch&tbs=sur:fc){:target="_blank"} for a better sky. Eventually I found [this image](http://i.imgur.com/947A6za.jpg){:target="_blank"}. It's very beautiful and I really would like to credit its original author but I failed to find his or her name.
+Since the blue sky of the original image is a little plain, I [searched the internet](https://www.google.com/search?q=sunrise+sky&source=lnms&tbm=isch&sa=X#q=sunrise+sky&tbm=isch&tbs=sur:fc){:target="_blank"} for a better sky. Eventually I found [this image](https://i.imgur.com/947A6za.jpg){:target="_blank"}. It's very beautiful and I really would like to credit its original author but I failed to find his or her name.
 
 I deleted the sky from the original image with the eraser tool and pasted the new sky to a new layer below the original image.
 
@@ -75,7 +75,7 @@ The picture looks quite interesting, but we need to adjust the colors of the sky
 
 ## The sun glare
 
-Finally I used some additional sunrise images to add a sun glare to the image. I used [this CC by SA image by Zimmermanns](https://commons.wikimedia.org/wiki/File:Sunrise_above_Oberwiesenthal.JPG){:target="_blank"} and [this public domain image](http://www.public-domain-image.com/free-images/nature-landscapes/sunrise/beautiful-sunrise-over-volcanoes-in-guatemala/attachment/beautiful-sunrise-over-volcanoes-in-guatemala){:target="_blank"}. I put both on separate layers, moved them around, blurred, mirrored and erased some parts. Both blend modes were set to `Soft Light`.
+Finally I used some additional sunrise images to add a sun glare to the image. I used [this CC by SA image by Zimmermanns](https://commons.wikimedia.org/wiki/File:Sunrise_above_Oberwiesenthal.JPG){:target="_blank"} and [this public domain image](https://www.public-domain-image.com/free-images/nature-landscapes/sunrise/beautiful-sunrise-over-volcanoes-in-guatemala/attachment/beautiful-sunrise-over-volcanoes-in-guatemala){:target="_blank"}. I put both on separate layers, moved them around, blurred, mirrored and erased some parts. Both blend modes were set to `Soft Light`.
 
 <div class="row">
 <div class="col s6">

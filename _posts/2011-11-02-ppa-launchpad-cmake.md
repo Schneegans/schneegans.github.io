@@ -14,7 +14,7 @@ When I first wanted to create a PPA for Ubuntu, it was a pain. It was barely doc
 
 ## Motivation
 
-The goal was to upload <a href="http://mars-game.sourceforge.net/">M.A.R.S.</a> to a PPA: M.A.R.S. uses CMake and I did not find any resource how to create a source package which launchpad would compile. With this tutorial I want to help those being in a similar situation I was some months ago. Please remark that I don't have inside knowledge on what is going on here --- it is the result of trial and error, but it works as supposed! So let's get started...
+The goal was to upload <a href="https://mars-game.sourceforge.net/">M.A.R.S.</a> to a PPA: M.A.R.S. uses CMake and I did not find any resource how to create a source package which launchpad would compile. With this tutorial I want to help those being in a similar situation I was some months ago. Please remark that I don't have inside knowledge on what is going on here --- it is the result of trial and error, but it works as supposed! So let's get started...
 
 
 ## 1. A short inroduction
@@ -99,7 +99,7 @@ mkdir debian && cd debian
 Now we will go through each individual file and check what it is for. You can download the file of each section with the given command. Just execute it inside the "debian"-directory and open the downloaded file in an editor of your choice. Or copy & paste the contents from below.
 
 {% highlight bash %}
-wget http://www.simonschneegans.de/assets/files/ppa-howto/control
+wget https://schneegans.github.io/assets/files/ppa-howto/control
 {% endhighlight %}
 
 {% highlight bash %}
@@ -108,7 +108,7 @@ Section: devel
 Priority: optional
 Maintainer: Your Name <your.email@some.where>
 Build-Depends: cmake, build-essential
-Homepage: http://www.yourhomepage.org
+Homepage: https://www.yourhomepage.org
 
 Package: greet-the-world
 Architecture: any
@@ -129,7 +129,7 @@ You'll have to write your name and e-mail address to the appropriate fields.
 The second file, "rules", is very important, too. It tells launchpad how to exactly compile your application. It is basically a normal makefile with some special targets, which are invoked by launchpad.
 
 {% highlight bash %}
-wget http://www.simonschneegans.de/assets/files/ppa-howto/rules
+wget https://schneegans.github.io/assets/files/ppa-howto/rules
 {% endhighlight %}
 
 {% highlight bash %}
@@ -173,7 +173,7 @@ You don't need to alter the content of this file.
 The third file is "changelog". It contains some information on what you have done since the last release.
 
 {% highlight bash %}
-wget http://www.simonschneegans.de/assets/files/ppa-howto/changelog
+wget https://schneegans.github.io/assets/files/ppa-howto/changelog
 {% endhighlight %}
 
 {% highlight bash %}
@@ -193,7 +193,7 @@ Please change the date and the e-mail address accordingly. The date string can b
 The last file contains your copyright information. It does not follow any structure and can contain everything you want. Here is a GPL-3 example. Just insert your name.
 
 {% highlight bash %}
-wget http://www.simonschneegans.de/assets/files/ppa-howto/copyright
+wget https://schneegans.github.io/assets/files/ppa-howto/copyright
 {% endhighlight %}
 
 {% highlight bash %}
@@ -214,7 +214,7 @@ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
 General Public License for more details.
 
 You should have received a copy of the GNU General Public License
-along with this program.  If not, see <http://www.gnu.org/licenses/>.
+along with this program.  If not, see <https://www.gnu.org/licenses/>.
 {% endhighlight %}
 
 

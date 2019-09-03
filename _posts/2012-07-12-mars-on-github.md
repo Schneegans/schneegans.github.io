@@ -8,7 +8,7 @@ colors: "color-mars"
 tags: ["news", "mars"]
 ---
 
-Just in case you are a fan of the game <a href="http://mars-game.sourceforge.net/">M.A.R.S.</a> and do not check its homepage regularly --- Felix and I managed to port it to the current snapshot of SFML2 and <a href="https://github.com/thelaui/M.A.R.S.">uploaded it to github</a>!
+Just in case you are a fan of the game <a href="https://mars-game.sourceforge.net/">M.A.R.S.</a> and do not check its homepage regularly --- Felix and I managed to port it to the current snapshot of SFML2 and <a href="https://github.com/thelaui/M.A.R.S.">uploaded it to github</a>!
 
 <!--more-->
 

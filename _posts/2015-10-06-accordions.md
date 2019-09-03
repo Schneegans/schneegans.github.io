@@ -17,11 +17,11 @@ With this tutorial I will show you how I implemented the accordion on the projec
 
 **Update: Scroll down to the end of the post for the final SASS code!**
 
-There is one main advantage of the approach presented here over others I found on the internet: The slides truly overlap each other. This prevents ugly text reflow during the animation (as seen in [this prominent example](http://blogs.sitepointstatic.com/examples/tech/css3-target/accordionhorz.html){:target="_blank"}, [this one](http://csswizardry.com/demos/accordion/){:target="_blank"} or [this one](http://experiments.wemakesites.net/animated-css3-only-horizontal-accordion.html){:target="_blank"}) and allows for multiple lines of text in the captions (as opposed to [this example](http://codepen.io/ferry/pen/ZYVwxz){:target="_blank"}).
+There is one main advantage of the approach presented here over others I found on the internet: The slides truly overlap each other. This prevents ugly text reflow during the animation (as seen in [this prominent example](https://blogs.sitepointstatic.com/examples/tech/css3-target/accordionhorz.html){:target="_blank"}, [this one](https://csswizardry.com/demos/accordion/){:target="_blank"} or [this one](https://experiments.wemakesites.net/animated-css3-only-horizontal-accordion.html){:target="_blank"}) and allows for multiple lines of text in the captions (as opposed to [this example](https://codepen.io/ferry/pen/ZYVwxz){:target="_blank"}).
 
-Furthermore the horizontal accordion presented here is fully responsive - no fixed width is required; it will always fill `100%` of its parent container (other accordions, such as [this one](http://thecodeplayer.com/walkthrough/make-an-accordian-style-slider-in-css3){:target="_blank"} or [this one](http://codepen.io/rrenula/pen/DGrhf){:target="_blank"} are hard-coded to a fixed width).
+Furthermore the horizontal accordion presented here is fully responsive - no fixed width is required; it will always fill `100%` of its parent container (other accordions, such as [this one](https://thecodeplayer.com/walkthrough/make-an-accordian-style-slider-in-css3){:target="_blank"} or [this one](https://codepen.io/rrenula/pen/DGrhf){:target="_blank"} are hard-coded to a fixed width).
 
-At first we will set up the basic behavior, then we will add background images and as a last step we will add captions. All style code will be provided as [SASS code](http://sass-lang.com/){:target="_blank"}.
+At first we will set up the basic behavior, then we will add background images and as a last step we will add captions. All style code will be provided as [SASS code](https://sass-lang.com/){:target="_blank"}.
 
 ## The basic bahavior
 
@@ -203,20 +203,20 @@ As a next step, we want to add pictures to our accordion. To achieve this, we se
 
 <div class="accordion accordion-items-4">
   <ul>
-  <li style="background-image:url('http://lorempixel.com/560/420/nature/1')"></li>
-  <li style="background-image:url('http://lorempixel.com/560/420/nature/2')"></li>
-  <li style="background-image:url('http://lorempixel.com/560/420/nature/3')"></li>
-  <li style="background-image:url('http://lorempixel.com/560/420/nature/4')"></li>
+  <li style="background-image:url('https://lorempixel.com/560/420/nature/1')"></li>
+  <li style="background-image:url('https://lorempixel.com/560/420/nature/2')"></li>
+  <li style="background-image:url('https://lorempixel.com/560/420/nature/3')"></li>
+  <li style="background-image:url('https://lorempixel.com/560/420/nature/4')"></li>
   </ul>
 </div>
 
 {% highlight html %}
 <div class="accordion accordion-items-4">
   <ul>
-  <li style="background-image:url('http://lorempixel.com/560/420/nature/1')"></li>
-  <li style="background-image:url('http://lorempixel.com/560/420/nature/2')"></li>
-  <li style="background-image:url('http://lorempixel.com/560/420/nature/3')"></li>
-  <li style="background-image:url('http://lorempixel.com/560/420/nature/4')"></li>
+  <li style="background-image:url('https://lorempixel.com/560/420/nature/1')"></li>
+  <li style="background-image:url('https://lorempixel.com/560/420/nature/2')"></li>
+  <li style="background-image:url('https://lorempixel.com/560/420/nature/3')"></li>
+  <li style="background-image:url('https://lorempixel.com/560/420/nature/4')"></li>
   </ul>
 </div>
 {% endhighlight %}
@@ -240,25 +240,25 @@ Finally we want to have some captions on our slides. Since they should look real
 
 <div class="accordion accordion-items-4">
   <ul>
-    <li style="background-image:url('http://lorempixel.com/560/420/nature/5')">
+    <li style="background-image:url('https://lorempixel.com/560/420/nature/5')">
       <div>
         <h3>Lorem Ipsum</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br><a href="#">read on »</a></p>
       </div>
     </li>
-    <li style="background-image:url('http://lorempixel.com/560/420/nature/6')">
+    <li style="background-image:url('https://lorempixel.com/560/420/nature/6')">
       <div>
         <h3>Lorem Ipsum</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br><a href="#">read on »</a></p>
       </div>
     </li>
-    <li style="background-image:url('http://lorempixel.com/560/420/nature/7')">
+    <li style="background-image:url('https://lorempixel.com/560/420/nature/7')">
       <div>
         <h3>Lorem Ipsum</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br><a href="#">read on »</a></p>
       </div>
     </li>
-    <li style="background-image:url('http://lorempixel.com/560/420/nature/8')">
+    <li style="background-image:url('https://lorempixel.com/560/420/nature/8')">
       <div>
         <h3>Lorem Ipsum</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br><a href="#">read on »</a></p>
@@ -270,7 +270,7 @@ Finally we want to have some captions on our slides. Since they should look real
 {% highlight html %}
 <div class="accordion accordion-items-4">
   <ul>
-    <li style="background-image:url('http://lorempixel.com/560/420/nature/5')">
+    <li style="background-image:url('https://lorempixel.com/560/420/nature/5')">
       <div>
         <h3>Lorem Ipsum</h3>
         <p>Lorem ipsum...
@@ -278,7 +278,7 @@ Finally we want to have some captions on our slides. Since they should look real
         </p>
       </div>
     </li>
-    <li style="background-image:url('http://lorempixel.com/560/420/nature/6')">
+    <li style="background-image:url('https://lorempixel.com/560/420/nature/6')">
       <div>
         <h3>Lorem Ipsum</h3>
         <p>Lorem ipsum...
@@ -286,7 +286,7 @@ Finally we want to have some captions on our slides. Since they should look real
         </p>
       </div>
     </li>
-    <li style="background-image:url('http://lorempixel.com/560/420/nature/7')">
+    <li style="background-image:url('https://lorempixel.com/560/420/nature/7')">
       <div>
         <h3>Lorem Ipsum</h3>
         <p>Lorem ipsum...
@@ -294,7 +294,7 @@ Finally we want to have some captions on our slides. Since they should look real
         </p>
       </div>
     </li>
-    <li style="background-image:url('http://lorempixel.com/560/420/nature/8')">
+    <li style="background-image:url('https://lorempixel.com/560/420/nature/8')">
       <div>
         <h3>Lorem Ipsum</h3>
         <p>Lorem ipsum ...

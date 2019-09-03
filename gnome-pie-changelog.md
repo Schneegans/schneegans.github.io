@@ -117,7 +117,7 @@ contents: true
 
 ## Gnome-Pie 0.6.4
 
-* **New Feature:** A new theme based on "Adwaita". It features bigger icons than the original theme. This looks awesome with some icon themes (the screenshot above uses [Faenza](http://tiheum.deviantart.com/art/Faenza-Icons-173323228)).
+* **New Feature:** A new theme based on "Adwaita". It features bigger icons than the original theme. This looks awesome with some icon themes (the screenshot above uses [Faenza](https://tiheum.deviantart.com/art/Faenza-Icons-173323228)).
 * **Bugfix:** Fixed missing icon of status icon in message tray.
 
 
