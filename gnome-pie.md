@@ -29,7 +29,7 @@ Gnome-Pie is designed to be fun, fast and visually appealing. It implements Fitt
 
 <div class="quote"> [...] is a model of human movement primarily used in human–computer interaction and ergonomics that predicts that the time required to rapidly move to a target area is a function of the distance to the target and the size of the target.<br><a href="https://en.wikipedia.org/wiki/Fitts's_law" target="_blank"> - Wikipedia</a></div>
 
-Many application launchers of today's Linux desktops are made for people using their keyboard mainly. Launchers like [Gnome-Do](https://do.cooperteam.net/){:target="_blank"}, [Synapse](https://launchpad.net/synapse-project){:target="_blank"}, [Kupfer](https://engla.github.io/kupfer/){:target="_blank"}, Unity's Dash or Gnome-Shell's Activities are designed for keyboard users. It's necessary to type the first letters of the desired action in order to launch it.
+Many application launchers of today's Linux desktops are made for people using their keyboard mainly. Launchers like [Gnome-Do](https://do.cooperteam.net/){:target="_blank"}, [Synapse](https://launchpad.net/synapse-project){:target="_blank"}, [Kupfer](https://kupferlauncher.github.io){:target="_blank"}, Unity's Dash or Gnome-Shell's Activities are designed for keyboard users. It's necessary to type the first letters of the desired action in order to launch it.
 
 <div class="responsive-video-169">
 <iframe src="https://player.vimeo.com/video/35385121?title=0&amp;byline=0&amp;portrait=0&amp;color={% include link-color.html %}" width="1600" height="900" frameborder="0" webkitAllowFullScreen allowFullScreen></iframe>
