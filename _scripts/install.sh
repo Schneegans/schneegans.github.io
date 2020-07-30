@@ -1,4 +1,4 @@
 #!/bin/bash
 
-sudo apt-get install ruby-dev nodejs
-sudo gem install rdoc jekyll sass compass jekyll-paginate pygments.rb bootstrap-sass
+sudo apt-get install ruby-full build-essential zlib1g-dev
+sudo gem install jekyll bundler
