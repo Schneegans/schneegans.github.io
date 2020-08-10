@@ -245,6 +245,7 @@ DEPENDENCIES
   github-pages
   jekyll-feed (~> 0.9)
   jekyll-seo-tag (~> 2.1)
+  jemoji
   tzinfo-data
 
 BUNDLED WITH
