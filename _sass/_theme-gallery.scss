@@ -18,14 +18,15 @@ div.gallery-item {
     white-space: normal;
     opacity: 0;
 
-    background-image: linear-gradient(to bottom, rgba(0,0,0,0),rgba(0,0,0,1));
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
     transition: all 300ms;
 
     p {
       text-align: left;
     }
 
-    h1, p {
+    h1,
+    p {
       margin: 0;
       width: 100%;
       position: relative;
@@ -53,34 +54,49 @@ div.gallery-item {
 
 // one column
 .grid-sizer,
-.grid-item { width: 100%; }
-.gutter-sizer { width: 0%; }
+.grid-item {
+  width: 100%;
+}
+
+.gutter-sizer {
+  width: 0%;
+}
 
 // two columns
 @media only screen and (min-width: 601px) {
+
   .grid-sizer,
   .grid-item {
-    width: 49%; 
+    width: 49%;
+
     &.item-size-2,
     &.item-size-3 {
-      width: 100%; 
+      width: 100%;
     }
   }
-  .gutter-sizer { width: 2%; }
+
+  .gutter-sizer {
+    width: 2%;
+  }
 }
 
 // three columns
 @media only screen and (min-width: 993px) {
+
   .grid-sizer,
   .grid-item {
-    width: 32%; 
+    width: 32%;
+
     &.item-size-2 {
-      width: 66%; 
+      width: 66%;
     }
+
     &.item-size-3 {
-      width: 100%; 
+      width: 100%;
     }
   }
-  .gutter-sizer { width: 2%; }
-}
 
+  .gutter-sizer {
+    width: 2%;
+  }
+}

@@ -1,7 +1,8 @@
 @import url(https://fonts.googleapis.com/css?family=Alegreya+Sans+SC);
 @import url(https://fonts.googleapis.com/css?family=Roboto:300,500&display=swap);
 
-$font-stack: "Roboto", sans-serif;
+$font-stack: "Roboto",
+sans-serif;
 $h1-fontsize: 3.0em !default;
 $h2-fontsize: 2.5em !default;
 $h3-fontsize: 2.0em !default;
@@ -23,42 +24,59 @@ $h6-fontsize: 1.0em !default;
 // adaptive link colors ------------------------------------------------------------------
 
 @mixin link-color() {
-  @each $class, $color in $link-colors {
+
+  @each $class,
+  $color in $link-colors {
     .#{$class} & {
       color: $color;
     }
   }
 }
+
 @mixin link-color-background() {
-  @each $class, $color in $link-colors {
+
+  @each $class,
+  $color in $link-colors {
     .#{$class} & {
       background-color: $color;
     }
   }
 }
+
 @mixin link-color-background-lighten() {
-  @each $class, $color in $link-colors {
+
+  @each $class,
+  $color in $link-colors {
     .#{$class} & {
       background-color: lighten($color, 20);
     }
   }
 }
+
 @mixin link-color-background-darken() {
-  @each $class, $color in $link-colors {
+
+  @each $class,
+  $color in $link-colors {
     .#{$class} & {
       background-color: darken($color, 20);
     }
   }
 }
+
 @mixin link-color-background-transparent() {
-  @each $class, $color in $link-colors {
+
+  @each $class,
+  $color in $link-colors {
     .#{$class} & {
       background-color: rgba(darken($color, 15), 0.1);
     }
   }
 }
+
 @mixin link-color-highlight() {
-  @each $class, $color in $link-colors {
+
+  @each $class,
+  $color in $link-colors {
     .#{$class} & {
       color: lighten($color, 20);
     }
@@ -68,17 +86,20 @@ $h6-fontsize: 1.0em !default;
 .pagination li a,
 a {
   @include link-color();
+
   &:hover,
   &:focus,
   &:active {
     @include link-color-highlight();
   }
+
   position: relative;
+
   &:active {
     top: 1px;
   }
 
-  
+
 }
 
 .pagination li a {
@@ -108,24 +129,29 @@ footer {
   font-size: 0.7em;
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "Alegreya Sans SC", sans-serif;
   margin: 0.9em 0 0.2em 0;
 }
 
 code,
-.highlight > pre,
+.highlight>pre,
 .well {
-    box-shadow: rgba(255,255,255,0.1) 0 1px 0,rgba(0,0,0,0.8) 0 1px 7px 0px inset;
-    background-color: rgba(0,0,0,0.3);
-    border-radius: 4px;
+  box-shadow: rgba(255, 255, 255, 0.1) 0 1px 0, rgba(0, 0, 0, 0.8) 0 1px 7px 0px inset;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
 }
 
-.highlight > pre,
+.highlight>pre,
 .well {
-    min-height: 20px;
-    padding: 14px 8px;
-    margin-bottom: 20px;
+  min-height: 20px;
+  padding: 14px 8px;
+  margin-bottom: 20px;
 }
 
 .inline-well {
@@ -145,12 +171,12 @@ code,
 }
 
 .chip {
-    border-radius: 6px;
-    padding: 0 6px;
-    height: auto;
-    line-height: inherit;
-    background: url("../img/body_dark.png");
-    box-shadow: 0 0 2px #000;
+  border-radius: 6px;
+  padding: 0 6px;
+  height: auto;
+  line-height: inherit;
+  background: url("../img/body_dark.png");
+  box-shadow: 0 0 2px #000;
 }
 
 nav ul a,
@@ -159,9 +185,9 @@ nav ul a,
 }
 
 nav {
-    box-shadow: none;
-    background: none;
-    border: none;
+  box-shadow: none;
+  background: none;
+  border: none;
 }
 
 .nav-wrapper {
@@ -175,7 +201,7 @@ nav {
 }
 
 i.left {
-    margin-right: 8px;
+  margin-right: 8px;
 }
 
 .page-header {
@@ -198,7 +224,9 @@ i.left {
   font-size: 0.8em;
 }
 
-.btn, .btn-large, .btn-flat {
+.btn,
+.btn-large,
+.btn-flat {
   border-top: 1px solid rgba(255, 255, 255, 0.07);
   background: url("../img/body_dark.png");
 
@@ -228,7 +256,7 @@ main {
 }
 
 footer {
-    padding: 30px 0;
+  padding: 30px 0;
 }
 
 .social-icons {
@@ -245,7 +273,7 @@ footer {
     &:focus {
       @include link-color-background-transparent();
     }
-    
+
     &:hover,
     &.active {
       @include link-color-highlight();
@@ -256,17 +284,17 @@ footer {
 // hr ------------------------------------------------------------------------------------
 
 hr {
-  border:none;
-  background:rgba(0,0,0,0.7);
-  height:1px;
+  border: none;
+  background: rgba(0, 0, 0, 0.7);
+  height: 1px;
   margin: 12px 0;
-  box-shadow: rgba(255,255,255,0.07) 0 1px 0;
+  box-shadow: rgba(255, 255, 255, 0.07) 0 1px 0;
 }
 
 // post preview image --------------------------------------------------------------------
 
 .post-preview {
-  width:100%;
+  width: 100%;
   position: relative;
   background-size: cover;
   background-position: 50% 50%;
@@ -315,10 +343,10 @@ figure {
   margin: 1em 0px;
 }
 
-pre > code {
+pre>code {
   padding: 0;
   overflow: auto;
-  background:none;
+  background: none;
   font-size: 1.0em;
   box-shadow: none;
 }
@@ -332,12 +360,14 @@ pre {
   position: relative;
 }
 
-.highlight > pre, code {
-  color:#ccc;
+.highlight>pre,
+code {
+  color: #ccc;
   font-size: 0.7em;
   transition: height 0.3s;
   overflow-y: hidden;
   position: relative;
+
   &.collapsed {
     height: 92px !important;
   }
@@ -347,7 +377,7 @@ pre {
   position: absolute;
   right: 0;
   top: 0;
-  z-index:1;
+  z-index: 1;
   font-size: 0.8em;
   padding: 4px 6px 4px 8px;
   background: url("../img/body.png") repeat;
@@ -384,7 +414,7 @@ td.gutter {
   line-height: 1.4;
   background: rgba(0, 0, 0, 0.1);
   border-radius: 4px;
-  box-shadow: rgba(0,0,0,0.4) 0 1px 7px 0px inset;
+  box-shadow: rgba(0, 0, 0, 0.4) 0 1px 7px 0px inset;
 }
 
 // table of contents ---------------------------------------------------------------------
