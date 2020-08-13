@@ -6,8 +6,6 @@ teaser: "sunset.jpg"
 colors: "color-sunset"
 ---
 
-## Some Photographs
-
 <div class="grid">
   <div class="grid-sizer"></div>
   <div class="gutter-sizer"></div>

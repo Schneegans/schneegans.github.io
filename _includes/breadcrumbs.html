@@ -1,24 +1,13 @@
 {% if page.url == "/" %}
 <a href="/about.html"><i class="material-icons left">home</i>Simon Schneegans</a>
-{% elsif page.url == "/about.html" %}
+{% else %}
 <a href="/" class="breadcrumb"><i class="material-icons left">home</i>Home</a>
-{% else %}
-<a href="/" class="breadcrumb"><i class="material-icons left">home</i> Home</a>
-{% for crumb in page.parents %}
-{% if crumb == "Gnome-Pie" %}
-<a href="/gnome-pie.html" class="breadcrumb hide-on-small-only">{{ crumb }}</a>
-{% endif %}
-{% endfor %}
-{% if page.title == "Blog" %}
-<span class="breadcrumb hide-on-small-only">Older Posts</span>
-{% else %}
-<span class="breadcrumb hide-on-small-only">{{ page.title }}</span>
-{% endif %}
 {% endif %}
 
 <ul class="right" id="project-list">
-  <li class="preselected"><a href="/gnome-pie.html"><i class="material-icons left">bubble_chart</i>Gnome-Pie</a></li>
+  <li><a href="/gnome-pie.html"><i class="material-icons left">bubble_chart</i>Gnome-Pie</a></li>
   <li><a href="/mars.html"><i class="material-icons left">videogame_asset</i>M.A.R.S.</a></li>
   <li><a href="/artwork.html"><i class="material-icons left">brush</i>Pictures</a></li>
-  <li><a href="/animations.html"><i class="material-icons left">play_circle_filled</i>Videos</a></li>
+  <li><a href="/animations.html"><i class="material-icons left">play_circle_filled</i>Videos</a>
+  </li>
 </ul>

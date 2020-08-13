@@ -4,38 +4,29 @@ layout: default
 
 <div class="page-header">
   <div class="container">
-    <h1>{{page.title}}</h1>
-    <p>{{page.excerpt}}</p>
-    <br>
-    <br>
+    <div class="row">
+      <div class="col  m9 s12">
+        <h1>{{page.title}}</h1>
+        <p>{{page.excerpt}}</p>
+        <br>
+        <br>
+      </div>
+    </div>
   </div>
 </div>
 
-<div class="page-background" style="padding-top: 35px;margin-top: -35px">
-  <div class="page-content" style="padding: 30px 0;">
-    <div class="container">
-      <div class="row">
+<div class="page-background" style="padding-top: 35px; margin-top: -35px">
+  <div class="page-content">
 
-        {% if page.contents %}
-        <div class="col m9 s12">
-          {{ content }}
-        </div>
-        {% else %}
-        <div class="col s12">
-          {{ content }}
-        </div>
-        {% endif %}
+    {{ content }}
 
-        {% if page.contents %}
-        <div id="sidebar-container" class="col m3 hide-on-small-only">
-          <div id="sidebar">
-            <h5><i class="material-icons top-offset">dehaze</i> Contents</h5>
-            <ul id="toc"></ul>
-          </div>
-        </div>
-        {% endif %}
-
+    {% if page.contents %}
+    <div id="sidebar-container" class="col s3 hide-on-small-only">
+      <div id="sidebar">
+        <h5><i class="material-icons top-offset">dehaze</i> Contents</h5>
+        <ul id="toc"></ul>
       </div>
     </div>
+    {% endif %}
   </div>
 </div>

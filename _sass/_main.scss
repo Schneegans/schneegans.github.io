@@ -120,6 +120,7 @@ body {
   font-weight: 300;
   color: #fff;
   background-color: #222;
+  overflow-x: hidden;
 }
 
 header,
@@ -184,16 +185,148 @@ nav ul a,
   font-size: 1.1em;
 }
 
+$content_width: 65vw;
+$container_width: (100vw - $content_width) / 2+$content_width;
+$content_margin: 2vw;
+$content_padding: 1.5vw;
+
 nav {
-  box-shadow: none;
-  background: none;
   border: none;
+  background: url("../img/body_dark.png");
+  box-shadow: 0 0 10px #000;
+
+  @media #{$large-and-up} {
+    border-radius: 0 0 40px 0;
+    width: $container_width + $content_margin;
+  }
 }
 
 .nav-wrapper {
-  background: url("../img/body_dark.png");
-  box-shadow: 0 0 10px #000;
+  width: 100%;
+
+  @media #{$large-and-up} {
+    width: $content_width;
+    margin-right: $content_margin;
+    left: (100vw - $content_width) / 2;
+  }
 }
+
+.page-header {
+  padding: 30px 0 10px 0;
+  position: relative;
+  z-index: 1;
+}
+
+.page-background {
+  position: relative;
+  background: url("../img/body_dark.png");
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+  border-top: 1px solid #272727;
+  padding-top: 90px;
+  margin-top: -120px;
+
+  @media #{$large-and-up} {
+    width: $container_width + $content_margin;
+    margin-left: (100vw - $content_width) / 2 - $content_margin;
+    border-radius: 40px 0 0 40px;
+  }
+
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+.page-content {
+  float: left;
+  background: url("../img/body.png");
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+  border-top: 1px solid #373737;
+  padding: $content_padding;
+  margin-bottom: $content_margin;
+
+  @media #{$large-and-up} {
+    width: $content_width;
+    margin-left: $content_margin;
+    border-radius: 20px;
+  }
+}
+
+.page-bottom-nav {
+  width: 100%;
+  padding-bottom: $content_margin;
+
+  @media #{$large-and-up} {
+    width: $content_width;
+    margin-left: $content_margin;
+  }
+}
+
+#sidebar {
+  float: left;
+  width: (100vw - $content_width) / 2 - $content_margin;
+  padding-left: $content_padding;
+  padding-top: 100px;
+
+  &.pinned {
+    margin-left: $content_width + $content_margin;
+  }
+}
+
+#sidebar h5 {
+  margin: 1.12em 0 .256em 0;
+}
+
+#toc {
+  li {
+    list-style: none;
+
+    a {
+      padding: 3px 0 3px 10px;
+      border-left: 1px solid transparent;
+      display: block;
+      line-height: 1.3em;
+
+      &.active {
+        border-left: 1px solid white;
+        color: white;
+      }
+    }
+  }
+}
+
+main {
+  position: relative;
+}
+
+footer {
+  padding: 30px 0;
+}
+
+.social-icons {
+  letter-spacing: 1em;
+}
+
+.tabs {
+  background-color: transparent;
+
+  a {
+    @include link-color();
+
+    &.active:focus,
+    &:focus {
+      @include link-color-background-transparent();
+    }
+
+    &:hover,
+    &.active {
+      @include link-color-highlight();
+    }
+  }
+}
+
+// ---------------------------------------------------------------------------------------
 
 .material-icons.top-offset {
   position: relative;
@@ -202,10 +335,6 @@ nav {
 
 i.left {
   margin-right: 8px;
-}
-
-.page-header {
-  padding: 30px 0 10px 0;
 }
 
 .excerpt {
@@ -232,52 +361,6 @@ i.left {
 
   &:hover {
     background: url("../img/body_dark.png");
-  }
-}
-
-.page-background {
-  background: url("../img/body_dark.png");
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
-  border-top: 1px solid #272727;
-  padding: 90px 0 10px 0;
-  margin: -90px 0 30px 0;
-}
-
-.page-content {
-  background: url("../img/body.png");
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
-  border-top: 1px solid #373737;
-  margin-bottom: 25px;
-}
-
-main {
-  position: relative;
-  margin-bottom: -30px;
-}
-
-footer {
-  padding: 30px 0;
-}
-
-.social-icons {
-  letter-spacing: 1em;
-}
-
-.tabs {
-  background-color: transparent;
-
-  a {
-    @include link-color();
-
-    &.active:focus,
-    &:focus {
-      @include link-color-background-transparent();
-    }
-
-    &:hover,
-    &.active {
-      @include link-color-highlight();
-    }
   }
 }
 
@@ -415,26 +498,4 @@ td.gutter {
   background: rgba(0, 0, 0, 0.1);
   border-radius: 4px;
   box-shadow: rgba(0, 0, 0, 0.4) 0 1px 7px 0px inset;
-}
-
-// table of contents ---------------------------------------------------------------------
-
-#sidebar h5 {
-  margin: 1.12em 0 .256em 0;
-}
-
-#toc {
-  li {
-    a {
-      padding: 3px 0 3px 10px;
-      border-left: 1px solid transparent;
-      display: block;
-      line-height: 1.3em;
-
-      &.active {
-        border-left: 1px solid white;
-        color: white;
-      }
-    }
-  }
 }
