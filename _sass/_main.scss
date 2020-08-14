@@ -186,9 +186,8 @@ nav ul a,
 }
 
 $content_width: 65vw;
-$container_width: (100vw - $content_width) / 2+$content_width;
-$content_margin: 2vw;
-$content_padding: 1.5vw;
+$content_padding: 2vw;
+$left_margin: 8vw;
 
 nav {
   border: none;
@@ -197,7 +196,7 @@ nav {
 
   @media #{$large-and-up} {
     border-radius: 0 0 40px 0;
-    width: $container_width + $content_margin;
+    width: $left_margin + $content_width + 2* $content_padding;
   }
 }
 
@@ -206,15 +205,31 @@ nav {
 
   @media #{$large-and-up} {
     width: $content_width;
-    margin-right: $content_margin;
-    left: (100vw - $content_width) / 2;
+    margin: 0 $content_padding;
+    left: $left_margin;
   }
 }
 
 .page-header {
-  padding: 30px 0 10px 0;
+  padding-top: 30px;
   position: relative;
   z-index: 1;
+
+  img {
+    border-radius: 20px 20px 0 0;
+  }
+
+  .caption {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+    position: absolute;
+    bottom: 0;
+    padding: $content_padding;
+  }
+
+  @media #{$large-and-up} {
+    width: $content_width;
+    margin-left: $left_margin + $content_padding;
+  }
 }
 
 .page-background {
@@ -223,11 +238,11 @@ nav {
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
   border-top: 1px solid #272727;
   padding-top: 90px;
-  margin-top: -120px;
+  margin-top: -90px;
 
   @media #{$large-and-up} {
-    width: $container_width + $content_margin;
-    margin-left: (100vw - $content_width) / 2 - $content_margin;
+    width: 100vw - $left_margin;
+    margin-left: $left_margin;
     border-radius: 40px 0 0 40px;
   }
 
@@ -240,37 +255,37 @@ nav {
 
 .page-content {
   float: left;
+
   background: url("../img/body.png");
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
   border-top: 1px solid #373737;
   padding: $content_padding;
-  margin-bottom: $content_margin;
+  margin-bottom: $content_padding;
 
   @media #{$large-and-up} {
     width: $content_width;
-    margin-left: $content_margin;
-    border-radius: 20px;
+    margin-left: $content_padding;
+    border-radius: 0 0 20px 20px;
   }
 }
 
 .page-bottom-nav {
   width: 100%;
-  padding-bottom: $content_margin;
+  padding-bottom: $content_padding;
 
   @media #{$large-and-up} {
     width: $content_width;
-    margin-left: $content_margin;
+    margin-left: $content_padding;
   }
 }
 
 #sidebar {
   float: left;
-  width: (100vw - $content_width) / 2 - $content_margin;
-  padding-left: $content_padding;
-  padding-top: 100px;
+  width: 100vw - $left_margin - $content_padding - $content_width;
+  padding: 100px $content_padding 0 $content_padding;
 
   &.pinned {
-    margin-left: $content_width + $content_margin;
+    margin-left: $content_width + $content_padding;
   }
 }
 

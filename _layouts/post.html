@@ -3,30 +3,21 @@ layout: default
 ---
 
 <div class="page-header">
-  <div class="row" style="position: relative;">
-    <div class="col m5 s12 z-depth-2 rounded gallery-item"
-      style="position: absolute; top: 0; bottom: 0; background-position: center; background-repeat: no-repeat;background-size: cover; background-image: url(/assets/pictures/teasers/{{page.teaser}});">
-      <div class="caption">
-        <p>{{page.tagline}}</p>
-      </div>
-    </div>
-    <div class="col offset-m5 m7 s12">
-      <h1>{{page.title}}</h1>
-      <p>{{page.excerpt}}</p>
-      <p style="margin-top: 50px;">
-        {% include post-nav.html %}
-      </p>
-    </div>
+  <img class="responsive-img materialboxed z-depth-2" data-caption="{{page.tagline}}"
+    src="/assets/pictures/teasers/{{page.teaser}}">
+
+  <div class="caption">
+    <h1>{{page.title}}</h1>
+    {{page.excerpt}}
   </div>
 </div>
 
 <div class="page-background">
 
   <div class="page-content">
-    {{ content | remove: page.excerpt }}
+    {{ content | remove: page.excerpt}}
     <h2 id="comments">Comments</h2>
     {% include comments.html %}
-    <br />
   </div>
 
   <div id="sidebar" class="hide-on-small-only">
