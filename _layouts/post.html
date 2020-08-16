@@ -23,7 +23,8 @@ layout: default
       <div class="row">
 
         <div class="col m9 s12">
-          {{ content | remove: page.excerpt }}
+          <h1 style="margin-top: 0.5em;">{{page.title}}</h1>
+          {{ content }}
           <h2 id="comments">Comments</h2>
           {% include comments.html %}
           <br />
