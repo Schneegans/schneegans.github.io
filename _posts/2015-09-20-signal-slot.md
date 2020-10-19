@@ -42,13 +42,43 @@ template <typename... Args>
 class Signal {
 
  public:
+  Signal()  = default;
+  ~Signal() = default;
 
-  Signal() : current_id_(0) {}
+  // Copy constructor and assignment create a new signal.
+  Signal(Signal const& /*unused*/) {}
 
-  // copy creates new signal
-  Signal(Signal const& other) : current_id_(0) {}
+  Signal& operator=(Signal const& other) {
+    if (this != &other) {
+      disconnect_all();
+    }
+    return *this;
+  }
 
-  // connects a member function to this Signal
+  // Move constructor and assignment operator work as expected.
+  Signal(Signal&& other) noexcept:
+    _slots(std::move(other._slots)),
+    _current_id(other._current_id) {}
+
+  Signal& operator=(Signal&& other) noexcept {
+    if (this != &other) {
+      _slots     = std::move(other._slots);
+      _current_id = other._current_id;
+    }
+
+    return *this;
+  }
+
+
+  // Connects a std::function to the signal. The returned
+  // value can be used to disconnect the function again.
+  int connect(std::function<void(Args...)> const& slot) const {
+    _slots.insert(std::make_pair(++_current_id, slot));
+    return _current_id;
+  }
+
+   // Convenience method to connect a member function of an
+   // object to this Signal.
   template <typename T>
   int connect_member(T *inst, void (T::*func)(Args...)) {
     return connect([=](Args... args) { 
@@ -56,7 +86,8 @@ class Signal {
     });
   }
 
-  // connects a const member function to this Signal
+  // Convenience method to connect a const member function
+  // of an object to this Signal.
   template <typename T>
   int connect_member(T *inst, void (T::*func)(Args...) const) {
     return connect([=](Args... args) {
@@ -64,38 +95,43 @@ class Signal {
     });
   }
 
-  // connects a std::function to the signal. The returned
-  // value can be used to disconnect the function again
-  int connect(std::function<void(Args...)> const& slot) const {
-    slots_.insert(std::make_pair(++current_id_, slot));
-    return current_id_;
-  }
-
-  // disconnects a previously connected function
+  // Disconnects a previously connected function.
   void disconnect(int id) const {
-    slots_.erase(id);
+    _slots.erase(id);
   }
 
-  // disconnects all previously connected functions
+  // Disconnects all previously connected functions.
   void disconnect_all() const {
-    slots_.clear();
+    _slots.clear();
   }
 
-  // calls all connected functions
+  // Calls all connected functions.
   void emit(Args... p) {
-    for(auto const& it : slots_) {
-      it.second(std::forward<Args>(p)...);
+    for (auto const& it : _slots) {
+      it.second(p...);
     }
   }
 
-  // assignment creates new Signal
-  Signal& operator=(Signal const& other) {
-    disconnect_all();
+  // Calls all connected functions except for one.
+  void emit_for_all_but_one(int excludedConnectionID, Args... p) {
+    for (auto const& it : _slots) {
+      if (it.first != excludedConnectionID) {
+        it.second(p...);
+      }
+    }
+  }
+
+  // Calls only one connected function.
+  void emit_for(int connectionID, Args... p) {
+    auto const& it = _slots.find(connectionID);
+    if (it != _slots.end()) {
+      it->second(p...);
+    }
   }
 
  private:
-  mutable std::map<int, std::function<void(Args...)>> slots_;
-  mutable int current_id_;
+  mutable std::map<int, std::function<void(Args...)>> _slots;
+  mutable int                                         _current_id{0};
 };
 
 #endif /* SIGNAL_HPP */
@@ -116,7 +152,7 @@ int main() {
 
   // attach a slot
   signal.connect([](std::string arg1, int arg2) {
-      std::cout << arg1 << " " << arg2 << std::endl;
+    std::cout << arg1 << " " << arg2 << std::endl;
   });
 
   signal.emit("The answer:", 42);
@@ -129,7 +165,7 @@ int main() {
 When you saved the Signal class as `Signal.hpp` and the above example as `main.cpp` you can compile the example with:
 
 {% highlight bash %}
-g++ --std=c++0x main.cpp
+g++ --std=c++17 main.cpp
 {% endhighlight %}
 
 And if you execute the resulting application you will get the following output:
@@ -213,4 +249,7 @@ Using this Signal class other patterns can be implemented easily. In a follow-up
 
 Have some fun coding events in C++!
 
-*- Last updated on 15 Februray 2017 -*
+**Edit on 2020-10-19:**
+* Add move-copy-constructor and move-assignment-operator
+* Add `emit_for_all_but_one` and `emit_for` methods.
+* Remove previously added `std::forward`.
