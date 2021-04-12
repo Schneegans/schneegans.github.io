@@ -66,15 +66,17 @@
             <a href="https://github.com/{{ site.author.github }}" target="_blank"><i
                 class="small material-icons">code</i></a>
             <a href="mailto:{{ site.author.email }}"><i class="small material-icons">mail</i></a>
-            <a href="{{site.url}}/feed.xml" target="_blank"><i class="small material-icons">rss_feed</i></a>
+            <a href="{{site.url}}/feed.xml" target="_blank"><i
+                class="small material-icons">rss_feed</i></a>
           </p>
         </div>
         <div class="col s12 center-align">
           &copy; {{ site.time | date: '%Y' }} Desgin &amp; Content by <a
-            href="{{ site.path }}/about.html">{{ site.author.name }} (Impressum)</a> with help from <a
-            href="https://jekyllrb.com/" target="_blank">Jekyll</a> and <a href="https://materializecss.com/"
-            target="_blank">Materialize</a>, inspired by <a href="https://github.com/danneu/darkstrap"
-            target="_blank">Darkstrap</a>.<br>Proudly hosted on <a href="https://pages.github.com/">github pages</a>.
+            href="{{ site.path }}/about.html">{{ site.author.name }} (Impressum)</a> with help from
+          <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> and <a
+            href="https://materializecss.com/" target="_blank">Materialize</a>, inspired by <a
+            href="https://github.com/danneu/darkstrap" target="_blank">Darkstrap</a>.<br>Proudly
+          hosted on <a href="https://pages.github.com/">github pages</a>.
           (<a href="https://github.com/schneegans/schneegans.github.io">repository</a>)
         </div>
       </div>
@@ -83,9 +85,12 @@
 
   <!--Import jQuery before materialize.js-->
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script type="text/javascript" src="{{ '/assets/js/materialize.min.js' | relative_url }}"></script>
-  <script type="text/javascript" src="{{ '/assets/js/masonry.pkgd.min.js' | relative_url }}"></script>
-  <script type="text/javascript" src="{{ '/assets/js/imagesloaded.pkgd.min.js' | relative_url }}"></script>
+  <script type="text/javascript"
+    src="{{ '/assets/js/materialize.min.js' | relative_url }}"></script>
+  <script type="text/javascript"
+    src="{{ '/assets/js/masonry.pkgd.min.js' | relative_url }}"></script>
+  <script type="text/javascript"
+    src="{{ '/assets/js/imagesloaded.pkgd.min.js' | relative_url }}"></script>
 
   <script>
     $(document).ready(function () {
@@ -114,13 +119,13 @@
       // add table of contents with scroll-spy ----------------------------------------------------
 
       // add an entry for each h1 and h2 to the toc
-      $("h2:not(.no-toc)").each(function (i) {
+      $("h1:not(.no-toc), h2:not(.no-toc)").each(function (i) {
         var id = $(this).attr("id");
         $("#toc").append("<li><a href='#" + id + "'>" + $(this).html() + "</a></li>");
       });
 
       // add a <section> for each h2, give it the id of the corresponding h2
-      $("h2").each(function (i) {
+      $("h1, h2").each(function (i) {
         var id = $(this).attr('id');
         $(this).removeAttr('id');
         $(this).nextUntil("h2").add($(this)).wrapAll("<section id='" + id + "'></section>");
