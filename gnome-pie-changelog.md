@@ -9,6 +9,15 @@ parents: ["Gnome-Pie"]
 contents: true
 ---
 
+## Gnome-Pie 0.7.3
+
+* **Improvement:** Updated Italian translation (thank you, [Albano Battistella](https://github.com/albanobattistella)).
+* **Improvement:** Updated Dutch translation (thank you, [Heimen Stoffels](https://github.com/Vistaus)).
+* **Improvement:** Gnome-Pie now uses window type dialog which should render it above other full screen windows.
+* **Bugfix:** Bamf is not required on Wayland anymore.
+* **Bugfix:** Fix compiler error on newer Vala compilers.
+
+
 ## Gnome-Pie 0.7.2
 
 * **New Feature:** Pies will not close when CTRL or SHIFT is pressed while clicking. This feature got requested several times so it is now reality! You can now perform multiple actions without having to re-open the pie.
