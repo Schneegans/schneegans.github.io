@@ -105,12 +105,12 @@
 
       ul li {
         width: $slide_w;
-        margin-right: 100% / $slides - $slide_w;
+        margin-right: 99.9% / $slides - $slide_w;
         padding-bottom: $slide_h;
       }
 
       ul:hover li {
-        margin-right: (100%-$slide_w) / ($slides - 1) - $slide_w;
+        margin-right: (99.9%-$slide_w) / ($slides - 1) - $slide_w;
       }
 
       ul:hover li:hover {
