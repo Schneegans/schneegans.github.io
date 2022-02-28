@@ -6,7 +6,7 @@ teaser: "signals.jpg"
 colors: "color-signals"
 license: "public domain"
 tagline: "A slot canyon. Image by photophilde (https://www.flickr.com/photos/photophilde/5000685616/)"
-tags: ["featured", "tutorial", "c++", "code"]
+tags: ["tutorial", "c++", "code"]
 ---
 
 I've been asked multiple times how I would implement a signal / slot mechanism in modern C++. Here is the answer!

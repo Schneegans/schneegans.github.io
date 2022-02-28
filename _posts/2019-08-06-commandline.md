@@ -6,7 +6,7 @@ teaser: "commandline.jpg"
 colors: "color-commandline"
 license: "public domain"
 tagline: "The final --help output of the example application below"
-tags: ["featured", "tutorial", "c++", "code"]
+tags: ["tutorial", "c++", "code"]
 ---
 
 Parsing command line options is part of many applications. While there are many good libraries out there, writing your own can be a very good C++ exercise.

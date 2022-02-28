@@ -7,7 +7,6 @@ colors: "color-color_splash"
 license: "public domain"
 tagline: "That happens if you combine thirty seconds of exposure, a mobile phone and someone jumping around wildly."
 tags: ["jekyll", "code"]
-featured: true
 ---
 
 I added a nifty feature to my homepage: Links are now colored according to corresponding images!

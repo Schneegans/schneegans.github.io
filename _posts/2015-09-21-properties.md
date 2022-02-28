@@ -7,7 +7,6 @@ colors: "color-properties"
 license: "public domain"
 tagline: "A tight connection. Image by whologwhy (https://www.flickr.com/photos/hulagway/6020190512/)"
 tags: ["tutorial", "c++", "code"]
-featured: true
 ---
 
 Based on the signal class from the previous post we can implement a class which holds a value and notifies anyone who's interested in value changes.
