@@ -14,22 +14,32 @@ colors: color-fallback
     <div class="row">
       {% if paginator.page == 1 %}
       <div class="col s12">
-        {% assign featuredPages = site.pages | where: "featured", "true" %}
-        {% assign featuredPosts = site.posts | where: "featured", "true" %}
-        {% assign featured = featuredPages | concat: featuredPosts %}
-
-        <div class="rounded accordion accordion-items-{{ featured.size }}">
+        <div class="rounded accordion accordion-items-3">
           <ul>
-            {% for page in featured %}
-            <li style="background-image:url(/assets/pictures/teasers/{{page.teaser}})">
-              <div class="{{page.colors}}">
-                <h3>{{page.title}}</h3>
-                <p>{{page.excerpt}}
-                  <br><a href="{{page.url}}">read on <i class="material-icons tiny top-offset">chevron_right</i></a>
+            <li style="background-image:url(/assets/pictures/fly-pie.jpg)">
+              <div>
+                <h3>Fly-Pie</h3>
+                <p>Fly-Pie is one of my main spare-time projects. It is an extension for GNOME Shell which lets you open marking menus via keyboard shortcuts. It is basically the follow-up project of Gnome-Pie.
+                  <br><a target="_blank" href="https://github.com/Schneegans/Fly-Pie/">View on GitHub <i class="material-icons tiny top-offset">chevron_right</i></a>
                 </p>
               </div>
             </li>
-            {% endfor %}
+            <li style="background-image:url(/assets/pictures/desktop-cube.jpg)">
+              <div>
+                <h3>The Desktop-Cube</h3>
+                <p>When I started using Linux more than a decade ago, it was because of the 3D desktop cube of Compiz. Therefore, I decided to re-create a similar effect for GNOME Shell!
+                  <br><a target="_blank" href="https://github.com/Schneegans/Desktop-Cube/">View on GitHub <i class="material-icons tiny top-offset">chevron_right</i></a>
+                </p>
+              </div>
+            </li>
+            <li style="background-image:url(/assets/pictures/burn-my-windows.jpg)">
+              <div>
+                <h3>Burn-My-Windows</h3>
+                <p>With this GNOME Shell extension, I want to revive one of the most useless features of Linux desktop history: Setting windows on fire!
+                  <br><a target="_blank" href="https://github.com/Schneegans/Burn-My-Windows/">View on GitHub <i class="material-icons tiny top-offset">chevron_right</i></a>
+                </p>
+              </div>
+            </li>
           </ul>
         </div>
         <small class="right" style="margin: 5px 0 -5px 0">* This accordion requires no Javascript at all. <a
