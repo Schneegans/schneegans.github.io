@@ -6,12 +6,13 @@ excerpt: Homepage of Gnome-Pie, the slick application launcher for Linux.
 teaser: "gnome-pie065.jpg"
 colors: "color-gnome-pie065"
 contents: true
-featured: true
 ---
 
 ## Summary
 
-<div class="adaptive-alert well">The most recent version of Gnome-Pie is 0.7.1. You can read the <a href="{% post_url 2017-07-09-gnome-pie-071 %}">release announcement here</a> or have a look at the <a href="/gnome-pie-changelog.html">changelog</a>.</div>
+<div class="deep-orange darken-4 well">
+At this point, I will only provide very basic support for Gnome-Pie. If you are on a GNOME Shell based distro, you may want to try my successor project, <a href="https://github.com/Schneegans/Fly-Pie">Fly-Pie</a>. You can read some <a href="http://schneegans.github.io/news/2020/08/13/flypie">background information here</a>.
+</div>
 
 {% include quick-links.html %}
 

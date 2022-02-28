@@ -3,7 +3,7 @@ layout: header-page
 title : About
 header : about
 teaser: signals.jpg
-excerpt: "This is the personal blog of Simon Schneegans, researcher at the <a href='https://www.dlr.de'>DLR (German Aerospace Center)</a> in Braunschweig. On this website you will find news regarding Gnome-Pie, some tutorials and other (hopefully) interesting stuff!"
+excerpt: "This is the personal blog of Simon Schneegans, researcher at the <a href='https://www.dlr.de'>DLR (German Aerospace Center)</a> in Braunschweig. On this website you will find news regarding my GNOME Shell extensions, some tutorials and other (hopefully) interesting stuff!"
 colors: color-signals
 contents: false
 ---

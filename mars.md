@@ -2,7 +2,7 @@
 layout: header-page
 title : M.A.R.S - a ridiculous shooter
 teaser: mars.jpg
-excerpt: M.A.R.S. is a ridiculous, open source 2D shooter developed by Felix Lauer and myself. It is a game for two players, flying with ships in a two-dimensional space setting, governed by the laws of gravity. Visit the <a href='https://mars-game.sourceforge.net/'>official homepage</a> for more details or watch the trailer below!
+excerpt: M.A.R.S. is a ridiculous, open source 2D shooter which has been developed by Felix Lauer and myself. It is a game for two players, flying with ships in a two-dimensional space setting, governed by the laws of gravity. You can still install it from various sources on the internet, but we do not develop it any further at this point.
 colors: color-mars
 ---
 
