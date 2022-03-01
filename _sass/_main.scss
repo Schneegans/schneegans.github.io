@@ -139,6 +139,12 @@ h6 {
   margin: 0.9em 0 0.2em 0;
 }
 
+h2 {
+  padding-bottom: 20px;
+  position: relative;
+}
+
+h2::before,
 code,
 .highlight>pre,
 .well {

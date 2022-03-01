@@ -34,10 +34,27 @@
     <![endif]-->
 
   {%- feed_meta -%}
+
+  <style>
+    .blurred-bg {
+      background-image: url(/assets/pictures/teasers/blurred/{{page.teaser}});
+    }
+    
+    h2::before {
+      background-image: url(/assets/img/symphony.png), url(/assets/pictures/teasers/blurred/{{page.teaser}});
+      background-attachment: scroll, fixed;
+      background-size: auto, cover;
+      position: absolute;
+      content: "";
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 15px;
+    }
+  </style>
 </head>
 
-<body class="{{ page.colors }} flow-text"
-  style="background-image: url(/assets/pictures/teasers/blurred/{{page.teaser}});">
+<body class="{{ page.colors }} flow-text blurred-bg">
 
   <header>
 
