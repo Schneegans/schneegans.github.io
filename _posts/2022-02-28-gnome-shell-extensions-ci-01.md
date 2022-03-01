@@ -50,7 +50,7 @@ This could also be done in many other ways, however, for the next part of the se
 **If your extension already contains a `makefile` or something similar which can be used to bundle the extension, you can directly skip to the second part. Or you can continue reading, maybe you find something useful 😉**
 
 The `makefile` assumes that it is placed in your source tree next to the `metadata.json`, `extension.js`, and `prefs.js`.
-It will bundle these as well as any other JavaScript file, and the toplevel `LICENSE` file into the extension zip file.
+It will bundle these as well as any other JavaScript files, and the top-level `LICENSE` file into the extension zip file.
 It will also compile the schema xml in the `schemas` directory and include the resulting `gschemas.compiled` file.
 Here's a schematic overview how the source directory could look like:
 
