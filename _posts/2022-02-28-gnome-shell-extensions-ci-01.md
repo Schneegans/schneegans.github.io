@@ -34,7 +34,7 @@ This post is the first of a three-part series.
 Here are links to the other parts:
 
 1. [Bundling the Extension]({% post_url 2022-02-28-gnome-shell-extensions-ci-01 %})
-2. Extension Bundling with GitHub Actions (TBD)
+2. [Automated Release Publishing]({% post_url 2022-03-01-gnome-shell-extensions-ci-02 %})
 3. Automated Tests with GitHub Actions (TBD)
 
 This guide assumes that you have solid background knowledge regarding the development of GNOME Shell extensions.
@@ -42,7 +42,7 @@ Basically, you should have a GNOME Shell extension at hand to which you want to 
 Also, this guide only shows how I implemented the CI jobs.
 Most things can be done in various ways: You do not have to use a `makefile`, you do not have to use shell scripts (any other scripting language will work as well), and you even do not have to use GitHub Actions (this can also be translated to GitLab CI, for example).
 
-## Part I: Bundling the Extension
+## Bundling the Extension
 
 In this first part of the series, we will create a `makefile` which can be used to bundle, install, and uninstall your extension.
 This could also be done in many other ways, however, for the next part of the series it will be important that we can package and install the extension with simple commands.
@@ -237,7 +237,8 @@ With this `makefile`, whenever `make zip` or `make install` is executed, all fil
 It is also quite straight-forward to make the `makefile` compile all `*.po` files and include the resulting `*.mo` files in the zip.
 For an example of this, you can have a look at the [makefile of the Desktop-Cube extension](https://github.com/Schneegans/Desktop-Cube/blob/main/Makefile).
 
-## Up Next: Automation
+## Up Next: Automated Release Publishing
 
-In the next part of this series, we will see how we can use GitHub actions to test whether the extension can be built successfully on each commit.
-Furthermore, we will use GitHub Actions to automatically publish the bundled extension whenever a new tag is pushed.
+That's it for now!
+I hope that you learned something useful for the development of your GNOME Shell extension.
+In the [next part of this series]({% post_url 2022-03-01-gnome-shell-extensions-ci-02 %}), we will see how we can use GitHub Actions to automatically publish the bundled extension whenever a new tag is pushed.
