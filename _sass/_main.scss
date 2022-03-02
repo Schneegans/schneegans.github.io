@@ -33,52 +33,21 @@ $h6-fontsize: 1.0em !default;
   }
 }
 
-@mixin link-color-background() {
-
-  @each $class,
-  $color in $link-colors {
-    .#{$class} & {
-      background-color: $color;
-    }
-  }
-}
-
-@mixin link-color-background-lighten() {
-
-  @each $class,
-  $color in $link-colors {
-    .#{$class} & {
-      background-color: lighten($color, 20);
-    }
-  }
-}
-
-@mixin link-color-background-darken() {
-
-  @each $class,
-  $color in $link-colors {
-    .#{$class} & {
-      background-color: darken($color, 20);
-    }
-  }
-}
-
-@mixin link-color-background-transparent() {
-
-  @each $class,
-  $color in $link-colors {
-    .#{$class} & {
-      background-color: rgba(darken($color, 15), 0.1);
-    }
-  }
-}
-
 @mixin link-color-highlight() {
 
   @each $class,
   $color in $link-colors {
     .#{$class} & {
       color: lighten($color, 20);
+    }
+  }
+}
+
+.link-color-background {
+  @each $class,
+  $color in $link-colors {
+    .#{$class} & {
+      background-color: desaturate(darken($color, 45%), 50%);
     }
   }
 }
@@ -98,8 +67,6 @@ a {
   &:active {
     top: 1px;
   }
-
-
 }
 
 .pagination li a {
@@ -156,13 +123,17 @@ code,
 .highlight>pre,
 .well {
   min-height: 20px;
-  padding: 14px 8px;
+  padding: 14px;
   margin-bottom: 20px;
 }
 
 .inline-well {
   padding: 0;
   margin-bottom: 0;
+}
+
+.warning {
+  background-color: rgb(109, 6, 6);
 }
 
 @for $num from 0 through 5 {
@@ -275,11 +246,6 @@ footer {
   a {
     @include link-color();
 
-    &.active:focus,
-    &:focus {
-      @include link-color-background-transparent();
-    }
-
     &:hover,
     &.active {
       @include link-color-highlight();
@@ -375,7 +341,7 @@ code {
   position: relative;
 
   &.collapsed {
-    height: 92px !important;
+    height: 115px !important;
   }
 }
 

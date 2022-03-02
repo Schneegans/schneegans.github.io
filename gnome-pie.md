@@ -10,7 +10,7 @@ contents: true
 
 ## Summary
 
-<div class="deep-orange darken-4 well">
+<div class="warning well">
 At this point, I will only provide very basic support for Gnome-Pie. If you are on a GNOME Shell based distro, you may want to try my successor project, <a href="https://github.com/Schneegans/Fly-Pie">Fly-Pie</a>. You can read some <a href="http://schneegans.github.io/news/2020/08/13/flypie">background information here</a>.
 </div>
 
