@@ -18,7 +18,11 @@ Each of those support several versions of GNOME Shell.
 Testing each and every new feature on all supported versions would be a very time-consuming process.
 Therefore, I set up a continuous integration (CI) process using [GitHub Actions](https://github.com/features/actions).
 
-## The Goal
+<div class="link-color-background well">
+ℹ️ With this guide, I want to share what I have learned. I hope that you can learn something as well!
+</div>
+
+## The Idea
 
 For each pull request and each commit to the `main` branch, a series of jobs is executed on the runners of GitHub.
 For this, I am using [podman](https://podman.io/) containers with fully working versions of GNOME Shell running on [xvfb](https://en.wikipedia.org/wiki/Xvfb).
@@ -35,7 +39,7 @@ Here are links to the other parts:
 
 1. [Bundling the Extension]({% post_url 2022-02-28-gnome-shell-extensions-ci-01 %})
 2. [Automated Release Publishing]({% post_url 2022-03-01-gnome-shell-extensions-ci-02 %})
-3. Automated Tests with GitHub Actions (TBD)
+3. [Automated Tests with GitHub Actions]({% post_url 2022-03-02-gnome-shell-extensions-ci-03 %})
 
 This guide assumes that you have solid background knowledge regarding the development of GNOME Shell extensions.
 Basically, you should have a GNOME Shell extension at hand to which you want to apply this guide.
@@ -44,12 +48,13 @@ Most things can be done in various ways: You do not have to use a `makefile`, yo
 
 ## Bundling the Extension
 
-In this first part of the series, we will create a `makefile` which can be used to bundle, install, and uninstall your extension.
-This could also be done in many other ways, however, for the next part of the series it will be important that we can package and install the extension with simple commands.
+In this first part of the series, I will show you the `makefile` which I use to bundling, installing, and uninstalling my extensions.
 
-**If your extension already contains a `makefile` or something similar which can be used to bundle the extension, you can directly skip to the second part. Or you can continue reading, maybe you find something useful 😉**
+<div class="link-color-background well">
+ℹ️ If your extension already contains a `makefile` or something similar which can be used to bundle the extension, you can directly skip to the second part. Or you can continue reading, maybe you find something useful 😉
+</div>
 
-The `makefile` assumes that it is placed in your source tree next to the `metadata.json`, `extension.js`, and `prefs.js`.
+The `makefile` below assumes that it is placed in the source tree next to the `metadata.json`, `extension.js`, and `prefs.js`.
 It will bundle these as well as any other JavaScript files, and the top-level `LICENSE` file into the extension zip file.
 It will also compile the schema xml in the `schemas` directory and include the resulting `gschemas.compiled` file.
 Here's a schematic overview how the source directory could look like:
@@ -141,7 +146,9 @@ schemas/gschemas.compiled: schemas/org.gnome.shell.extensions.$(NAME).gschema.xm
 	@glib-compile-schemas schemas
 {% endhighlight %}
 
-
+<div class="link-color-background well">
+💞 Btw, I want to send a big THANKS to GitHub user <a href="https://github.com/daPhipz">@daPhipz</a> who helped me a lot in setting up these makefiles!
+</div>
 
 ### Adding Resources
 

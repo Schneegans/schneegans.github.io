@@ -9,7 +9,7 @@ tagline: "Testing your code is important."
 tags: ["tutorial"]
 ---
 
-In the second part of the series, we will see how to publish releases using GitHub Actions.
+In the second part of the series, I will show how I publish releases using GitHub Actions.
 
 <!--more-->
 
@@ -18,7 +18,7 @@ Here are links to the other parts:
 
 1. [Bundling the Extension]({% post_url 2022-02-28-gnome-shell-extensions-ci-01 %})
 2. [Automated Release Publishing]({% post_url 2022-03-01-gnome-shell-extensions-ci-02 %})
-3. Automated Tests with GitHub Actions (TBD)
+3. [Automated Tests with GitHub Actions]({% post_url 2022-03-02-gnome-shell-extensions-ci-03 %})
 
 ## Publishing a Release on every Tag
 
@@ -74,4 +74,4 @@ Finally, you can download the bundled extension and upload it to extensions.gnom
 
 ## Up Next: Automated Tests
 
-In the next part of this series, we will see how we can use GitHub Actions together with podman to automatically perform various tests on your GNOME Shell extension.
+In the [last part of this series]({% post_url 2022-03-02-gnome-shell-extensions-ci-03 %}), I will show how I use GitHub Actions together with podman to automatically perform various tests on my GNOME Shell extensions.
