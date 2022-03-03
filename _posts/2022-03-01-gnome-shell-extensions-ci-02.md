@@ -17,7 +17,7 @@ If you haven't read the first one yet, I would suggest doing this before.
 Here are links to the other parts:
 
 1. [Bundling the Extension]({% post_url 2022-02-28-gnome-shell-extensions-ci-01 %})
-2. [Automated Release Publishing]({% post_url 2022-03-01-gnome-shell-extensions-ci-02 %})
+2. Automated Release Publishing (this post)
 3. [Automated Tests with GitHub Actions]({% post_url 2022-03-02-gnome-shell-extensions-ci-03 %})
 
 ## Publishing a Release on every Tag

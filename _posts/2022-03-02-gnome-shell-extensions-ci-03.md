@@ -18,7 +18,7 @@ Here are links to the other parts:
 
 1. [Bundling the Extension]({% post_url 2022-02-28-gnome-shell-extensions-ci-01 %})
 2. [Automated Release Publishing]({% post_url 2022-03-01-gnome-shell-extensions-ci-02 %})
-3. [Automated Tests with GitHub Actions]({% post_url 2022-03-02-gnome-shell-extensions-ci-03 %})
+3. Automated Tests with GitHub Actions (this post)
 
 ## GNOME Shell in a Container
 
@@ -36,7 +36,7 @@ These containers are currently available:
 * **[ghcr.io/schneegans/gnome-shell-pod-36](https://github.com/Schneegans/gnome-shell-pod/pkgs/container/gnome-shell-pod-36)**: GNOME Shell 42.beta (based on Fedora 36)
 
 <div class="link-color-background well">
-ℹ️ For more information on the content of those container images, please visit the <a href="https://github.com/Schneegans/gnome-shell-pod">repository with the deployed packages on GitHub</a>.
+📦 For more information on the content of those container images, please visit the <a href="https://github.com/Schneegans/gnome-shell-pod">repository with the deployed packages on GitHub</a>.
 </div>
 
 So here's an example what you can do with these containers (you will need to have `podman` and `imagemagick` installed).
@@ -139,7 +139,7 @@ Finally, it opens the preferences window of the extension.
 
 To test whether this worked, the virtual screen is searched for a sub-image of the preferences dialog.
 For example, the Burn-My-Windows preferences dialog looks different on various GNOME versions.
-So I made a screenshot of a small portion of the logo and saved it as `references/preferences.png` to the extension's repository.
+So I made a screenshot of a small portion of the logo and saved it as [references/preferences.png](https://github.com/Schneegans/Burn-My-Windows/blob/main/tests/references/preferences.png) to the extension's repository.
 
 <div class="row">
 <div class="col s6">
