@@ -223,7 +223,7 @@ do_in_pod() {
 fail() {
   echo "${1}"
   podman cp "${POD}:/opt/Xvfb_screen0" - | tar xf - --to-command 'convert xwd:- fail.png'
-  LOG=$(do_in_pod sudo journalctl | grep -C 5 "error\|gjs")
+  LOG=$(do_in_pod sudo journalctl)
   echo "${LOG}" > fail.log
   exit 1
 }
