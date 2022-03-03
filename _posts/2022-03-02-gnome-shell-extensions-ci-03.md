@@ -266,9 +266,8 @@ podman cp "references" "${POD}:/home/gnomeshell/references"
 # Copy the extension bundle.
 podman cp "${EXTENSION}.zip" "${POD}:/home/gnomeshell"
 
-# Enable the extension.
+# Install the extension.
 do_in_pod gnome-extensions install "${EXTENSION}.zip"
-do_in_pod gnome-extensions enable "${EXTENSION}"
 
 
 # ---------------------------------------------------------------------- start GNOME Shell
@@ -283,6 +282,9 @@ fi
 echo "Starting $(do_in_pod gnome-shell --version)."
 do_in_pod systemctl --user start "${SESSION}@:99"
 sleep 10
+
+# Enable the extension.
+do_in_pod gnome-extensions enable "${EXTENSION}"
 
 # Starting with GNOME 40, the overview is the default mode. We close this here by hitting
 # the super key.
