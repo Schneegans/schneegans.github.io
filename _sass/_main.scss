@@ -44,6 +44,7 @@ $h6-fontsize: 1.0em !default;
 }
 
 .link-color-background {
+
   @each $class,
   $color in $link-colors {
     .#{$class} & {
@@ -251,6 +252,13 @@ footer {
       @include link-color-highlight();
     }
   }
+}
+
+// tables --------------------------------------------------------------------------------
+
+td,
+th {
+  padding: 1px;
 }
 
 // hr ------------------------------------------------------------------------------------
