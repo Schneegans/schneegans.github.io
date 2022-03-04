@@ -315,7 +315,8 @@ Furthermore, it makes sure that all calls to `Math.random()` are effectively dis
 
 Then, I created a [script](https://github.com/Schneegans/Burn-My-Windows/blob/main/tests/generate-references.sh) which generates [reference images](https://github.com/Schneegans/Burn-My-Windows/tree/main/tests/references) for all supported GNOME versions / X11 / Wayland / all window-open animations / all window-close animations.
 This makes up for a total of 136 test cases.
-Below you can see the reference images for some included effects.Observe how they slightly differ from configuration to configuration.
+Below, you can see the reference images for some included effects.
+You can observe, how they slightly differ from configuration to configuration.
 
 The [test script](https://github.com/Schneegans/Burn-My-Windows/blob/main/tests/run-test.sh) of Burn-My-Windows then re-captures all those images and compares them with the reference versions.
 
