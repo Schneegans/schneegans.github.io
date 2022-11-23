@@ -24,7 +24,6 @@
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="/feed.xml">
   <link rel="shortcut icon" href="/favicon.ico">
 
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel='stylesheet' href='{{ "/assets/css/main.css" | relative_url }}'>
   <link rel='stylesheet' href='{{ "/assets/css/pygments.css" | relative_url }}'>
 
@@ -39,9 +38,10 @@
     .blurred-bg {
       background-image: url(/assets/pictures/teasers/blurred/{{page.teaser}});
     }
-    
+
     h2::before {
-      background-image: url(/assets/img/symphony.png), url(/assets/pictures/teasers/blurred/{{page.teaser}});
+      background-image: url(/assets/img/symphony.png),
+      url(/assets/pictures/teasers/blurred/{{page.teaser}});
       background-attachment: scroll, fixed;
       background-size: auto, cover;
       position: absolute;
