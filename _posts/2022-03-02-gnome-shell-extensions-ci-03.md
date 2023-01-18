@@ -29,11 +29,12 @@ Here are links to the other parts:
 So the idea is to run GNOME Shell in a container, install the extension, and perform various tests on it.
 For this purpose, I created several Fedora-based containers, one for each GNOME Shell version I want to run tests on.
 These containers are currently available:
-* **[ghcr.io/schneegans/gnome-shell-pod-32](https://github.com/Schneegans/gnome-shell-pod/pkgs/container/gnome-shell-pod-32)**: GNOME Shell 3.36.9 (based on Fedora 32)
-* **[ghcr.io/schneegans/gnome-shell-pod-33](https://github.com/Schneegans/gnome-shell-pod/pkgs/container/gnome-shell-pod-33)**: GNOME Shell 3.38.5 (based on Fedora 33)
-* **[ghcr.io/schneegans/gnome-shell-pod-34](https://github.com/Schneegans/gnome-shell-pod/pkgs/container/gnome-shell-pod-34)**: GNOME Shell 40.4 (based on Fedora 34)
-* **[ghcr.io/schneegans/gnome-shell-pod-35](https://github.com/Schneegans/gnome-shell-pod/pkgs/container/gnome-shell-pod-35)**: GNOME Shell 41.0 (based on Fedora 35)
-* **[ghcr.io/schneegans/gnome-shell-pod-36](https://github.com/Schneegans/gnome-shell-pod/pkgs/container/gnome-shell-pod-36)**: GNOME Shell 42.beta (based on Fedora 36)
+* **[ghcr.io/schneegans/gnome-shell-pod-32](https://github.com/Schneegans/gnome-shell-pod/pkgs/container/gnome-shell-pod-32)**: GNOME Shell 3.36 (based on Fedora 32)
+* **[ghcr.io/schneegans/gnome-shell-pod-33](https://github.com/Schneegans/gnome-shell-pod/pkgs/container/gnome-shell-pod-33)**: GNOME Shell 3.38 (based on Fedora 33)
+* **[ghcr.io/schneegans/gnome-shell-pod-34](https://github.com/Schneegans/gnome-shell-pod/pkgs/container/gnome-shell-pod-34)**: GNOME Shell 40 (based on Fedora 34)
+* **[ghcr.io/schneegans/gnome-shell-pod-35](https://github.com/Schneegans/gnome-shell-pod/pkgs/container/gnome-shell-pod-35)**: GNOME Shell 41 (based on Fedora 35)
+* **[ghcr.io/schneegans/gnome-shell-pod-36](https://github.com/Schneegans/gnome-shell-pod/pkgs/container/gnome-shell-pod-36)**: GNOME Shell 42 (based on Fedora 36)
+* **[ghcr.io/schneegans/gnome-shell-pod-37](https://github.com/Schneegans/gnome-shell-pod/pkgs/container/gnome-shell-pod-37)**: GNOME Shell 43 (based on Fedora 36)
 
 <div class="link-color-background well">
 📦 For more information on the content of those container images, please visit the <a href="https://github.com/Schneegans/gnome-shell-pod">repository with the deployed packages on GitHub</a>.
@@ -77,6 +78,8 @@ eog capture.jpg
 {% assign picture = "podman-capture-1.jpg" %}
 {% assign text = "GNOME Shell running in a container." %}
 {% include image.html %}
+
+To shut down the container, hit Ctrl+C to kill the GNOME control center and execute `poweroff` to exit the container.
 
 I think you see where this is going.
 In the next example, we will perform the same steps, but with a non-interactive container.
@@ -132,174 +135,11 @@ Feel free to replace the `gnome-shell-pod-33` with any other container image nam
 ## Executing Tests in the Container
 
 We can now use this setup to run automated tests inside the containers.
-The following example script uses `podman cp` to copy the extension zip into the running container.
-It then installs and enables the extension with `gnome-extensions install` and `gnome-extensions enable` respectively.
-Thereafter, it launches GNOME Shell and closes the initial overview & welcome tour of GNOME 40+.
-Finally, it opens the preferences window of the extension.
-To test whether this worked, the virtual screen is searched for a sub-image of the preferences dialog.
-For this, you can make a screen shot of a small portion of your preferences dialog, and save it as `references/preferences.png` to the extension's repository.
-
-If the script fails at some point, a screenshot (`fail.png`) and log (`fail.log`) will be saved.
-Later, these will be uploaded as assets by GitHub Actions so that we can learn why a pipeline failed.
-
-Just save the following code as `run-tests.sh` in the root directory of your extension repository.
-I use a bash script here, however you could also use any other scripting language.
-Please study the code carefully; I tried to explain everything with inline comments.
-
-{% highlight bash linenos %}
-#!/bin/bash
-
-# The script supports two arguments:
-#
-# -v fedora_version: This determines the version of GNOME Shell to test against.
-#                    -v 32: GNOME Shell 3.36
-#                    -v 33: GNOME Shell 3.38
-#                    -v 34: GNOME Shell 40
-#                    -v 35: GNOME Shell 41
-#                    -v 36: GNOME Shell 42
-# -s session:        This can either be "gnome-xsession" or "gnome-wayland-nested".
-
-# Exit on error.
-set -e
-
-usage() {
-  echo "Usage: $0 -v fedora_version -s session" >&2
-}
-
-FEDORA_VERSION=33
-SESSION="gnome-xsession"
-
-while getopts "v:s:h" opt; do
-  case $opt in
-    v) FEDORA_VERSION="${OPTARG}";;
-    s) SESSION="${OPTARG}";;
-    h) usage; exit 0;;
-    *) usage; exit 1;;
-  esac
-done
-
-# Go to the repo root.
-cd "$( cd "$( dirname "$0" )" && pwd )" || \
-  { echo "ERROR: Could not find the repo root."; exit 1; }
-
-IMAGE="ghcr.io/schneegans/gnome-shell-pod-${FEDORA_VERSION}"
-EXTENSION="my-cool-extension@my.cool.domain.com"
-
-# Run the container. For more info, visit https://github.com/Schneegans/gnome-shell-pod.
-POD=$(podman run --rm --cap-add=SYS_NICE --cap-add=IPC_LOCK -td "${IMAGE}")
-
-# Properly shutdown podman when this script is exited.
-quit() {
-  podman kill "${POD}"
-  wait
-}
-
-trap quit INT TERM EXIT
-
-# -------------------------------------------------------------------------------- methods
-
-# This function is used below to execute any shell command inside the running container.
-do_in_pod() {
-  podman exec --user gnomeshell --workdir /home/gnomeshell "${POD}" set-env.sh "$@"
-}
-
-# This is called whenever a test fails. It prints an error message (given as first
-# parameter), captures a screenshot to "fail.png" and stores a log in "fail.log".
-fail() {
-  echo "${1}"
-  podman cp "${POD}:/opt/Xvfb_screen0" - | tar xf - --to-command 'convert xwd:- fail.png'
-  LOG=$(do_in_pod sudo journalctl)
-  echo "${LOG}" > fail.log
-  exit 1
-}
-
-# This searches the virtual screen of the container for a given target image (first
-# parameter). If it is not found, an error message (second parameter) is printed and the
-# script exits via the fail() method above.
-find_target() {
-  echo "Looking for ${1} on the screen."
-  POS=$(do_in_pod find-target.sh "${1}") || true
-  if [[ -z "${POS}" ]]; then
-    fail "${2}"
-  fi
-}
-
-# This simulates the given keystroke in the container. Simply calling "xdotool key $1"
-# sometimes fails to be recognized. Maybe the default 12ms between key-down and key-up
-# are too short for xvfb...
-send_keystroke() {
-  do_in_pod xdotool keydown "${1}"
-  sleep 0.5
-  do_in_pod xdotool keyup "${1}"
-}
-
-
-# ----------------------------------------------------- wait for the container to start up
-
-echo "Waiting for D-Bus."
-do_in_pod wait-user-bus.sh > /dev/null 2>&1
-
-
-# ----------------------------------------------------- install the to-be-tested extension
-
-echo "Installing extension."
-
-# This directory contains the reference images of the
-# settings dialog we will be searching for later.
-podman cp "references" "${POD}:/home/gnomeshell/references"
-
-# Copy the extension bundle.
-podman cp "${EXTENSION}.zip" "${POD}:/home/gnomeshell"
-
-# Install the extension.
-do_in_pod gnome-extensions install "${EXTENSION}.zip"
-
-
-# ---------------------------------------------------------------------- start GNOME Shell
-
-# Starting with GNOME 40, there is a "Welcome Tour" dialog popping up at first launch.
-# We disable this beforehand.
-if [[ "${FEDORA_VERSION}" -gt 33 ]]; then
-  echo "Disabling welcome tour."
-  do_in_pod gsettings set org.gnome.shell welcome-dialog-last-shown-version "999" || true
-fi
-
-echo "Starting $(do_in_pod gnome-shell --version)."
-do_in_pod systemctl --user start "${SESSION}@:99"
-sleep 10
-
-# Enable the extension.
-do_in_pod gnome-extensions enable "${EXTENSION}"
-
-# Starting with GNOME 40, the overview is the default mode. We close this here by hitting
-# the super key.
-if [[ "${FEDORA_VERSION}" -gt 33 ]]; then
-  echo "Closing Overview."
-  send_keystroke "super"
-fi
-
-# Wait until the extension is installed and the overview closed.
-sleep 3
-
-# ---------------------------------------------------------------------- perform the tests
-
-# Finally, we open the preferences and check whether the window is shown on screen by
-# searching for a small snippet of the preferences dialog.
-echo "Opening Preferences."
-do_in_pod gnome-extensions prefs "${EXTENSION}"
-sleep 3
-find_target "references/preferences.png" "Failed to open preferences!"
-
-echo "All tests executed successfully."
-{% endhighlight %}
-
-The script can be run like this:
-
-```bash
-make zip                                       # From Part I of the series
-./run-tests.sh -v 33 -s gnome-xsession         # Test on Fedora 33 / X11
-./run-tests.sh -v 36 -s gnome-wayland-nested   # Test on Fedora 36 / Wayland
-```
+First, you want to copy your extension zip into the container (`podman cp`).
+Then you install and enable your extension with `gnome-extensions install` and `gnome-extensions enable` respectively.
+Thereafter, launch GNOME Shell and closes the initial overview & welcome tour of GNOME 40+.
+Finally, you can for instance open the settings dialog, take a screenshot and look for its presence!
+An example of this is the [test script of the Desktop Cube](https://github.com/Schneegans/Desktop-Cube/blob/main/tests/run-test.sh) extensions.
 
 This is just a minimal example for how such a testing script could look like.
 Of course, you can do this completely differently!
@@ -309,39 +149,43 @@ For example, the [test script of Fly-Pie](https://github.com/Schneegans/Fly-Pie/
 
 ### A more Complex Example: Burn-My-Windows
 
-To test the animations of the [Burn-My-Windows](https://github.com/Schneegans/Burn-My-Windows) extensions, I added a `test-mode` which can be enabled using `gsettings set` during the tests.
-This causes all animations just show one fixed frame for a period of five seconds (this ensures that all screenshots will capture the same moment of the animations).
+To test the animations of the [Burn-My-Windows](https://github.com/Schneegans/Burn-My-Windows) extensions, I added a `test-mode` boolean setting which can be enabled using `gsettings set` during the tests.
+This causes all animations to just show one fixed frame for a period of five seconds (this ensures that all screenshots will capture the same moment of the animations).
 Furthermore, it makes sure that all calls to `Math.random()` are effectively disabled.
 
 Then, I created a [script](https://github.com/Schneegans/Burn-My-Windows/blob/main/tests/generate-references.sh) which generates [reference images](https://github.com/Schneegans/Burn-My-Windows/tree/main/tests/references) for all supported GNOME versions / X11 / Wayland / all window-open animations / all window-close animations.
-This makes up for a total of 136 test cases.
+This makes up for a total of 200+ test cases.
 Below, you can see the reference images for some included effects.
 You can observe, how they slightly differ from configuration to configuration.
 
 The [test script](https://github.com/Schneegans/Burn-My-Windows/blob/main/tests/run-test.sh) of Burn-My-Windows then re-captures all those images and compares them with the reference versions.
 
-|  | Energ. A | Energ. B | Fire | TV | Wisps
+|  | Energ. A | Energ. B | Fire | Portal | Hexagon
 |--|--|--|--|--|
-GNOME 3.36, Wayland, Open |<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/energize-a-open-gnome-wayland-nested-32.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/energize-b-open-gnome-wayland-nested-32.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/fire-open-gnome-wayland-nested-32.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/tv-open-gnome-wayland-nested-32.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/wisps-open-gnome-wayland-nested-32.png" />|
-GNOME 3.36, Wayland, Close |<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/energize-a-close-gnome-wayland-nested-32.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/energize-b-close-gnome-wayland-nested-32.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/fire-close-gnome-wayland-nested-32.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/tv-close-gnome-wayland-nested-32.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/wisps-close-gnome-wayland-nested-32.png" />|
-GNOME 3.36, X11, Open |<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/energize-a-open-gnome-xsession-32.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/energize-b-open-gnome-xsession-32.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/fire-open-gnome-xsession-32.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/tv-open-gnome-xsession-32.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/wisps-open-gnome-xsession-32.png" />|
-GNOME 3.36, X11, Close |<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/energize-a-close-gnome-xsession-32.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/energize-b-close-gnome-xsession-32.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/fire-close-gnome-xsession-32.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/tv-close-gnome-xsession-32.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/wisps-close-gnome-xsession-32.png" />|
-GNOME 3.38, Wayland, Open |<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/energize-a-open-gnome-wayland-nested-33.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/energize-b-open-gnome-wayland-nested-33.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/fire-open-gnome-wayland-nested-33.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/tv-open-gnome-wayland-nested-33.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/wisps-open-gnome-wayland-nested-33.png" />|
-GNOME 3.38, Wayland, Close |<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/energize-a-close-gnome-wayland-nested-33.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/energize-b-close-gnome-wayland-nested-33.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/fire-close-gnome-wayland-nested-33.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/tv-close-gnome-wayland-nested-33.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/wisps-close-gnome-wayland-nested-33.png" />|
-GNOME 3.38, X11, Open |<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/energize-a-open-gnome-xsession-33.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/energize-b-open-gnome-xsession-33.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/fire-open-gnome-xsession-33.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/tv-open-gnome-xsession-33.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/wisps-open-gnome-xsession-33.png" />|
-GNOME 3.38, X11, Close |<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/energize-a-close-gnome-xsession-33.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/energize-b-close-gnome-xsession-33.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/fire-close-gnome-xsession-33.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/tv-close-gnome-xsession-33.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/wisps-close-gnome-xsession-33.png" />|
-GNOME 40, Wayland, Open |<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/energize-a-open-gnome-wayland-nested-34.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/energize-b-open-gnome-wayland-nested-34.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/fire-open-gnome-wayland-nested-34.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/tv-open-gnome-wayland-nested-34.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/wisps-open-gnome-wayland-nested-34.png" />|
-GNOME 40, Wayland, Close |<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/energize-a-close-gnome-wayland-nested-34.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/energize-b-close-gnome-wayland-nested-34.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/fire-close-gnome-wayland-nested-34.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/tv-close-gnome-wayland-nested-34.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/wisps-close-gnome-wayland-nested-34.png" />|
-GNOME 40, X11, Open |<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/energize-a-open-gnome-xsession-34.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/energize-b-open-gnome-xsession-34.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/fire-open-gnome-xsession-34.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/tv-open-gnome-xsession-34.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/wisps-open-gnome-xsession-34.png" />|
-GNOME 40, X11, Close |<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/energize-a-close-gnome-xsession-34.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/energize-b-close-gnome-xsession-34.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/fire-close-gnome-xsession-34.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/tv-close-gnome-xsession-34.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/wisps-close-gnome-xsession-34.png" />|
-GNOME 41, Wayland, Open |<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/energize-a-open-gnome-wayland-nested-35.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/energize-b-open-gnome-wayland-nested-35.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/fire-open-gnome-wayland-nested-35.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/tv-open-gnome-wayland-nested-35.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/wisps-open-gnome-wayland-nested-35.png" />|
-GNOME 41, Wayland, Close |<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/energize-a-close-gnome-wayland-nested-35.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/energize-b-close-gnome-wayland-nested-35.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/fire-close-gnome-wayland-nested-35.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/tv-close-gnome-wayland-nested-35.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/wisps-close-gnome-wayland-nested-35.png" />|
-GNOME 41, X11, Open |<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/energize-a-open-gnome-xsession-35.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/energize-b-open-gnome-xsession-35.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/fire-open-gnome-xsession-35.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/tv-open-gnome-xsession-35.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/wisps-open-gnome-xsession-35.png" />|
-GNOME 41, X11, Close |<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/energize-a-close-gnome-xsession-35.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/energize-b-close-gnome-xsession-35.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/fire-close-gnome-xsession-35.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/tv-close-gnome-xsession-35.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/wisps-close-gnome-xsession-35.png" />|
-GNOME 42, Wayland, Open |<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/energize-a-open-gnome-wayland-nested-36.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/energize-b-open-gnome-wayland-nested-36.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/fire-open-gnome-wayland-nested-36.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/tv-open-gnome-wayland-nested-36.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/wisps-open-gnome-wayland-nested-36.png" />|
-GNOME 42, Wayland, Close |<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/energize-a-close-gnome-wayland-nested-36.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/energize-b-close-gnome-wayland-nested-36.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/fire-close-gnome-wayland-nested-36.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/tv-close-gnome-wayland-nested-36.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/wisps-close-gnome-wayland-nested-36.png" />|
-GNOME 42, X11, Open |<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/energize-a-open-gnome-xsession-36.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/energize-b-open-gnome-xsession-36.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/fire-open-gnome-xsession-36.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/tv-open-gnome-xsession-36.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/wisps-open-gnome-xsession-36.png" />|
-GNOME 42, X11, Close |<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/energize-a-close-gnome-xsession-36.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/energize-b-close-gnome-xsession-36.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/fire-close-gnome-xsession-36.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/tv-close-gnome-xsession-36.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/wisps-close-gnome-xsession-36.png" />|
+GNOME 3.36, Wayland, Open |<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/energize-a-open-gnome-wayland-nested-32.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/energize-b-open-gnome-wayland-nested-32.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/fire-open-gnome-wayland-nested-32.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/portal-open-gnome-wayland-nested-32.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/hexagon-open-gnome-wayland-nested-32.png" />|
+GNOME 3.36, Wayland, Close |<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/energize-a-close-gnome-wayland-nested-32.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/energize-b-close-gnome-wayland-nested-32.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/fire-close-gnome-wayland-nested-32.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/portal-close-gnome-wayland-nested-32.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/hexagon-close-gnome-wayland-nested-32.png" />|
+GNOME 3.36, X11, Open |<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/energize-a-open-gnome-xsession-32.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/energize-b-open-gnome-xsession-32.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/fire-open-gnome-xsession-32.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/portal-open-gnome-xsession-32.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/hexagon-open-gnome-xsession-32.png" />|
+GNOME 3.36, X11, Close |<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/energize-a-close-gnome-xsession-32.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/energize-b-close-gnome-xsession-32.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/fire-close-gnome-xsession-32.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/portal-close-gnome-xsession-32.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/hexagon-close-gnome-xsession-32.png" />|
+GNOME 3.38, Wayland, Open |<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/energize-a-open-gnome-wayland-nested-33.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/energize-b-open-gnome-wayland-nested-33.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/fire-open-gnome-wayland-nested-33.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/portal-open-gnome-wayland-nested-33.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/hexagon-open-gnome-wayland-nested-33.png" />|
+GNOME 3.38, Wayland, Close |<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/energize-a-close-gnome-wayland-nested-33.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/energize-b-close-gnome-wayland-nested-33.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/fire-close-gnome-wayland-nested-33.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/portal-close-gnome-wayland-nested-33.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/hexagon-close-gnome-wayland-nested-33.png" />|
+GNOME 3.38, X11, Open |<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/energize-a-open-gnome-xsession-33.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/energize-b-open-gnome-xsession-33.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/fire-open-gnome-xsession-33.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/portal-open-gnome-xsession-33.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/hexagon-open-gnome-xsession-33.png" />|
+GNOME 3.38, X11, Close |<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/energize-a-close-gnome-xsession-33.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/energize-b-close-gnome-xsession-33.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/fire-close-gnome-xsession-33.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/portal-close-gnome-xsession-33.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/hexagon-close-gnome-xsession-33.png" />|
+GNOME 40, Wayland, Open |<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/energize-a-open-gnome-wayland-nested-34.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/energize-b-open-gnome-wayland-nested-34.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/fire-open-gnome-wayland-nested-34.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/portal-open-gnome-wayland-nested-34.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/hexagon-open-gnome-wayland-nested-34.png" />|
+GNOME 40, Wayland, Close |<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/energize-a-close-gnome-wayland-nested-34.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/energize-b-close-gnome-wayland-nested-34.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/fire-close-gnome-wayland-nested-34.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/portal-close-gnome-wayland-nested-34.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/hexagon-close-gnome-wayland-nested-34.png" />|
+GNOME 40, X11, Open |<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/energize-a-open-gnome-xsession-34.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/energize-b-open-gnome-xsession-34.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/fire-open-gnome-xsession-34.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/portal-open-gnome-xsession-34.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/hexagon-open-gnome-xsession-34.png" />|
+GNOME 40, X11, Close |<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/energize-a-close-gnome-xsession-34.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/energize-b-close-gnome-xsession-34.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/fire-close-gnome-xsession-34.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/portal-close-gnome-xsession-34.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/hexagon-close-gnome-xsession-34.png" />|
+GNOME 41, Wayland, Open |<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/energize-a-open-gnome-wayland-nested-35.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/energize-b-open-gnome-wayland-nested-35.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/fire-open-gnome-wayland-nested-35.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/portal-open-gnome-wayland-nested-35.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/hexagon-open-gnome-wayland-nested-35.png" />|
+GNOME 41, Wayland, Close |<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/energize-a-close-gnome-wayland-nested-35.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/energize-b-close-gnome-wayland-nested-35.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/fire-close-gnome-wayland-nested-35.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/portal-close-gnome-wayland-nested-35.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/hexagon-close-gnome-wayland-nested-35.png" />|
+GNOME 41, X11, Open |<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/energize-a-open-gnome-xsession-35.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/energize-b-open-gnome-xsession-35.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/fire-open-gnome-xsession-35.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/portal-open-gnome-xsession-35.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/hexagon-open-gnome-xsession-35.png" />|
+GNOME 41, X11, Close |<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/energize-a-close-gnome-xsession-35.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/energize-b-close-gnome-xsession-35.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/fire-close-gnome-xsession-35.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/portal-close-gnome-xsession-35.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/hexagon-close-gnome-xsession-35.png" />|
+GNOME 42, Wayland, Open |<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/energize-a-open-gnome-wayland-nested-36.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/energize-b-open-gnome-wayland-nested-36.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/fire-open-gnome-wayland-nested-36.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/portal-open-gnome-wayland-nested-36.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/hexagon-open-gnome-wayland-nested-36.png" />|
+GNOME 42, Wayland, Close |<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/energize-a-close-gnome-wayland-nested-36.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/energize-b-close-gnome-wayland-nested-36.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/fire-close-gnome-wayland-nested-36.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/portal-close-gnome-wayland-nested-36.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/hexagon-close-gnome-wayland-nested-36.png" />|
+GNOME 42, X11, Open |<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/energize-a-open-gnome-xsession-36.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/energize-b-open-gnome-xsession-36.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/fire-open-gnome-xsession-36.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/portal-open-gnome-xsession-36.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/hexagon-open-gnome-xsession-36.png" />|
+GNOME 42, X11, Close |<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/energize-a-close-gnome-xsession-36.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/energize-b-close-gnome-xsession-36.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/fire-close-gnome-xsession-36.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/portal-close-gnome-xsession-36.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/hexagon-close-gnome-xsession-36.png" />|
+GNOME 43, Wayland, Open |<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/energize-a-open-gnome-wayland-nested-37.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/energize-b-open-gnome-wayland-nested-37.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/fire-open-gnome-wayland-nested-37.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/portal-open-gnome-wayland-nested-37.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/hexagon-open-gnome-wayland-nested-37.png" />|
+GNOME 43, Wayland, Close |<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/energize-a-close-gnome-wayland-nested-37.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/energize-b-close-gnome-wayland-nested-37.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/fire-close-gnome-wayland-nested-37.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/portal-close-gnome-wayland-nested-37.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/hexagon-close-gnome-wayland-nested-37.png" />|
+GNOME 43, X11, Open |<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/energize-a-open-gnome-xsession-37.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/energize-b-open-gnome-xsession-37.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/fire-open-gnome-xsession-37.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/portal-open-gnome-xsession-37.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/hexagon-open-gnome-xsession-37.png" />|
+GNOME 43, X11, Close |<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/energize-a-close-gnome-xsession-37.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/energize-b-close-gnome-xsession-37.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/fire-close-gnome-xsession-37.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/portal-close-gnome-xsession-37.png" />|<img class="z-depth-2 rounded" width="70px" src="https://raw.githubusercontent.com/Schneegans/Burn-My-Windows/main/tests/references/hexagon-close-gnome-xsession-37.png" />|
 
 
 ## Running the Tests on GitHub
@@ -374,6 +218,7 @@ jobs:
           - '34'
           - '35'
           - '36'
+          - '37'
         session:
           - 'gnome-xsession'
           - 'gnome-wayland-nested'
@@ -409,7 +254,7 @@ Therefore, I added the interesting `if` in line 15: This ensures that the tests 
 * If something was pushed to any branch _and_ the commit message _did_ contain `[run-ci]`.
 
 The `run-tests.sh` script will then be executed for each combination of the Fedora versions and Wayland / X11.
-Whenever a test fails, the `fail.png` and `fail.log` will be uploaded.
+Whenever a test fails, the `fail.png` and `fail.log` will be uploaded (these are produced by the linked example test script if any of the tests fails).
 As before, the "Download Dependencies" step may not be necessary for your extension.
 
 ## Wrapping Up
@@ -419,5 +264,9 @@ Maybe, one or the other aspect can be applied to your extension as well.
 If you have any questions, suggestions, or alternative solutions, feel free to post a comment!
 
 <div class="link-color-background well">
-ℹ️ The post has been updated on 04 March 2022 to include the more advanced Burn-My-Windows example.
+ℹ️ The post has been updated on March 04, 2022 to include the more advanced Burn-My-Windows example.
+</div>
+
+<div class="link-color-background well">
+ℹ️ The post has been updated on January 18, 2023 to include the latest changes in the `gnome-shell-pod` container images.
 </div>
